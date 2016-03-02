@@ -56,3 +56,4 @@ $route['translate_uri_dashes'] = FALSE;
 $route['login']                = 'user/login';
 $route['logout']               = 'user/logout';
 $route['admin']                = 'admin/dashboard';
+$route['project/(:any)'] = "project/project_by_stub/$1";
