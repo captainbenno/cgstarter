@@ -37,7 +37,7 @@ class Project extends Public_Controller {
 	{		
 		var_dump($this->projects_model->get_project_by_stub($stub));
 
-		echo "hello world";
+		echo "hello world yay";
 
 	}
 

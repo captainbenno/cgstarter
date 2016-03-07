@@ -1,3 +1,7 @@
+body{
+    background: url(/themes/default/img/cgstarter-home.png);
+}
+
 #session-language {
     margin: 8px 15px 0 20px;
 }
@@ -27,3 +31,102 @@
         margin: 12px 0 0 15px;
     }
 }
+
+#top-spacer{
+    height: 16px;
+    background-color: #fff;
+}
+
+#top-nav{
+
+}
+
+    #navbar,#navbar-main{
+        font-family: 'Open Sans', sans-serif;
+        padding: 0 5%;
+    }
+
+    #top-nav.navbar-default{
+        background-image: none;
+        background-color: #fff;
+        box-shadow: none;
+        border-color: #c3c3c3;
+        border-width: 1px 0;
+    }
+
+    #top-nav ul{
+        border-color: #c3c3c3;
+        border-style: solid;
+        border-width: 0 0 0 1px;        
+    }
+        #top-nav li{
+            border-color: #c3c3c3;
+            border-style: solid;
+            border-width: 0 1px 0 0;        
+        }
+            #top-nav li a{
+                padding: 15px 29px;
+            }
+
+#main-nav{
+    margin-bottom: 0;
+}
+
+    .navbar-brand{
+        background-image: url(/themes/default/img/cgstarter-logo.png);
+        background-repeat: no-repeat;
+        background-position: 0 -34px;
+        width: 336px;
+        height: 55px;
+        margin-left: 0 !important;
+    }
+        .navbar-brand span{
+            display: none;
+        }
+
+    #main-nav.navbar-default{
+        background-image: none;
+        background-color: transparent;
+        box-shadow: none;
+        border-color: #e5e5e5;
+        border-width: 0 0 6px 0;
+        border-style: solid;
+    }
+
+    #main-nav ul{
+        text-transform: uppercase;
+        color: #9cb80f;
+    }
+        #main-nav li.active, #main-nav li:hover{
+            border-width: 0 0 5px 0;
+            border-color: #9cb80f;
+            border-style: solid; 
+        }
+
+            #main-nav li.active a{
+                background: none; 
+                box-shadow: none;
+            }
+
+                #main-nav li.active a:hover{
+
+                }
+#hero{
+    background-image: url(/themes/default/img/hero-image.jpg);
+    height: 460px;
+    background-position: center;
+    vertical-align: middle;
+}
+    #hero.container-fluid{
+        padding: 0;
+    }
+
+    #main-logo{
+        background-image: url(/themes/default/img/cgstarter-logo-large.png);
+        height: 216px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: rgba(103, 103, 103, 0.75);
+        margin-top: 143px;
+    }
+
