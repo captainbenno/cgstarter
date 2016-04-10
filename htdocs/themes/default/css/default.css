@@ -51,6 +51,9 @@ body{
     }
 }
 
+/* Top Nav
+-------------------------------------------------- */
+
 #top-spacer{
     height: 16px;
     background-color: #fff;
@@ -86,6 +89,9 @@ body{
             #top-nav li a{
                 padding: 15px 29px;
             }
+
+/* Main Nav
+-------------------------------------------------- */
 
 #main-nav{
     margin-bottom: 0;
@@ -131,6 +137,10 @@ body{
                 #main-nav li.active a:hover{
 
                 }
+
+/* Home Page Hero
+-------------------------------------------------- */
+
 #hero{
     background-image: url(/themes/default/img/hero-image.jpg);
     height: 460px;
@@ -143,13 +153,23 @@ body{
     }
 
     #main-logo{
-        background-image: url(/themes/default/img/cgstarter-logo-large.png);
         height: 216px;
-        background-position: center;
-        background-repeat: no-repeat;
         background-color: rgba(103, 103, 103, 0.75);
         margin-top: 146px;
     }
+
+    #logo-placement{
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        max-width: 551px;
+        height: 216px;
+        margin: 0 auto;        
+        background-image: url(/themes/default/img/cgstarter-logo-large.png);
+    }
+
+/* Home page Video
+-------------------------------------------------- */
 
 #home-video{
     margin: 20px 0;
@@ -163,37 +183,40 @@ body{
         font-size: 44px;
     }
 
-* CUSTOMIZE THE CAROUSEL
+/* Home Page Carousel
 -------------------------------------------------- */
 
-/* Carousel base class */
+//* Carousel base class */
 .carousel {
-  height: 500px;
+  min-height: 500px;
   margin-bottom: 60px;
 }
-/* Since positioning the image, we need to help out the caption */
+//* Since positioning the image, we need to help out the caption */
 .carousel-caption {
   z-index: 10;
   left: 0;
   right: 0;
 }
 
-/* Declare heights because of positioning of img element */
+//* Declare heights because of positioning of img element */
 .carousel .item {
-  height: 500px;
+  min-height: 500px;
 }
 .carousel-inner > .item > img {
   position: absolute;
   top: 0;
   left: 0;
   min-width: 100%;
-  height: 500px;
 }
 
 .carousel-caption .row{
     padding: 0;
     margin: 0;
 }
+
+
+/* Teaser Tile
+-------------------------------------------------- */
 
 .teaser-tile{
     background-color: #f7f7f7;
@@ -236,11 +259,10 @@ body{
 
         .teaser-tile .progress-bar{
             background-color: #9cb80f;
-            background-image: none;
         }
 
     .teaser-tile img{
-        width: 268px;
+        width: 100%;
     }
 
     .teaser-tile p{
@@ -276,3 +298,95 @@ body{
         .teaser-tile .btn-primary:hover{
             background-color: #67790a;
         }
+
+/* Footer
+-------------------------------------------------- */
+
+footer{
+    color: #f2f2f2;
+    font-size: 14px;
+    text-align: left;
+}
+
+    footer h4{
+        font-family: klavika_bold;
+        font-size: 24px;
+    }
+
+    footer #tweets-feed, footer #facebook-feed{
+        padding-left: 33px;
+    }
+
+    #footer-1{
+        padding-top: 12px;
+        background-color: #353535;
+    }
+
+    #footer-menu{
+
+    }
+
+        #footer-menu ul{
+            list-style: none;
+            padding: 0;
+        }
+
+            #footer-menu li{
+                padding: 5px 0;
+                border-bottom: 1px solid #545454;
+            }
+
+                #footer-menu li:last-child{
+                    border: none;
+                }
+
+                #footer-menu a{
+                    color: #f2f2f2;
+                }
+
+    #footer-2{
+        background-color: #1a1a1a;
+        padding: 20px 0;
+    }
+
+/* Project Page Hero
+-------------------------------------------------- */    
+
+#project-hero{
+    height: 368px;
+    background-position: center;
+}
+    #project-hero.container-fluid{
+        margin-top: 161px;
+        padding: 0;
+    }
+
+    #project-main-logo{
+        height: 368px;
+        display: flex;
+        align-items: flex-end;
+        padding-bottom: 20px;
+    }
+
+    #project-hero.container-fluid div div{
+    }
+
+        #project-logo{
+        }
+            #project-logo img{
+            }
+
+        #project-title{        
+            padding-bottom: 20px;
+        }
+
+            #project-title h1{
+                color: #fafafa;
+                font-size: 44px;
+                text-shadow: 2px 2px #4f4f4f;
+                min-height: 100px;
+            }
+
+                #project-title h1 span{
+                    color: #99b707;
+                }
