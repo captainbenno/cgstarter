@@ -1,3 +1,5 @@
+
+
 @font-face {
     font-family: klavika_bold;
     src: url(/themes/default/fonts/klavika-bold-webfont.woff);
@@ -186,6 +188,18 @@ body{
 /* Home Page Carousel
 -------------------------------------------------- */
 
+.jcarousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.jcarousel li {
+    float: left;
+    width: 200px;
+}
+
+
 //* Carousel base class */
 .carousel {
   min-height: 500px;
@@ -366,10 +380,10 @@ footer{
         display: flex;
         align-items: flex-end;
         padding-bottom: 20px;
+        margin-right: 0;
     }
 
-    #project-hero.container-fluid div div{
-    }
+    #project-hero.container-fluid div div
 
         #project-logo{
         }
@@ -390,3 +404,227 @@ footer{
                 #project-title h1 span{
                     color: #99b707;
                 }
+
+/* Project Page Pledge Row
+-------------------------------------------------- */    
+
+#pledge-row{
+    background-color: #e5e5e5;
+    height: 114px;
+}
+
+    #pledge-row h3{
+        font-size:24px;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: bold;
+        color: #4f4f4f;
+    }
+
+    #pledge-row button{
+        background-color: #9cb80f;
+        font-size:24px;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: bold;
+        color: #ffffff;
+        border: none;
+        border-bottom: 4px solid #67790a;
+        text-transform: uppercase;
+        margin-top: 21px;
+        padding: 18px 44px;
+        text-transform: uppercase;
+        width: 100%;
+    }
+
+    #pledge-row .progress{
+        border-radius: 0;
+        background-color: #8b8b8b;
+        background-image: none;
+        padding: 3px;
+        margin-bottom: 0;
+    }
+
+        #pledge-row .progress-bar{
+            background-color: #9cb80f;
+        }
+
+/* Project Info
+-------------------------------------------------- */    
+
+#project-info{
+}
+    #project-info h2{
+        font-size: 44px;
+        color: #4f4f4f;
+    }
+        #project-info h2 span{
+            color: #99b707;
+        }
+
+    #project-tabs{
+        margin-top: 30px;
+    }
+        #project-tabs .nav li{
+            color: #4f4f4f;
+            font-size: 14px;
+            font-weight: bold;
+            padding: 0;
+        }
+
+            #project-tabs .nav li a{
+                color: #4f4f4f;
+                padding: 10px;
+                color: #4f4f4f;
+            }
+
+            #project-tabs .nav li.active a{
+                border-top: 4px solid #9cb80f;
+            }
+        #project-tabs .tab-content{
+            margin-top: 30px;
+        }
+            .project-update h4{
+                color: #99b707;
+                font-weight: bold;
+            }
+            .project-update p{
+                font-size: 12px;
+            }
+            .project-update h6{
+                font-style: italic;
+            }
+
+            #backers ul{
+                list-style: none
+            }
+            
+                #backers li{
+                    border-bottom: 1px solid #efefef;
+                    clear: both;
+                    font-size: 18px;
+                    height: 66px;
+                    margin-top: 5px;
+                }
+                    #backers img{
+                        float: left;
+                        margin-right: 20px;
+                    }
+                    #backers em{
+                        color: #9cb80f;
+                        font-size: 12px;
+                    }
+
+    #social-media-block{
+        margin-top: 20px;
+        margin-bottom: 40px;
+        text-align: right;
+    }
+
+    #project-leader{
+
+    }
+        #project-leader h4{
+            color: 4f4f4f;
+            font-size: 24px;
+        }
+        #project-leader h6{
+            font-size: 14px;
+            padding-left: 170px;
+        }
+        #project-leader p{
+            padding-left: 170px;
+        }
+
+    #project-stats{
+        background-color: #e5e5e5;
+        margin-top: 32px;
+        padding: 0 10px 0 10px;
+    }   
+        ul#project-stats{
+            list-style: none;
+        }
+
+        #project-stats li{
+            background-image: url(/themes/default/img/project-stats-sprite.png);
+            background-repeat: no-repeat;
+            height: 71px;
+            padding-top: 7px;            
+            color: #4f4f4f;
+        }
+
+        #project-stats strong{
+            display: block;
+            font-size: 24px;
+            margin-left: 50px;
+            margin-top: 0;
+        }
+
+        #project-stats em{
+            display: block;
+            font-size: 14px;
+            margin-left: 50px;
+            margin-top: -7px;
+            font-style: normal;
+        }
+
+        #project-stats hr{
+            margin-top: 15px;
+        }
+
+        #project-stats #stats-backer{
+            background-position: -5px 6px;        
+        }
+
+        #project-stats #stats-total{
+            background-position: -5px -67px; 
+        }
+
+        #project-stats #stats-days{
+            background-position: -5px -135px;
+        }
+
+    #project-rewards{
+        list-style: outside none none;
+        margin-top: 32px;
+        padding: 0; 
+    }
+
+        #project-rewards li{
+            margin: 0 0 10px;
+            padding: 10px 20px 0;
+            background-color: #e5e5e5;
+        }
+            #project-rewards h4{
+                color: #7c920c;
+                font-size: 18px;
+                font-weight: bold;
+                margin: 10px 0 0;
+            }
+
+            #project-rewards em{
+                display: block;
+                font-size: 15px;
+                font-weight: bold;
+            }
+
+            #project-rewards img{
+            
+            }
+
+            #project-rewards p{
+                font-size: 12px;
+                color: #4f4f4f;
+            }
+
+            #project-rewards button{
+                background-color: #9cb80f;
+                font-size:24px;
+                font-family: 'Open Sans', sans-serif;
+                font-weight: bold;
+                color: #ffffff;
+                border: none;
+                border-bottom: 4px solid #67790a;
+                text-transform: uppercase;
+                margin: 12px;
+                padding: 3px 83px;
+                text-transform: uppercase;
+            }
