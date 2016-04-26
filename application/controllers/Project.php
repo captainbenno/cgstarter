@@ -11,6 +11,7 @@ class Project extends Public_Controller {
 
 	 	// load the projects model
         $this->load->model('projects_model');
+        $this->load->model('projects_news');
         // load the language file
         //$this->lang->load('welcome');
     }
@@ -34,10 +35,22 @@ class Project extends Public_Controller {
 	 * Default
      */
 	function project_by_stub($stub)
-	{		
-		var_dump($this->projects_model->get_project_by_stub($stub));
+	{		        
+        $data = $this->includes;
+        $this->set_title( 'project' );
 
-		echo "hello world yay";
+get_all_active_news
+
+        // set content data
+        $content_data = array(
+            'cancel_url'        => base_url(),
+            'project'              => $this->projects_model->get_project_by_stub($stub),
+
+        );
+        // load views
+        $data['content'] = $this->load->view('project/project_view', $content_data, TRUE);
+        $this->load->view($this->template, $data);
+
 
 	}
 

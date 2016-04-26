@@ -196,9 +196,21 @@ body{
 
 .jcarousel li {
     float: left;
-    width: 200px;
+    width: 275px;
 }
 
+.jcarousel-wrapper {
+    border: none !important;
+    height: 400px;
+    margin: 20px auto !important;
+    position: relative;
+    box-shadow: none !important;
+    width: 100% !important;
+}
+
+.jcarousel .row{
+    margin:0;
+}
 
 //* Carousel base class */
 .carousel {
@@ -214,7 +226,7 @@ body{
 
 //* Declare heights because of positioning of img element */
 .carousel .item {
-  min-height: 500px;
+  min-height: 380px;
 }
 .carousel-inner > .item > img {
   position: absolute;
@@ -235,7 +247,7 @@ body{
 .teaser-tile{
     background-color: #f7f7f7;
     text-shadow: none;
-    min-height: 450px;
+    min-height: 380px;
     border-right: 20px solid #676767;
     padding:0;
 }
@@ -283,6 +295,8 @@ body{
         color: #8b8b8b;
         padding: 10px;
         text-align: left;
+        font-size: 12px;
+        margin: 0;
     }
 
     .teaser-tile .teaser-data{
@@ -307,6 +321,9 @@ body{
         background-image: none;
         border: none;
         border-radius: 0;
+        margin: 18px;
+        width: 218px;
+        border-bottom: 2px solid #67790a;
     }
 
         .teaser-tile .btn-primary:hover{
@@ -628,3 +645,27 @@ footer{
                 padding: 3px 83px;
                 text-transform: uppercase;
             }
+
+.general-content-container{
+
+}
+
+.title-spacer-container{
+    margin-top: 161px;
+}
+
+.btn-success{
+    background-color: #9cb80f;
+    background-image: none;
+    border: none;
+    border-radius: 0;
+    border-bottom: 2px solid #67790a;
+}
+    .btn-success.active, 
+    .btn-success.focus, 
+    .btn-success:active, 
+    .btn-success:focus, 
+    .btn-success:hover, 
+    .open > .dropdown-toggle.btn-success{
+        background-color: #67790a;
+    }

@@ -1,5 +1,10 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
-
+<div class="container-fluid general-content-container" >
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <h1>CGStarter Account Sign Up</h1>
+            <p>Signup for your cgstarter account below.</p>
 <?php echo form_open('', array('role'=>'form')); ?>
 
     <div class="row">
@@ -29,21 +34,21 @@
 
     <div class="row">
         <?php // email ?>
-        <div class="form-group col-sm-6<?php echo form_error('email') ? ' has-error' : ''; ?>">
+        <div class="form-group col-sm-8<?php echo form_error('email') ? ' has-error' : ''; ?>">
             <?php echo form_label(lang('users input email'), 'email', array('class'=>'control-label')); ?>
             <span class="required">*</span>
             <?php echo form_input(array('name'=>'email', 'value'=>set_value('email', (isset($user['email']) ? $user['email'] : '')), 'class'=>'form-control', 'type'=>'email')); ?>
         </div>
     </div>
 
-    <div class="row">
+    <!--div class="row">
         <?php // language ?>
         <div class="form-group col-sm-6<?php echo form_error('language') ? ' has-error' : ''; ?>">
             <?php echo form_label(lang('users input language'), 'language', array('class'=>'control-label')); ?>
             <span class="required">*</span>
             <?php echo form_dropdown('language', $this->languages, (isset($user['language']) ? $user['language'] : $this->config->item('language')), 'id="language" class="form-control"'); ?>
         </div>
-    </div>
+    </div-->
 
     <div class="row">
         <?php // password ?>
@@ -65,13 +70,19 @@
     </div>
 
     <?php // buttons ?>
-    <div class="row pull-right">
-        <a class="btn btn-default" href="<?php echo $cancel_url; ?>"><?php echo lang('core button cancel'); ?></a>
-        <?php if ($this->session->userdata('logged_in')) : ?>
-            <button type="submit" name="submit" class="btn btn-success"><span class="glyphicon glyphicon-save"></span> <?php echo lang('core button save'); ?></button>
-        <?php else : ?>
-            <button type="submit" name="submit" class="btn btn-success"><span class="glyphicon glyphicon-ok"></span> <?php echo lang('users button register'); ?></button>
-        <?php endif; ?>
+    <div class="row">
+        <div class="form-group col-sm-4">
+            <a class="btn btn-default" href="<?php echo $cancel_url; ?>"><?php echo lang('core button cancel'); ?></a>
+            <?php if ($this->session->userdata('logged_in')) : ?>
+                <button type="submit" name="submit" class="btn btn-success"><span class="glyphicon glyphicon-save"></span> <?php echo lang('core button save'); ?></button>
+            <?php else : ?>
+                <button type="submit" name="submit" class="btn btn-success"><span class="glyphicon glyphicon-ok"></span> <?php echo lang('users button register'); ?></button>
+            <?php endif; ?>
+        </div>
     </div>
-
 <?php echo form_close(); ?>
+
+        </div>
+        <div class="col-md-2"></div>
+    </div>        
+</div> 

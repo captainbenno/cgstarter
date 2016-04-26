@@ -55,6 +55,7 @@ class Projects_model extends CI_Model {
      */
     function get_project_by_stub($stub)
     {
+
         $this->db->where('stub', $stub);        
         $query = $this->db->get($this->_db); 
         $return_data = $query->row_array();
