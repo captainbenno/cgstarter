@@ -11,7 +11,6 @@ class Project extends Public_Controller {
 
 	 	// load the projects model
         $this->load->model('projects_model');
-        $this->load->model('projects_news');
         // load the language file
         //$this->lang->load('welcome');
     }
@@ -38,8 +37,6 @@ class Project extends Public_Controller {
 	{		        
         $data = $this->includes;
         $this->set_title( 'project' );
-
-get_all_active_news
 
         // set content data
         $content_data = array(
