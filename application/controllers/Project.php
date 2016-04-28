@@ -15,8 +15,6 @@ class Project extends Public_Controller {
         $this->load->model('project_leaders_model');
         $this->load->model('project_rewards_model');
 
-        // load the language file
-        //$this->lang->load('welcome');
     }
 
 
@@ -49,7 +47,6 @@ class Project extends Public_Controller {
         $project_data['project_rewards'] = $this->project_rewards_model->get_active_rewards($project_data['project_id']);
         $project_data['goal_achievement'] = $this->projects_model->goal_achievement($project_data['project_id']);
         $project_data['backers'] = $this->projects_model->get_backers($project_data['project_id']);
-
 
         // set content data
         $content_data = array(
