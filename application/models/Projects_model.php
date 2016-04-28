@@ -30,7 +30,7 @@ class Projects_model extends CI_Model {
         $this->db->where('is_active', 1);        
         $this->db->order_by('end_date', 'DESC');       
         $query = $this->db->get($this->_db); 
-        $return_data = $query->row_array();
+        $return_data = $query->result_array();
         return $return_data;
     }
 
@@ -59,6 +59,7 @@ class Projects_model extends CI_Model {
         $this->db->where('stub', $stub);        
         $query = $this->db->get($this->_db); 
         $return_data = $query->row_array();
+        $return_data['seconds_remaining'] = $this->seconds_remaining($return_data['end_date']);
         return $return_data;
     }
 
@@ -69,7 +70,15 @@ class Projects_model extends CI_Model {
      */
     function get_backers($project_id)
     {
-       
+        $this->db->select('id,username,first_name,last_name,email,UNIX_TIMESTAMP(create_date) AS backer_timestamp,create_date');
+        $this->db->where('project_rewards.project_id', $project_id);
+        $this->db->join('users', 'users.id = project_rewards_join_backers.user_id');        
+        $this->db->join('project_rewards', 'project_rewards.project_reward_id = project_rewards_join_backers.reward_id');        
+        $this->db->order_by('', 'DESC');     
+        $query = $this->db->get('project_rewards_join_backers'); 
+        $return_data = $query->result_array();
+        return $return_data;
+
     }
 
     /**
@@ -86,6 +95,36 @@ class Projects_model extends CI_Model {
         $this->db->join('project_rewards', 'project_rewards.project_reward_id = project_rewards_join_backers.reward_id');        
         $query = $this->db->get('project_rewards_join_backers'); 
         return $query->row()->total;
+    }
+
+     /**
+     * Goal Achievement
+     *
+     * @return int
+     */
+    function goal_achievement($project_id)
+    {
+
+        $this->db->select('sum(reward_cost) AS total');
+        $this->db->where('projects.project_id', $project_id);
+        $this->db->join('transactions', 'transactions.transaction_id = transaction_items.transaction_id');        
+        $this->db->join('projects', 'projects.project_id = transaction_items.project_id');        
+        $query = $this->db->get('transaction_items'); 
+
+        $project = $this->get_project($project_id);
+
+        $goal_results = array();
+        $goal_results['achievement_percentage'] = (($query->row()->total/$project['goal'])*100);
+        $goal_results['achievement_dollars'] = $query->row()->total;
+
+        return $goal_results;
+    }
+
+    function seconds_remaining($end_date)
+    {
+        $end_date_timestamp = strtotime($end_date);
+        $current_timestamp = now();
+        return $current_timestamp - $end_date_timestamp;
     }
 
 #

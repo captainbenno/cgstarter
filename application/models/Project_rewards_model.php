@@ -32,7 +32,7 @@ class Project_rewards_model extends CI_Model {
         $this->db->where('project_id', $project_id);        
         $this->db->order_by('price', 'DESC');       
         $query = $this->db->get($this->_db); 
-        $return_data = $query->row_array();
+        $return_data = $query->result_array();
         return $return_data;
     }
 

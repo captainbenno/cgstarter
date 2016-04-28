@@ -11,7 +11,10 @@ class Project extends Public_Controller {
 
 	 	// load the projects model
         $this->load->model('projects_model');
-        $this->load->model('projects_news');
+        $this->load->model('project_news_model');
+        $this->load->model('project_leaders_model');
+        $this->load->model('project_rewards_model');
+
         // load the language file
         //$this->lang->load('welcome');
     }
@@ -39,12 +42,20 @@ class Project extends Public_Controller {
         $data = $this->includes;
         $this->set_title( 'project' );
 
-get_all_active_news
+        $project_data = $this->projects_model->get_project_by_stub($stub);
+        $project_data['project_leaders'] = $this->project_leaders_model->get_project_leaders($project_data['project_id']);
+        $project_data['project_news'] = $this->project_news_model->get_all_active_news($project_data['project_id']);
+        $project_data['backers_total'] = $this->projects_model->count_backers($project_data['project_id']);
+        $project_data['project_rewards'] = $this->project_rewards_model->get_active_rewards($project_data['project_id']);
+        $project_data['goal_achievement'] = $this->projects_model->goal_achievement($project_data['project_id']);
+        $project_data['backers'] = $this->projects_model->get_backers($project_data['project_id']);
+
 
         // set content data
         $content_data = array(
-            'cancel_url'        => base_url(),
-            'project'              => $this->projects_model->get_project_by_stub($stub),
+            'page_title' => 'Project: '.$project_data['title'],
+            'cancel_url' => base_url(),
+            'project'    => $project_data,
 
         );
         // load views

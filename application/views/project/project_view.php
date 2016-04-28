@@ -1,4 +1,9 @@
-<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
+<?php defined('BASEPATH') OR exit('No direct script access allowed');
+
+    $this->load->helper('date');
+
+?>
+
             <xmp>
             <?php  print_r($project)?>
             </xmp>
@@ -23,8 +28,8 @@
             <div class="col-md-5">
                 <h3>Project Goal</h3>
                 <div class="progress">
-                    <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-                        <span class="sr-only">40% Complete (success)</span>
+                    <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="<?php echo  $project['goal_achievement']['achievement_percentage']?>" aria-valuemin="0" aria-valuemax="100" style="width: <?php echo  $project['goal_achievement']['achievement_percentage']?>%">
+                        <span class="sr-only"><?php echo  $project['goal_achievement']['achievement_percentage']?>% Complete (success)</span>
                     </div>
                 </div>
             </div>
@@ -63,52 +68,44 @@
                             <?php echo $project['description'] ?>
                         </div>
                         <div role="tabpanel" class="tab-pane" id="updates">
-                            <div class="project-update">
-                                <h4>Looks good!</h4>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec massa ut justo accumsan malesuada ut pharetra sapien. Nullam ac nisi vel augue ultrices venenatis sed sed felis. Quisque velit tortor, suscipit et auctor tempus, pretium eu velit. Vestibulum vitae ligula sapien. Donec et felis lorem. Vestibulum non feugiat risus.
-                                </p>
-                                <h6>posted: Benjamin Dry , 12th April 2016</h6>
-                            </div>
-                            <hr />
-                            <div class="project-update">
-                                <h4>Looks good!</h4>
-                                <p>
-                                    Sed malesuada nisl vel lorem rhoncus feugiat. Proin pellentesque velit nec metus tincidunt quis egestas tortor venenatis. Phasellus mattis sapien suscipit massa suscipit placerat. Vestibulum semper laoreet tempus. Curabitur ac sagittis urna. Sed rhoncus massa vel lorem lobortis sit amet adipiscing nunc aliquet. 
-                                </p>
-                                <h6>posted: Benjamin Dry , 12th April 2016</h6>
-                            </div>
-                            <hr />
-                            <div class="project-update">
-                                <h4>Looks good!</h4>
-                                <p>
-                                    Vestibulum semper laoreet tempus. Curabitur ac sagittis urna. Sed rhoncus massa vel lorem lobortis sit amet adipiscing nunc aliquet. 
-                                </p>
-                                <h6>posted: Benjamin Dry , 12th April 2016</h6>
-                            </div>
-                            <hr />
+                            <?php 
+                                foreach ($project['project_news'] as $project_news) { ?>
+                                    <div class="project-update">
+                                        <h4><?php echo  $project_news['title']?></h4>
+                                        <p>
+                                            <?php echo  $project_news['description']?>
+                                        </p>
+                                        <h6>posted: <?php echo  $project_news['first_name']?> <?php echo  $project_news['last_name']?> ,  <?php echo date( 'd-m-Y H:i', strtotime( $project_news['create_date']) ); ?></h6>
+                                    </div>
+                                    <hr />
+                            <?php 
+                                }
+                            ?>
                         </div>
                         <div role="tabpanel" class="tab-pane" id="backers">
                             <ul>
-                                <li>
-                                    <img src="http://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?s=60" /> Peter Syphilis - Australia <br /><em>about 3 minutes ago.</em>
-                                </li>
-                                <li>
-                                    <img src="http://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?s=60" /> Peter Syphilis - Australia <br /><em>about 3 minutes ago.</em>
-                                </li>
-                                <li>
-                                    <img src="http://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?s=60" /> Peter Syphilis - Australia <br /><em>about 3 minutes ago.</em>
-                                </li>
-                                <li>
-                                    <img src="http://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?s=60" /> Peter Syphilis - Australia <br /><em>about 3 minutes ago.</em>
-                                </li>
-                                <li>
-                                    <img src="http://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?s=60" /> Peter Syphilis - Australia <br /><em>about 3 minutes ago.</em>
-                                </li>
-                                <li>
-                                    <img src="http://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?s=60" /> Peter Syphilis - Australia <br /><em>about 3 minutes ago.</em>
-                                </li>
+                                <?php 
+                                    foreach ($project['backers'] as $backer) { ?>
+                                        <li>
+                                            <img src="http://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?s=60" /> <?php echo  $backer['first_name']?> <?php echo  $backer['last_name']?> - Australia <br />
+                                            
+                                            <em><?php
 
+                                            $seconds_remaining = now() - $backer['backer_timestamp'];
+
+                                            if($seconds_remaining<60){
+                                                echo "&gt; 1 minute to ago";
+                                            } else if($seconds_remaining<3600){
+                                                echo floor($seconds_remaining/60)."minutes to go";
+                                            } else if($seconds_remaining<86400){
+                                                echo floor($seconds_remaining/60/60)." hours to go";
+                                            } else if($seconds_remaining>=86400){
+                                                echo "".floor($seconds_remaining/60/60/24)." days to go";
+                                            } ?></em>
+                                        </li>
+                                <?php 
+                                    }
+                                ?>
                             </ul>
 
                         </div>
@@ -161,10 +158,16 @@
                     <hr />
                     <div id="project-leader">
                         <h4 class="klavika-regular">Project Leader</h4>
-                        <h6>Mark Snoswell</h6>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec massa ut justo accumsan malesuada ut pharetra sapien. Nullam ac nisi vel augue ultrices venenatis sed sed felis. Quisque velit tortor, suscipit et auctor tempus, pretium eu velit. Vestibulum vitae ligula sapien. Donec et felis lorem. Vestibulum non feugiat risus. Sed malesuada nisl vel lorem rhoncus feugiat. Proin pellentesque velit nec metus tincidunt quis egestas tortor venenatis. Phasellus mattis sapien suscipit massa suscipit placerat. Vestibulum semper laoreet tempus. Curabitur ac sagittis urna. Sed rhoncus massa vel lorem lobortis sit amet adipiscing nunc aliquet. 
-                        </p>
+                        <?php 
+                            foreach ($project['project_leaders'] as $project_leader) { ?>
+                                <h6><?php echo  $project_leader['first_name']?> <?php echo  $project_leader['last_name']?></h6>
+                                <p>
+                                    <?php echo  $project_leader['leader_profile']?>
+                                </p>                            
+                        <?php 
+                            }
+                        ?>
+
                     </div>
                     <hr />
 
@@ -175,52 +178,51 @@
             <div class="col-md-3" id="back-project">
                 <ul id="project-stats">
                     <li id="stats-backer">
-                        <strong>480</strong>
+                        <strong><?php echo $project['backers_total'] ?></strong>
                         <em>Backers</em>
                         <hr />
                     </li>
                     <li id="stats-total">
-                        <strong>22,000</strong>
-                        <em>Pledged of $50,000 goal</em>
+                        <strong><?php echo  $project['goal_achievement']['achievement_dollars']?></strong>
+                        <em>Pledged of $<?php echo  $project['goal']?> goal</em>
                         <hr />
                     </li>
                     <li id="stats-days">
-                        <strong>20</strong>
-                        <em>Days to go</em>
+                        <?php
+
+                            $seconds_remaining = 30;//$project['seconds_remaining'];
+
+                            if($seconds_remaining<60){
+                                echo "<strong>&gt; 1</strong><em> minute to go</em>";
+                            } else if($seconds_remaining<3600){
+                                echo "<strong>".floor($seconds_remaining/60)."</strong><em> minutes to go</em>";
+                            } else if($seconds_remaining<86400){
+                                echo "<strong>".floor($seconds_remaining/60/60)."</strong><em> hours to go</em>";
+                            } else if($seconds_remaining>=86400){
+                                echo "<strong>".floor($seconds_remaining/60/60/24)."</strong><em> days to go</em>";
+                            }
+                        ?>
                         <hr />
                     </li>
                 </ul>
 
                 <h3>Pledges & Your Rewards</h3>
                 <ul id="project-rewards">
-                    <li>
-                        <h4>Reward Title</h4>
-                        <em>$70</em>
-                        <img src="/themes/default/img/demobook.png" />
-                        <p>Malesuada ut pharetra sapien. Nullam ac nisi vel augue ultrices venenatis sed sed felis. Quisque velit tortor, suscipit et auctor tempus, pretium eu </p>
-                        <button>
-                            PLEDGE
-                        </button>
-                    </li>
-                    <li>
-                        <h4>Reward Title</h4>
-                        <em>$70</em>
-                        <img src="/themes/default/img/demobook.png" />
-                        <p>Malesuada ut pharetra sapien. Nullam ac nisi vel augue ultrices venenatis sed sed felis. Quisque velit tortor, suscipit et auctor tempus, pretium eu </p>
-                        <button>
-                            PLEDGE
-                        </button>
-                    </li>
-                    <li>
-                        <h4>Reward Title</h4>
-                        <em>$70</em>
-                        <img src="/themes/default/img/demobook.png" />
-                        <p>Malesuada ut pharetra sapien. Nullam ac nisi vel augue ultrices venenatis sed sed felis. Quisque velit tortor, suscipit et auctor tempus, pretium eu </p>
-                        <button>
-                            PLEDGE
-                        </button>
-                    </li>
-                   
+                    <?php 
+                        foreach ($project['project_rewards'] as $project_reward) { ?>
+                            <li>
+                                <h4><?php echo  $project_reward['title']?></h4>
+                                <em>$<?php echo  $project_reward['price']?></em>
+                                <img src="<?php echo  $project_reward['teaser_image']?>" />
+                                <p><?php echo  $project_reward['teaser_text']?></p>
+                                <button>
+                                    PLEDGE
+                                </button>
+                            </li>
+                    <?php 
+                        }
+                    ?>
+
                 </ul>
             </div>
             <div class="col-md-2"></div>
