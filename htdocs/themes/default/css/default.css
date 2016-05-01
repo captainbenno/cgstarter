@@ -632,7 +632,7 @@ footer{
                 color: #4f4f4f;
             }
 
-            #project-rewards button{
+            #project-rewards a.btn{
                 background-color: #9cb80f;
                 font-size:24px;
                 font-family: 'Open Sans', sans-serif;
@@ -669,3 +669,24 @@ footer{
     .open > .dropdown-toggle.btn-success{
         background-color: #67790a;
     }
+
+.table-responsive{
+    background-color: #ffffff;
+}
+
+.mini-cart{
+    background-color: #9cb80f;
+    color: #ffffff !important;
+}
+.mini-cart:hover{
+    background-color: #67790a !important;
+    color: #ffffff !important;
+}
+
+.checkout{
+    margin-bottom: 20px;
+}
+
+.del-btn{
+    color: #9cb80f;
+}

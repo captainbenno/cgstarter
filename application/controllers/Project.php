@@ -23,12 +23,7 @@ class Project extends Public_Controller {
      */
 	function index()
 	{		
-		var_dump($this->projects_model->count_backers(1));
-		
-
-
-		echo "hello world";
-
+        
 	}
 
 

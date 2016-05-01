@@ -245,16 +245,20 @@ class CI_Cart {
 		// Internally, we need to treat identical submissions, but with different options, as a unique product.
 		// Our solution is to convert the options array to a string and MD5 it along with the product ID.
 		// This becomes the unique "row ID"
+
+		//BD 28th April 2016 - removed uniqueness, changed index to item id for reasons of KISS.
 		if (isset($items['options']) && count($items['options']) > 0)
 		{
-			$rowid = md5($items['id'].serialize($items['options']));
+			//$rowid = md5($items['id'].serialize($items['options']));
+			$rowid = $items['id'];
 		}
 		else
 		{
 			// No options were submitted so we simply MD5 the product ID.
 			// Technically, we don't need to MD5 the ID in this case, but it makes
 			// sense to standardize the format of array indexes for both conditions
-			$rowid = md5($items['id']);
+			//$rowid = md5($items['id']);
+			$rowid = $items['id'];
 		}
 
 		// --------------------------------------------------------------------

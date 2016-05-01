@@ -57,4 +57,6 @@ $route['login']                = 'user/login';
 $route['logout']               = 'user/logout';
 $route['admin']                = 'admin/dashboard';
 $route['project/(:any)'] = "project/project_by_stub/$1";
-$route['cart/(:any)'] = "cart/index/$1";
+$route['cart/(:num)'] = "cart/index/$1";
+$route['cart/remove/(:num)'] = "cart/remove_product/$1";
+$route['cart']['post'] = "cart/refresh_qty";

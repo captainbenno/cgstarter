@@ -11,42 +11,65 @@ class Cart extends Public_Controller {
 
 	 	// load the projects model
         $this->load->model('cart_model');
-        $this->load->library('cart');
-        // load the language file
-        //$this->lang->load('welcome');
+
+        //$this->cart->destroy();
+
     }
 
 
     /**
 	 * Default
      */
-	function index($cart_data = false)
+	function index($project_reward_id = false , $cart_alert = false)
 	{	
+        $add_cart_alert = 0;
+        $remove_cart_alert = 0;
+        $update_cart_alert = 0;
+ 
         //add to cart
-        if(is_numeric($cart_data)){
-            $project_reward_id = $cart_data;
+        if(is_numeric($project_reward_id)){
             $this->cart_model->add_to_cart($project_reward_id);
+            $add_cart_alert = 1;
         }
 
-        //del from cart
-
-        var_dump(preg_match('/^[0-9A-F]{8}-[0-9A-F]{4}-4[0-9A-F]{3}-[89AB][0-9A-F]{3}-[0-9A-F]{12}$/', $cart_data));
-
-        if(preg_match('/^[0-9A-F]{8}-[0-9A-F]{4}-4[0-9A-F]{3}-[89AB][0-9A-F]{3}-[0-9A-F]{12}$/', $cart_data)){
-            echo "UUID";
+        if($cart_alert!=false){
+            if($cart_alert == 'remove_cart_alert'){
+                $remove_cart_alert = 1;
+            }
+            if($cart_alert == 'update_cart_alert'){
+                $update_cart_alert = 1;
+            }
         }
 
-        if(strlen($cart_data) == 32){ //possibly a UUID 
-            $project_reward_id = $cart_data;
-            $this->cart_model->add_to_cart($project_reward_id);
-        }
+        $content_data = array(
+            'page_title' => 'Cart',
+            'cancel_url' => base_url(),
+            'cart'    => $this->cart_model->contents(),
+            'add_cart_alert' => $add_cart_alert,
+            'update_cart_alert' => $update_cart_alert,
+            'remove_cart_alert' => $remove_cart_alert
+        );
 
-        echo "<xmp>";
-        print_r($this->cart->contents());
-        echo "</xmp>";
-
+        $data['content'] = $this->load->view('cart/index', $content_data, TRUE);
+        $this->load->view($this->template, $data);
 	}
 
+    function refresh_qty()
+    {
+        $qty_data = $this->input->post();
+        $this->cart_model->update_cart($qty_data);
+        $this->index('','update_cart_alert');
+
+    }
+
+
+    function remove_product($project_reward_id = false)
+    {   
+        if(is_numeric($project_reward_id)){
+            $this->cart_model->remove_from_cart($project_reward_id);
+        }
+        $this->index('','remove_cart_alert');
+    }
 
 	 /**
 	 * Default

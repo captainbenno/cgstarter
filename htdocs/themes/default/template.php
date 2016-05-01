@@ -2,6 +2,7 @@
 /**
  * Default Public Template
  */
+
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=3.2.4">
     <link rel="icon" type="image/x-icon" href="/favicon.ico?v=3.2.4">
-    <title><?php echo $this->settings->site_name; ?> - <?php echo $page_title; ?></title>
+    <title><?php echo $this->settings->site_namesite_namesite_name; ?> - <?php echo $page_title; ?></title>
     <meta name="keywords" content="these, are, keywords">
     <meta name="description" content="This is the site description.">
 
@@ -31,6 +32,12 @@
             <?php endif; ?>
         <?php endforeach; ?>
     <?php endif; ?>
+
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js?v=3.2.4"></script>
+                                                
+    <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js?v=3.2.4"></script>
+                                     
+    <script type="text/javascript" src="/themes/default/js/jquery.jcarousel-core.min.js"></script>
 
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -72,6 +79,15 @@
                         <li class=""><a href="<?php echo base_url('/user/register'); ?>">Register</a></li>
                     <?php endif; ?>                    
                 </ul>
+                <?php if($this->cart->total() > 0){ ?>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="<?php echo (uri_string() == 'login') ? 'active' : ''; ?>">
+                            <a class="mini-cart" role="buton" href="<?php echo base_url('/cart/'); ?>">
+                                <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+                             $<?php echo $this->cart->total(); ?></a>
+                        </li>
+                    </ul>
+                <?php } ?>
             </div>
         </div>
     </nav>
@@ -164,11 +180,6 @@
     </footer>
     <!-- end of footer -->
                                       
-<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js?v=3.2.4"></script>
-                                                
-<script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js?v=3.2.4"></script>
-                                     
-<script type="text/javascript" src="/themes/default/js/jquery.jcarousel-core.min.js"></script>
 
 <script type="text/javascript">
 /**

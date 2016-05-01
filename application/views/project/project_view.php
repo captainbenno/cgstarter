@@ -4,9 +4,6 @@
 
 ?>
 
-            <xmp>
-            <?php  print_r($project)?>
-            </xmp>
 <!-- beginning of hero -->
     <div id="project-hero" class="container-fluid" style="background-image:url(/themes/default/img/expose-hero.jpg);">
         <div class="row" id="project-main-logo">
@@ -215,9 +212,9 @@
                                 <em>$<?php echo  $project_reward['price']?></em>
                                 <img src="<?php echo  $project_reward['teaser_image']?>" />
                                 <p><?php echo  $project_reward['teaser_text']?></p>
-                                <button>
+                                <a href="/cart/<?php echo  $project_reward['project_reward_id']?>" class="btn" role="button">
                                     PLEDGE
-                                </button>
+                                </a>
                             </li>
                     <?php 
                         }
