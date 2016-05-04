@@ -14,7 +14,7 @@
 <?php if($this->cart->total_items()>0){
 
     $attributes = array('id' => 'cart-form');
-    echo form_open('/cart', $attributes); ?>
+    echo form_open('', array('id'=>'order-form','role'=>'form')); ?>
 
     <div class="container-fluid checkout">
         <div class="row">
@@ -22,9 +22,12 @@
             <div class="col-md-8">
                 <h1>Checkout</h1>
 
+                <div id="add-alert" class="alert alert-danger hide" role="alert">
+                    Error - One or more fields below need to be filled in before we can continue. Please make sure that ALL the fields marked with '*'' are completed, these are mandatory for us to be able to complete your order.
+                </div>
+
                 <p>Fill in all the details below and then select your payment method.</p>
 
-                <?php echo form_open('', array('role'=>'form')); ?>
                 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                     <div class="panel panel-default" id="details-section">
                         <div class="panel-heading" role="tab" id="headingOne">
@@ -243,7 +246,6 @@
                     </div>
                 </div>
 
-                <?php echo form_close(); ?>
             </div>
             <div class="col-md-2"></div>
         </div>            
@@ -270,12 +272,8 @@
                 }
             });
 
-            $("#details-section input").change(function() {
-                validate_form();
-            });
-
-            $("#delivery-address-section input").change(function() {
-                validate_form();
+            $(".form-validate").change(function() {
+                validate_item($(this));
             });
 
             $("#copy_billing_address").change(function() {
@@ -285,38 +283,62 @@
             build_delivery_address();
 
             $(".checkout-btn").click(function(){
-                validate_form();
+                if(validate_form()){
+                    post_order();
+                }
             })
+
+
 
         });
 
-        function validate_form(){
-            var error = 0;
+        function post_order(){
 
-            $("#details-section input.form-validate").each(function(){
-                if($(this).val().length < 1){
-                    $(this).parent().addClass("has-error");
-                    error = 1;
-                }
-            })
+            $form_data = $("#order-form").serializeArray();
 
-            $("#billing-address-section input.form-validate").each(function(){
-                console.log($(this).val());
-                if($(this).val().length < 1){
-                    $(this).parent().addClass("has-error");
-                    error = 1;
-                }
-            })
-
-            $("#delivery-address-section input.form-validate").each(function(){
-                console.log($(this).val());
-                if($(this).val().length < 1){
-                    $(this).parent().addClass("has-error");
-                    error = 1;
-                }
-            })
+            var jqxhr = $.ajax({
+                    url: "/checkout/placeorder",
+                    data: $form_data,
+                    dataType: 'json'
+                })
+                .done(function() {
+                    alert( "success" );
+                })
+                .fail(function() {
+                    alert( "error" );
+                })
+                .always(function() {
+                    alert( "complete" );
+                });
         }
 
+
+        // Worlds simplest form validation....
+        function validate_form(){
+            error = 0;
+            $(".form-validate").each(function(){
+                validate_item($(this));
+            })            
+            $("#add-alert").addClass('hide');
+            if(error==1){
+                $("#add-alert").removeClass('hide');
+                return false;
+            }
+            return true;
+        }
+
+        function validate_item(obj){            
+            if($(obj).val().length < 1){
+                $(obj).parent().addClass("has-error");
+                error = 1;
+                return false;
+            } else {
+                $(obj).parent().removeClass("has-error");
+                return true;
+            }
+        }
+
+        // Populate Delivery Address from Billing Address
         function build_delivery_address(){
             if($("#copy_billing_address").is(":checked")) {
                 $("input[name='delivery_street_address1']").val($("input[name='billing_street_address1']").val());

@@ -101,6 +101,34 @@ class Users_model extends CI_Model {
         return FALSE;
     }
 
+    /**
+     * Get specific user
+     *
+     * @param  int $id
+     * @return array|boolean
+     */
+    function get_user_by_email($email = NULL)
+    {
+        if ($email)
+        {
+            $sql = "
+                SELECT *
+                FROM {$this->_db}
+                WHERE email = " . $this->db->escape($email) . "
+                    AND deleted = '0'
+            ";
+
+            $query = $this->db->query($sql);
+
+            if ($query->num_rows())
+            {
+                return $query->row_array();
+            }
+        }
+
+        return FALSE;
+    }
+
 
     /**
      * Add a new user
