@@ -25,6 +25,12 @@
                 <div id="add-alert" class="alert alert-danger hide" role="alert">
                     Error - One or more fields below need to be filled in before we can continue. Please make sure that ALL the fields marked with '*'' are completed, these are mandatory for us to be able to complete your order.
                 </div>
+                <div id="order-error-alert" class="alert alert-danger hide" role="alert">
+                    Error - We have had an issue adding your order into our "silicon chips n' such", sorry about that. Our clever techs have been notified and will email you once we have cleared the pipes for you to try again.
+                </div>
+                <div id="gateway-error-alert" class="alert alert-danger hide" role="alert">
+                    Error - The payment gateway has decided to have a moment to rest, sorry about this, it's likely it will wake up soon, maybe go and have a cup of tea and try again in about 5 minutes.
+                </div>
 
                 <p>Fill in all the details below and then select your payment method.</p>
 
@@ -238,9 +244,9 @@
                                     </table> 
                                 </div>     
 
-                               <a id="paypal-checkout-btn" class="checkout-btn" href="#"><img src="https://www.paypal-marketing.com/paypal/html/partner/na/portal-v2/img/hero_express_checkout_300x74.png" /></a>
+                               <a id="eway-checkout-btn" class="checkout-btn" href="#"><img src="/themes/default/img/checkout_eway.png" /></a>
                                 &nbsp;
-                               <a id="eway-checkout-btn" class="checkout-btn" href="#"><img src="https://www.paypal-marketing.com/paypal/html/partner/na/portal-v2/img/hero_express_checkout_300x74.png" /></a>
+                               <a id="paypal-checkout-btn" class="checkout-btn" href="#"><img src="https://www.paypal-marketing.com/paypal/html/partner/na/portal-v2/img/hero_express_checkout_300x74.png" /></a>
                             </div>
                         </div>
                     </div>
@@ -250,10 +256,48 @@
             <div class="col-md-2"></div>
         </div>            
     </div>
+    <input id="payment_type" type="hidden" name="payment_type" value="" />
     <?php echo form_close(); ?>
     <!-- end of pledge row -->
 
+
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" id="paypal_form">
+      <input type="hidden" name="cmd" value="_cart">
+      <input type="hidden" name="business" value="seller@designerfotos.com">
+      <input type="hidden" name="item_name" value="CGStarter Order">
+      <input type="hidden" name="item_number" value="1">
+      <input type="hidden" name="amount" value="<?php echo $this->cart->total(); ?>">
+      <input type="hidden" name="first_name" value="">
+      <input type="hidden" name="last_name" value="">
+      <input type="hidden" name="address1" value="">
+      <input type="hidden" name="address2" value="">
+      <input type="hidden" name="city" value="">
+      <input type="hidden" name="state" value="">
+      <input type="hidden" name="zip" value="">
+      <input type="hidden" name="notify_url" value="">
+      <input type="hidden" name="invoice" value="">
+      <input type="hidden" name="country" value="">
+      <input type="hidden" name="email" value="">
+    </form>
+
+    <!-- Modal -->
+    <div class="modal fade" id="pleaseWaitDialog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            Loading, please wait...
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="https://secure.ewaypayments.com/scripts/eCrypt.js"></script>
+
     <script type="text/javascript">
+
+        var access_code = null;
+
         $(document).ready(function() {
             $("#billing-address-section input").change(function() {
                 if($("#copy_billing_address").is(":checked")) {
@@ -282,17 +326,53 @@
             
             build_delivery_address();
 
-            $(".checkout-btn").click(function(){
+            $("#eway-checkout-btn").click(function(){
                 if(validate_form()){
-                    post_order();
+                    eway_post_order();
+                }
+            })
+            
+            $("#paypal-checkout-btn").click(function(){
+                if(validate_form()){
+                    paypal_post_order();
                 }
             })
 
-
-
         });
 
-        function post_order(){
+        function eway_post_order(){
+            $('#pleaseWaitDialog').modal();
+            $('#payment_type').val('eway');
+            $form_data = $("#order-form").serializeArray();
+
+            var jqxhr = $.ajax({
+                    url: "/checkout/placeorder",
+                    data: $form_data,
+                    dataType: 'json'
+                })
+                .done(function(data) {
+                    payment_url = data.payment_url;
+                    success = data.success;
+                    order_ref = data.order_ref;
+                    access_code = data.access_code;
+                    if(payment_url==null){
+                        $('#pleaseWaitDialog').modal('hide');
+                        $("#gateway-error-alert").removeClass('hide');
+                    } else {
+                        launch_eway_form(payment_url,order_ref,access_code);
+                    }
+                })
+                .fail(function() {
+                    $("#order-error-alert").removeClass('hide');
+                })
+                .always(function() {
+                   // alert( "complete" );
+                });
+        }
+
+        function paypal_post_order(){
+            $('#pleaseWaitDialog').modal();
+            $('#payment_type').val('paypal');
 
             $form_data = $("#order-form").serializeArray();
 
@@ -301,17 +381,62 @@
                     data: $form_data,
                     dataType: 'json'
                 })
-                .done(function() {
-                    alert( "success" );
+                .done(function(data) {
+                    success = data.success;
+                    order_ref = data.order_ref;
+                    if(success==false){
+                        $('#pleaseWaitDialog').modal('hide');
+                        $("#gateway-error-alert").removeClass('hide');
+                    } else {
+                        post_paypal_form(order_ref);
+                    }
                 })
                 .fail(function() {
-                    alert( "error" );
+                    $("#order-error-alert").removeClass('hide');
                 })
                 .always(function() {
-                    alert( "complete" );
+                   // alert( "complete" );
                 });
         }
 
+        function post_paypal_form(order_ref){
+            // fill in paypal form and post
+
+            $("#paypal_form input[name='first_name']").val($("#order-form input[name='first_name']").val());
+            $("#paypal_form input[name='last_name']").val($("#order-form input[name='last_name']").val());
+            $("#paypal_form input[name='address1']").val($("#order-form input[name='delivery_street_address1']").val());
+            $("#paypal_form input[name='address2']").val($("#order-form input[name='delivery_street_address2']").val());
+            $("#paypal_form input[name='city']").val($("#order-form input[name='delivery_suburb']").val());
+            $("#paypal_form input[name='state']").val($("#order-form input[name='delivery_state']").val());
+            $("#paypal_form input[name='zip']").val($("#order-form input[name='delivery_postcode']").val());
+            $("#paypal_form input[name='email']").val($("#order-form input[name='email']").val());
+            $("#paypal_form input[name='country']").val($("#order-form input[name='delivery_country']").val());
+            $("#paypal_form input[name='invoice']").val(order_ref);
+            $("#paypal_form").submit();
+        }
+
+        function eway_resultCallback(result, transactionID, errors) {
+            if (result == "Complete") {
+                window.location.href = "/checkout/complete?AccessCode="+access_code;
+            } else if (result == "Error") {
+                alert("There was a problem completing the payment: " + errors);
+            }
+        }
+
+        function launch_eway_form(payment_url,order_ref,access_code){
+
+            var ewayConfig = {
+              sharedPaymentUrl: payment_url
+            };
+            eCrypt.showModalPayment(ewayConfig, eway_resultCallback);
+            setTimeout( removeLoaderModal, 3000 );
+            $("body").css("overflow","visible");
+        }
+
+        function removeLoaderModal()
+        {
+            $('#pleaseWaitDialog').modal('hide');   
+        }
 
         // Worlds simplest form validation....
         function validate_form(){
@@ -353,6 +478,21 @@
             }
         }
 
+
+        var myApp;
+        myApp = myApp || (function () {
+            var pleaseWaitDiv = $('#pleaseWaitDialog');
+            return {
+                showPleaseWait: function() {
+                    console.log('hoe');
+                    pleaseWaitDiv.modal();
+                },
+                hidePleaseWait: function () {
+                    pleaseWaitDiv.modal('hide');
+                },
+
+            };
+        })();
     </script>
 <?php } else { ?>
     <div class="container-fluid checkout">

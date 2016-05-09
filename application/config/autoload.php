@@ -104,7 +104,7 @@ $autoload['helper'] = array('core', 'url', 'form', 'language', 'date','MY_countr
 |
 */
 
-$autoload['config'] = array('core', 'timezones');
+$autoload['config'] = array('core', 'timezones','cgstarter');
 
 
 /*

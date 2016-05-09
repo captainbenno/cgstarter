@@ -61,3 +61,4 @@ $route['cart/(:num)']          = "cart/index/$1";
 $route['cart/remove/(:num)']   = "cart/remove_product/$1";
 $route['cart']['post']         = "cart/refresh_qty";
 $route['checkout/guest']       = "checkout/index";
+$route['checkout/complete/(:any)']   = "checkout/complete/$1";

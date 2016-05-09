@@ -690,3 +690,7 @@ footer{
 .del-btn{
     color: #9cb80f;
 }
+
+.modal{
+    z-index:2000;
+}
