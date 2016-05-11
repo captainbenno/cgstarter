@@ -27,7 +27,7 @@
             <div class="col-md-2"></div>
             <div class="col-md-8">
                 <p class="lead">
-                   HELLO Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                   HELLO HELLO Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 </p>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie elit enim, vel vestibulum neque pellentesque eu. Ut id fermentum augue. Proin efficitur at dolor sed feugiat. Pellentesque vitae pretium justo. Nulla porttitor augue et auctor consectetur. Proin lacinia sem non quam faucibus, at malesuada ante volutpat. Vestibulum quam est, consectetur quis laoreet id, consectetur at odio.
