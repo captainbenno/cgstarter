@@ -22,6 +22,9 @@
                 <?php echo form_open('', array('class'=>'form-signin')); ?>
                     <?php echo form_input(array('name'=>'username', 'id'=>'username', 'class'=>'form-control', 'placeholder'=>lang('users input username_email'), 'maxlength'=>256)); ?>
                     <?php echo form_password(array('name'=>'password', 'id'=>'password', 'class'=>'form-control', 'placeholder'=>lang('users input password'), 'maxlength'=>72, 'autocomplete'=>'off')); ?>
+
+<?php echo $this->session->userdata('redirect'); ?>
+
                     <?php if( $this->session->userdata('redirect')=='/checkout'){ ?> 
                         <button class="btn cart-btn btn-success btn-lg">Checkout with Account <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></button>
                     <? } else { ?>
