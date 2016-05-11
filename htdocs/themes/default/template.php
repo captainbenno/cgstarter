@@ -99,7 +99,7 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li class="active"><a href="/login">Home</a></li>
                     <li class=""><a href="/about">About</a></li>
-                    <li class=""><a href="/projects/expose">Projects</a></li>
+                    <li class=""><a href="/project/expose">Projects</a></li>
                     <li class=""><a href="/contact">Contact</a></li>
                 </ul>
             </div>
@@ -158,7 +158,7 @@
                             <a href="/about">About</a>
                         </li>
                         <li>
-                            <a href="/projects/expose">Projects</a>
+                            <a href="/project/expose">Projects</a>
                         </li>
                         <li>
                             <a href="/contact">Contact</a>
