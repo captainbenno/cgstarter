@@ -97,10 +97,10 @@
             <div id="navbar-main">
                 <a class="navbar-brand" href="/"><span>CG-Starter</span></a>
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="active"><a href="http://cgstarter.com/login">Home</a></li>
-                    <li class=""><a href="http://cgstarter.com/login">About</a></li>
-                    <li class=""><a href="http://cgstarter.com/login">Projects</a></li>
-                    <li class=""><a href="http://cgstarter.com/login">Contact</a></li>
+                    <li class="active"><a href="/login">Home</a></li>
+                    <li class=""><a href="/about">About</a></li>
+                    <li class=""><a href="/projects/expose">Projects</a></li>
+                    <li class=""><a href="/contact">Contact</a></li>
                 </ul>
             </div>
         </div>
@@ -152,16 +152,16 @@
                     <h4>Menu</h4>
                     <ul>
                         <li>
-                            <a href="#">Home</a>
+                            <a href="/">Home</a>
                         </li>
                         <li>
-                            <a href="#">About</a>
+                            <a href="/about">About</a>
                         </li>
                         <li>
-                            <a href="#">Projects</a>
+                            <a href="/projects/expose">Projects</a>
                         </li>
                         <li>
-                            <a href="#">Contact</a>
+                            <a href="/contact">Contact</a>
                         </li>
                     </ul>
                 </div>
