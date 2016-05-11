@@ -88,7 +88,7 @@ $autoload['drivers'] = array();
 |	$autoload['helper'] = array('url', 'file');
 */
 
-$autoload['helper'] = array('core', 'url', 'form', 'language', 'date','MY_countryselect');
+$autoload['helper'] = array('core', 'url', 'form', 'language', 'date','my_countryselect');
 
 
 /*
