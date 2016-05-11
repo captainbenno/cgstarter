@@ -104,7 +104,7 @@ class Checkout extends Public_Controller {
         define("DEBUG", 1);
         // Set to 0 once you're ready to go live
         define("USE_SANDBOX", 1);
-        define("LOG_FILE", "/var/www/html/application/controllers/ipn.log");
+        define("LOG_FILE", "../application/controllers/ipn.log");
         // Read POST data
         // reading posted data directly from $_POST causes serialization
         // issues with array data in POST. Reading raw POST data from input stream instead.
