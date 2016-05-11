@@ -233,3 +233,419 @@ Content-Type: text/html; charset=UTF-8
 
 INVALID
 [2016-05-11 12:58 Europe/London] Invalid IPN: cmd=_notify-validate&mc_gross=500.00&custom=some+custom+data&address_status=confirmed&item_number1=6&item_number2=4&payer_id=FW5W7ZUC3T4KL&tax=0.00&address_street=1234+Rock+Road&payment_date=14%3A55+15+Jan+07+2005+PST&payment_status=Completed&address_zip=12345&mc_shipping=0.00&mc_handling=0.00&first_name=Jason&last_name=Anderson&mc_fee=0.02&address_name=Jason+Anderson&notify_version=1.6&payer_status=verified&business=paypal%40emailaddress.com&address_country=United+States&num_cart_items=2&mc_handling1=0.00&mc_handling2=0.00&address_city=Los+Angeles&verify_sign=AlUbUcinRR5pIo2KwP4xjo9OxxHMAi6.s6AES.4Z6C65yv1Ob2eNqrHm&mc_shipping1=0.00&mc_shipping2=0.00&tax1=0.00&tax2=0.00&txn_id=TESTER&payment_type=instant&last_name%3DBorduin=&payer_email=test%40domain.com&item_name1=Rubber%2Bclog&address_state=CA&payment_fee=0.02&item_name2=Roman+sandal&invoice=123456&quantity=1&quantity1=1&receiver_id=5HRS8SCK9NSJ2&quantity2=1&txn_type=web_accept&mc_gross_1=0.01&mc_currency=USD&mc_gross_2=0.01&payment_gross=0.02&subscr_id=PP-1234&test=test
+[2016-05-11 14:31 Europe/London] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1039
+Content-Type: application/x-www-form-urlencoded
+Expect: 100-continue
+
+ for IPN payload: cmd=_notify-validate&mc_gross=500.00&custom=some+custom+data&address_status=confirmed&item_number1=6&item_number2=4&payer_id=FW5W7ZUC3T4KL&tax=0.00&address_street=1234+Rock+Road&payment_date=14%3A55+15+Jan+07+2005+PST&payment_status=Completed&address_zip=12345&mc_shipping=0.00&mc_handling=0.00&first_name=Jason&last_name=Anderson&mc_fee=0.02&address_name=Jason+Anderson&notify_version=1.6&payer_status=verified&business=paypal%40emailaddress.com&address_country=United+States&num_cart_items=2&mc_handling1=0.00&mc_handling2=0.00&address_city=Los+Angeles&verify_sign=AlUbUcinRR5pIo2KwP4xjo9OxxHMAi6.s6AES.4Z6C65yv1Ob2eNqrHm&mc_shipping1=0.00&mc_shipping2=0.00&tax1=0.00&tax2=0.00&txn_id=TESTER&payment_type=instant&last_name%3DBorduin=&payer_email=test%40domain.com&item_name1=Rubber%2Bclog&address_state=CA&payment_fee=0.02&item_name2=Roman+sandal&invoice=123456&quantity=1&quantity1=1&receiver_id=5HRS8SCK9NSJ2&quantity2=1&txn_type=web_accept&mc_gross_1=0.01&mc_currency=USD&mc_gross_2=0.01&payment_gross=0.02&subscr_id=PP-1234&test=test
+[2016-05-11 14:31 Europe/London] HTTP response of validation request: HTTP/1.1 100 Continue
+
+HTTP/1.1 200 OK
+Date: Wed, 11 May 2016 13:31:13 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=PutycfK2quZ0h20Okb9pQoX7eiYdqL803iMK9-NhTG4jnPzkp1gUiRaEpV_D9w3tazbCOhQuNNI9qb5aPiieAsGqpinAApBnSmk2Mcn_3PfudqVn7jjPg43bC5-uh-DvJtLNq3nWLT8BAkEeB5VC-iT9KUIXUee0zxtr5fGdsDeryFFWX0TkpS8U6qGi2WDCxx0JsXJXYf4EmSVPzWsyTiB25L0VvQAIKO6WsVwDdV_kreN4Hq_9L7E2ZZy3NCkUyvOQ0l8Qz_VFwLYXs2xnXcDTakTf3F__PkaF9njmAk3SpyrS3CCCmwuZKNPfREc33wKutiLvGIBdhiyEyoq7v47b-o5WUUdsgPfnCCh7axJBbp4Xaqc6HQV7NJugrB2yDG5XQq05YZbFSGv8KbyawhFDV6-iOasOCWQka0DriyUNdl5ef0e5mUahfrm; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Sat, 09-May-2026 13:31:14 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Fri, 11-May-2018 13:31:14 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.108.11.1462973473715606; path=/; expires=Fri, 04-May-46 13:31:13 GMT
+Vary: Accept-Encoding,User-Agent
+Connection: close
+HTTP_X_PP_AZ_LOCATOR: sandbox.slc
+Paypal-Debug-Id: c8ee0e67aadb5
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D1880%26app%3Dappdispatcher%26TIME%3D557069143%26HTTP_X_PP_AZ_LOCATOR%3Dsandbox.slc; Expires=Wed, 11 May 2016 14:01:14 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+INVALID
+[2016-05-11 14:31 Europe/London] Invalid IPN: cmd=_notify-validate&mc_gross=500.00&custom=some+custom+data&address_status=confirmed&item_number1=6&item_number2=4&payer_id=FW5W7ZUC3T4KL&tax=0.00&address_street=1234+Rock+Road&payment_date=14%3A55+15+Jan+07+2005+PST&payment_status=Completed&address_zip=12345&mc_shipping=0.00&mc_handling=0.00&first_name=Jason&last_name=Anderson&mc_fee=0.02&address_name=Jason+Anderson&notify_version=1.6&payer_status=verified&business=paypal%40emailaddress.com&address_country=United+States&num_cart_items=2&mc_handling1=0.00&mc_handling2=0.00&address_city=Los+Angeles&verify_sign=AlUbUcinRR5pIo2KwP4xjo9OxxHMAi6.s6AES.4Z6C65yv1Ob2eNqrHm&mc_shipping1=0.00&mc_shipping2=0.00&tax1=0.00&tax2=0.00&txn_id=TESTER&payment_type=instant&last_name%3DBorduin=&payer_email=test%40domain.com&item_name1=Rubber%2Bclog&address_state=CA&payment_fee=0.02&item_name2=Roman+sandal&invoice=123456&quantity=1&quantity1=1&receiver_id=5HRS8SCK9NSJ2&quantity2=1&txn_type=web_accept&mc_gross_1=0.01&mc_currency=USD&mc_gross_2=0.01&payment_gross=0.02&subscr_id=PP-1234&test=test
+[2016-05-11 14:33 Europe/London] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1042
+Content-Type: application/x-www-form-urlencoded
+Expect: 100-continue
+
+ for IPN payload: cmd=_notify-validate&mc_gross=500.00&custom=some+custom+data&address_status=confirmed&item_number1=6&item_number2=4&payer_id=FW5W7ZUC3T4KL&tax=0.00&address_street=1234+Rock+Road&payment_date=14%3A55+15+Jan+07+2005+PST&payment_status=Completed&address_zip=12345&mc_shipping=0.00&mc_handling=0.00&first_name=Jason&last_name=Anderson&mc_fee=0.02&address_name=Jason+Anderson&notify_version=1.6&payer_status=verified&business=paypal%40emailaddress.com&address_country=United+States&num_cart_items=2&mc_handling1=0.00&mc_handling2=0.00&address_city=Los+Angeles&verify_sign=AlUbUcinRR5pIo2KwP4xjo9OxxHMAi6.s6AES.4Z6C65yv1Ob2eNqrHm&mc_shipping1=0.00&mc_shipping2=0.00&tax1=0.00&tax2=0.00&txn_id=TESTER&payment_type=instant&last_name%3DBorduin=&payer_email=test%40domain.com&item_name1=Rubber%2Bclog&address_state=CA&payment_fee=0.02&item_name2=Roman+sandal&invoice=100000061&quantity=1&quantity1=1&receiver_id=5HRS8SCK9NSJ2&quantity2=1&txn_type=web_accept&mc_gross_1=0.01&mc_currency=USD&mc_gross_2=0.01&payment_gross=0.02&subscr_id=PP-1234&test=test
+[2016-05-11 14:33 Europe/London] HTTP response of validation request: HTTP/1.1 100 Continue
+
+HTTP/1.1 200 OK
+Date: Wed, 11 May 2016 13:33:16 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=fYvsnprvzvx-SN3972zRnNQP1qDGQpoQGs9SLe2a3ztT5rVh7jifvH6mSX8UwcnDaWIMzO95MRRMSwYg4u71Pe_esMGlR9HcHShxtOVy6zldfzNZBdBS5QCt9Q0nNpw_oMxSpgemZWbHQiE579mIdUSfEr0yQM4Yxb-gG4YTFwcjHFCHy0rjqkrY12Zzc_r4C-NMxDRWdA3S1sH9lzOPqQ3DQBLChVeE7mxc9RvdPBM3NATDBXxhtqGIhXQZG4nSAztJmCniaib-LfiCtubsXE_CWQU8kQ9TNG0aZMXo72__MYaV7N028aQxtvIZHQTWlJ_gcogNHLKf4tN_FwremggEE6be4vj3yiM6vi4f2ufYGYgR0cJN7MtfDBnO0aL6xuVenQLJHAYb5C0hg6FwoHwm-vaW-_EOFV6Vr3cg5HPIfAv8PXOELpFeBG0; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Sat, 09-May-2026 13:33:17 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Fri, 11-May-2018 13:33:17 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.108.11.1462973597022716; path=/; expires=Fri, 04-May-46 13:33:17 GMT
+Vary: Accept-Encoding,User-Agent
+Connection: close
+HTTP_X_PP_AZ_LOCATOR: sandbox.slc
+Paypal-Debug-Id: 2642fc0c1b44
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D1880%26app%3Dappdispatcher%26TIME%3D2637443927%26HTTP_X_PP_AZ_LOCATOR%3Dsandbox.slc; Expires=Wed, 11 May 2016 14:03:17 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+INVALID
+[2016-05-11 14:33 Europe/London] Invalid IPN: cmd=_notify-validate&mc_gross=500.00&custom=some+custom+data&address_status=confirmed&item_number1=6&item_number2=4&payer_id=FW5W7ZUC3T4KL&tax=0.00&address_street=1234+Rock+Road&payment_date=14%3A55+15+Jan+07+2005+PST&payment_status=Completed&address_zip=12345&mc_shipping=0.00&mc_handling=0.00&first_name=Jason&last_name=Anderson&mc_fee=0.02&address_name=Jason+Anderson&notify_version=1.6&payer_status=verified&business=paypal%40emailaddress.com&address_country=United+States&num_cart_items=2&mc_handling1=0.00&mc_handling2=0.00&address_city=Los+Angeles&verify_sign=AlUbUcinRR5pIo2KwP4xjo9OxxHMAi6.s6AES.4Z6C65yv1Ob2eNqrHm&mc_shipping1=0.00&mc_shipping2=0.00&tax1=0.00&tax2=0.00&txn_id=TESTER&payment_type=instant&last_name%3DBorduin=&payer_email=test%40domain.com&item_name1=Rubber%2Bclog&address_state=CA&payment_fee=0.02&item_name2=Roman+sandal&invoice=100000061&quantity=1&quantity1=1&receiver_id=5HRS8SCK9NSJ2&quantity2=1&txn_type=web_accept&mc_gross_1=0.01&mc_currency=USD&mc_gross_2=0.01&payment_gross=0.02&subscr_id=PP-1234&test=test
+[2016-05-11 14:34 Europe/London] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1042
+Content-Type: application/x-www-form-urlencoded
+Expect: 100-continue
+
+ for IPN payload: cmd=_notify-validate&mc_gross=500.00&custom=some+custom+data&address_status=confirmed&item_number1=6&item_number2=4&payer_id=FW5W7ZUC3T4KL&tax=0.00&address_street=1234+Rock+Road&payment_date=14%3A55+15+Jan+07+2005+PST&payment_status=Completed&address_zip=12345&mc_shipping=0.00&mc_handling=0.00&first_name=Jason&last_name=Anderson&mc_fee=0.02&address_name=Jason+Anderson&notify_version=1.6&payer_status=verified&business=paypal%40emailaddress.com&address_country=United+States&num_cart_items=2&mc_handling1=0.00&mc_handling2=0.00&address_city=Los+Angeles&verify_sign=AlUbUcinRR5pIo2KwP4xjo9OxxHMAi6.s6AES.4Z6C65yv1Ob2eNqrHm&mc_shipping1=0.00&mc_shipping2=0.00&tax1=0.00&tax2=0.00&txn_id=TESTER&payment_type=instant&last_name%3DBorduin=&payer_email=test%40domain.com&item_name1=Rubber%2Bclog&address_state=CA&payment_fee=0.02&item_name2=Roman+sandal&invoice=100000061&quantity=1&quantity1=1&receiver_id=5HRS8SCK9NSJ2&quantity2=1&txn_type=web_accept&mc_gross_1=0.01&mc_currency=USD&mc_gross_2=0.01&payment_gross=0.02&subscr_id=PP-1234&test=test
+[2016-05-11 14:34 Europe/London] HTTP response of validation request: HTTP/1.1 100 Continue
+
+HTTP/1.1 200 OK
+Date: Wed, 11 May 2016 13:34:38 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=AWo1zKTlcSzZb3mjNynpIxzxDYBNOqxZ595TURB6YsbLIUO5qO-8R0VyIns33AUZFPEV8gZv8qOF3X4UhAwTQTnR_EfQ8qSiadjqq8UV7BzLn9vN-xc4QTyDaqpIJ6GGm_lOXlnqbCo1nGSYagAJPYoZxvz8fDT1KnGaCfVgIcjP-RmVxWP9aX9poKpEdbJorshtDXLkSsuOAcd2TCXQ3Xy69g_wAaOf8hmzMgxiOhtirl85afIydsjNOvAz49t1rEKjS6FiwcAFT6j7IYYxVX9oJIt8PGHuhf11nK4sNqoZILQrkg4KkuJdt7y8ETSc-v-AAzqpIOymFe5grzRVV4zS5iy85PXtM5UOVKY_6Om4KjzeqMb_I7YrqHrzXVkuYb2vyVHSU9c4-rFKvQa8DcFW41Zd4E7N8BBuJm; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Sat, 09-May-2026 13:34:39 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Fri, 11-May-2018 13:34:39 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.108.11.1462973679150022; path=/; expires=Fri, 04-May-46 13:34:39 GMT
+Vary: Accept-Encoding,User-Agent
+Connection: close
+HTTP_X_PP_AZ_LOCATOR: sandbox.slc
+Paypal-Debug-Id: d52a292220334
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D1880%26app%3Dappdispatcher%26TIME%3D4013175639%26HTTP_X_PP_AZ_LOCATOR%3Dsandbox.slc; Expires=Wed, 11 May 2016 14:04:39 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+INVALID
+[2016-05-11 14:34 Europe/London] Invalid IPN: cmd=_notify-validate&mc_gross=500.00&custom=some+custom+data&address_status=confirmed&item_number1=6&item_number2=4&payer_id=FW5W7ZUC3T4KL&tax=0.00&address_street=1234+Rock+Road&payment_date=14%3A55+15+Jan+07+2005+PST&payment_status=Completed&address_zip=12345&mc_shipping=0.00&mc_handling=0.00&first_name=Jason&last_name=Anderson&mc_fee=0.02&address_name=Jason+Anderson&notify_version=1.6&payer_status=verified&business=paypal%40emailaddress.com&address_country=United+States&num_cart_items=2&mc_handling1=0.00&mc_handling2=0.00&address_city=Los+Angeles&verify_sign=AlUbUcinRR5pIo2KwP4xjo9OxxHMAi6.s6AES.4Z6C65yv1Ob2eNqrHm&mc_shipping1=0.00&mc_shipping2=0.00&tax1=0.00&tax2=0.00&txn_id=TESTER&payment_type=instant&last_name%3DBorduin=&payer_email=test%40domain.com&item_name1=Rubber%2Bclog&address_state=CA&payment_fee=0.02&item_name2=Roman+sandal&invoice=100000061&quantity=1&quantity1=1&receiver_id=5HRS8SCK9NSJ2&quantity2=1&txn_type=web_accept&mc_gross_1=0.01&mc_currency=USD&mc_gross_2=0.01&payment_gross=0.02&subscr_id=PP-1234&test=test
+[2016-05-11 14:35 Europe/London] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1042
+Content-Type: application/x-www-form-urlencoded
+Expect: 100-continue
+
+ for IPN payload: cmd=_notify-validate&mc_gross=500.00&custom=some+custom+data&address_status=confirmed&item_number1=6&item_number2=4&payer_id=FW5W7ZUC3T4KL&tax=0.00&address_street=1234+Rock+Road&payment_date=14%3A55+15+Jan+07+2005+PST&payment_status=Completed&address_zip=12345&mc_shipping=0.00&mc_handling=0.00&first_name=Jason&last_name=Anderson&mc_fee=0.02&address_name=Jason+Anderson&notify_version=1.6&payer_status=verified&business=paypal%40emailaddress.com&address_country=United+States&num_cart_items=2&mc_handling1=0.00&mc_handling2=0.00&address_city=Los+Angeles&verify_sign=AlUbUcinRR5pIo2KwP4xjo9OxxHMAi6.s6AES.4Z6C65yv1Ob2eNqrHm&mc_shipping1=0.00&mc_shipping2=0.00&tax1=0.00&tax2=0.00&txn_id=TESTER&payment_type=instant&last_name%3DBorduin=&payer_email=test%40domain.com&item_name1=Rubber%2Bclog&address_state=CA&payment_fee=0.02&item_name2=Roman+sandal&invoice=100000061&quantity=1&quantity1=1&receiver_id=5HRS8SCK9NSJ2&quantity2=1&txn_type=web_accept&mc_gross_1=0.01&mc_currency=USD&mc_gross_2=0.01&payment_gross=0.02&subscr_id=PP-1234&test=test
+[2016-05-11 14:35 Europe/London] HTTP response of validation request: HTTP/1.1 100 Continue
+
+HTTP/1.1 200 OK
+Date: Wed, 11 May 2016 13:35:57 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=U7EzHiIV5kqYy6PTfdGtnY-QnhNjirHDSC25UpP2CA95tFsPG4rwTsp3_5gD2pjhgcnpRxkENapNAKm6oXjWClKzAV7ShjIMNFIKd8E2IQyw1XCPna1btkx5kGiA5V6xJHhe6S6Gcms-c2Gg_pEqxberpTuKBItgXra9eOsOehG9Mw0L3YB3IHfHrTspqoYV_0GJ2O1abBox0N-GfMeOtPGmSZgUvPJ2J0EvygEpxlHDMYpZOoyIPsIhO4GDa1REqWCAQCc_ofdCcP8ila-_cnBlpMSdb1JCxATyDR7sO0QTv9nBjsxrzgTZZULILXgNKNUODrn2-3r7Iwt0nylLheAvFnRYKPNxg96f37b1DNx2SNBWedfvtbJAiKvp9oj-pUsJc_egpRVjaWuQNd7ak0BF094avJvY3N8ZuLO6SUcx9lwvKkk7aJ-yVsC; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Sat, 09-May-2026 13:35:57 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Fri, 11-May-2018 13:35:57 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.108.11.1462973757360228; path=/; expires=Fri, 04-May-46 13:35:57 GMT
+Vary: Accept-Encoding,User-Agent
+Connection: close
+HTTP_X_PP_AZ_LOCATOR: sandbox.slc
+Paypal-Debug-Id: 8dd5d06a54487
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D1880%26app%3Dappdispatcher%26TIME%3D1026896727%26HTTP_X_PP_AZ_LOCATOR%3Dsandbox.slc; Expires=Wed, 11 May 2016 14:05:57 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+INVALID
+[2016-05-11 14:35 Europe/London] Invalid IPN: cmd=_notify-validate&mc_gross=500.00&custom=some+custom+data&address_status=confirmed&item_number1=6&item_number2=4&payer_id=FW5W7ZUC3T4KL&tax=0.00&address_street=1234+Rock+Road&payment_date=14%3A55+15+Jan+07+2005+PST&payment_status=Completed&address_zip=12345&mc_shipping=0.00&mc_handling=0.00&first_name=Jason&last_name=Anderson&mc_fee=0.02&address_name=Jason+Anderson&notify_version=1.6&payer_status=verified&business=paypal%40emailaddress.com&address_country=United+States&num_cart_items=2&mc_handling1=0.00&mc_handling2=0.00&address_city=Los+Angeles&verify_sign=AlUbUcinRR5pIo2KwP4xjo9OxxHMAi6.s6AES.4Z6C65yv1Ob2eNqrHm&mc_shipping1=0.00&mc_shipping2=0.00&tax1=0.00&tax2=0.00&txn_id=TESTER&payment_type=instant&last_name%3DBorduin=&payer_email=test%40domain.com&item_name1=Rubber%2Bclog&address_state=CA&payment_fee=0.02&item_name2=Roman+sandal&invoice=100000061&quantity=1&quantity1=1&receiver_id=5HRS8SCK9NSJ2&quantity2=1&txn_type=web_accept&mc_gross_1=0.01&mc_currency=USD&mc_gross_2=0.01&payment_gross=0.02&subscr_id=PP-1234&test=test
+[2016-05-11 14:37 Europe/London] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1042
+Content-Type: application/x-www-form-urlencoded
+Expect: 100-continue
+
+ for IPN payload: cmd=_notify-validate&mc_gross=500.00&custom=some+custom+data&address_status=confirmed&item_number1=6&item_number2=4&payer_id=FW5W7ZUC3T4KL&tax=0.00&address_street=1234+Rock+Road&payment_date=14%3A55+15+Jan+07+2005+PST&payment_status=Completed&address_zip=12345&mc_shipping=0.00&mc_handling=0.00&first_name=Jason&last_name=Anderson&mc_fee=0.02&address_name=Jason+Anderson&notify_version=1.6&payer_status=verified&business=paypal%40emailaddress.com&address_country=United+States&num_cart_items=2&mc_handling1=0.00&mc_handling2=0.00&address_city=Los+Angeles&verify_sign=AlUbUcinRR5pIo2KwP4xjo9OxxHMAi6.s6AES.4Z6C65yv1Ob2eNqrHm&mc_shipping1=0.00&mc_shipping2=0.00&tax1=0.00&tax2=0.00&txn_id=TESTER&payment_type=instant&last_name%3DBorduin=&payer_email=test%40domain.com&item_name1=Rubber%2Bclog&address_state=CA&payment_fee=0.02&item_name2=Roman+sandal&invoice=100000061&quantity=1&quantity1=1&receiver_id=5HRS8SCK9NSJ2&quantity2=1&txn_type=web_accept&mc_gross_1=0.01&mc_currency=USD&mc_gross_2=0.01&payment_gross=0.02&subscr_id=PP-1234&test=test
+[2016-05-11 14:37 Europe/London] HTTP response of validation request: HTTP/1.1 100 Continue
+
+HTTP/1.1 200 OK
+Date: Wed, 11 May 2016 13:37:08 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=J9O4-iir7_3I6AeBdGEm5ckIsWfbGs54SRqUvey7ZV89ho6NddfWb61pBWlgGV_uco7_gp1jv0zxwoXdhX4zulX0b91M9IbeCiIEWDfTtKBDTZome6xMg01DjpwSanoKXfeSbO85Haw-Kgs0gEKhnjbOcKpdYKBoLH2bCT1_q_ZNZCwb-REJe25DoYL50qw3VJGwgeUmA0EjfNQwpqFgasse2qwdGtcFMJZc8qWfjY5V2KERyiKB1VRHLD-9ZJPQL4oObyasRy0H_9i0_QM7k8-ZWa4lA0rRi4bQh8hVY_IuHja-VM_Vk4ozYc8Br5f_3wkL2kRgdJRpcjs3bbGul9TyrFUiQ1FQSkDlhzLA2lK-R6UGoTC7jtASIesGLR8GoTG6djlIn_3pWYQ7LRXxnyIkZeh6mwmCmMstuOssOJH5B8Km1DzLpEuiFum; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Sat, 09-May-2026 13:37:09 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Fri, 11-May-2018 13:37:09 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.108.11.1462973829127241; path=/; expires=Fri, 04-May-46 13:37:09 GMT
+Vary: Accept-Encoding,User-Agent
+Connection: close
+HTTP_X_PP_AZ_LOCATOR: sandbox.slc
+Paypal-Debug-Id: f1df5e301b224
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D1880%26app%3Dappdispatcher%26TIME%3D2234856279%26HTTP_X_PP_AZ_LOCATOR%3Dsandbox.slc; Expires=Wed, 11 May 2016 14:07:09 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+INVALID
+[2016-05-11 14:37 Europe/London] Invalid IPN: cmd=_notify-validate&mc_gross=500.00&custom=some+custom+data&address_status=confirmed&item_number1=6&item_number2=4&payer_id=FW5W7ZUC3T4KL&tax=0.00&address_street=1234+Rock+Road&payment_date=14%3A55+15+Jan+07+2005+PST&payment_status=Completed&address_zip=12345&mc_shipping=0.00&mc_handling=0.00&first_name=Jason&last_name=Anderson&mc_fee=0.02&address_name=Jason+Anderson&notify_version=1.6&payer_status=verified&business=paypal%40emailaddress.com&address_country=United+States&num_cart_items=2&mc_handling1=0.00&mc_handling2=0.00&address_city=Los+Angeles&verify_sign=AlUbUcinRR5pIo2KwP4xjo9OxxHMAi6.s6AES.4Z6C65yv1Ob2eNqrHm&mc_shipping1=0.00&mc_shipping2=0.00&tax1=0.00&tax2=0.00&txn_id=TESTER&payment_type=instant&last_name%3DBorduin=&payer_email=test%40domain.com&item_name1=Rubber%2Bclog&address_state=CA&payment_fee=0.02&item_name2=Roman+sandal&invoice=100000061&quantity=1&quantity1=1&receiver_id=5HRS8SCK9NSJ2&quantity2=1&txn_type=web_accept&mc_gross_1=0.01&mc_currency=USD&mc_gross_2=0.01&payment_gross=0.02&subscr_id=PP-1234&test=test
+[2016-05-11 14:39 Europe/London] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1042
+Content-Type: application/x-www-form-urlencoded
+Expect: 100-continue
+
+ for IPN payload: cmd=_notify-validate&mc_gross=500.00&custom=some+custom+data&address_status=confirmed&item_number1=6&item_number2=4&payer_id=FW5W7ZUC3T4KL&tax=0.00&address_street=1234+Rock+Road&payment_date=14%3A55+15+Jan+07+2005+PST&payment_status=Completed&address_zip=12345&mc_shipping=0.00&mc_handling=0.00&first_name=Jason&last_name=Anderson&mc_fee=0.02&address_name=Jason+Anderson&notify_version=1.6&payer_status=verified&business=paypal%40emailaddress.com&address_country=United+States&num_cart_items=2&mc_handling1=0.00&mc_handling2=0.00&address_city=Los+Angeles&verify_sign=AlUbUcinRR5pIo2KwP4xjo9OxxHMAi6.s6AES.4Z6C65yv1Ob2eNqrHm&mc_shipping1=0.00&mc_shipping2=0.00&tax1=0.00&tax2=0.00&txn_id=TESTER&payment_type=instant&last_name%3DBorduin=&payer_email=test%40domain.com&item_name1=Rubber%2Bclog&address_state=CA&payment_fee=0.02&item_name2=Roman+sandal&invoice=100000061&quantity=1&quantity1=1&receiver_id=5HRS8SCK9NSJ2&quantity2=1&txn_type=web_accept&mc_gross_1=0.01&mc_currency=USD&mc_gross_2=0.01&payment_gross=0.02&subscr_id=PP-1234&test=test
+[2016-05-11 14:39 Europe/London] HTTP response of validation request: HTTP/1.1 100 Continue
+
+HTTP/1.1 200 OK
+Date: Wed, 11 May 2016 13:39:06 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=BznGwA9MRP4j0H1m-s_-ozqT9axiFMWCRCtIKMpKXhY_5dzn41lYZ3WEpW7kXht_9rQxtI8mMjlgl3Pv9HNw-2mWnQG8Pbp2L4iDpw4dpCKrhAxPFpsGCGNbc8hlo_o6_B9V8dC4JBmtnDhUuu1G02UsGnEAvWDTPxVXrHCnO1xcytY95KQxbRQvD8k8FA0F9IrWwBfIH2DdS6u1HzT-9rr-Vj_GRCACowNAdGsZvU8kbz7E3X9LCJJY-kfn6kQaAsABqLmzt2lZLqQzI1kLCAhwIkzgiuqWy8oHGOG7O_qGxuus_yg8DZL0WpFeDbjN_LsngZiATMgK3_U52yxff0lEovEXAggqmzdUL3Ud-nDESxcTxkzPc6LYL0tJoTCxaI9tQF1wmIobecydPCzeolrMBeDIAfEGb2qJnDyMtOQipuXW8v1-aGw1mxy; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Sat, 09-May-2026 13:39:06 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Fri, 11-May-2018 13:39:06 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.108.11.1462973946375577; path=/; expires=Fri, 04-May-46 13:39:06 GMT
+Vary: Accept-Encoding,User-Agent
+Connection: close
+HTTP_X_PP_AZ_LOCATOR: sandbox.slc
+Paypal-Debug-Id: 1ba15c65582e6
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D1880%26app%3Dappdispatcher%26TIME%3D4197790551%26HTTP_X_PP_AZ_LOCATOR%3Dsandbox.slc; Expires=Wed, 11 May 2016 14:09:06 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+INVALID
+[2016-05-11 14:39 Europe/London] Invalid IPN: cmd=_notify-validate&mc_gross=500.00&custom=some+custom+data&address_status=confirmed&item_number1=6&item_number2=4&payer_id=FW5W7ZUC3T4KL&tax=0.00&address_street=1234+Rock+Road&payment_date=14%3A55+15+Jan+07+2005+PST&payment_status=Completed&address_zip=12345&mc_shipping=0.00&mc_handling=0.00&first_name=Jason&last_name=Anderson&mc_fee=0.02&address_name=Jason+Anderson&notify_version=1.6&payer_status=verified&business=paypal%40emailaddress.com&address_country=United+States&num_cart_items=2&mc_handling1=0.00&mc_handling2=0.00&address_city=Los+Angeles&verify_sign=AlUbUcinRR5pIo2KwP4xjo9OxxHMAi6.s6AES.4Z6C65yv1Ob2eNqrHm&mc_shipping1=0.00&mc_shipping2=0.00&tax1=0.00&tax2=0.00&txn_id=TESTER&payment_type=instant&last_name%3DBorduin=&payer_email=test%40domain.com&item_name1=Rubber%2Bclog&address_state=CA&payment_fee=0.02&item_name2=Roman+sandal&invoice=100000061&quantity=1&quantity1=1&receiver_id=5HRS8SCK9NSJ2&quantity2=1&txn_type=web_accept&mc_gross_1=0.01&mc_currency=USD&mc_gross_2=0.01&payment_gross=0.02&subscr_id=PP-1234&test=test
+[2016-05-11 14:45 Europe/London] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1042
+Content-Type: application/x-www-form-urlencoded
+Expect: 100-continue
+
+ for IPN payload: cmd=_notify-validate&mc_gross=500.00&custom=some+custom+data&address_status=confirmed&item_number1=6&item_number2=4&payer_id=FW5W7ZUC3T4KL&tax=0.00&address_street=1234+Rock+Road&payment_date=14%3A55+15+Jan+07+2005+PST&payment_status=Completed&address_zip=12345&mc_shipping=0.00&mc_handling=0.00&first_name=Jason&last_name=Anderson&mc_fee=0.02&address_name=Jason+Anderson&notify_version=1.6&payer_status=verified&business=paypal%40emailaddress.com&address_country=United+States&num_cart_items=2&mc_handling1=0.00&mc_handling2=0.00&address_city=Los+Angeles&verify_sign=AlUbUcinRR5pIo2KwP4xjo9OxxHMAi6.s6AES.4Z6C65yv1Ob2eNqrHm&mc_shipping1=0.00&mc_shipping2=0.00&tax1=0.00&tax2=0.00&txn_id=TESTER&payment_type=instant&last_name%3DBorduin=&payer_email=test%40domain.com&item_name1=Rubber%2Bclog&address_state=CA&payment_fee=0.02&item_name2=Roman+sandal&invoice=100000061&quantity=1&quantity1=1&receiver_id=5HRS8SCK9NSJ2&quantity2=1&txn_type=web_accept&mc_gross_1=0.01&mc_currency=USD&mc_gross_2=0.01&payment_gross=0.02&subscr_id=PP-1234&test=test
+[2016-05-11 14:45 Europe/London] HTTP response of validation request: HTTP/1.1 100 Continue
+
+HTTP/1.1 200 OK
+Date: Wed, 11 May 2016 13:45:17 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=ovhmybxSEon6vNEoEYwoxH65w6V2GTJmYmZfj22kM2lFLYERuG_wA8yiBnpNDBO4KiotVyuDiMTr9qPnmOqDOkQLDUaU8SJiU6ccWLKRyPjeHLI_oBk0Gy_XylAqpFtEOrDMdTNg_ftO9lWX_uL6jDgNwYx0fOGdBsMCTx1uqKirtv-rhFQ7ywEDCQMzWXyZcwq2AwK-BOIuJnulPPJ31rWFFyEITMk46fpSEIM57jNX_uZM1vinDO4sIC4rVRd59bSSJC63S4BmBOy8m6lu7ZP8mD4MLT-jBaLPwecxIoIGhXRr9jlZyUqp50CyfuWBbJ6hYMSC5_qGPmIb-cjFdjVWq6QcKlUPY4PYeNByJIiMWVrZPGJuzJa4AZ_xLbKJWh3eNb7n9U2MhvNSXY38PSB-PbYCFTlkB7fScEtCITxGGZqdJqe2fPrnk6O; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Sat, 09-May-2026 13:45:18 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Fri, 11-May-2018 13:45:18 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.108.11.1462974318095135; path=/; expires=Fri, 04-May-46 13:45:18 GMT
+Vary: Accept-Encoding,User-Agent
+Connection: close
+HTTP_X_PP_AZ_LOCATOR: sandbox.slc
+Paypal-Debug-Id: bc13640612688
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D1880%26app%3Dappdispatcher%26TIME%3D1849111383%26HTTP_X_PP_AZ_LOCATOR%3Dsandbox.slc; Expires=Wed, 11 May 2016 14:15:18 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+INVALID
+[2016-05-11 14:45 Europe/London] Invalid IPN: cmd=_notify-validate&mc_gross=500.00&custom=some+custom+data&address_status=confirmed&item_number1=6&item_number2=4&payer_id=FW5W7ZUC3T4KL&tax=0.00&address_street=1234+Rock+Road&payment_date=14%3A55+15+Jan+07+2005+PST&payment_status=Completed&address_zip=12345&mc_shipping=0.00&mc_handling=0.00&first_name=Jason&last_name=Anderson&mc_fee=0.02&address_name=Jason+Anderson&notify_version=1.6&payer_status=verified&business=paypal%40emailaddress.com&address_country=United+States&num_cart_items=2&mc_handling1=0.00&mc_handling2=0.00&address_city=Los+Angeles&verify_sign=AlUbUcinRR5pIo2KwP4xjo9OxxHMAi6.s6AES.4Z6C65yv1Ob2eNqrHm&mc_shipping1=0.00&mc_shipping2=0.00&tax1=0.00&tax2=0.00&txn_id=TESTER&payment_type=instant&last_name%3DBorduin=&payer_email=test%40domain.com&item_name1=Rubber%2Bclog&address_state=CA&payment_fee=0.02&item_name2=Roman+sandal&invoice=100000061&quantity=1&quantity1=1&receiver_id=5HRS8SCK9NSJ2&quantity2=1&txn_type=web_accept&mc_gross_1=0.01&mc_currency=USD&mc_gross_2=0.01&payment_gross=0.02&subscr_id=PP-1234&test=test
+[2016-05-11 14:45 Europe/London] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1042
+Content-Type: application/x-www-form-urlencoded
+Expect: 100-continue
+
+ for IPN payload: cmd=_notify-validate&mc_gross=500.00&custom=some+custom+data&address_status=confirmed&item_number1=6&item_number2=4&payer_id=FW5W7ZUC3T4KL&tax=0.00&address_street=1234+Rock+Road&payment_date=14%3A55+15+Jan+07+2005+PST&payment_status=Completed&address_zip=12345&mc_shipping=0.00&mc_handling=0.00&first_name=Jason&last_name=Anderson&mc_fee=0.02&address_name=Jason+Anderson&notify_version=1.6&payer_status=verified&business=paypal%40emailaddress.com&address_country=United+States&num_cart_items=2&mc_handling1=0.00&mc_handling2=0.00&address_city=Los+Angeles&verify_sign=AlUbUcinRR5pIo2KwP4xjo9OxxHMAi6.s6AES.4Z6C65yv1Ob2eNqrHm&mc_shipping1=0.00&mc_shipping2=0.00&tax1=0.00&tax2=0.00&txn_id=TESTER&payment_type=instant&last_name%3DBorduin=&payer_email=test%40domain.com&item_name1=Rubber%2Bclog&address_state=CA&payment_fee=0.02&item_name2=Roman+sandal&invoice=100000061&quantity=1&quantity1=1&receiver_id=5HRS8SCK9NSJ2&quantity2=1&txn_type=web_accept&mc_gross_1=0.01&mc_currency=USD&mc_gross_2=0.01&payment_gross=0.02&subscr_id=PP-1234&test=test
+[2016-05-11 14:45 Europe/London] HTTP response of validation request: HTTP/1.1 100 Continue
+
+HTTP/1.1 200 OK
+Date: Wed, 11 May 2016 13:45:59 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=FyF45_WrsRVJ5eoKvv4zkC79ykZtLoCTE_7ltB2eEK355i9iX5qtxmW52zhoy8n9JfHApUvHAALtrEqp4IK1kVbzEa2C8hoj4q340TA4mHe52RICeUEe0I43UNxIQxaIEa2JlH7BNhiYQnrCTAX2n4z63OZhrPNQYW_fT0XLuOuo89h2e8k1Qgy-ni_GX9yDXQI2iqAGj6atpJ2FSi_Z2I0jV6sRVWxHe5ybraDldqtzpF5SnSHfNneh4QXRn3zg3uIDAhbyCNcqohKHhSyAk5WzAHDRu4l7w12rL789QvTUhXzepAjwW4xdvHTIk-j44IS2Q7to9uLIR-JAXvYNfo3Gc7wyDw9qkrEFNCmtyd8qOMqPoJ9IlfE5tz-2R-U8mIh5iq7z3MCwndstm89v1I2WWJf1Nxcnb03lIc_R1jOYMGk-KDttM4PHhqe; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Sat, 09-May-2026 13:46:00 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Fri, 11-May-2018 13:46:00 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.108.11.1462974359716718; path=/; expires=Fri, 04-May-46 13:45:59 GMT
+Vary: Accept-Encoding,User-Agent
+Connection: close
+HTTP_X_PP_AZ_LOCATOR: sandbox.slc
+Paypal-Debug-Id: 5511253aa75f
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D1880%26app%3Dappdispatcher%26TIME%3D2536977239%26HTTP_X_PP_AZ_LOCATOR%3Dsandbox.slc; Expires=Wed, 11 May 2016 14:16:00 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+INVALID
+[2016-05-11 14:45 Europe/London] Invalid IPN: cmd=_notify-validate&mc_gross=500.00&custom=some+custom+data&address_status=confirmed&item_number1=6&item_number2=4&payer_id=FW5W7ZUC3T4KL&tax=0.00&address_street=1234+Rock+Road&payment_date=14%3A55+15+Jan+07+2005+PST&payment_status=Completed&address_zip=12345&mc_shipping=0.00&mc_handling=0.00&first_name=Jason&last_name=Anderson&mc_fee=0.02&address_name=Jason+Anderson&notify_version=1.6&payer_status=verified&business=paypal%40emailaddress.com&address_country=United+States&num_cart_items=2&mc_handling1=0.00&mc_handling2=0.00&address_city=Los+Angeles&verify_sign=AlUbUcinRR5pIo2KwP4xjo9OxxHMAi6.s6AES.4Z6C65yv1Ob2eNqrHm&mc_shipping1=0.00&mc_shipping2=0.00&tax1=0.00&tax2=0.00&txn_id=TESTER&payment_type=instant&last_name%3DBorduin=&payer_email=test%40domain.com&item_name1=Rubber%2Bclog&address_state=CA&payment_fee=0.02&item_name2=Roman+sandal&invoice=100000061&quantity=1&quantity1=1&receiver_id=5HRS8SCK9NSJ2&quantity2=1&txn_type=web_accept&mc_gross_1=0.01&mc_currency=USD&mc_gross_2=0.01&payment_gross=0.02&subscr_id=PP-1234&test=test
+[2016-05-11 14:47 Europe/London] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1042
+Content-Type: application/x-www-form-urlencoded
+Expect: 100-continue
+
+ for IPN payload: cmd=_notify-validate&mc_gross=500.00&custom=some+custom+data&address_status=confirmed&item_number1=6&item_number2=4&payer_id=FW5W7ZUC3T4KL&tax=0.00&address_street=1234+Rock+Road&payment_date=14%3A55+15+Jan+07+2005+PST&payment_status=Completed&address_zip=12345&mc_shipping=0.00&mc_handling=0.00&first_name=Jason&last_name=Anderson&mc_fee=0.02&address_name=Jason+Anderson&notify_version=1.6&payer_status=verified&business=paypal%40emailaddress.com&address_country=United+States&num_cart_items=2&mc_handling1=0.00&mc_handling2=0.00&address_city=Los+Angeles&verify_sign=AlUbUcinRR5pIo2KwP4xjo9OxxHMAi6.s6AES.4Z6C65yv1Ob2eNqrHm&mc_shipping1=0.00&mc_shipping2=0.00&tax1=0.00&tax2=0.00&txn_id=TESTER&payment_type=instant&last_name%3DBorduin=&payer_email=test%40domain.com&item_name1=Rubber%2Bclog&address_state=CA&payment_fee=0.02&item_name2=Roman+sandal&invoice=100000061&quantity=1&quantity1=1&receiver_id=5HRS8SCK9NSJ2&quantity2=1&txn_type=web_accept&mc_gross_1=0.01&mc_currency=USD&mc_gross_2=0.01&payment_gross=0.02&subscr_id=PP-1234&test=test
+[2016-05-11 14:47 Europe/London] HTTP response of validation request: HTTP/1.1 100 Continue
+
+HTTP/1.1 200 OK
+Date: Wed, 11 May 2016 13:47:16 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=RHQjYkGzIMTLqcwfAr37nnuId0YgHMWCSwhIT-MjdtXJn7WMyAgSa3ZPaA-zVDMhKCjwgoyvyNW43aEa4YdVDR3smsWNmLsaniP39Od94Eky9rYtdKW4cTDbdxGpCYgN0MP5sqgy1VdH1mMnhhLcM0ibKRpMNRNYssPwXFTWre0pg5AHUcrevZ3ItjYqh-TqMwh-Pe0VtZ1fUV1TB-B8_P7iHbAUVZ0zU1a3aLtEVF89_lnTp3nrl75j47MXlBhScAGvAgWeAoZX-7wDc9dY0oR1WfRYvsspI8DKhP265KL2rmQKwaCSJ1L7pK2MOGPPo5gjIqUUM9djzAw-xQk1QTipMTILIg1caA2eGt878yzA9I8l_P6Msn0qMSybwPI0VYXc85dk6sPAhjMZhR3q0YYdJ1LvKwdsaWPI7mdgSEZjQS5c7lpkAe1j0jO; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Sat, 09-May-2026 13:47:17 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Fri, 11-May-2018 13:47:17 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.108.11.1462974436777683; path=/; expires=Fri, 04-May-46 13:47:16 GMT
+Vary: Accept-Encoding,User-Agent
+Connection: close
+HTTP_X_PP_AZ_LOCATOR: sandbox.slc
+Paypal-Debug-Id: c46b2272ba0e0
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D1880%26app%3Dappdispatcher%26TIME%3D3828822871%26HTTP_X_PP_AZ_LOCATOR%3Dsandbox.slc; Expires=Wed, 11 May 2016 14:17:17 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+INVALID
+[2016-05-11 14:47 Europe/London] Invalid IPN: cmd=_notify-validate&mc_gross=500.00&custom=some+custom+data&address_status=confirmed&item_number1=6&item_number2=4&payer_id=FW5W7ZUC3T4KL&tax=0.00&address_street=1234+Rock+Road&payment_date=14%3A55+15+Jan+07+2005+PST&payment_status=Completed&address_zip=12345&mc_shipping=0.00&mc_handling=0.00&first_name=Jason&last_name=Anderson&mc_fee=0.02&address_name=Jason+Anderson&notify_version=1.6&payer_status=verified&business=paypal%40emailaddress.com&address_country=United+States&num_cart_items=2&mc_handling1=0.00&mc_handling2=0.00&address_city=Los+Angeles&verify_sign=AlUbUcinRR5pIo2KwP4xjo9OxxHMAi6.s6AES.4Z6C65yv1Ob2eNqrHm&mc_shipping1=0.00&mc_shipping2=0.00&tax1=0.00&tax2=0.00&txn_id=TESTER&payment_type=instant&last_name%3DBorduin=&payer_email=test%40domain.com&item_name1=Rubber%2Bclog&address_state=CA&payment_fee=0.02&item_name2=Roman+sandal&invoice=100000061&quantity=1&quantity1=1&receiver_id=5HRS8SCK9NSJ2&quantity2=1&txn_type=web_accept&mc_gross_1=0.01&mc_currency=USD&mc_gross_2=0.01&payment_gross=0.02&subscr_id=PP-1234&test=test
+[2016-05-11 14:49 Europe/London] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1042
+Content-Type: application/x-www-form-urlencoded
+Expect: 100-continue
+
+ for IPN payload: cmd=_notify-validate&mc_gross=500.00&custom=some+custom+data&address_status=confirmed&item_number1=6&item_number2=4&payer_id=FW5W7ZUC3T4KL&tax=0.00&address_street=1234+Rock+Road&payment_date=14%3A55+15+Jan+07+2005+PST&payment_status=Completed&address_zip=12345&mc_shipping=0.00&mc_handling=0.00&first_name=Jason&last_name=Anderson&mc_fee=0.02&address_name=Jason+Anderson&notify_version=1.6&payer_status=verified&business=paypal%40emailaddress.com&address_country=United+States&num_cart_items=2&mc_handling1=0.00&mc_handling2=0.00&address_city=Los+Angeles&verify_sign=AlUbUcinRR5pIo2KwP4xjo9OxxHMAi6.s6AES.4Z6C65yv1Ob2eNqrHm&mc_shipping1=0.00&mc_shipping2=0.00&tax1=0.00&tax2=0.00&txn_id=TESTER&payment_type=instant&last_name%3DBorduin=&payer_email=test%40domain.com&item_name1=Rubber%2Bclog&address_state=CA&payment_fee=0.02&item_name2=Roman+sandal&invoice=100000061&quantity=1&quantity1=1&receiver_id=5HRS8SCK9NSJ2&quantity2=1&txn_type=web_accept&mc_gross_1=0.01&mc_currency=USD&mc_gross_2=0.01&payment_gross=0.02&subscr_id=PP-1234&test=test
+[2016-05-11 14:49 Europe/London] HTTP response of validation request: HTTP/1.1 100 Continue
+
+HTTP/1.1 200 OK
+Date: Wed, 11 May 2016 13:49:24 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=nfIDbM84mzd0qnvut9A9unOHDpBLveEs5wn0wYfzTXNW68yhWXdK8yT1QonFMBmUng29mddqjOtNT2y69XFC5doGBj_vQYKllnLPhm8PxiF0hrC_bxCHKzqwAJqfoUKSc6DnxupevTSpTzDyMBy3zNeopTGf1owj8LA50x15cCNxkTtmVwvOoGgxkNqwudGELFOsWOXnfllyP_W4lAm5M0KjFAOniYtGW0UpHHijrHIaQryADEB15OtdFSOttlcu9mTo9c4yBf3Us3ZjH9Doe_gx6T68XJs8vHwEOvC2YeN1_B_KEzKembbKbYWX0-S6MZEZhKJuk9tZXsnCxalmH9NuaQdCRXuTMoViWQ4pU6m9aQH07TTK7QOVHvRJdVJvvkch3P4XrDVS4H6MCwgSP5c_RgJaxOHN5DvImr6Ao1Su4QjjPZUCQylHxke; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Sat, 09-May-2026 13:49:24 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Fri, 11-May-2018 13:49:24 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.108.11.1462974564282901; path=/; expires=Fri, 04-May-46 13:49:24 GMT
+Vary: Accept-Encoding,User-Agent
+Connection: close
+HTTP_X_PP_AZ_LOCATOR: sandbox.slc
+Paypal-Debug-Id: c2a8f33841776
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D1880%26app%3Dappdispatcher%26TIME%3D1681404759%26HTTP_X_PP_AZ_LOCATOR%3Dsandbox.slc; Expires=Wed, 11 May 2016 14:19:24 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+INVALID
+[2016-05-11 14:49 Europe/London] Invalid IPN: cmd=_notify-validate&mc_gross=500.00&custom=some+custom+data&address_status=confirmed&item_number1=6&item_number2=4&payer_id=FW5W7ZUC3T4KL&tax=0.00&address_street=1234+Rock+Road&payment_date=14%3A55+15+Jan+07+2005+PST&payment_status=Completed&address_zip=12345&mc_shipping=0.00&mc_handling=0.00&first_name=Jason&last_name=Anderson&mc_fee=0.02&address_name=Jason+Anderson&notify_version=1.6&payer_status=verified&business=paypal%40emailaddress.com&address_country=United+States&num_cart_items=2&mc_handling1=0.00&mc_handling2=0.00&address_city=Los+Angeles&verify_sign=AlUbUcinRR5pIo2KwP4xjo9OxxHMAi6.s6AES.4Z6C65yv1Ob2eNqrHm&mc_shipping1=0.00&mc_shipping2=0.00&tax1=0.00&tax2=0.00&txn_id=TESTER&payment_type=instant&last_name%3DBorduin=&payer_email=test%40domain.com&item_name1=Rubber%2Bclog&address_state=CA&payment_fee=0.02&item_name2=Roman+sandal&invoice=100000061&quantity=1&quantity1=1&receiver_id=5HRS8SCK9NSJ2&quantity2=1&txn_type=web_accept&mc_gross_1=0.01&mc_currency=USD&mc_gross_2=0.01&payment_gross=0.02&subscr_id=PP-1234&test=test
+[2016-05-11 14:50 Europe/London] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1042
+Content-Type: application/x-www-form-urlencoded
+Expect: 100-continue
+
+ for IPN payload: cmd=_notify-validate&mc_gross=500.00&custom=some+custom+data&address_status=confirmed&item_number1=6&item_number2=4&payer_id=FW5W7ZUC3T4KL&tax=0.00&address_street=1234+Rock+Road&payment_date=14%3A55+15+Jan+07+2005+PST&payment_status=Completed&address_zip=12345&mc_shipping=0.00&mc_handling=0.00&first_name=Jason&last_name=Anderson&mc_fee=0.02&address_name=Jason+Anderson&notify_version=1.6&payer_status=verified&business=paypal%40emailaddress.com&address_country=United+States&num_cart_items=2&mc_handling1=0.00&mc_handling2=0.00&address_city=Los+Angeles&verify_sign=AlUbUcinRR5pIo2KwP4xjo9OxxHMAi6.s6AES.4Z6C65yv1Ob2eNqrHm&mc_shipping1=0.00&mc_shipping2=0.00&tax1=0.00&tax2=0.00&txn_id=TESTER&payment_type=instant&last_name%3DBorduin=&payer_email=test%40domain.com&item_name1=Rubber%2Bclog&address_state=CA&payment_fee=0.02&item_name2=Roman+sandal&invoice=100000061&quantity=1&quantity1=1&receiver_id=5HRS8SCK9NSJ2&quantity2=1&txn_type=web_accept&mc_gross_1=0.01&mc_currency=USD&mc_gross_2=0.01&payment_gross=0.02&subscr_id=PP-1234&test=test
+[2016-05-11 14:50 Europe/London] HTTP response of validation request: HTTP/1.1 100 Continue
+
+HTTP/1.1 200 OK
+Date: Wed, 11 May 2016 13:50:32 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=Zr_jnUqPJ4RLsXrK8ad7VCmiT4jDMtEr-VRDCeWf7oYcEDDprkw0_jCzR2jrlycqWgfht3hOwmqxugsqMjJr4UkWnnroNUj4aNY_Qz0cA1Fra-750EPcBZcF81lB2ANqZ98MLBBGv18EJvEF3ZVOst5YhAKGYUczdJn9M3bXhgjbJq1oDl80J5DHSgnfAvwVTN9AMKA-uoDyY3llq6b2nZpW-GywusJcgaf__l2dnQDbKU1tJrOqhYgc2XjYOsDA1wb0k07RKmoAfEcpb4TuLfmsmiaxVllxaR3nUq53JkrcaCYiDAJkegEcz0DFLy7Q6t2pPX_4yJQ0YBPZgESSdqZd7KWdP729RXFKVb4SESaqQo7e-8VED3C-ApVs1gixI66LALqywXgNPuLkFHGcFnhFgPScoeEiqm9AczsJOodCV6Bbg4dkpuzuTI4; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Sat, 09-May-2026 13:50:32 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Fri, 11-May-2018 13:50:32 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.108.11.1462974632596416; path=/; expires=Fri, 04-May-46 13:50:32 GMT
+Vary: Accept-Encoding,User-Agent
+Connection: close
+HTTP_X_PP_AZ_LOCATOR: sandbox.slc
+Paypal-Debug-Id: fb26daac8cd72
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D1880%26app%3Dappdispatcher%26TIME%3D2822255447%26HTTP_X_PP_AZ_LOCATOR%3Dsandbox.slc; Expires=Wed, 11 May 2016 14:20:32 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+INVALID
+[2016-05-11 14:50 Europe/London] Invalid IPN: cmd=_notify-validate&mc_gross=500.00&custom=some+custom+data&address_status=confirmed&item_number1=6&item_number2=4&payer_id=FW5W7ZUC3T4KL&tax=0.00&address_street=1234+Rock+Road&payment_date=14%3A55+15+Jan+07+2005+PST&payment_status=Completed&address_zip=12345&mc_shipping=0.00&mc_handling=0.00&first_name=Jason&last_name=Anderson&mc_fee=0.02&address_name=Jason+Anderson&notify_version=1.6&payer_status=verified&business=paypal%40emailaddress.com&address_country=United+States&num_cart_items=2&mc_handling1=0.00&mc_handling2=0.00&address_city=Los+Angeles&verify_sign=AlUbUcinRR5pIo2KwP4xjo9OxxHMAi6.s6AES.4Z6C65yv1Ob2eNqrHm&mc_shipping1=0.00&mc_shipping2=0.00&tax1=0.00&tax2=0.00&txn_id=TESTER&payment_type=instant&last_name%3DBorduin=&payer_email=test%40domain.com&item_name1=Rubber%2Bclog&address_state=CA&payment_fee=0.02&item_name2=Roman+sandal&invoice=100000061&quantity=1&quantity1=1&receiver_id=5HRS8SCK9NSJ2&quantity2=1&txn_type=web_accept&mc_gross_1=0.01&mc_currency=USD&mc_gross_2=0.01&payment_gross=0.02&subscr_id=PP-1234&test=test
+[2016-05-11 14:52 Europe/London] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1042
+Content-Type: application/x-www-form-urlencoded
+Expect: 100-continue
+
+ for IPN payload: cmd=_notify-validate&mc_gross=500.00&custom=some+custom+data&address_status=confirmed&item_number1=6&item_number2=4&payer_id=FW5W7ZUC3T4KL&tax=0.00&address_street=1234+Rock+Road&payment_date=14%3A55+15+Jan+07+2005+PST&payment_status=Completed&address_zip=12345&mc_shipping=0.00&mc_handling=0.00&first_name=Jason&last_name=Anderson&mc_fee=0.02&address_name=Jason+Anderson&notify_version=1.6&payer_status=verified&business=paypal%40emailaddress.com&address_country=United+States&num_cart_items=2&mc_handling1=0.00&mc_handling2=0.00&address_city=Los+Angeles&verify_sign=AlUbUcinRR5pIo2KwP4xjo9OxxHMAi6.s6AES.4Z6C65yv1Ob2eNqrHm&mc_shipping1=0.00&mc_shipping2=0.00&tax1=0.00&tax2=0.00&txn_id=TESTER&payment_type=instant&last_name%3DBorduin=&payer_email=test%40domain.com&item_name1=Rubber%2Bclog&address_state=CA&payment_fee=0.02&item_name2=Roman+sandal&invoice=100000061&quantity=1&quantity1=1&receiver_id=5HRS8SCK9NSJ2&quantity2=1&txn_type=web_accept&mc_gross_1=0.01&mc_currency=USD&mc_gross_2=0.01&payment_gross=0.02&subscr_id=PP-1234&test=test
+[2016-05-11 14:52 Europe/London] HTTP response of validation request: HTTP/1.1 100 Continue
+
+HTTP/1.1 200 OK
+Date: Wed, 11 May 2016 13:52:25 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=htK4n43WxNJN6Se0MoA2MhqUd5t7-Z3VUIiW3u7JAjDKfsV4tmmXLo5zTKlQR2kA-buU2jIC1MX8OlLtCOP5MYVM6itR6ymxOdQj_tG8iWH07KEgpm_LWE4HdX_WL1UlKnLQpwXBcu9ZT23QijYNquvIYjz1GFIvN99oEEe9FkIn8Hep5v_KQRcfXd0wvKGUMW_IZHh92eKvlqeuOsvoyPYJzxdOgzvnTb8YLKoPzh2kkqnl_WjMdQPoEGqisVyUh5MHRiEkHmfnIEP7vFushqy4qW1jOG1QRnF-Y_0ALL4ePpcKFxNma0vumxoboHySbtblAn8NJg7vQylfewoh-WeGpQFUgO2xJio0DlmIYdx3PXhzYOXSJq9U7IxEskBasnscP7btPzbhjMxq_vPtoenRIWzvVExqnTQLrrv84Jr0tkoSPB6pSUUtBJ8; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Sat, 09-May-2026 13:52:25 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Fri, 11-May-2018 13:52:25 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.108.11.1462974745318380; path=/; expires=Fri, 04-May-46 13:52:25 GMT
+Vary: Accept-Encoding,User-Agent
+Connection: close
+HTTP_X_PP_AZ_LOCATOR: sandbox.slc
+Paypal-Debug-Id: f2cce9bc49db6
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D1880%26app%3Dappdispatcher%26TIME%3D423179095%26HTTP_X_PP_AZ_LOCATOR%3Dsandbox.slc; Expires=Wed, 11 May 2016 14:22:25 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+INVALID
+[2016-05-11 14:52 Europe/London] Invalid IPN: cmd=_notify-validate&mc_gross=500.00&custom=some+custom+data&address_status=confirmed&item_number1=6&item_number2=4&payer_id=FW5W7ZUC3T4KL&tax=0.00&address_street=1234+Rock+Road&payment_date=14%3A55+15+Jan+07+2005+PST&payment_status=Completed&address_zip=12345&mc_shipping=0.00&mc_handling=0.00&first_name=Jason&last_name=Anderson&mc_fee=0.02&address_name=Jason+Anderson&notify_version=1.6&payer_status=verified&business=paypal%40emailaddress.com&address_country=United+States&num_cart_items=2&mc_handling1=0.00&mc_handling2=0.00&address_city=Los+Angeles&verify_sign=AlUbUcinRR5pIo2KwP4xjo9OxxHMAi6.s6AES.4Z6C65yv1Ob2eNqrHm&mc_shipping1=0.00&mc_shipping2=0.00&tax1=0.00&tax2=0.00&txn_id=TESTER&payment_type=instant&last_name%3DBorduin=&payer_email=test%40domain.com&item_name1=Rubber%2Bclog&address_state=CA&payment_fee=0.02&item_name2=Roman+sandal&invoice=100000061&quantity=1&quantity1=1&receiver_id=5HRS8SCK9NSJ2&quantity2=1&txn_type=web_accept&mc_gross_1=0.01&mc_currency=USD&mc_gross_2=0.01&payment_gross=0.02&subscr_id=PP-1234&test=test
+[2016-05-11 14:53 Europe/London] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1042
+Content-Type: application/x-www-form-urlencoded
+Expect: 100-continue
+
+ for IPN payload: cmd=_notify-validate&mc_gross=500.00&custom=some+custom+data&address_status=confirmed&item_number1=6&item_number2=4&payer_id=FW5W7ZUC3T4KL&tax=0.00&address_street=1234+Rock+Road&payment_date=14%3A55+15+Jan+07+2005+PST&payment_status=Completed&address_zip=12345&mc_shipping=0.00&mc_handling=0.00&first_name=Jason&last_name=Anderson&mc_fee=0.02&address_name=Jason+Anderson&notify_version=1.6&payer_status=verified&business=paypal%40emailaddress.com&address_country=United+States&num_cart_items=2&mc_handling1=0.00&mc_handling2=0.00&address_city=Los+Angeles&verify_sign=AlUbUcinRR5pIo2KwP4xjo9OxxHMAi6.s6AES.4Z6C65yv1Ob2eNqrHm&mc_shipping1=0.00&mc_shipping2=0.00&tax1=0.00&tax2=0.00&txn_id=TESTER&payment_type=instant&last_name%3DBorduin=&payer_email=test%40domain.com&item_name1=Rubber%2Bclog&address_state=CA&payment_fee=0.02&item_name2=Roman+sandal&invoice=100000061&quantity=1&quantity1=1&receiver_id=5HRS8SCK9NSJ2&quantity2=1&txn_type=web_accept&mc_gross_1=0.01&mc_currency=USD&mc_gross_2=0.01&payment_gross=0.02&subscr_id=PP-1234&test=test
+[2016-05-11 14:53 Europe/London] HTTP response of validation request: HTTP/1.1 100 Continue
+
+HTTP/1.1 200 OK
+Date: Wed, 11 May 2016 13:53:14 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=nsUG1pnBfXkuXS7vq1BpFi1qkulUIWtV1gWIQN_YBdCceJo5L-0OwHcpurpTHml2LGwRHloQzyzcVjgVuvroaZHOV59x_y0zA9_MeHlwof598Az3WV3l23WsUp1PwsPZKTRRNVOE6r3hyYA1t2gPdiBh_YwKnrLrKZSbkL1VoJFH0PtFNRnfWvuZ8gPdaz7UAcH7OpZ3zlQ1p8KEASBy-x2DlwKOvo0av8cVW8Nnr9QpH5E8GAdK7he8OkHEhi1QDZgEGHINsaYGMF0yJ96-2mKAqAfzMfQCjhnB1da-9nT0gmIjAJv4OVClPPtTAS_Apx3BTN2VGNuSFdQtjAiPfItXhHtZl8shK27UbwgjqcOaHI9BtX56arzXr2ssccAobx3OM7Be1TcgncZ4ou72dre5DQBmQfGbjUFb_Z75pOjEbbwucYQDYKIeugW; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Sat, 09-May-2026 13:53:15 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Fri, 11-May-2018 13:53:15 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.108.11.1462974795120672; path=/; expires=Fri, 04-May-46 13:53:15 GMT
+Vary: Accept-Encoding,User-Agent
+Connection: close
+HTTP_X_PP_AZ_LOCATOR: sandbox.slc
+Paypal-Debug-Id: e850990919a33
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D1880%26app%3Dappdispatcher%26TIME%3D1262039895%26HTTP_X_PP_AZ_LOCATOR%3Dsandbox.slc; Expires=Wed, 11 May 2016 14:23:15 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+INVALID
+[2016-05-11 14:53 Europe/London] Invalid IPN: cmd=_notify-validate&mc_gross=500.00&custom=some+custom+data&address_status=confirmed&item_number1=6&item_number2=4&payer_id=FW5W7ZUC3T4KL&tax=0.00&address_street=1234+Rock+Road&payment_date=14%3A55+15+Jan+07+2005+PST&payment_status=Completed&address_zip=12345&mc_shipping=0.00&mc_handling=0.00&first_name=Jason&last_name=Anderson&mc_fee=0.02&address_name=Jason+Anderson&notify_version=1.6&payer_status=verified&business=paypal%40emailaddress.com&address_country=United+States&num_cart_items=2&mc_handling1=0.00&mc_handling2=0.00&address_city=Los+Angeles&verify_sign=AlUbUcinRR5pIo2KwP4xjo9OxxHMAi6.s6AES.4Z6C65yv1Ob2eNqrHm&mc_shipping1=0.00&mc_shipping2=0.00&tax1=0.00&tax2=0.00&txn_id=TESTER&payment_type=instant&last_name%3DBorduin=&payer_email=test%40domain.com&item_name1=Rubber%2Bclog&address_state=CA&payment_fee=0.02&item_name2=Roman+sandal&invoice=100000061&quantity=1&quantity1=1&receiver_id=5HRS8SCK9NSJ2&quantity2=1&txn_type=web_accept&mc_gross_1=0.01&mc_currency=USD&mc_gross_2=0.01&payment_gross=0.02&subscr_id=PP-1234&test=test

@@ -54,47 +54,17 @@ class Checkout extends Public_Controller {
 
     //complete paypal transaction
     function paypal(){
-        if($this->input->get('payer_status') != null){
 
-            $payment_success = true;
+        $payment_success = true;
 
-            if ($payment_success == true) {
-                $payment_success = true;
-                $order_data = array(
-                    'transaction_status'        => 'paid',
-                    'payment_transaction_ref'   => '123456',
-                    'payment_auth_code'         => '234234',
-                    'order_status'              => 'payment confirmed',
-                    'transaction_date'          => date_create()->format('Y-m-d H:i:s'),
-                    'transaction_total'         => '10'
-                );                
-            } else {
-                $order_data = array(
-                    'transaction_status'        => 'payment failure',
-                    'payment_transaction_ref'   => $transactionResponse->TransactionID,
-                    'order_status'              => 'pending',
-                    'transaction_date'          => date_create()->format('Y-m-d H:i:s'),
-                    'transaction_total'         => $transactionResponse->TotalAmount
-                );
-            }
+        $content_data = array(
+            'page_title' => 'Payment',
+            'cancel_url' => base_url(),
+            'payment_success' => $payment_success
+        );
+        $data['content'] = $this->load->view('checkout/complete', $content_data, TRUE);
+        $this->load->view($this->template, $data);
 
-            $this->db->where('transaction_id', $this->session->transaction_id);
-            $this->db->update('transactions', $order_data);
-
-            if ($payment_success == true) {
-                $this->send_payment_success_email();
-                $this->cart->destroy();
-            }
-
-            $content_data = array(
-                'page_title' => 'Payment',
-                'cancel_url' => base_url(),
-                'payment_success' => $payment_success
-            );
-            return true;
-        }
-
-        return false;        
     }
 
     function paypal_ipn(){
@@ -129,6 +99,7 @@ class Checkout extends Public_Controller {
             }
             $req .= "&$key=$value";
         }
+
         // Post IPN data back to PayPal to validate the IPN data is genuine
         // Without this step anyone can fake IPN data
         if(USE_SANDBOX == true) {
@@ -163,6 +134,7 @@ class Checkout extends Public_Controller {
         //$cert = __DIR__ . "./cacert.pem";
         //curl_setopt($ch, CURLOPT_CAINFO, $cert);
         $res = curl_exec($ch);
+
         if (curl_errno($ch) != 0) // cURL error
             {
             if(DEBUG == true) { 
@@ -182,6 +154,7 @@ class Checkout extends Public_Controller {
         // Split response headers and payload, a better way for strcmp
         $tokens = explode("\r\n\r\n", trim($res));
         $res = trim(end($tokens));
+
         if (strcmp ($res, "VERIFIED") == 0) {
             // check whether the payment_status is Completed
             // check that txn_id has not been previously processed
@@ -191,17 +164,48 @@ class Checkout extends Public_Controller {
             // assign posted variables to local variables
             //$item_name = $_POST['item_name'];
             //$item_number = $_POST['item_number'];
-            //$payment_status = $_POST['payment_status'];
-            //$payment_amount = $_POST['mc_gross'];
+            $payment_status = $_POST['payment_status'];
+            $payment_amount = $_POST['mc_gross'];
+            $invoice = $_POST['invoice'];
             //$payment_currency = $_POST['mc_currency'];
-            //$txn_id = $_POST['txn_id'];
+            $txn_id = $_POST['txn_id'];
             //$receiver_email = $_POST['receiver_email'];
             //$payer_email = $_POST['payer_email'];
             
+
+            $payment_success = true;
+            $order_data = array(
+                'transaction_status'        => $payment_status,
+                'payment_transaction_ref'   => $txn_id,
+                'payment_auth_code'         => '',
+                'order_status'              => 'payment confirmed',
+                'transaction_date'          => date_create()->format('Y-m-d H:i:s'),
+                'transaction_total'         => $payment_amount);
+
+            $this->db->where('order_ref', $invoice);
+           $this->db->update('transactions', $order_data);
+
+            $this->send_payment_success_email();
+            $this->cart->destroy();
+
             if(DEBUG == true) {
                 error_log(date('[Y-m-d H:i e] '). "Verified IPN: $req ". PHP_EOL, 3, LOG_FILE);
             }
         } else if (strcmp ($res, "INVALID") == 0) {
+
+
+
+            $invoice = $_POST['invoice'];
+
+            $order_data = array(
+                'transaction_status'        => 'payment failure',
+                'order_status'              => 'pending',
+                'transaction_date'          => date_create()->format('Y-m-d H:i:s'));
+
+            $this->db->where('order_ref', $invoice);
+            $this->db->update('transactions', $order_data);
+
+        var_dump($this->db->last_query());
             // log for manual investigation
             // Add business logic here which deals with invalid IPN messages
             if(DEBUG == true) {

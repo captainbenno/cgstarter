@@ -280,7 +280,6 @@
       <input type="hidden" name="city" value="">
       <input type="hidden" name="state" value="">
       <input type="hidden" name="zip" value="">
-      <input type="hidden" name="notify_url" value="">
       <input type="hidden" name="invoice" value="">
       <input type="hidden" name="country" value="">
       <input type="hidden" name="email" value="">

@@ -19,6 +19,18 @@ class Transactions_model extends CI_Model {
         $this->_db = 'transactions';
     }
 
+
+    function is_transaction_success($order_ref)
+    {
+        $this->db->where('order_ref', $order_ref);        
+        $query = $this->db->get($this->_db); 
+        $data = $query->row_array();
+
+        
+        
+        return $return_data;
+    }
+
     function next_order_id(){
         $sql = "
             SELECT transaction_id
