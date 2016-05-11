@@ -1,1 +1,2 @@
 /application/sessions/*
+/application/config/config.php
