@@ -24,8 +24,8 @@
                     <?php echo form_password(array('name'=>'password', 'id'=>'password', 'class'=>'form-control', 'placeholder'=>lang('users input password'), 'maxlength'=>72, 'autocomplete'=>'off')); ?>
                     <?php if( $this->session->userdata('redirect')=='/checkout'){ ?> 
                         <button class="btn cart-btn btn-success btn-lg">Checkout with Account <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></button>
-                    <? } else { ?>
-                        <?php echo form_submit(array('name'=>'submit', 'class'=>'btn btn-lg btn-success btn-block thing'), lang('core button login')); ?>
+                    <?php } else { ?>
+                        <?php echo form_submit(array('name'=>'submit', 'class'=>'btn btn-lg btn-success btn-block'), lang('core button login')); ?>
                     <?php } ?>
                     <p><br /><a href="<?php echo base_url('user/forgot'); ?>"><?php echo lang('users link forgot_password'); ?></a></p>
                     <p><a href="<?php echo base_url('user/register'); ?>"><?php echo lang('users link register_account'); ?></a></p>
