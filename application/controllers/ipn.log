@@ -172,3 +172,32 @@ Content-Type: text/html; charset=UTF-8
 
 INVALID
 [2016-05-11 12:04 Europe/London] Invalid IPN: cmd=_notify-validate
+[2016-05-11 12:26 Europe/London] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 20
+Content-Type: application/x-www-form-urlencoded
+
+ for IPN payload: cmd=_notify-validate
+[2016-05-11 12:26 Europe/London] HTTP response of validation request: HTTP/1.1 200 OK
+Date: Wed, 11 May 2016 11:26:28 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=Eyn2qmgOHKHI0HZuPO3-sviFVN1mtaAWARDRCnWr5szW8Zf0O47j0-y2ZENSuQ02LP67xSQHa0lxPlNh5VFurfXi-kJkxqYjwb3B25ierO4fjORAjgb80VmfAqbn8DDX-UlKUNxG9g0czTKFEnC1AKoDiS8fN03N3ZFVAYLxFdyF2W-XRAmr2frkRfsGpd6UkBIIQ7bCM7eXHvcLmqq98vqleuCsKjDeqSLTHt186RZYxf92a2W3QxP83HZIyyow9Sy9d5JS44Vdf8Ymg3_r7h3O2di0qvQ5MtzSWehB5wEFPEhc6_-8ewa-wL8p2HRPXpS0X7WQyyl0vLH6Q0eOM7-Afxfzl8Z7ANJwksqOqGhka3xEh95OaqIc9Ub0AyflwjJntrzIhOzhUPWuuxHf3h5-LY7XoqbQ50NquhIEp-0WQByPLOsUK-mTrP4; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Sat, 09-May-2026 11:26:28 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Fri, 11-May-2018 11:26:28 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.108.11.1462965988614319; path=/; expires=Fri, 04-May-46 11:26:28 GMT
+Vary: Accept-Encoding,User-Agent
+Connection: close
+HTTP_X_PP_AZ_LOCATOR: sandbox.slc
+Paypal-Debug-Id: daa2f8bc91de6
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D1880%26app%3Dappdispatcher%26TIME%3D3826660183%26HTTP_X_PP_AZ_LOCATOR%3Dsandbox.slc; Expires=Wed, 11 May 2016 11:56:28 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+INVALID
+[2016-05-11 12:26 Europe/London] Invalid IPN: cmd=_notify-validate
