@@ -260,13 +260,19 @@
     <?php echo form_close(); ?>
     <!-- end of pledge row -->
 
-
-    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" id="paypal_form">
+<!--https://www.paypal.com/cgi-bin/webscr -->
+    <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" id="paypal_form">
       <input type="hidden" name="cmd" value="_cart">
-      <input type="hidden" name="business" value="seller@designerfotos.com">
-      <input type="hidden" name="item_name" value="CGStarter Order">
-      <input type="hidden" name="item_number" value="1">
-      <input type="hidden" name="amount" value="<?php echo $this->cart->total(); ?>">
+      <input type="hidden" name="upload" value="1">      
+      <input type="hidden" name="business" value="test@cgstarter.com">
+
+
+        <input type="hidden" name="quantity_1" value="1">
+        <input type="hidden" name="item_name_1" value="CGStarter Order">
+        <input type="hidden" name="item_number_1" value="1">
+      <input type="hidden" name="amount_1" value="<?php echo $this->cart->total(); ?>">
+
+        <input type="hidden" name="currency_code" value="USD">
       <input type="hidden" name="first_name" value="">
       <input type="hidden" name="last_name" value="">
       <input type="hidden" name="address1" value="">
@@ -278,6 +284,11 @@
       <input type="hidden" name="invoice" value="">
       <input type="hidden" name="country" value="">
       <input type="hidden" name="email" value="">
+      <input type="hidden" name="notify_url" value="http://cgstarter.local/checkout/paypal/">
+      <INPUT TYPE="hidden" NAME="return" value="http://cgstarter.local/checkout/paypal/">
+
+
+
     </form>
 
     <!-- Modal -->
