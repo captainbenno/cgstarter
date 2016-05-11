@@ -46,7 +46,7 @@ class Checkout extends Public_Controller {
             'cancel_url' => base_url(),
             'cart'       => $this->cart_model->contents(),
             'user'       => $this->user
-        );
+        ); 
 
         $data['content'] = $this->load->view('checkout/index', $content_data, TRUE);
         $this->load->view($this->template, $data);
