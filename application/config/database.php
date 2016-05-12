@@ -64,9 +64,9 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'cgstarterci3.clryq2ylutoc.us-east-1.rds.amazonaws.com',
-	'username' => 'cgstarter',
-	'password' => 'ddhh75Fgf',
+	'hostname' => 'localhost',
+	'username' => 'root',
+	'password' => '',
 	'database' => 'cgstarter',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
