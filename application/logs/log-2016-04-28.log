@@ -1,0 +1,11 @@
+ERROR - 2016-04-28 11:00:00 --> Severity: Parsing Error --> syntax error, unexpected '$content_data' (T_VARIABLE) /var/www/html/application/controllers/Project.php 45
+ERROR - 2016-04-28 02:51:17 --> Severity: error --> Exception: Unable to locate the model you have specified: Projects_news /var/www/html/system/core/Loader.php 344
+ERROR - 2016-04-28 02:51:28 --> Severity: Notice --> Undefined variable: page_title /var/www/html/htdocs/themes/default/template.php 13
+ERROR - 2016-04-28 13:55:30 --> 404 Page Not Found: Cart/10
+ERROR - 2016-04-28 13:58:02 --> Severity: Parsing Error --> syntax error, unexpected '==' (T_IS_EQUAL), expecting ')' /var/www/html/application/controllers/Cart.php 23
+ERROR - 2016-04-28 13:58:17 --> Severity: Parsing Error --> syntax error, unexpected '==' (T_IS_EQUAL), expecting ')' /var/www/html/application/controllers/Cart.php 23
+ERROR - 2016-04-28 13:58:25 --> Severity: Parsing Error --> syntax error, unexpected ';', expecting ')' /var/www/html/application/controllers/Cart.php 23
+ERROR - 2016-04-28 05:29:10 --> Severity: Error --> Call to undefined method CI_Cart::add_to_cart() /var/www/html/application/controllers/Cart.php 28
+ERROR - 2016-04-28 05:41:36 --> Severity: Notice --> Undefined index:  /var/www/html/application/models/Cart_model.php 42
+ERROR - 2016-04-28 14:29:16 --> Severity: Parsing Error --> syntax error, unexpected '^', expecting ')' /var/www/html/application/controllers/Cart.php 33
+ERROR - 2016-04-28 05:59:27 --> Severity: Warning --> preg_match(): No ending delimiter '^' found /var/www/html/application/controllers/Cart.php 33

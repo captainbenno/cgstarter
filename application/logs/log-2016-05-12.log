@@ -1,0 +1,18 @@
+ERROR - 2016-05-12 07:45:28 --> 404 Page Not Found: About/index
+ERROR - 2016-05-12 14:55:58 --> Severity: Notice --> Undefined index: project_id /var/www/html/application/controllers/Project.php 39
+ERROR - 2016-05-12 14:55:58 --> Severity: Notice --> Undefined index: project_id /var/www/html/application/controllers/Project.php 40
+ERROR - 2016-05-12 14:55:58 --> Severity: Notice --> Undefined index: project_id /var/www/html/application/controllers/Project.php 41
+ERROR - 2016-05-12 14:55:58 --> Severity: Notice --> Undefined index: project_id /var/www/html/application/controllers/Project.php 42
+ERROR - 2016-05-12 14:55:58 --> Severity: Notice --> Undefined index: project_id /var/www/html/application/controllers/Project.php 43
+ERROR - 2016-05-12 14:55:58 --> Severity: Warning --> Division by zero /var/www/html/application/models/Projects_model.php 117
+ERROR - 2016-05-12 14:55:58 --> Severity: Notice --> Undefined index: project_id /var/www/html/application/controllers/Project.php 44
+ERROR - 2016-05-12 14:55:58 --> Severity: Notice --> Undefined index: title /var/www/html/application/controllers/Project.php 48
+ERROR - 2016-05-12 14:55:58 --> Severity: Notice --> Undefined index: title /var/www/html/application/views/project/project_view.php 13
+ERROR - 2016-05-12 14:55:58 --> Severity: Notice --> Undefined index: title /var/www/html/application/views/project/project_view.php 46
+ERROR - 2016-05-12 14:55:58 --> Severity: Notice --> Undefined index: description /var/www/html/application/views/project/project_view.php 65
+ERROR - 2016-05-12 14:55:58 --> Severity: Notice --> Undefined index: goal /var/www/html/application/views/project/project_view.php 184
+ERROR - 2016-05-12 15:10:03 --> 404 Page Not Found: M/index
+ERROR - 2016-05-12 16:33:17 --> 404 Page Not Found: Mobile/index
+ERROR - 2016-05-12 18:56:54 --> 404 Page Not Found: Wwwbaiducom/cache
+ERROR - 2016-05-12 19:53:32 --> 404 Page Not Found: Captcha/1462952961.0772.jpg
+ERROR - 2016-05-12 23:14:10 --> 404 Page Not Found: Wp-content/plugins
