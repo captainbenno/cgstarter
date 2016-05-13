@@ -260,35 +260,34 @@
     <?php echo form_close(); ?>
     <!-- end of pledge row -->
 
-<!--https://www.paypal.com/cgi-bin/webscr -->
-    <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" id="paypal_form">
-      <input type="hidden" name="cmd" value="_cart">
-      <input type="hidden" name="upload" value="1">      
-      <input type="hidden" name="business" value="test@cgstarter.com">
-
-
+    <?php
+        if($this->config->item('paypal_sandbox') == true) {
+            $paypal_url = "https://www.sandbox.paypal.com/cgi-bin/webscr";
+        } else {
+            $paypal_url = "https://www.paypal.com/cgi-bin/webscr";
+        }
+    ?>
+    <form action="<?php echo  $paypal_url; ?>" method="post" id="paypal_form">
+        <input type="hidden" name="cmd" value="_cart">
+        <input type="hidden" name="upload" value="1">      
+        <input type="hidden" name="business" value="<?php echo $this->config->item('paypal_email'); ?>">
         <input type="hidden" name="quantity_1" value="1">
         <input type="hidden" name="item_name_1" value="CGStarter Order">
         <input type="hidden" name="item_number_1" value="1">
-      <input type="hidden" name="amount_1" value="<?php echo $this->cart->total(); ?>">
-
+        <input type="hidden" name="amount_1" value="<?php echo $this->cart->total(); ?>">
         <input type="hidden" name="currency_code" value="USD">
-      <input type="hidden" name="first_name" value="">
-      <input type="hidden" name="last_name" value="">
-      <input type="hidden" name="address1" value="">
-      <input type="hidden" name="address2" value="">
-      <input type="hidden" name="city" value="">
-      <input type="hidden" name="state" value="">
-      <input type="hidden" name="zip" value="">
-      <input type="hidden" name="notify_url" value="">
-      <input type="hidden" name="invoice" value="">
-      <input type="hidden" name="country" value="">
-      <input type="hidden" name="email" value="">
-      <input type="hidden" name="notify_url" value="http://cgstarter.local/checkout/paypal/">
-      <INPUT TYPE="hidden" NAME="return" value="http://cgstarter.local/checkout/paypal/">
-
-
-
+        <input type="hidden" name="first_name" value="">
+        <input type="hidden" name="last_name" value="">
+        <input type="hidden" name="address1" value="">
+        <input type="hidden" name="address2" value="">
+        <input type="hidden" name="city" value="">
+        <input type="hidden" name="state" value="">
+        <input type="hidden" name="zip" value="">
+        <input type="hidden" name="invoice" value="">
+        <input type="hidden" name="country" value="">
+        <input type="hidden" name="email" value="">
+        <input type="hidden" name="notify_url" value="http://cgstarter.local/checkout/paypal/">
+        <input type="hidden" name="return" value="http://cgstarter.local/checkout/paypal/">
     </form>
 
     <!-- Modal -->
@@ -428,7 +427,7 @@
 
         function eway_resultCallback(result, transactionID, errors) {
             if (result == "Complete") {
-                window.location.href = "/checkout/complete?AccessCode="+access_code;
+                window.location.href = "/checkout/eway?AccessCode="+access_code;
             } else if (result == "Error") {
                 alert("There was a problem completing the payment: " + errors);
             }

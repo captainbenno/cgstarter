@@ -12,7 +12,7 @@ class Checkout extends Public_Controller {
     {
         parent::__construct();
 
-        require_once '../application/libraries/eway-rapid-php-master/include_eway.php'; 
+       require_once '../application/libraries/eway-rapid-php-master/include_eway.php'; 
 
         if(!$this->uri->segment(2)=="guest"){
             if (!$this->session->userdata('logged_in')){
@@ -28,7 +28,7 @@ class Checkout extends Public_Controller {
 
         // load the users model
         $this->load->model('users_model');
-        $this->load->model('transactions_model');
+        $this->load->model('orders_model');
 
     }
 
@@ -52,58 +52,29 @@ class Checkout extends Public_Controller {
         $this->load->view($this->template, $data);
     }
 
-    //complete paypal transaction
+    //complete paypal order
     function paypal(){
-        if($this->input->get('payer_status') != null){
 
-            $payment_success = true;
+        $payment_success = true;
 
-            if ($payment_success == true) {
-                $payment_success = true;
-                $order_data = array(
-                    'transaction_status'        => 'paid',
-                    'payment_transaction_ref'   => '123456',
-                    'payment_auth_code'         => '234234',
-                    'order_status'              => 'payment confirmed',
-                    'transaction_date'          => date_create()->format('Y-m-d H:i:s'),
-                    'transaction_total'         => '10'
-                );                
-            } else {
-                $order_data = array(
-                    'transaction_status'        => 'payment failure',
-                    'payment_transaction_ref'   => $transactionResponse->TransactionID,
-                    'order_status'              => 'pending',
-                    'transaction_date'          => date_create()->format('Y-m-d H:i:s'),
-                    'transaction_total'         => $transactionResponse->TotalAmount
-                );
-            }
+        $content_data = array(
+            'page_title' => 'Payment',
+            'cancel_url' => base_url(),
+            'payment_success' => $payment_success
+        );
 
-            $this->db->where('transaction_id', $this->session->transaction_id);
-            $this->db->update('transactions', $order_data);
+        $data['content'] = $this->load->view('checkout/complete', $content_data, TRUE);
+        $this->load->view($this->template, $data);
 
-            if ($payment_success == true) {
-                $this->send_payment_success_email();
-                $this->cart->destroy();
-            }
-
-            $content_data = array(
-                'page_title' => 'Payment',
-                'cancel_url' => base_url(),
-                'payment_success' => $payment_success
-            );
-            return true;
-        }
-
-        return false;        
     }
 
     function paypal_ipn(){
         // CONFIG: Enable debug mode. This means we'll log requests into 'ipn.log' in the same directory.
         // Especially useful if you encounter network errors or other intermittent problems with IPN (validation).
         // Set this to 0 once you go live or don't require logging.
-        define("DEBUG", 1);
+        define("DEBUG", $this->config->item('paypal_debug'));
         // Set to 0 once you're ready to go live
-        define("USE_SANDBOX", 1);
+        define("USE_SANDBOX", $this->config->item('paypal_sandbox'));
         define("LOG_FILE", "../application/controllers/ipn.log");
         // Read POST data
         // reading posted data directly from $_POST causes serialization
@@ -129,6 +100,7 @@ class Checkout extends Public_Controller {
             }
             $req .= "&$key=$value";
         }
+
         // Post IPN data back to PayPal to validate the IPN data is genuine
         // Without this step anyone can fake IPN data
         if(USE_SANDBOX == true) {
@@ -163,6 +135,7 @@ class Checkout extends Public_Controller {
         //$cert = __DIR__ . "./cacert.pem";
         //curl_setopt($ch, CURLOPT_CAINFO, $cert);
         $res = curl_exec($ch);
+
         if (curl_errno($ch) != 0) // cURL error
             {
             if(DEBUG == true) { 
@@ -182,26 +155,42 @@ class Checkout extends Public_Controller {
         // Split response headers and payload, a better way for strcmp
         $tokens = explode("\r\n\r\n", trim($res));
         $res = trim(end($tokens));
-        if (strcmp ($res, "VERIFIED") == 0) {
-            // check whether the payment_status is Completed
-            // check that txn_id has not been previously processed
-            // check that receiver_email is your PayPal email
-            // check that payment_amount/payment_currency are correct
-            // process payment and mark item as paid.
-            // assign posted variables to local variables
-            //$item_name = $_POST['item_name'];
-            //$item_number = $_POST['item_number'];
-            //$payment_status = $_POST['payment_status'];
-            //$payment_amount = $_POST['mc_gross'];
+
+        if (strcmp ($res, "VERIFIED") != 0) {
+            $payment_status = $_POST['payment_status'];
+            $payment_amount = $_POST['mc_gross'];
+            $invoice = $_POST['invoice'];
             //$payment_currency = $_POST['mc_currency'];
-            //$txn_id = $_POST['txn_id'];
-            //$receiver_email = $_POST['receiver_email'];
-            //$payer_email = $_POST['payer_email'];
-            
+            $txn_id = $_POST['txn_id'];            
+
+            $payment_success = true;
+            $order_data = array(
+                'order_ref'   => $invoice,
+                'payment_auth_code'         => '',
+                'order_status'              => 'payment confirmed',
+                'order_date'          => date_create()->format('Y-m-d H:i:s'),
+                'order_total'         => $payment_amount);
+
+            $this->db->where('order_ref', $invoice);
+            $this->db->update('orders', $order_data);
+
+            $this->send_payment_success_email($invoice);
+            $this->cart->destroy();
+
             if(DEBUG == true) {
                 error_log(date('[Y-m-d H:i e] '). "Verified IPN: $req ". PHP_EOL, 3, LOG_FILE);
             }
         } else if (strcmp ($res, "INVALID") == 0) {
+
+            $invoice = $_POST['invoice'];
+
+            $order_data = array(
+                'order_status'        => 'payment failure',
+                'order_date'          => date_create()->format('Y-m-d H:i:s'));
+
+            $this->db->where('order_ref', $invoice);
+            $this->db->update('orders', $order_data);
+
             // log for manual investigation
             // Add business logic here which deals with invalid IPN messages
             if(DEBUG == true) {
@@ -214,57 +203,43 @@ class Checkout extends Public_Controller {
     }
 
 
-    // complete eway transaction
-    function complete(){
+    // complete eway order
+    function eway(){
         if($this->input->get('AccessCode') != null){
             //we have a completed order transactoin, let's take a look at it:
             // Create the eWAY Client
             $client = $this->get_eway_client();
-            // Query the transaction result.
-            $response = $client->queryTransaction($this->input->get('AccessCode'));
+            // Query the order result.
+            $response = $client->queryorder($this->input->get('AccessCode'));
 
-            if(count($response->Transactions) > 0){
+            if(count($response->orders) > 0){
 
-                $transactionResponse = $response->Transactions[0];
-                
-                /*
-                    [AuthorisationCode] => 173879
-                    [ResponseCode] => 00
-                    [ResponseMessage] => A2000
-                    [InvoiceReference] => 
-                    [TotalAmount] => 2000
-                    [TransactionID] => 12779253
-                    [TransactionStatus] => 1
-                    [BeagleScore] => 0
-                */
-
-                $transactionResponse->AuthorisationCode;
+                $orderResponse = $response->orders[0];
+                $orderResponse->AuthorisationCode;
                 $payment_success = false;
 
-                if ($transactionResponse->TransactionStatus) {
+                if ($orderResponse->orderStatus) {
                     $payment_success = true;
                     $order_data = array(
-                        'transaction_status'        => 'paid',
-                        'payment_transaction_ref'   => $transactionResponse->TransactionID,
-                        'payment_auth_code'         => $transactionResponse->AuthorisationCode,
+                        'payment_order_ref'   => $orderResponse->orderID,
+                        'payment_auth_code'         => $orderResponse->AuthorisationCode,
                         'order_status'              => 'payment confirmed',
-                        'transaction_date'          => date_create()->format('Y-m-d H:i:s'),
-                        'transaction_total'         => $transactionResponse->TotalAmount
+                        'order_date'          => date_create()->format('Y-m-d H:i:s'),
+                        'order_total'         => $orderResponse->TotalAmount
                     );                
                 } else {
                     $order_data = array(
-                        'transaction_status'        => 'payment failure',
-                        'payment_transaction_ref'   => $transactionResponse->TransactionID,
-                        'order_status'              => 'pending',
-                        'transaction_date'          => date_create()->format('Y-m-d H:i:s'),
-                        'transaction_total'         => $transactionResponse->TotalAmount
+                        'order_status'        => 'payment failure',
+                        'payment_order_ref'   => $orderResponse->orderID,
+                        'order_date'          => date_create()->format('Y-m-d H:i:s'),
+                        'order_total'         => $orderResponse->TotalAmount
                     );
                 }
 
-                $this->db->where('transaction_id', $this->session->transaction_id);
-                $this->db->update('transactions', $order_data);
+                $this->db->where('order_id', $this->session->order_id);
+                $this->db->update('orders', $order_data);
 
-                if ($transactionResponse->TransactionStatus) {
+                if ($orderResponse->orderStatus) {
                     $this->send_payment_success_email();
                     $this->cart->destroy();
                 }
@@ -288,16 +263,17 @@ class Checkout extends Public_Controller {
         }
     }
 
-    function send_payment_success_email(){
+    function send_payment_success_email($order_ref){
+
+
+        $cart = $this->orders_model->order_by_ref($order_ref);
+
         $this->load->library('email');
 
         $this->email->from($this->config->item('order_email_from'));
-        $this->email->to($this->session->order_details->email_address);
+        $this->email->to($cart['email_address']);
         $this->email->bcc($this->config->item('order_email_bcc'));
-
         $this->email->subject('CGStarter - Payment Invoice');
-
-        $cart = $this->cart_model->contents();
 
         $email_body = '<h1>CGStarter</h1>
         <p>Thankyou for support CG projects through CG Starter, your payment for the following items was successful:</p>
@@ -310,25 +286,29 @@ class Checkout extends Public_Controller {
                 <th style="text-align:right">Item Price</th>
                 <th style="text-align:right">Sub-Total</th>
             </tr>';
-            foreach ($cart as $items){
+
+            $items = $cart['items'];
+
+         
+            foreach ($items as $item){
                 $email_body = $email_body.'<tr>
                     <td>
-                        <h4>'.$items['name'].'</h4>
-                        '.$items['project']['title'].'
+                        <h4>'.$item['reward_title'].'</h4>
+                        '.$item['project_title'].'
                     </td>
-                    <td>'.$items['qty'].'</td>
-                    <td style="text-align:right">$'.$this->cart->format_number($items['price']).'</td>
-                    <td style="text-align:right">$'.$this->cart->format_number($items['subtotal']).'</td>
+                    <td>'.$item['qty'].'</td>
+                    <td style="text-align:right">$'.$this->cart->format_number($item['reward_cost']).'</td>
+                    <td style="text-align:right">$'.$this->cart->format_number($item['reward_cost']*$item['qty']).'</td>
                 </tr>';
             }
             $email_body = $email_body.'<tr>
                 <td colspan="2"> </td>
                 <td style="text-align:right"><strong>Total</strong></td>
-                <td style="text-align:right">$'.$this->cart->format_number($this->cart->total()).'</td>
+                <td style="text-align:right">$'.'2'.'</td>
                 </tr>
             </table>
 
-            <p>Your order reference is <strong>'.$this->session->order_ref.'</strong>.</p>
+            <p>Your order reference is <strong>'.$order_ref.'</strong>.</p>
 
             <p>From everyone here at CGStarter we thank you for supporting the CG community.</p>
 
@@ -372,7 +352,7 @@ class Checkout extends Public_Controller {
                 $user_id = $this->session->userdata['logged_in']['id'];
             }
 
-            $order_ref = $this->transactions_model->next_order_id();;
+            $order_ref = $this->orders_model->next_order_id();;
             $order_data = array(
                 'user_id' => $user_id,
                 'first_name' => $form_data['first_name'],
@@ -395,31 +375,32 @@ class Checkout extends Public_Controller {
             );
             
             $this->session->order_ref = $order_ref;
-            $this->db->insert('transactions', $order_data);
-            $transaction_id = $this->db->insert_id();
-            $this->session->transaction_id = $transaction_id;
+            $this->db->insert('orders', $order_data);
+            $order_id = $this->db->insert_id();
+            $this->session->order_id = $order_id;
             $this->session->order_details = $order_data;
         }
 
         // remove all cart items first
-        $this->db->where('transaction_id', $this->session->transaction_id);
-        $this->db->delete('transaction_items');
+        $this->db->where('order_id', $this->session->order_id);
+        $this->db->delete('order_items');
 
         // add them all back in
         foreach ($this->cart_model->contents() as $items){
              $order_items_data = array(
-                'transaction_id' => $this->session->transaction_id,
+                'order_id' => $this->session->order_id,
                 'reward_id' => $items['id'],
                 'reward_title' => $items['name'],
                 'reward_cost' => $items['price'],
                 'project_id' => $items['project_reward']['project_id'],
-                'project_title' => $items['project']['title']
+                'project_title' => $items['project']['title'],
+                'qty' => $items['qty']
             );
-            $this->db->insert('transaction_items', $order_items_data);
+            $this->db->insert('order_items', $order_items_data);
         }
 
         if($form_data['payment_type']=='eway'){
-            $response = $this->create_transaction($this->session->order_details);
+            $response = $this->create_order($this->session->order_details);
             $SharedPaymentUrl = $response->SharedPaymentUrl;
             $AccessCode = $response->AccessCode;
 
@@ -433,8 +414,8 @@ class Checkout extends Public_Controller {
             'payment_gateway'    => $form_data['payment_type']
         );
 
-        $this->db->where('transaction_id', $this->session->transaction_id);
-        $this->db->update('transactions', $order_data);
+        $this->db->where('order_id', $this->session->order_id);
+        $this->db->update('orders', $order_data);
 
         $content_data = array(
             'success' => 'true',
@@ -461,12 +442,12 @@ class Checkout extends Public_Controller {
         $this->index('','remove_cart_alert');
     }
 
-    function create_transaction($order_data){
+    function create_order($order_data){
         
         $client = $this->get_eway_client();
 
-        // Transaction details - these would usually come from the application
-        $transaction = [
+        // order details - these would usually come from the application
+        $order = [
         'Customer' => [
             'FirstName' => $order_data['first_name'],
         //        'LastName' => 'Smith',
@@ -481,7 +462,7 @@ class Checkout extends Public_Controller {
             // These should be set to your actual website (on HTTPS of course)
             'RedirectUrl' => "http://$_SERVER[HTTP_HOST]" . dirname($_SERVER['REQUEST_URI']),
             'CancelUrl' => "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]",
-            'TransactionType' => \Eway\Rapid\Enum\TransactionType::PURCHASE,
+            'orderType' => \Eway\Rapid\Enum\orderType::PURCHASE,
             'Payment' => [
                 'TotalAmount' => ($this->cart->total()*100),
                 'InvoiceReference' => $this->session->order_ref
@@ -489,7 +470,7 @@ class Checkout extends Public_Controller {
         ];
 
         // Submit data to eWAY to get a Shared Page URL
-        $response = $client->createTransaction(\Eway\Rapid\Enum\ApiMethod::RESPONSIVE_SHARED, $transaction);
+        $response = $client->createorder(\Eway\Rapid\Enum\ApiMethod::RESPONSIVE_SHARED, $order);
 
         // Check for any errors
         if (!$response->getErrors()) {

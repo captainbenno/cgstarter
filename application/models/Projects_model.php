@@ -107,9 +107,9 @@ class Projects_model extends CI_Model {
 
         $this->db->select('sum(reward_cost) AS total');
         $this->db->where('projects.project_id', $project_id);
-        $this->db->join('transactions', 'transactions.transaction_id = transaction_items.transaction_id');        
-        $this->db->join('projects', 'projects.project_id = transaction_items.project_id');        
-        $query = $this->db->get('transaction_items'); 
+        $this->db->join('orders', 'orders.order_id = order_items.order_id');        
+        $this->db->join('projects', 'projects.project_id = order_items.project_id');        
+        $query = $this->db->get('order_items'); 
 
         $project = $this->get_project($project_id);
 
