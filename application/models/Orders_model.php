@@ -16,7 +16,7 @@ class Orders_model extends CI_Model {
         parent::__construct();
 
         // define primary table
-        $this->_db = 'Orders';
+        $this->_db = 'orders';
     }
 
 
@@ -36,9 +36,9 @@ class Orders_model extends CI_Model {
         $query = $this->db->get('orders'); 
         $order = $query->row_array();
 
-        $this->db->select('project_title,project_id,reward_id,reward_cost,reward_title');
-        $this->db->where('Orders.order_ref', $order_ref);
-        $this->db->join('order_items', 'Orders.order_id = order_items.order_id');        
+        $this->db->select('project_title,project_id,reward_id,reward_cost,reward_title,qty');
+        $this->db->where('orders.order_ref', $order_ref);
+        $this->db->join('order_items', 'orders.order_id = order_items.order_id');        
         $query = $this->db->get($this->_db); 
 
         $order_items = $query->result_array();

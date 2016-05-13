@@ -12,7 +12,7 @@ class Checkout extends Public_Controller {
     {
         parent::__construct();
 
-        require_once '../application/libraries/eway-rapid-php-master/include_eway.php'; 
+       require_once '../application/libraries/eway-rapid-php-master/include_eway.php'; 
 
         if(!$this->uri->segment(2)=="guest"){
             if (!$this->session->userdata('logged_in')){
@@ -62,6 +62,7 @@ class Checkout extends Public_Controller {
             'cancel_url' => base_url(),
             'payment_success' => $payment_success
         );
+
         $data['content'] = $this->load->view('checkout/complete', $content_data, TRUE);
         $this->load->view($this->template, $data);
 
@@ -71,9 +72,9 @@ class Checkout extends Public_Controller {
         // CONFIG: Enable debug mode. This means we'll log requests into 'ipn.log' in the same directory.
         // Especially useful if you encounter network errors or other intermittent problems with IPN (validation).
         // Set this to 0 once you go live or don't require logging.
-        define("DEBUG", 1);
+        define("DEBUG", $this->config->item('paypal_debug'));
         // Set to 0 once you're ready to go live
-        define("USE_SANDBOX", 1);
+        define("USE_SANDBOX", $this->config->item('paypal_sandbox'));
         define("LOG_FILE", "../application/controllers/ipn.log");
         // Read POST data
         // reading posted data directly from $_POST causes serialization
@@ -156,22 +157,11 @@ class Checkout extends Public_Controller {
         $res = trim(end($tokens));
 
         if (strcmp ($res, "VERIFIED") != 0) {
-            // check whether the payment_status is Completed
-            // check that txn_id has not been previously processed
-            // check that receiver_email is your PayPal email
-            // check that payment_amount/payment_currency are correct
-            // process payment and mark item as paid.
-            // assign posted variables to local variables
-            //$item_name = $_POST['item_name'];
-            //$item_number = $_POST['item_number'];
             $payment_status = $_POST['payment_status'];
             $payment_amount = $_POST['mc_gross'];
             $invoice = $_POST['invoice'];
             //$payment_currency = $_POST['mc_currency'];
-            $txn_id = $_POST['txn_id'];
-            //$receiver_email = $_POST['receiver_email'];
-            //$payer_email = $_POST['payer_email'];
-            
+            $txn_id = $_POST['txn_id'];            
 
             $payment_success = true;
             $order_data = array(
@@ -214,7 +204,7 @@ class Checkout extends Public_Controller {
 
 
     // complete eway order
-    function complete(){
+    function eway(){
         if($this->input->get('AccessCode') != null){
             //we have a completed order transactoin, let's take a look at it:
             // Create the eWAY Client
@@ -225,18 +215,6 @@ class Checkout extends Public_Controller {
             if(count($response->orders) > 0){
 
                 $orderResponse = $response->orders[0];
-                
-                /*
-                    [AuthorisationCode] => 173879
-                    [ResponseCode] => 00
-                    [ResponseMessage] => A2000
-                    [InvoiceReference] => 
-                    [TotalAmount] => 2000
-                    [orderID] => 12779253
-                    [orderStatus] => 1
-                    [BeagleScore] => 0
-                */
-
                 $orderResponse->AuthorisationCode;
                 $payment_success = false;
 
@@ -311,15 +289,16 @@ class Checkout extends Public_Controller {
 
             $items = $cart['items'];
 
+         
             foreach ($items as $item){
                 $email_body = $email_body.'<tr>
                     <td>
                         <h4>'.$item['reward_title'].'</h4>
                         '.$item['project_title'].'
                     </td>
-                    <td>'.$items['qty'].'</td>
-                    <td style="text-align:right">$'.$this->cart->format_number($item['price']).'</td>
-                    <td style="text-align:right">$'.$this->cart->format_number($item['price']*$item-['qty']).'</td>
+                    <td>'.$item['qty'].'</td>
+                    <td style="text-align:right">$'.$this->cart->format_number($item['reward_cost']).'</td>
+                    <td style="text-align:right">$'.$this->cart->format_number($item['reward_cost']*$item['qty']).'</td>
                 </tr>';
             }
             $email_body = $email_body.'<tr>
@@ -329,7 +308,7 @@ class Checkout extends Public_Controller {
                 </tr>
             </table>
 
-            <p>Your order reference is <strong>'.$this->session->order_ref.'</strong>.</p>
+            <p>Your order reference is <strong>'.$order_ref.'</strong>.</p>
 
             <p>From everyone here at CGStarter we thank you for supporting the CG community.</p>
 
@@ -414,7 +393,8 @@ class Checkout extends Public_Controller {
                 'reward_title' => $items['name'],
                 'reward_cost' => $items['price'],
                 'project_id' => $items['project_reward']['project_id'],
-                'project_title' => $items['project']['title']
+                'project_title' => $items['project']['title'],
+                'qty' => $items['qty']
             );
             $this->db->insert('order_items', $order_items_data);
         }

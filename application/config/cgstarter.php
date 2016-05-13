@@ -30,3 +30,7 @@ $config['prodApiEndpoint'] = \Eway\Rapid\Client::MODE_SANDBOX;
 
 $config['order_email_from'] = 'captainbenno73@gmail.com';
 $config['order_email_bcc'] = 'captainbenno73@gmail.com';
+
+$config['paypal_debug'] = false;
+$config['paypal_sandbox'] = true;
+$config['paypal_email'] = 'captainbenno73@gmail.com';
