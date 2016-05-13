@@ -33,4 +33,4 @@ $config['order_email_bcc'] = 'captainbenno73@gmail.com';
 
 $config['paypal_debug'] = false;
 $config['paypal_sandbox'] = true;
-$config['paypal_email'] = 'captainbenno73@gmail.com';
+$config['paypal_email'] = 'test@cgstarter.com';
