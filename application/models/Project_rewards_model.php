@@ -33,6 +33,10 @@ class Project_rewards_model extends CI_Model {
         $this->db->order_by('price', 'DESC');       
         $query = $this->db->get($this->_db); 
         $return_data = $query->result_array();
+        foreach ($return_data as $key => $value) {
+            $return_data[$key]['sold'] = $this->get_rewards_sold_count($value['project_reward_id']);
+        }
+
         return $return_data;
     }
 
@@ -46,8 +50,23 @@ class Project_rewards_model extends CI_Model {
         $this->db->where('project_reward_id', $project_reward_id);        
         $query = $this->db->get($this->_db); 
         $return_data = $query->row_array();
+        foreach ($return_data as $key => $value) {
+            $return_data[$key]['sold'] = $this->get_rewards_sold_count($value['project_reward_id']);
+        }
         return $return_data;
     }
 
+    /**
+     * Get get_rewards_sold_count
+     *
+     * @return int
+     */
+    function get_rewards_sold_count($project_reward_id)
+    {
+        $this->db->select('count(*) AS total');
+        $this->db->where('order_items.reward_id', $project_reward_id);
+        $query = $this->db->get('order_items'); 
+        return $query->row()->total;
+    }
 
 }

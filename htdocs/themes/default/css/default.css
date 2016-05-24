@@ -529,7 +529,9 @@ footer{
                         color: #9cb80f;
                         font-size: 12px;
                     }
-
+                        #backers em span{
+                            color: #cccccc;
+                        }
     #social-media-block{
         margin-top: 20px;
         margin-bottom: 40px;
@@ -622,6 +624,11 @@ footer{
                 font-size: 15px;
                 font-weight: bold;
             }
+                #project-rewards em span{
+                    color: #808080;
+                    font-size: 12px;
+                }
+
 
             #project-rewards img{
             
@@ -644,6 +651,11 @@ footer{
                 margin: 12px;
                 padding: 3px 83px;
                 text-transform: uppercase;
+            }
+
+            #project-rewards a.btn.disabled{
+                background-color: #cccccc;
+                border-color: #999999;
             }
 
 .general-content-container{

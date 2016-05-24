@@ -209,10 +209,18 @@
                         foreach ($project['project_rewards'] as $project_reward) { ?>
                             <li>
                                 <h4><?php echo  $project_reward['title']?></h4>
-                                <em>$<?php echo  $project_reward['price']?></em>
+                                <em>$<?php echo  $project_reward['price']?>
+                                    <span>
+                                    <?php if($project_reward['sold'] >= $project_reward['quantity']){ ?> 
+                                        SOLD OUT!
+                                    <? } else { ?>
+                                        (<?php if($project_reward['sold'] > 0){ echo  $project_reward['sold']?> sold, <?php } echo  $project_reward['quantity']-$project_reward['sold']?> left)                                    
+                                    <?php } ?>
+                                    </span>
+                                </em>
                                 <img src="<?php echo  $project_reward['teaser_image']?>" />
                                 <p><?php echo  $project_reward['teaser_text']?></p>
-                                <a href="/cart/<?php echo  $project_reward['project_reward_id']?>" class="btn" role="button">
+                                <a href="/cart/<?php echo  $project_reward['project_reward_id']?>" class="btn<?php if($project_reward['sold'] >= $project_reward['quantity']){ echo ' disabled'; } ?>" role="button">
                                     PLEDGE
                                 </a>
                             </li>
