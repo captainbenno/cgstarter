@@ -450,6 +450,7 @@ footer{
         padding: 18px 44px;
         text-transform: uppercase;
         width: 100%;
+	max-width: 320px;
     }
 
     #pledge-row .progress{
@@ -557,7 +558,8 @@ footer{
         background-color: #e5e5e5;
         margin-top: 32px;
         padding: 0 10px 0 10px;
-    }   
+    	max-width: 320px;
+     }   
         ul#project-stats{
             list-style: none;
         }
@@ -605,6 +607,7 @@ footer{
         list-style: outside none none;
         margin-top: 32px;
         padding: 0; 
+	max-width:320px;   
     }
 
         #project-rewards li{
