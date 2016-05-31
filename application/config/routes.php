@@ -62,3 +62,7 @@ $route['cart/remove/(:num)']   = "cart/remove_product/$1";
 $route['cart']['post']         = "cart/refresh_qty";
 $route['checkout/guest']       = "checkout/index";
 $route['checkout/complete/(:any)']   = "checkout/complete/$1";
+$route['about']                = 'misc/about';
+$route['privacy']                = 'misc/privacy';
+$route['terms']                = 'misc/terms';
+$route['shipping']                = 'misc/shipping';

@@ -48,6 +48,16 @@
     <![endif]-->
 </head>
 <body>
+    
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.6&appId=242282062472425";
+    fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
     <!-- beginning of nav -->
     <nav id="top-nav" class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
@@ -97,10 +107,10 @@
             <div id="navbar-main">
                 <a class="navbar-brand" href="/"><span>CG-Starter</span></a>
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="active"><a href="/login">Home</a></li>
-                    <li class=""><a href="/about">About</a></li>
-                    <li class=""><a href="/project/expose">Projects</a></li>
-                    <li class=""><a href="/contact">Contact</a></li>
+                    <li class="<?php echo (uri_string() == '') ? 'active' : ''; ?>"><a href="/">Home</a></li>                    
+                    <li class="<?php echo (uri_string() == 'about') ? 'active' : ''; ?>"><a href="/about">About</a></li>
+                    <li class="<?php echo (uri_string() == 'project/expose') ? 'active' : ''; ?>"><a href="/project/expose">Projects</a></li>
+                    <li class="<?php echo (uri_string() == 'contact') ? 'active' : ''; ?>"><a href="/contact">Contact</a></li>
                 </ul>
             </div>
         </div>
@@ -144,21 +154,34 @@
                 </div>
                 <div class="col-md-2" id="tweets-feed">
                     <h4>Recents Tweets</h4>
+                    <a class="twitter-timeline" href="https://twitter.com/damirdokic" data-widget-id="737237435642347520">Tweets by @damirdokic</a>
+                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
                 </div>
                 <div class="col-md-2" id="facebook-feed">
                     <h4>Facebook Feed</h4>
+                    <div class="fb-page" 
+                        data-href="https://www.facebook.com/ballisticpublishing/" 
+                        data-tabs="timeline" 
+                        data-small-header="false" 
+                        data-adapt-container-width="true" 
+                        data-hide-cover="true" 
+                        data-show-facepile="true" 
+                        data-height="300"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/ballisticpublishing/"><a href="https://www.facebook.com/ballisticpublishing/">Ballistic Publishing</a></blockquote></div></div>
                 </div>
                 <div class="col-md-2" id="footer-menu">
                     <h4>Menu</h4>
                     <ul>
                         <li>
-                            <a href="/">Home</a>
+                            <a href="/about">About and FAQ</a>
                         </li>
                         <li>
-                            <a href="/about">About</a>
+                            <a href="/privacy">Privacy Policy</a>
                         </li>
                         <li>
-                            <a href="/project/expose">Projects</a>
+                            <a href="/terms">Terms and Conditions</a>
+                        </li>
+                        <li>
+                            <a href="/shipping">Shipping and Returns</a>
                         </li>
                         <li>
                             <a href="/contact">Contact</a>

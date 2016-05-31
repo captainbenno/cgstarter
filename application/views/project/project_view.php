@@ -135,21 +135,17 @@
                     <!-- end of project tabs -->
                     <!-- start of social media block -->
                     <div id="social-media-block">
-                        <a class="btn btn-social-icon btn-facebook">
-                            <span class="fa fa-facebook"></span>
-                        </a>
-                        <a class="btn btn-social-icon btn-google">
-                            <span class="fa fa-google"></span>
-                        </a>
-                        <a class="btn btn-social-icon btn-twitter">
-                            <span class="fa fa-twitter"></span>
-                        </a>
-                        <a class="btn btn-social-icon btn-linkedin">
-                            <span class="fa fa-linkedin"></span>
-                        </a>
-                        <a class="btn btn-social-icon btn-pinterest">
-                            <span class="fa fa-pinterest"></span>
-                        </a>
+                        <?php $socialLinks =  array('facebook','google','pinterest','twitter','instagram');
+                            foreach ($socialLinks as $socialLink) {
+                                if(strlen($project['url_'.$socialLink]) > 0){
+                                    echo '
+                                        <a href="'.$project['url_'.$socialLink].'" target="_blank" class="btn btn-social-icon btn-'.$socialLink.'">
+                                            <span class="fa fa-'.$socialLink.'"></span>
+                                        </a>
+                                    ';                                    
+                                }
+                            } 
+                        ?>
                     </div>
                     <!-- end of social media block -->
                     <hr />

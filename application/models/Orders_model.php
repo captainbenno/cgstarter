@@ -19,6 +19,31 @@ class Orders_model extends CI_Model {
         $this->_db = 'orders';
     }
 
+    /**
+     * Get all orders
+     *
+     * @return array
+     */
+    function get_all_orders()
+    {
+     //   $this->db->where('is_active', 1);        
+   //     $this->db->order_by('end_date', 'DESC');       
+        $query = $this->db->get($this->_db); 
+        if ($query->num_rows() > 0)
+        {
+            $results['results'] = $query->result_array();
+        }
+        else
+        {
+            $results['results'] = NULL;
+        }
+
+        $sql = "SELECT FOUND_ROWS() AS total";
+        $query = $this->db->query($sql);
+        $results['total'] = $query->row()->total;
+
+        return $results;
+    }
 
     function is_order_success($order_ref)
     {

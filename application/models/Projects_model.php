@@ -35,6 +35,20 @@ class Projects_model extends CI_Model {
     }
 
     /**
+     * Get all active projects
+     *
+     * @return array
+     */
+    function get_all_projects()
+    {
+     //   $this->db->where('is_active', 1);        
+        $this->db->order_by('end_date', 'DESC');       
+        $query = $this->db->get($this->_db); 
+        $return_data = $query->result_array();
+        return $return_data;
+    }
+
+    /**
      * Get project by id
      *
      * @return array
