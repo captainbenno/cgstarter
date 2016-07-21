@@ -223,7 +223,7 @@
                                         </tr>
                                         <?php $i = 1;
                                         $shipping = 0?>
-                                        <?php foreach ($cart as $items): ?>
+                                        <?php foreach ($cart as $items){ ?>
                                             <?php $shipping = $shipping +($items['shipping']*$items['qty']) ?>
 
                                             <?php echo form_hidden($i.'[rowid]', $items['rowid']); ?>
@@ -247,7 +247,7 @@
                                                 <td style="text-align:right">$<?php echo $this->cart->format_number($items['subtotal']); ?></td>
                                             </tr>
                                         <?php $i++; ?>
-                                        <?php endforeach; ?>
+                                        <?php } ?>
                                         <tr>
                                             <td colspan="2"> </td>
                                             <td style="text-align:right"><strong>Total</strong></td>
