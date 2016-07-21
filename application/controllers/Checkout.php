@@ -443,7 +443,7 @@ class Checkout extends Public_Controller {
     }
 
     function create_order($order_data){
-        
+
         $client = $this->get_eway_client();
 
         // order details - these would usually come from the application
@@ -462,7 +462,7 @@ class Checkout extends Public_Controller {
             // These should be set to your actual website (on HTTPS of course)
             'RedirectUrl' => "http://$_SERVER[HTTP_HOST]" . dirname($_SERVER['REQUEST_URI']),
             'CancelUrl' => "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]",
-            'orderType' => \Eway\Rapid\Enum\orderType::PURCHASE,
+            'TransactionType' => \Eway\Rapid\Enum\TransactionType::PURCHASE,
             'Payment' => [
                 'TotalAmount' => ($this->cart->total()*100),
                 'InvoiceReference' => $this->session->order_ref
@@ -470,7 +470,7 @@ class Checkout extends Public_Controller {
         ];
 
         // Submit data to eWAY to get a Shared Page URL
-        $response = $client->createorder(\Eway\Rapid\Enum\ApiMethod::RESPONSIVE_SHARED, $order);
+        $response = $client->createTransaction(\Eway\Rapid\Enum\ApiMethod::RESPONSIVE_SHARED, $order);
 
         // Check for any errors
         if (!$response->getErrors()) {
