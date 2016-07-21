@@ -481,7 +481,7 @@ class Checkout extends Public_Controller {
     }
 
      function get_eway_client(){
-        if($this->config->item('paymentMode')){
+        if($this->config->item('paymentMode')=='test'){
             $apiKey = $this->config->item('testApiKey');
             $apiPassword = $this->config->item('testApiPassword');
             $apiEndpoint = $this->config->item('testApiEndpoint');
