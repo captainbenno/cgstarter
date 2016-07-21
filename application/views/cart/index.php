@@ -14,7 +14,7 @@
                 <h1>Rewards Shopping Bag</h1>
                 <?php if($add_cart_alert==1){ ?>
                     <div id="add-alert" class="alert alert-success" role="alert">
-                        Success - Pledge added to cart.
+                        Success - Reward added to cart.
                     </div>
                 <?php } ?>
 
@@ -40,8 +40,10 @@
                             <th style="text-align:right">Item Price</th>
                             <th style="text-align:right">Sub-Total</th>
                         </tr>
-                        <?php $i = 1; ?>
+                        <?php $i = 1;
+                            $shipping = 0?>
                         <?php foreach ($cart as $items): ?>
+                            <?php $shipping = $shipping +($items['shipping']*$items['qty']) ?>
                             <?php echo form_hidden($i.'[rowid]', $items['rowid']); ?>
                             <tr>
                                 <td>
@@ -58,15 +60,31 @@
                                       <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
                                     </a>
                                 </td>
-                                <td style="text-align:right">$<?php echo $this->cart->format_number($items['price']); ?></td>
+                                <td style="text-align:right">$<?php echo $this->cart->format_number($items['price']); ?>
+                                        <? if($items['shipping']>0){
+                                            ?>
+                                            <br />
+                                            <span class="small">(inc $<?php echo $this->cart->format_number($items['shipping']); ?> shipping)</span></td>
+                                        <?
+                                        };
+                                        ?>
                                 <td style="text-align:right">$<?php echo $this->cart->format_number($items['subtotal']); ?></td>
                             </tr>
                         <?php $i++; ?>
                         <?php endforeach; ?>
                         <tr>
                             <td colspan="4"> </td>
-                            <td style="text-align:right"><strong>Total</strong></td>
-                            <td style="text-align:right">$<?php echo $this->cart->format_number($this->cart->total()); ?></td>
+                            <td style="text-align:right"><strong>Total</strong>
+                            </td>
+                            <td style="text-align:right">$<?php echo $this->cart->format_number($this->cart->total()); ?>
+                                <? if($shipping >0){
+                                ?>
+                                <br />
+                                <span class="small">(inc $<?php echo $this->cart->format_number($shipping); ?> shipping)</span>
+                            <?
+                            };
+                            ?>
+                            </td>
                         </tr>
                     </table>                
                     <a role="button" href="#" id="refresh-btn" class="btn cart-btn btn-default pull-right">
@@ -75,7 +93,7 @@
                 </div>
                 <hr />
                 <a role="button" href="/checkout" class="btn cart-btn btn-success pull-right btn-lg">Proceed To Checkout <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-                <p>You will be abe to select your shipping and payment options once you proceed to the checkout.</p>
+                <p>You will be abe to select your payment options once you proceed to the checkout.</p>
             </div>
             <div class="col-md-2"></div>
         </div>            

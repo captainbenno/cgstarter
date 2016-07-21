@@ -709,3 +709,57 @@ footer{
 .modal{
     z-index:2000;
 }
+
+==================================================
+# Profile
+================================================== */
+.carousel .slides li {
+    width: 230px;
+    margin-right: 10px;
+}
+.profile {
+    background: #fff;
+    margin-bottom: 30px;
+}
+.profile-content {
+    padding: 25px 8.7% 10px;
+}
+.profile-name,
+.profile-function,
+.profile-social {
+    display:block;
+}
+.profile:hover .profile-photo {
+    opacity:0.5;
+}
+.profile .profile-photo {
+    overflow: hidden;
+}
+.profile .profile-photo img {
+    width: 100.5%!important;
+    max-width: 100.5%;
+}
+.profile .profile-photo:hover {
+    cursor: pointer;
+}
+.profile-name {
+    font-family: 'Montserrat', sans-serif;
+    color: #393939;
+    font-size: 15px;
+    line-height: 20px;
+    margin-bottom: 8px;
+}
+.profile-function {
+    margin-bottom: 15px;
+}
+.profile-social {
+    padding: 10px 0px 25px;
+}
+.profile-social [class^="icon-"],
+.profile-social [class*=" icon-"] {
+    font-size: 17px;
+    margin-right: 10px;
+}
+.profile-text{
+    padding-top: 0px;
+}

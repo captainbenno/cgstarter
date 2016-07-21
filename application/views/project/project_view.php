@@ -25,14 +25,21 @@
             <div class="col-md-5">
                 <h3>Project Goal</h3>
                 <div class="progress">
-                    <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="<?php echo  $project['goal_achievement']['achievement_percentage']?>" aria-valuemin="0" aria-valuemax="100" style="width: <?php echo  $project['goal_achievement']['achievement_percentage']?>%">
-                        <span class="sr-only"><?php echo  $project['goal_achievement']['achievement_percentage']?>% Complete (success)</span>
+                    <?php
+                        if($project['goal_achievement']['achievement_percentage'] > 0){
+                            $achievement_percentage = $project['goal_achievement']['achievement_percentage'];
+                        }else{
+                            $achievement_percentage = 1;
+                        }
+                    ?>
+                    <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="<?php echo $achievement_percentage ?>" aria-valuemin="0" aria-valuemax="100" style="width: <?php echo $achievement_percentage ?>%">
+                        <span class="sr-only"><?php echo $achievement_percentage ?>% Complete (success)</span>
                     </div>
                 </div>
             </div>
-            <div class="col-md-3" id="back-project">
+            <!--div class="col-md-3" id="back-project">
                 <button>Back Project</button>
-            </div>
+            </div-->
             <div class="col-md-2"></div>
         </div>            
     </div>
@@ -46,7 +53,8 @@
                 <h2 class="klavika-bold"><span>Project:</span> <?php echo $project['title'] ?></h2>
                 <!-- beginning of project video -->
                 <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="//www.youtube.com/embed/cgD8fJlkLqk"></iframe>
+                    <img src="//cgimg.s3.amazonaws.com/newsletter/exp12.jpg" />
+                    <!--iframe class="embed-responsive-item" src="//www.youtube.com/embed/cgD8fJlkLqk"></iframe -->
                 </div>
                 <!-- end of project video -->
                 <!-- start of project tabs -->
@@ -63,6 +71,106 @@
                     <div class="tab-content">
                         <div role="tabpanel" class="tab-pane active" id="what">                     
                             <?php echo $project['description'] ?>
+
+                            <a href="http://ballisticpublishing.com/books/expose/expose_12/callforentries/index.html"><img src="https://cgimg.s3.amazonaws.com/newsletter/july2016header.jpg" border="0" alt="EXPOSE 12" width="680" height="352"></a>
+
+
+
+                            <h3>EXPOSÉ 12</h3>
+                            <p>EXPOSÉ is the first and premiere
+                                showcase for digital art and artists. Every year EXPOSÉ&nbsp; features
+                                the best digital art in the know universe. Since it launched in 2003
+                                EXPOSÉ&nbsp; has been a sensation -- a continuing global
+                                phenomenon, receiving critical acclaim from all quarters of the digital
+                                art industry.</p>
+                            <p>
+                                EXPOSÉ will expand to encompass an exciting range of products that
+                                throughout the year will showcase you, your art, your techniques, your
+                                inspirations and your experiences.&nbsp; EXPOSÉ will also celebrate the
+                                influences and the impact of the digital arts. But always,
+                                at the center, EXPOSÉ will celebrate extraordinary digital art and artists. <br>
+                            </p>
+
+                            <p>So have a global impact and be part of the excitement.<br>
+                            </p>
+
+                            <p class="skill">&nbsp;</p>
+            <!-- // End About Section -->
+
+                            <h3 class="section-title">Artists Testimonials EXPOSÉ 11</h3>
+
+                            <!-- Testimonials Carousel -->
+                            <div id="testimonials-carousel" class="flexslider carousel profile-carousel">
+                                <ul class="slides">
+                                    <li>
+                                        <div class="profile text-center">
+                                            <div class="profile-photo"><img src="//ballisticpublishing.com/books/expose/expose_12/callforentries/assets/img/test-01.jpg" alt=""></div>
+                                            <div class="profile-content">
+                                                <div class="profile-text"><p>The
+                                                        book is really amazing ! It’s so cool to be showcased among so many
+                                                        inspiring artists from around world! Thanks a lot to everyone on the
+                                                        Ballistic Publishing team!</p></div>
+                                                <div class="profile-info">
+                                                    <span class="profile-name">Jean-Marc Emy</span>
+                                                    <span class="profile-function">France</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="profile text-center">
+                                            <div class="profile-photo"><img src="//ballisticpublishing.com/books/expose/expose_12/callforentries/assets/img/test-02.jpg" alt=""></div>
+                                            <div class="profile-content">
+                                                <div class="profile-text"><p>I'm
+                                                        really glad to be part of this edition! Really appreciate the
+                                                        opportunity to be in this select group, filled with great artists I
+                                                        admire. Its incredibly motivational!</p></div>
+                                                <div class="profile-info">
+                                                    <span class="profile-name">Rodrigo Ramos</span>
+                                                    <span class="profile-function">Brazil</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="profile text-center">
+                                            <div class="profile-photo"><img src="//ballisticpublishing.com/books/expose/expose_12/callforentries/assets/img/test-03.jpg" alt=""></div>
+                                            <div class="profile-content">
+                                                <div class="profile-text"><p>It's
+                                                        a great honour to feature in this years EXPOSÉ 11 and I am completely
+                                                        thrilled to be sharing my work along such talented artists,
+                                                        Congratulations to everyone who took part.</p></div>
+                                                <div class="profile-info">
+                                                    <span class="profile-name">Guy Atherfield</span>
+                                                    <span class="profile-function">Great Britain</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="profile text-center">
+                                            <div class="profile-photo"><img src="//ballisticpublishing.com/books/expose/expose_12/callforentries/assets/img/test-04.jpg" alt=""></div>
+                                            <div class="profile-content">
+                                                <div class="profile-text"><p>Thanks
+                                                        to everyone involved in creating the amazing book EXPOSÉ 11! It is a
+                                                        deep feeling to be part of this great artistic family, where we all grow
+                                                        up year after year.</p></div>
+                                                <div class="profile-info">
+                                                    <span class="profile-name">Patricio Clarey</span>
+                                                    <span class="profile-function">Spain</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+
+
+
+
+
+
                         </div>
                         <div role="tabpanel" class="tab-pane" id="updates">
                             <?php 
@@ -89,7 +197,6 @@
                                             <em><?php
 
                                             $seconds_remaining = now() - $backer['backer_timestamp'];
-
                                             if($seconds_remaining<60){
                                                 echo "&gt; 1 minute to ago";
                                             } else if($seconds_remaining<3600){
@@ -176,14 +283,13 @@
                         <hr />
                     </li>
                     <li id="stats-total">
-                        <strong><?php echo  $project['goal_achievement']['achievement_dollars']?></strong>
+                        <strong><?php if($project['goal_achievement']['achievement_dollars']>0){echo $project['goal_achievement']['achievement_dollars'];}else{echo 0;}?></strong>
                         <em>Pledged of $<?php echo  $project['goal']?> goal</em>
                         <hr />
                     </li>
                     <li id="stats-days">
                         <?php
-
-                            $seconds_remaining = 30;//$project['seconds_remaining'];
+                            $seconds_remaining = strtotime($project['end_date']) -now();
 
                             if($seconds_remaining<60){
                                 echo "<strong>&gt; 1</strong><em> minute to go</em>";
@@ -199,7 +305,7 @@
                     </li>
                 </ul>
 
-                <h3>Pledges & Your Rewards</h3>
+                <h3>Your Rewards</h3>
                 <ul id="project-rewards">
                     <?php 
                         foreach ($project['project_rewards'] as $project_reward) { ?>
@@ -217,7 +323,7 @@
                                 <img src="<?php echo  $project_reward['teaser_image']?>" />
                                 <p><?php echo  $project_reward['teaser_text']?></p>
                                 <a href="/cart/<?php echo  $project_reward['project_reward_id']?>" class="btn<?php if($project_reward['sold'] >= $project_reward['quantity']){ echo ' disabled'; } ?>" role="button">
-                                    PLEDGE
+                                    BUY ME!
                                 </a>
                             </li>
                     <?php 

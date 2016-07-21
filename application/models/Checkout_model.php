@@ -36,8 +36,9 @@ class Checkout_model extends CI_Model {
                 $data = array(
                         'id'      => $project_reward_data['project_reward_id'],
                         'qty'     => 1,
-                        'price'   => $project_reward_data['price'],
-                        'name'    => $project_reward_data['title']
+                        'price'   => $project_reward_data['price']+$project_reward_data['shipping'],
+                        'name'    => $project_reward_data['title'],
+                        'shipping'    => $project_reward_data['shipping']
                 );
 
                 $this->cart->insert($data); 

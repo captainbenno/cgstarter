@@ -221,8 +221,11 @@
                                             <th style="text-align:right">Item Price</th>
                                             <th style="text-align:right">Sub-Total</th>
                                         </tr>
-                                        <?php $i = 1; ?>
+                                        <?php $i = 1;
+                                        $shipping = 0?>
                                         <?php foreach ($cart as $items): ?>
+                                            <?php $shipping = $shipping +($items['shipping']*$items['qty']) ?>
+
                                             <?php echo form_hidden($i.'[rowid]', $items['rowid']); ?>
                                             <tr>
                                                 <td>
@@ -231,7 +234,16 @@
                                                     <a href="/project/<?php echo $items['project']['stub']; ?>"><?php echo $items['project']['title']; ?></a>
                                                 </td>
                                                 <td><?php echo $items['qty']; ?> </td>
-                                                <td style="text-align:right">$<?php echo $this->cart->format_number($items['price']); ?></td>
+                                                <td style="text-align:right">$<?php echo $this->cart->format_number($items['price']); ?>
+                                                    <? if($items['shipping']>0){
+                                                    ?>
+                                                    <br />
+                                                    <span class="small">(inc $<?php echo $this->cart->format_number($items['shipping']); ?> shipping)</span></td>
+                                                <?
+                                                };
+                                                ?>
+
+                                                </td>
                                                 <td style="text-align:right">$<?php echo $this->cart->format_number($items['subtotal']); ?></td>
                                             </tr>
                                         <?php $i++; ?>
@@ -239,7 +251,17 @@
                                         <tr>
                                             <td colspan="2"> </td>
                                             <td style="text-align:right"><strong>Total</strong></td>
-                                            <td style="text-align:right">$<?php echo $this->cart->format_number($this->cart->total()); ?></td>
+                                            <td style="text-align:right">$<?php echo $this->cart->format_number($this->cart->total()); ?>
+                                                <? if($shipping >0){
+                                                ?>
+                                                <br />
+                                                <span class="small">(inc $<?php echo $this->cart->format_number($shipping); ?> shipping)</span>
+                                            <?
+                                            };
+                                            ?>
+                                            <div id="austgst"><span class="small">(inc $<?php echo $this->cart->format_number($this->cart->total()/10); ?> GST)</span></div>
+
+                                            </td>
                                         </tr>
                                     </table> 
                                 </div>     
@@ -309,6 +331,8 @@
         var access_code = null;
 
         $(document).ready(function() {
+
+
             $("#billing-address-section input").change(function() {
                 if($("#copy_billing_address").is(":checked")) {
                     field_name = $(this).attr('name').replace('billing_','delivery_');
@@ -319,6 +343,15 @@
             });
 
             $("#billing-address-section select").change(function() {
+
+                if($(this).attr('name')=="billing_country"){
+                    if($(this).val()=="AU"){
+                        $("#austgst").removeClass("hidden");
+                    }else{
+                        $("#austgst").addClass("hidden");
+                    }
+                }
+
                 if($("#copy_billing_address").is(":checked")) {
                     field_name = $(this).attr('name').replace('billing_','delivery_');
                     field_val = $(this).val();

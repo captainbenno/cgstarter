@@ -10,8 +10,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=3.2.4">
-    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=3.2.4">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="shortcut icon" type="image/png" href="/favicon-16x16.png">
     <title><?php echo $this->settings->site_name; ?> - <?php echo $page_title; ?></title>
     <meta name="keywords" content="these, are, keywords">
     <meta name="description" content="This is the site description.">
@@ -23,8 +23,7 @@
     <link rel="stylesheet" href="/themes/core/css/core.css?v=3.2.4">
     <link rel="stylesheet" href="/themes/default/css/default.css?v=3.2.4">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="/themes/default/css/jcarousel.basic.css">
-                        
+
     <! -- other -->
     <?php if (isset($css_files) && is_array($css_files)) : ?>
         <?php foreach ($css_files as $css) : ?>
@@ -109,7 +108,7 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li class="<?php echo (uri_string() == '') ? 'active' : ''; ?>"><a href="/">Home</a></li>                    
                     <li class="<?php echo (uri_string() == 'about') ? 'active' : ''; ?>"><a href="/about">About</a></li>
-                    <li class="<?php echo (uri_string() == 'project/expose') ? 'active' : ''; ?>"><a href="/project/expose">Projects</a></li>
+                    <li class="<?php echo (uri_string() == 'project/expose12') ? 'active' : ''; ?>"><a href="/project/expose12">Projects</a></li>
                     <li class="<?php echo (uri_string() == 'contact') ? 'active' : ''; ?>"><a href="/contact">Contact</a></li>
                 </ul>
             </div>
@@ -150,7 +149,7 @@
                 <div class="col-md-2"></div>
                 <div class="col-md-2">
                     <img src="/themes/default/img/cgstarter-logo-small.png" />
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie elit enim, vel vestibulum neque pellentesque eu.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <p>Crowd funded CG projects for all of humanity and beyond.</p>
                 </div>
                 <div class="col-md-2" id="tweets-feed">
                     <h4>Recents Tweets</h4>
@@ -299,8 +298,10 @@ $(document).ready(function() {
 });
 
 </script>
-                                                
-<script type="text/javascript">
+
+    <script type="text/javascript" src="/themes/default/js/custom.js"></script>
+
+    <script type="text/javascript">
 /**
  * Default theme functions
  */
