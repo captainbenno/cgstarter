@@ -283,8 +283,13 @@
                         <hr />
                     </li>
                     <li id="stats-total">
-                        <strong><?php if($project['goal_achievement']['achievement_dollars']>0){echo $project['goal_achievement']['achievement_dollars'];}else{echo 0;}?></strong>
-                        <em>Pledged of $<?php echo  $project['goal']?> goal</em>
+                        <strong><?php if($project['goal_achievement']['achievement_total']>0){echo $project['goal_achievement']['achievement_total'];}else{echo 0;}?></strong>
+                        <em>
+                            <?php if($project['goal_type'] == 'items'){ ?>
+                                Items sold of <?php echo  $project['goal']?> goal</em>
+                            <?php }else{ ?>
+                                Pledged of $<?php echo  $project['goal']?> goal</em>
+                            <?php } ?>
                         <hr />
                     </li>
                     <li id="stats-days">

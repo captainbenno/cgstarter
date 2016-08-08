@@ -119,17 +119,23 @@ class Projects_model extends CI_Model {
     function goal_achievement($project_id)
     {
 
-        $this->db->select('sum(reward_cost) AS total');
+        $this->db->select('sum(reward_cost) AS total, sum(qty) AS total_cnt');
         $this->db->where('projects.project_id', $project_id);
         $this->db->join('orders', 'orders.order_id = order_items.order_id');        
         $this->db->join('projects', 'projects.project_id = order_items.project_id');        
-        $query = $this->db->get('order_items'); 
+        $query = $this->db->get('order_items');
 
         $project = $this->get_project($project_id);
-
+        $goal_type = $project['goal_type'];
         $goal_results = array();
-        $goal_results['achievement_percentage'] = (($query->row()->total/$project['goal'])*100);
-        $goal_results['achievement_dollars'] = $query->row()->total;
+        
+        if($goal_type=='items'){
+            $goal_results['achievement_percentage'] = (($query->row()->total_cnt/$project['goal'])*100);
+            $goal_results['achievement_total'] = $query->row()->total_cnt;
+        } else {
+            $goal_results['achievement_percentage'] = (($query->row()->total/$project['goal'])*100);
+            $goal_results['achievement_total'] = $query->row()->total;
+        }
 
         return $goal_results;
     }
