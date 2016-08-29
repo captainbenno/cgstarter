@@ -191,7 +191,7 @@
             })
 
             $(document).on("keypress", function (e){
-                alert(event.which);
+               // alert(event.which);
                 //zoom entry
 
                 if($('#recat').css('display') == 'none'){
