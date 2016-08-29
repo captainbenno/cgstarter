@@ -121,8 +121,11 @@
 
             $('#save_cat').click(function(){
                 new_cat = $("#recat_category").val();
-                if($("#new_cat").length >0){
+                if($("#new_cat").val().length>0){
                     new_cat = $("#new_cat").val();
+
+                    console.log(new_cat);
+
                 }
                 change_cat(new_cat);
             })
