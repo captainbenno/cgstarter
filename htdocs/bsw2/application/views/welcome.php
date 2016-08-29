@@ -3,7 +3,7 @@
 
 <?php if ($this->session->userdata('logged_in')){ ?>
 
-    <h4>Current Role: <?  echo $this->session->userdata('logged_in')['user_type'] ?></h4>
+    <h4>Current Role: <?php  echo $this->session->userdata('logged_in')['user_type'] ?></h4>
 
     <p>This area gives you the ability to sort, cull, and recategorise entries, using the keyboard short cuts is the fatest way to get through them.</p>
 
