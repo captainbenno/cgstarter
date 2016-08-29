@@ -1,0 +1,7 @@
+ERROR - 2016-08-29 12:41:45 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1, 1' at line 6 - Invalid query: SELECT *
+FROM `entry`
+WHERE `status` = '0'
+AND `category_title` = ''
+AND `image_large` != ''
+ LIMIT -1, 1
+ERROR - 2016-08-29 12:49:04 --> Severity: error --> Exception: Passed variable is not an array or object, using empty array instead /var/www/vhosts/cg/htdocs/bsw2/application/controllers/Dataimport.php 35
