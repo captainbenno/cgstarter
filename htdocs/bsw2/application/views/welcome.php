@@ -191,7 +191,7 @@
             })
 
             $(document).on("keypress", function (e){
-               // alert(event.which);
+                alert(event.which);
                 //zoom entry
 
                 if($('#recat').css('display') == 'none'){
@@ -206,6 +206,10 @@
                     //zoom entry
                     if ( event.which == 120 ) {
                         write_unzoom();
+                    }
+                    //zoom entry
+                    if ( event.which == 122 ) {
+                        write_zoom();
                     }
                     //next entry
                     if ( event.which == 32 ) {
