@@ -1,5 +1,0 @@
-ERROR - 2016-06-29 19:57:51 --> Severity: Warning --> mysqli::real_connect(): Headers and client library minor version mismatch. Headers:50547 Library:50631 /var/www/vhosts/cg/system/database/drivers/mysqli/mysqli_driver.php 202
-ERROR - 2016-06-29 19:59:31 --> Severity: Warning --> mysqli::real_connect(): Headers and client library minor version mismatch. Headers:50547 Library:50631 /var/www/vhosts/cg/system/database/drivers/mysqli/mysqli_driver.php 202
-ERROR - 2016-06-29 20:27:04 --> Severity: Warning --> mysqli::real_connect(): Headers and client library minor version mismatch. Headers:50547 Library:50631 /var/www/vhosts/cg/system/database/drivers/mysqli/mysqli_driver.php 202
-ERROR - 2016-06-29 20:27:13 --> Severity: Warning --> mysqli::real_connect(): Headers and client library minor version mismatch. Headers:50547 Library:50631 /var/www/vhosts/cg/system/database/drivers/mysqli/mysqli_driver.php 202
-ERROR - 2016-06-29 21:00:04 --> Severity: Parsing Error --> syntax error, unexpected 'mirror' (T_STRING) /var/www/vhosts/cg/application/controllers/Welcome.php 40
