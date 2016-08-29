@@ -72,6 +72,10 @@ class Api extends API_Controller {
         // get user data
         $entry = $this->entry_model->get_entry_by_index($index,$cat,$status);
 
+        if($entry==null){
+            $entry = 'end';
+        }
+
         display_json($entry);
         exit;
     }

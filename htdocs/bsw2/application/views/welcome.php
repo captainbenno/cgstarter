@@ -311,13 +311,17 @@
 
             $.get( "<?php echo base_url('api/entry'); ?>", { cat: selected_cat, status: selected_status, index: current_index } )
                 .done(function( data ) {
-                    current_image_data = data;
-                    write_preview();
                     console.log(data);
-                    $("#entry_status_accepted").hide();
-                    $("#entry_status_rejected").hide();
-                    $("#cat_changed").hide();
-                    get_nextentry();
+                    if(data =='end'){
+                        alert('You have reached the end of this category');
+                    } else {
+                        current_image_data = data;
+                        write_preview();
+                        $("#entry_status_accepted").hide();
+                        $("#entry_status_rejected").hide();
+                        $("#cat_changed").hide();
+                        get_nextentry();
+                    }
                 });
 
         }
