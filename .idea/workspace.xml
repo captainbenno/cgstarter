@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a4b91ab6-f6b4-4e75-873e-5dfe24a7a851" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htdocs/bsw2/application/views/welcome.php" afterPath="$PROJECT_DIR$/htdocs/bsw2/application/views/welcome.php" />
     </list>
     <ignored path="cg.iws" />
@@ -534,12 +535,12 @@
       <workItem from="1470653020908" duration="5884000" />
       <workItem from="1472256012335" duration="5998000" />
       <workItem from="1472448841031" duration="1462000" />
-      <workItem from="1472466085579" duration="7601000" />
+      <workItem from="1472466085579" duration="7686000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51886000" />
+    <option name="totallyTimeSpent" value="51971000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="27" width="1922" height="1054" extended-state="6" />
