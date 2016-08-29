@@ -1,0 +1,13 @@
+ERROR - 2016-08-29 12:41:45 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1, 1' at line 6 - Invalid query: SELECT *
+FROM `entry`
+WHERE `status` = '0'
+AND `category_title` = ''
+AND `image_large` != ''
+ LIMIT -1, 1
+ERROR - 2016-08-29 12:49:04 --> Severity: error --> Exception: Passed variable is not an array or object, using empty array instead /var/www/vhosts/cg/htdocs/bsw2/application/controllers/Dataimport.php 35
+ERROR - 2016-08-29 14:23:44 --> Severity: Warning --> file_get_contents(../../data1.json): failed to open stream: No such file or directory /var/www/vhosts/cg/htdocs/bsw2/application/controllers/Dataimport.php 30
+ERROR - 2016-08-29 14:23:44 --> Severity: error --> Exception: Passed variable is not an array or object, using empty array instead /var/www/vhosts/cg/htdocs/bsw2/application/controllers/Dataimport.php 33
+ERROR - 2016-08-29 22:56:28 --> 404 Page Not Found: Judging/index
+ERROR - 2016-08-29 22:57:05 --> 404 Page Not Found: Judging/index
+ERROR - 2016-08-29 22:57:58 --> 404 Page Not Found: Judging/index
+ERROR - 2016-08-29 15:11:00 --> Severity: Parsing Error --> syntax error, unexpected ')', expecting :: (T_PAAMAYIM_NEKUDOTAYIM) /var/www/vhosts/cg/htdocs/bsw2/application/views/judging.php 17

@@ -31,6 +31,8 @@
         <?php endforeach; ?>
     <?php endif; ?>
 
+    <script type="text/javascript" src="/themes/default/js/jquery.sortable.js"></script>
+
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -72,7 +74,7 @@
                 <?php // Nav bar left ?>
                 <ul class="nav navbar-nav">
                     <li class="<?php echo (uri_string() == '') ? 'active' : ''; ?>"><a href="<?php echo base_url('/'); ?>">Culling</a></li>
-                    <li class="<?php echo (uri_string() == '') ? 'active' : ''; ?>"><a href="<?php echo base_url('/'); ?>">Judging</a></li>
+                    <li class="<?php echo (uri_string() == 'judging') ? 'active' : ''; ?>"><a href="<?php echo base_url('/'); ?>">Judging</a></li>
                     <li class="<?php echo (uri_string() == '') ? 'active' : ''; ?>"><a href="<?php echo base_url('/'); ?>">Selecting</a></li>
                 </ul>
                 <?php // Nav bar right ?>

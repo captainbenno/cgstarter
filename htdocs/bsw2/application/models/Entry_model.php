@@ -100,6 +100,17 @@ class Entry_model extends CI_Model
         $this->db->update('entry', $order_data);
     }
 
+
+    function get_all_entries_judging($cat){
+        $this->db->select('*');
+        $this->db->where('status', '0');
+        $this->db->where('category_title', $cat);
+        $this->db->order_by('category_title', 'ASC');
+        $query = $this->db->get($this->_db);
+        $return_data = $query->result_array();
+        return $return_data;
+    }
+
     function entry_exists($art_id)
     {
         $sql = "

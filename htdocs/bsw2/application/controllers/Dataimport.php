@@ -28,11 +28,11 @@ class Dataimport extends Public_Controller
     {
 
         $json = file_get_contents("../data1.json");
-
 //        $json = file_get_contents("http://www.cgsociety.org/ajax/expose12.php?view=entries&page=1&per=7000&bust=");
 
 //        echo $json;
 //        die;
+
 
         $jsonIterator = new RecursiveIteratorIterator(
             new RecursiveArrayIterator(json_decode($json, TRUE)),

@@ -112,9 +112,14 @@
         </div>
     </div>
 
+    <div id="preload_entry" style="height:1px;width:1px;">
+
+    </div>
+
     <script type="text/javascript">
         var current_index = 0;
         var current_image_data = '';
+        var next_image_data = '';
 
         // A $( document ).ready() block.
         $( document ).ready(function() {
@@ -251,6 +256,12 @@
             $("#entry_data").html(entry_data_html);
         }
 
+
+        function write_preload(){
+            var entry_html = "<img style='width:100%' src='"+(next_image_data.image_large)+"' />";
+            $("#preload_entry").html(entry_html);
+        }
+
         function write_zoom(){
             var entry_html = "<img style='position:absolute;top:0;left:0' src='"+current_image_data.image_orig+"' id='zoomedimage' />";
             $(entry_html).insertAfter("body");
@@ -306,6 +317,20 @@
                     $("#entry_status_accepted").hide();
                     $("#entry_status_rejected").hide();
                     $("#cat_changed").hide();
+                    get_nextentry();
+                });
+
+        }
+
+        function get_nextentry(){
+
+            selected_cat = $('#category').val();
+            selected_status = $('#status').val();
+
+            $.get( "<?php echo base_url('api/entry'); ?>", { cat: selected_cat, status: selected_status, index: current_index+1 } )
+                .done(function( data ) {
+                    next_image_data = data;
+                    write_preload();
                 });
 
         }
