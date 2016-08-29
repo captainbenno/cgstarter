@@ -128,7 +128,7 @@ class Projects_model extends CI_Model {
         $project = $this->get_project($project_id);
         $goal_type = $project['goal_type'];
         $goal_results = array();
-        
+
         if($goal_type=='items'){
             $goal_results['achievement_percentage'] = (($query->row()->total_cnt/$project['goal'])*100);
             $goal_results['achievement_total'] = $query->row()->total_cnt;
