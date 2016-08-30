@@ -323,7 +323,8 @@
                         $("#entry_status_accepted").hide();
                         $("#entry_status_rejected").hide();
                         $("#cat_changed").hide();
-                        get_nextentry(current_index);
+                        next_index = current_index;
+                        get_nextentry();
                     }
                 });
 
