@@ -339,8 +339,11 @@
                 selected_status = $('#status').val();
                 $.get( "<?php echo base_url('api/entry'); ?>", { cat: selected_cat, status: selected_status, index: next_index } )
                     .done(function( data ) {
-                        next_image_data = data;
-                        write_preload();
+                        console.log(data);
+                        if(data !='end') {
+                            next_image_data = data;
+                            write_preload();
+                        }
                     });
             }
 
