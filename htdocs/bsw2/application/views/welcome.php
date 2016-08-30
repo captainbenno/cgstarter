@@ -325,7 +325,6 @@
                         $("#entry_status_rejected").hide();
                         $("#cat_changed").hide();
                         index_cnt = 0;
-                        next_index = current_index;
                         get_nextentry();
                     }
                 });
