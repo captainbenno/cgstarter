@@ -1,3 +1,7 @@
 /application/sessions/*
 /application/config/config.php
 .idea/workspace.xml
+/application/config/database.php
+/htdocs/bsw2/application/config/config.php
+/htdocs/bsw2/application/config/database.php
+/htdocs/bsw2/application/sessions/*

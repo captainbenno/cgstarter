@@ -120,6 +120,7 @@
         var current_index = 0;
         var current_image_data = '';
         var next_image_data = '';
+        var next_index = current_index;
 
         // A $( document ).ready() block.
         $( document ).ready(function() {
@@ -259,7 +260,9 @@
 
         function write_preload(){
             var entry_html = "<img style='width:100%' src='"+(next_image_data.image_large)+"' />";
-            $("#preload_entry").html(entry_html);
+            $("#preload_entry").append(entry_html);
+            console.log('completed preload '+next_image_data.image_large);
+            get_nextentry();
         }
 
         function write_zoom(){
@@ -320,22 +323,23 @@
                         $("#entry_status_accepted").hide();
                         $("#entry_status_rejected").hide();
                         $("#cat_changed").hide();
-                        get_nextentry();
+                        get_nextentry(current_index);
                     }
                 });
 
         }
 
         function get_nextentry(){
-
-            selected_cat = $('#category').val();
-            selected_status = $('#status').val();
-
-            $.get( "<?php echo base_url('api/entry'); ?>", { cat: selected_cat, status: selected_status, index: current_index+1 } )
-                .done(function( data ) {
-                    next_image_data = data;
-                    write_preload();
-                });
+            next_index = next_index+1
+            if(next_index < 20){
+                selected_cat = $('#category').val();
+                selected_status = $('#status').val();
+                $.get( "<?php echo base_url('api/entry'); ?>", { cat: selected_cat, status: selected_status, index: next_index } )
+                    .done(function( data ) {
+                        next_image_data = data;
+                        write_preload();
+                    });
+            }
 
         }
 
