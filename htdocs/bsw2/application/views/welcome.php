@@ -186,6 +186,7 @@
 
             $('#category').change(function(){
                 current_index = 0;
+                next_index = 0;
                 get_entry();
                 document.activeElement.blur();
                 return false;
@@ -193,6 +194,7 @@
 
             $('#status').change(function(){
                 current_index = 0;
+                next_index = 0;
                 get_entry();
                 document.activeElement.blur();
             })
