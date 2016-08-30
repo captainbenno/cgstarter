@@ -112,7 +112,7 @@
         </div>
     </div>
 
-    <div id="preload_entry" style="height:1px;width:1px;">
+    <div id="preload_entry" style="height:1px;width:1px;position:absolute;top:-20000px;">
 
     </div>
 

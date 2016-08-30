@@ -100,12 +100,13 @@
       <file leaf-file-name="welcome.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/htdocs/bsw2/application/views/welcome.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
-              <caret line="325" column="51" selection-start-line="325" selection-start-column="51" selection-end-line="325" selection-end-column="51" />
+            <state relative-caret-position="484">
+              <caret line="114" column="87" selection-start-line="114" selection-start-column="87" selection-end-line="114" selection-end-column="87" />
               <folding>
-                <marker date="1472553151419" expanded="true" signature="9264:9274" ph="..." />
-                <marker date="1472553151419" expanded="true" signature="10223:10233" ph="..." />
-                <marker date="1472553151419" expanded="true" signature="10520:10550" ph="..." />
+                <element signature="n#style#0;n#div#5;n#!!top" expanded="true" />
+                <marker date="1472554107331" expanded="true" signature="9295:9305" ph="..." />
+                <marker date="1472554107331" expanded="true" signature="10254:10264" ph="..." />
+                <marker date="1472554107331" expanded="true" signature="10551:10581" ph="..." />
               </folding>
             </state>
           </provider>
@@ -594,12 +595,12 @@
       <workItem from="1472256012335" duration="5998000" />
       <workItem from="1472448841031" duration="1462000" />
       <workItem from="1472466085579" duration="15787000" />
-      <workItem from="1472533365155" duration="2363000" />
+      <workItem from="1472533365155" duration="3076000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62435000" />
+    <option name="totallyTimeSpent" value="63148000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="27" width="1922" height="1054" extended-state="6" />
@@ -985,12 +986,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/htdocs/bsw2/application/views/welcome.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="325" column="51" selection-start-line="325" selection-start-column="51" selection-end-line="325" selection-end-column="51" />
+        <state relative-caret-position="484">
+          <caret line="114" column="87" selection-start-line="114" selection-start-column="87" selection-end-line="114" selection-end-column="87" />
           <folding>
-            <marker date="1472553151419" expanded="true" signature="9264:9274" ph="..." />
-            <marker date="1472553151419" expanded="true" signature="10223:10233" ph="..." />
-            <marker date="1472553151419" expanded="true" signature="10520:10550" ph="..." />
+            <element signature="n#style#0;n#div#5;n#!!top" expanded="true" />
+            <marker date="1472554107331" expanded="true" signature="9295:9305" ph="..." />
+            <marker date="1472554107331" expanded="true" signature="10254:10264" ph="..." />
+            <marker date="1472554107331" expanded="true" signature="10551:10581" ph="..." />
           </folding>
         </state>
       </provider>
