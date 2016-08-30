@@ -5,3 +5,5 @@
 /htdocs/bsw2/application/config/config.php
 /htdocs/bsw2/application/config/database.php
 /htdocs/bsw2/application/sessions/*
+/htdocs/bsw2/application/logs/*
+/application/logs/*
