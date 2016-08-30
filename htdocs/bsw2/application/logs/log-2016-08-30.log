@@ -712,3 +712,5 @@ ERROR - 2016-08-30 20:50:45 --> 404 Page Not Found: Undefined/index
 ERROR - 2016-08-30 20:50:45 --> 404 Page Not Found: Undefined/index
 ERROR - 2016-08-30 20:51:06 --> 404 Page Not Found: Undefined/index
 ERROR - 2016-08-30 20:51:06 --> 404 Page Not Found: Undefined/index
+ERROR - 2016-08-30 13:06:20 --> Severity: Notice --> Undefined variable: categories /var/www/vhosts/cg/htdocs/bsw2/application/views/judging.php 20
+ERROR - 2016-08-30 13:06:20 --> Severity: Warning --> Invalid argument supplied for foreach() /var/www/vhosts/cg/htdocs/bsw2/application/views/judging.php 20

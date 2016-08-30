@@ -31,7 +31,6 @@
         <?php endforeach; ?>
     <?php endif; ?>
 
-    <script type="text/javascript" src="/themes/default/js/jquery.sortable.js"></script>
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -55,6 +54,8 @@
         <?php endforeach; ?>
     <?php endif; ?>
 
+    <script type="text/javascript" src="/bsw2/htdocs/themes/default/js/jquery.sortable.js"></script>
+
 </head>
 <body>
 
@@ -74,8 +75,8 @@
                 <?php // Nav bar left ?>
                 <ul class="nav navbar-nav">
                     <li class="<?php echo (uri_string() == '') ? 'active' : ''; ?>"><a href="<?php echo base_url('/'); ?>">Culling</a></li>
-                    <li class="<?php echo (uri_string() == 'judging') ? 'active' : ''; ?>"><a href="<?php echo base_url('/'); ?>">Judging</a></li>
-                    <li class="<?php echo (uri_string() == '') ? 'active' : ''; ?>"><a href="<?php echo base_url('/'); ?>">Selecting</a></li>
+                    <li class="<?php echo (uri_string() == 'judging') ? 'active' : ''; ?>"><a href="<?php echo base_url('/judging'); ?>">Judging</a></li>
+                    <li class="<?php echo (uri_string() == 'selecting') ? 'active' : ''; ?>"><a href="<?php echo base_url('/'); ?>">Selecting</a></li>
                 </ul>
                 <?php // Nav bar right ?>
                 <ul class="nav navbar-nav navbar-right">

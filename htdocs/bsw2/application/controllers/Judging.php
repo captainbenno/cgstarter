@@ -27,13 +27,14 @@ class Judging extends Public_Controller {
         $cat = $this->input->get('cat');
 
         $data = $this->includes;
-
+        $categories = $this->entry_model->get_all_categories();
         $entries = $this->entry_model->get_all_entries_judging($cat);
 
         // set content data
         $content_data = array(
             'welcome_message' => $this->settings->welcome_message[$this->session->language],
-            'entries' => $entries
+            'entries' => $entries,
+            'categories' => $categories
         );
 
         // load views
