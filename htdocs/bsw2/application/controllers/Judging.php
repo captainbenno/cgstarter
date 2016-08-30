@@ -34,7 +34,8 @@ class Judging extends Public_Controller {
         $content_data = array(
             'welcome_message' => $this->settings->welcome_message[$this->session->language],
             'entries' => $entries,
-            'categories' => $categories
+            'categories' => $categories,
+            'current_cat' => $cat
         );
 
         // load views

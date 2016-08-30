@@ -49,7 +49,11 @@
                 <select id="category" name="cat" class="form-control">
                     <?php
                     foreach($categories as $category){
-                        echo "<option>".$category['category_title']."</option>";
+                        $selected = "";
+                        if($current_cat == $category['category_title']){
+                            $selected = "selected";
+                        }
+                        echo "<option ".$selected.">".$category['category_title']."</option>";
                     }
                     ?>
                 </select>
@@ -61,7 +65,7 @@
     <ol class="table">
         <?php
             foreach($entries as $entry){
-                echo "<li><img src='".str_replace("_large.jpg","_thumb.jpg",$entry['image_large'])."'>
+                echo "<li><img style='width:120px;' src='".str_replace("_large.jpg","_thumb.jpg",$entry['image_large'])."'>
                      <button class=\"zoombtn btn btn-default\" aria-data='".$entry['image_large']."'>
                     <span class=\"glyphicon glyphicon-zoom-in\" aria-hidden=\"true\"></span>
                     </button>                
