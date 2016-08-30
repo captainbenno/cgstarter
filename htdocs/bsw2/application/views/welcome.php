@@ -121,6 +121,7 @@
         var current_image_data = '';
         var next_image_data = '';
         var next_index = current_index;
+        var index_cnt = 0;
 
         // A $( document ).ready() block.
         $( document ).ready(function() {
@@ -323,6 +324,7 @@
                         $("#entry_status_accepted").hide();
                         $("#entry_status_rejected").hide();
                         $("#cat_changed").hide();
+                        index_cnt = 0;
                         next_index = current_index;
                         get_nextentry();
                     }
@@ -331,8 +333,9 @@
         }
 
         function get_nextentry(){
-            next_index = next_index+1
-            if(next_index < 20){
+            index_cnt = index_cnt+1;
+            if(index_cnt < 20){
+                next_index = next_index+1;
                 selected_cat = $('#category').val();
                 selected_status = $('#status').val();
                 $.get( "<?php echo base_url('api/entry'); ?>", { cat: selected_cat, status: selected_status, index: next_index } )
