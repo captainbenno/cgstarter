@@ -25,7 +25,7 @@
         }
 
         .table li{
-            padding-bottom: 10px;
+            padding: 10px;
             margin-bottom: 10px;
             border-bottom: 1px solid #cccccc;
             font-size: 24px;
@@ -34,13 +34,17 @@
         #image-zoom{
             cursor: zoom-in;
         }
+
+        .topten{
+            background: #cccccc;
+        }
     </style>
 
     <h4>Current Role: <?php  echo $this->session->userdata('logged_in')['user_type'] ?></h4>
 
-    <p>Drag the images into the order of preference, 1 being the highest.</p>
+    <p>Drag the images into the order of preference, 1 to 10, 1 being the highest, once you are happy with the order press the 'Save Voting Order' button. You can come back at any time and rearrange your vote.</p>
 
-    <div id="entry_status_accepted" style="display:none" class="alert alert-success" role="alert">Judging Saved!</div>
+    <div id="votes_saved" style="display:none" class="alert alert-success" role="alert">Voting Saved!</div>
 
     <form method="get" id="cat_form">
         <div class="form-group">
@@ -58,18 +62,27 @@
                     ?>
                 </select>
             </label>
+            <label>
+                <button id="save_order" type="button" class="btn btn-success">Save Voting Order</button>
+            </label>
         </div>
     </form>
 
 
     <ol class="table">
         <?php
+            $i = 0;
             foreach($entries as $entry){
-                echo "<li><img style='width:120px;' src='".str_replace("_large.jpg","_thumb.jpg",$entry['image_large'])."'>
+                $class = "";
+                if($i < 10){
+                    $class = "topten";
+                }
+                echo "<li class='".$class."'><img aria-data='".$entry['art_id']."' style='width:120px;' src='".str_replace("_large.jpg","_thumb.jpg",$entry['image_large'])."'>
                      <button class=\"zoombtn btn btn-default\" aria-data='".$entry['image_large']."'>
                     <span class=\"glyphicon glyphicon-zoom-in\" aria-hidden=\"true\"></span>
                     </button>                
                 </li>";
+                $i = $i+1;
             }
         ?>
     </ol>
@@ -104,7 +117,29 @@
         // A $( document ).ready() block.
         $( document ).ready(function() {
 
+            $("#save_order").click(function(){
+                var art_ids = []
+                $(".table li img").each(function(){
+                    art_ids.push($(this).attr("aria-data"));
+                });
+
+                console.log(art_ids);
+
+                save_vote('<?php echo $current_cat ?>',art_ids);
+            });
+
             $('.table').sortable();
+
+            $('.table').sortable().bind('sortupdate', function() {
+                $(".table li").removeClass('topten');
+                i = 0;
+                $(".table li").each(function(){
+                    i++;
+                    if(i<11){
+                        $(this).addClass('topten');
+                    }
+                });
+            });
 
             $('#category').change(function(){
                 $("#cat_form").submit();
@@ -139,20 +174,15 @@
         });
 
 
+        function save_vote(current_cat,votes_data){
 
-        function get_entry(){
-
-            selected_cat = $('#category').val();
-            selected_status = $('#status').val();
-
-            $.get( "<?php echo base_url('api/entry'); ?>", { cat: selected_cat, status: selected_status, index: current_index } )
+            $.get( "<?php echo base_url('api/vote'); ?>", { cat: current_cat, votes_data: votes_data } )
                 .done(function( data ) {
-                    current_image_data = data;
-                    write_preview();
                     console.log(data);
-                    $("#entry_status_accepted").hide();
-                    $("#entry_status_rejected").hide();
-                    $("#cat_changed").hide();
+                    $("#votes_saved").show();
+                    $("#votes_saved").fadeTo(2000, 500).slideUp(500, function(){
+                        $("#votes_saved").alert('close');
+                    });
                 });
 
         }

@@ -76,7 +76,7 @@
                 <ul class="nav navbar-nav">
                     <li class="<?php echo (uri_string() == '') ? 'active' : ''; ?>"><a href="<?php echo base_url('/'); ?>">Culling</a></li>
                     <li class="<?php echo (uri_string() == 'judging') ? 'active' : ''; ?>"><a href="<?php echo base_url('/judging'); ?>">Judging</a></li>
-                    <li class="<?php echo (uri_string() == 'selecting') ? 'active' : ''; ?>"><a href="<?php echo base_url('/'); ?>">Selecting</a></li>
+                    <li class="<?php echo (uri_string() == 'selecting') ? 'active' : ''; ?>"><a href="<?php echo base_url('/selecting'); ?>">Selecting</a></li>
                 </ul>
                 <?php // Nav bar right ?>
                 <ul class="nav navbar-nav navbar-right">

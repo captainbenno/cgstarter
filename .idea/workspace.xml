@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a4b91ab6-f6b4-4e75-873e-5dfe24a7a851" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htdocs/bsw2/application/controllers/Judging.php" afterPath="$PROJECT_DIR$/htdocs/bsw2/application/controllers/Judging.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htdocs/bsw2/application/controllers/Selecting.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htdocs/bsw2/application/controllers/Api.php" afterPath="$PROJECT_DIR$/htdocs/bsw2/application/controllers/Api.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htdocs/bsw2/application/logs/log-2016-08-30.log" afterPath="$PROJECT_DIR$/htdocs/bsw2/application/logs/log-2016-08-30.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htdocs/bsw2/application/models/Entry_model.php" afterPath="$PROJECT_DIR$/htdocs/bsw2/application/models/Entry_model.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htdocs/bsw2/application/views/judging.php" afterPath="$PROJECT_DIR$/htdocs/bsw2/application/views/judging.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htdocs/bsw2/htdocs/themes/default/template.php" afterPath="$PROJECT_DIR$/htdocs/bsw2/htdocs/themes/default/template.php" />
     </list>
     <ignored path="cg.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,40 +30,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="judging.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="judging.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/htdocs/bsw2/application/views/judging.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="385">
-              <caret line="67" column="46" selection-start-line="67" selection-start-column="46" selection-end-line="67" selection-end-column="46" />
+            <state relative-caret-position="467">
+              <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                <marker date="1472563673445" expanded="true" signature="1931:2104" ph="..." />
-                <marker date="1472563673445" expanded="true" signature="1931:2291" ph="..." />
-                <marker date="1472563673445" expanded="true" signature="1944:1956" ph="..." />
-                <marker date="1472563673445" expanded="true" signature="2130:2253" ph="..." />
-                <marker date="1472563673445" expanded="true" signature="3930:4031" ph="..." />
-                <marker date="1472563673445" expanded="true" signature="4014:4031" ph="{...}" />
+                <marker date="1472736147851" expanded="true" signature="2410:2616" ph="..." />
+                <marker date="1472736147851" expanded="true" signature="2410:2803" ph="..." />
+                <marker date="1472736147851" expanded="true" signature="2456:2468" ph="..." />
+                <marker date="1472736147851" expanded="true" signature="2642:2765" ph="..." />
+                <marker date="1472736147851" expanded="true" signature="2985:3728" ph="..." />
+                <marker date="1472736147851" expanded="true" signature="3045:3728" ph="..." />
+                <marker date="1472736147851" expanded="true" signature="3085:3728" ph="..." />
+                <marker date="1472736147851" expanded="true" signature="3128:3373" ph="..." />
+                <marker date="1472736147851" expanded="true" signature="3414:3728" ph="..." />
+                <marker date="1472736147851" expanded="true" signature="3438:3728" ph="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Welcome.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/htdocs/bsw2/application/controllers/Welcome.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="28" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Api.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controllers/Api.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -66,10 +54,9 @@
       <file leaf-file-name="welcome.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/htdocs/bsw2/application/views/welcome.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2439">
-              <caret line="208" column="24" selection-start-line="208" selection-start-column="24" selection-end-line="208" selection-end-column="43" />
+            <state relative-caret-position="691">
+              <caret line="306" column="0" selection-start-line="279" selection-start-column="0" selection-end-line="306" selection-end-column="0" />
               <folding>
-                <element signature="n#style#0;n#div#5;n#!!top" expanded="true" />
                 <marker date="1472556545426" expanded="true" signature="9386:9396" ph="..." />
                 <marker date="1472556545426" expanded="true" signature="10345:10355" ph="..." />
                 <marker date="1472556545426" expanded="true" signature="10642:10672" ph="..." />
@@ -78,41 +65,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="database.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/htdocs/bsw2/application/config/database.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="146">
-              <caret line="61" column="24" selection-start-line="61" selection-start-column="24" selection-end-line="61" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/htdocs/bsw2/application/config/config.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" column="45" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="template.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/htdocs/bsw2/htdocs/themes/default/template.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="640">
-              <caret line="56" column="100" selection-start-line="56" selection-start-column="100" selection-end-line="56" selection-end-column="100" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="jquery.sortable.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/htdocs/bsw2/htdocs/themes/default/js/jquery.sortable.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
-              <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="43" />
+              <caret line="2" column="43" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -121,8 +78,8 @@
       <file leaf-file-name="Judging.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/htdocs/bsw2/application/controllers/Judging.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="586">
-              <caret line="37" column="24" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="24" />
+            <state relative-caret-position="153">
+              <caret line="9" column="30" selection-start-line="0" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -131,10 +88,51 @@
       <file leaf-file-name="Entry_model.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/htdocs/bsw2/application/models/Entry_model.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="81" column="48" selection-start-line="81" selection-start-column="48" selection-end-line="81" selection-end-column="48" />
+            <state relative-caret-position="773">
+              <caret line="158" column="0" selection-start-line="158" selection-start-column="0" selection-end-line="158" selection-end-column="0" />
               <folding>
-                <marker date="1472479347274" expanded="true" signature="3139:3264" ph="SELECT art_i... $" />
+                <marker date="1472738175033" expanded="true" signature="3560:3567" ph="SELECT entry... " />
+                <marker date="1472738175033" expanded="true" signature="3560:3869" ph="SELECT entry... $" />
+                <marker date="1472738175033" expanded="true" signature="3568:3636" ph="SELECT posit... votes" />
+                <marker date="1472738175033" expanded="true" signature="3568:3637" ph="SELECT posit... votes" />
+                <marker date="1472738175033" expanded="true" signature="3568:3869" ph="SELECT posit... votes" />
+                <marker date="1472738175033" expanded="true" signature="4089:4311" ph="SELECT (SELE... " />
+                <marker date="1472738175033" expanded="true" signature="4089:4379" ph="SELECT (SELE... " />
+                <marker date="1472738175033" expanded="true" signature="4097:4151" ph="SELECT posit... votes" />
+                <marker date="1472738175033" expanded="true" signature="4589:4714" ph="SELECT art_i... $" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Api.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/htdocs/bsw2/application/controllers/Api.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="578">
+              <caret line="34" column="43" selection-start-line="34" selection-start-column="43" selection-end-line="34" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Selecting.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/htdocs/bsw2/application/controllers/Selecting.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="646">
+              <caret line="38" column="34" selection-start-line="38" selection-start-column="34" selection-end-line="38" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="selecting.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/htdocs/bsw2/application/views/selecting.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="269" column="2" selection-start-line="269" selection-start-column="2" selection-end-line="269" selection-end-column="2" />
+              <folding>
+                <marker date="1472739345528" expanded="true" signature="6681:7369" ph="..." />
+                <marker date="1472739345528" expanded="true" signature="7393:7555" ph="..." />
               </folding>
             </state>
           </provider>
@@ -168,15 +166,18 @@
         <option value="$PROJECT_DIR$/htdocs/bsw2/data.json" />
         <option value="$PROJECT_DIR$/htdocs/bsw2/Dump20160829.sql" />
         <option value="$PROJECT_DIR$/htdocs/bsw2/application/controllers/Dataimport.php" />
-        <option value="$PROJECT_DIR$/htdocs/bsw2/application/models/Entry_model.php" />
         <option value="$PROJECT_DIR$/htdocs/themes/default/template.php" />
-        <option value="$PROJECT_DIR$/htdocs/bsw2/application/controllers/Api.php" />
         <option value="$PROJECT_DIR$/htdocs/bsw2/application/config/database.php" />
         <option value="$PROJECT_DIR$/htdocs/bsw2/application/config/config.php" />
-        <option value="$PROJECT_DIR$/htdocs/bsw2/application/views/welcome.php" />
-        <option value="$PROJECT_DIR$/htdocs/bsw2/htdocs/themes/default/template.php" />
         <option value="$PROJECT_DIR$/htdocs/bsw2/application/controllers/Judging.php" />
+        <option value="$PROJECT_DIR$/htdocs/bsw2/application/controllers/Api.php" />
+        <option value="$PROJECT_DIR$/htdocs/bsw2/application/controllers/Sorting.php" />
+        <option value="$PROJECT_DIR$/htdocs/bsw2/htdocs/themes/default/template.php" />
         <option value="$PROJECT_DIR$/htdocs/bsw2/application/views/judging.php" />
+        <option value="$PROJECT_DIR$/htdocs/bsw2/application/models/Entry_model.php" />
+        <option value="$PROJECT_DIR$/htdocs/bsw2/application/controllers/Selecting.php" />
+        <option value="$PROJECT_DIR$/htdocs/bsw2/application/views/welcome.php" />
+        <option value="$PROJECT_DIR$/htdocs/bsw2/application/views/selecting.php" />
       </list>
     </option>
   </component>
@@ -218,7 +219,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -654,6 +654,7 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -715,18 +716,20 @@
       <workItem from="1472256012335" duration="5998000" />
       <workItem from="1472448841031" duration="1462000" />
       <workItem from="1472466085579" duration="15787000" />
-      <workItem from="1472533365155" duration="11459000" />
+      <workItem from="1472533365155" duration="15743000" />
+      <workItem from="1472640227589" duration="4835000" />
+      <workItem from="1472728278168" duration="9060000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71531000" />
+    <option name="totallyTimeSpent" value="89710000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="27" width="1922" height="1054" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26256683" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26898396" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -750,24 +753,18 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/htdocs/bsw2/application/controllers/Selecting.php</url>
+          <line>20</line>
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/views/cart/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="95" column="49" selection-start-line="95" selection-start-column="49" selection-end-line="95" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/misc/shipping.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/misc/terms.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="715">
@@ -1012,7 +1009,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1309">
           <caret line="77" column="14" selection-start-line="77" selection-start-column="14" selection-end-line="77" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1020,15 +1016,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="663">
           <caret line="39" column="51" selection-start-line="39" selection-start-column="51" selection-end-line="39" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/htdocs/bsw2/application/controllers/Api.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1275">
-          <caret line="75" column="27" selection-start-line="75" selection-start-column="27" selection-end-line="75" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1036,7 +1023,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1044,23 +1030,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="146">
           <caret line="61" column="24" selection-start-line="61" selection-start-column="24" selection-end-line="61" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/htdocs/bsw2/application/config/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="45" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/htdocs/bsw2/htdocs/themes/default/js/jquery.sortable.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1072,22 +1041,87 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/htdocs/bsw2/application/config/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="45" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/htdocs/bsw2/application/controllers/Api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="34" column="43" selection-start-line="34" selection-start-column="43" selection-end-line="34" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/htdocs/bsw2/htdocs/themes/default/js/jquery.sortable.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="43" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/htdocs/bsw2/application/controllers/Judging.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="30" selection-start-line="0" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/htdocs/bsw2/htdocs/themes/default/template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="85" column="98" selection-start-line="85" selection-start-column="98" selection-end-line="85" selection-end-column="98" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/htdocs/bsw2/application/views/judging.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="467">
+          <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+          <folding>
+            <marker date="1472736147851" expanded="true" signature="2410:2616" ph="..." />
+            <marker date="1472736147851" expanded="true" signature="2410:2803" ph="..." />
+            <marker date="1472736147851" expanded="true" signature="2456:2468" ph="..." />
+            <marker date="1472736147851" expanded="true" signature="2642:2765" ph="..." />
+            <marker date="1472736147851" expanded="true" signature="2985:3728" ph="..." />
+            <marker date="1472736147851" expanded="true" signature="3045:3728" ph="..." />
+            <marker date="1472736147851" expanded="true" signature="3085:3728" ph="..." />
+            <marker date="1472736147851" expanded="true" signature="3128:3373" ph="..." />
+            <marker date="1472736147851" expanded="true" signature="3414:3728" ph="..." />
+            <marker date="1472736147851" expanded="true" signature="3438:3728" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/htdocs/bsw2/application/models/Entry_model.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="81" column="48" selection-start-line="81" selection-start-column="48" selection-end-line="81" selection-end-column="48" />
+        <state relative-caret-position="773">
+          <caret line="158" column="0" selection-start-line="158" selection-start-column="0" selection-end-line="158" selection-end-column="0" />
           <folding>
-            <marker date="1472479347274" expanded="true" signature="3139:3264" ph="SELECT art_i... $" />
+            <marker date="1472738175033" expanded="true" signature="3560:3567" ph="SELECT entry... " />
+            <marker date="1472738175033" expanded="true" signature="3560:3869" ph="SELECT entry... $" />
+            <marker date="1472738175033" expanded="true" signature="3568:3636" ph="SELECT posit... votes" />
+            <marker date="1472738175033" expanded="true" signature="3568:3637" ph="SELECT posit... votes" />
+            <marker date="1472738175033" expanded="true" signature="3568:3869" ph="SELECT posit... votes" />
+            <marker date="1472738175033" expanded="true" signature="4089:4311" ph="SELECT (SELE... " />
+            <marker date="1472738175033" expanded="true" signature="4089:4379" ph="SELECT (SELE... " />
+            <marker date="1472738175033" expanded="true" signature="4097:4151" ph="SELECT posit... votes" />
+            <marker date="1472738175033" expanded="true" signature="4589:4714" ph="SELECT art_i... $" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/htdocs/bsw2/application/views/welcome.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2439">
-          <caret line="208" column="24" selection-start-line="208" selection-start-column="24" selection-end-line="208" selection-end-column="43" />
+        <state relative-caret-position="691">
+          <caret line="306" column="0" selection-start-line="279" selection-start-column="0" selection-end-line="306" selection-end-column="0" />
           <folding>
-            <element signature="n#style#0;n#div#5;n#!!top" expanded="true" />
             <marker date="1472556545426" expanded="true" signature="9386:9396" ph="..." />
             <marker date="1472556545426" expanded="true" signature="10345:10355" ph="..." />
             <marker date="1472556545426" expanded="true" signature="10642:10672" ph="..." />
@@ -1095,34 +1129,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/htdocs/bsw2/application/controllers/Judging.php">
+    <entry file="file://$PROJECT_DIR$/htdocs/bsw2/application/controllers/Selecting.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="586">
-          <caret line="37" column="24" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="24" />
+        <state relative-caret-position="646">
+          <caret line="38" column="34" selection-start-line="38" selection-start-column="34" selection-end-line="38" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/htdocs/bsw2/htdocs/themes/default/template.php">
+    <entry file="file://$PROJECT_DIR$/htdocs/bsw2/application/views/selecting.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="640">
-          <caret line="56" column="100" selection-start-line="56" selection-start-column="100" selection-end-line="56" selection-end-column="100" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/htdocs/bsw2/application/views/judging.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="67" column="46" selection-start-line="67" selection-start-column="46" selection-end-line="67" selection-end-column="46" />
+        <state relative-caret-position="300">
+          <caret line="269" column="2" selection-start-line="269" selection-start-column="2" selection-end-line="269" selection-end-column="2" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <marker date="1472563673445" expanded="true" signature="1931:2104" ph="..." />
-            <marker date="1472563673445" expanded="true" signature="1931:2291" ph="..." />
-            <marker date="1472563673445" expanded="true" signature="1944:1956" ph="..." />
-            <marker date="1472563673445" expanded="true" signature="2130:2253" ph="..." />
-            <marker date="1472563673445" expanded="true" signature="3930:4031" ph="..." />
-            <marker date="1472563673445" expanded="true" signature="4014:4031" ph="{...}" />
+            <marker date="1472739345528" expanded="true" signature="6681:7369" ph="..." />
+            <marker date="1472739345528" expanded="true" signature="7393:7555" ph="..." />
           </folding>
         </state>
       </provider>

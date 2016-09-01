@@ -22,6 +22,21 @@ class Api extends API_Controller {
         exit;
     }
 
+    /**
+     * Users API - DO NOT LEAVE THIS ACTIVE IN A PRODUCTION ENVIRONMENT !!! - for demo purposes only
+     */
+    public function vote()
+    {
+        $this->load->model('entry_model');
+        $votes_data = $this->input->get('votes_data');
+        $cat = $this->input->get('cat');
+        // get user data
+
+        $this->entry_model->savevotes($cat,$votes_data);
+        display_json('ok');
+        exit;
+    }
+
 
     /**
      * Users API - DO NOT LEAVE THIS ACTIVE IN A PRODUCTION ENVIRONMENT !!! - for demo purposes only

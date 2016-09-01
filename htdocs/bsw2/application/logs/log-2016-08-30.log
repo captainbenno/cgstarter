@@ -714,3 +714,12 @@ ERROR - 2016-08-30 20:51:06 --> 404 Page Not Found: Undefined/index
 ERROR - 2016-08-30 20:51:06 --> 404 Page Not Found: Undefined/index
 ERROR - 2016-08-30 13:06:20 --> Severity: Notice --> Undefined variable: categories /var/www/vhosts/cg/htdocs/bsw2/application/views/judging.php 20
 ERROR - 2016-08-30 13:06:20 --> Severity: Warning --> Invalid argument supplied for foreach() /var/www/vhosts/cg/htdocs/bsw2/application/views/judging.php 20
+ERROR - 2016-08-30 23:37:51 --> 404 Page Not Found: Api/vote
+ERROR - 2016-08-30 23:37:56 --> 404 Page Not Found: Api/vote
+ERROR - 2016-08-30 15:19:29 --> Severity: Parsing Error --> syntax error, unexpected '$order_data' (T_VARIABLE) /var/www/vhosts/cg/htdocs/bsw2/application/models/Entry_model.php 91
+ERROR - 2016-08-30 15:26:14 --> Query error: Table 'bsw2.votes' doesn't exist - Invalid query: DELETE FROM `votes`
+WHERE `user_id` = '1'
+AND `cat` = 'Cartoon'
+ERROR - 2016-08-30 15:27:16 --> Severity: Notice --> Undefined variable: art_ids /var/www/vhosts/cg/htdocs/bsw2/application/models/Entry_model.php 92
+ERROR - 2016-08-30 15:27:16 --> Severity: Warning --> Invalid argument supplied for foreach() /var/www/vhosts/cg/htdocs/bsw2/application/models/Entry_model.php 92
+ERROR - 2016-08-30 15:29:51 --> Query error: Unknown column 'art_id' in 'field list' - Invalid query: INSERT INTO `votes` (`user_id`, `art_id`, `cat`, `position`) VALUES ('1', '1395160', 'Cartoon', 1)
