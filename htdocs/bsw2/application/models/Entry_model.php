@@ -134,7 +134,7 @@ class Entry_model extends CI_Model
                 entry.*
             FROM {$this->_db}
             WHERE category_title = " . $this->db->escape($cat) . "
-            AND status = 0
+            AND status = 2
             ORDER BY -position DESC
         ";
 
