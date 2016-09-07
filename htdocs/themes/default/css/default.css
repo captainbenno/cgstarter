@@ -599,6 +599,10 @@ footer{
             background-position: -5px -67px; 
         }
 
+        #project-stats #stats-item{
+            background-position: -5px -200px;
+        }
+
         #project-stats #stats-days{
             background-position: -5px -135px;
         }
@@ -632,15 +636,34 @@ footer{
                     font-size: 12px;
                 }
 
+                    #project-rewards em span.rrp{
+                        color: #9f191f;
+                        font-size: 12px;
+                        text-decoration: line-through;
+                    }
+
+
 
             #project-rewards img{
-            
+
             }
 
             #project-rewards p{
                 font-size: 12px;
                 color: #4f4f4f;
             }
+
+            #project-rewards li ul.reward_teasertext li{
+                font-size: 12px;
+                color: #4f4f4f;
+                list-style: none;
+                padding: 0;
+            }
+
+                #project-rewards li ul.reward_teasertext li .rrp{
+                    color: #9f191f;
+                    text-decoration: line-through;
+                }
 
             #project-rewards a.btn{
                 background-color: #9cb80f;
