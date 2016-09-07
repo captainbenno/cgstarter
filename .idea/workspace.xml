@@ -2,11 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a4b91ab6-f6b4-4e75-873e-5dfe24a7a851" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htdocs/themes/default/img/project-stats-sprite.png" afterPath="$PROJECT_DIR$/htdocs/themes/default/img/project-stats-sprite.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/misc/about.php" afterPath="$PROJECT_DIR$/application/views/misc/about.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/project/project_view.php" afterPath="$PROJECT_DIR$/application/views/project/project_view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/welcome.php" afterPath="$PROJECT_DIR$/application/views/welcome.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htdocs/themes/default/css/default.css" afterPath="$PROJECT_DIR$/htdocs/themes/default/css/default.css" />
     </list>
     <ignored path="cg.iws" />
@@ -863,12 +858,12 @@
       <workItem from="1472640227589" duration="4835000" />
       <workItem from="1472728278168" duration="10663000" />
       <workItem from="1473242852225" duration="9791000" />
-      <workItem from="1473256992660" duration="2785000" />
+      <workItem from="1473256992660" duration="3012000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="103889000" />
+    <option name="totallyTimeSpent" value="104116000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="27" width="1922" height="1054" extended-state="6" />
