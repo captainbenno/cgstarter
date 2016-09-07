@@ -282,7 +282,7 @@
                         <em>Backers</em>
                         <hr />
                     </li>
-                    <li id="stats-total">
+                    <li id="<?php if($project['goal_type'] == 'items'){ ?>stats-item<?php } else { ?>stats-total<?php } ?>">
                         <strong><?php if($project['goal_achievement']['achievement_total']>0){echo $project['goal_achievement']['achievement_total'];}else{echo 0;}?></strong>
                         <em>
                             <?php if($project['goal_type'] == 'items'){ ?>
@@ -316,7 +316,11 @@
                         foreach ($project['project_rewards'] as $project_reward) { ?>
                             <li>
                                 <h4><?php echo  $project_reward['title']?></h4>
-                                <em>$<?php echo  $project_reward['price']?>
+                                <em>
+                                    <?php if($project_reward['rrp']>0){
+                                        echo  "<span class='rrp'>($".$project_reward['rrp'].")</span>";
+                                    }?>
+                                    $<?php echo  $project_reward['price']?>
                                     <span>
                                     <?php if($project_reward['sold'] >= $project_reward['quantity']){ ?> 
                                         SOLD OUT!
@@ -326,7 +330,7 @@
                                     </span>
                                 </em>
                                 <img src="<?php echo  $project_reward['teaser_image']?>" />
-                                <p><?php echo  $project_reward['teaser_text']?></p>
+                                <p class="reward_teasertext"><?php echo  $project_reward['teaser_text']?></p>
                                 <a href="/cart/<?php echo  $project_reward['project_reward_id']?>" class="btn<?php if($project_reward['sold'] >= $project_reward['quantity']){ echo ' disabled'; } ?>" role="button">
                                     BUY ME!
                                 </a>

@@ -8,7 +8,7 @@
         </div>
     </div>
     <!-- end of hero -->
-    <!-- beginning of video -->
+    <!-- beginning of video
     <div id="home-video" class="container-fluid">
         <div class="row">
             <div class="col-md-2"></div>
@@ -19,18 +19,24 @@
             </div>
             <div class="col-md-2"></div>
         </div>        
-    </div> 
+    </div> -->
     <!-- end of video -->
     <!-- beginning of content -->
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-2"></div>
-            <div class="col-md-8">
+            <div class="col-md-8" style="padding:40px;">
                 <p class="lead">
-                   HELLO HELLO Hello Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    cgStarter is a new campaign outlet for Ballistic Publishing. It is being launched with the <a href="/project/expose12">EXPOSE 12</a> campaign.
                 </p>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie elit enim, vel vestibulum neque pellentesque eu. Ut id fermentum augue. Proin efficitur at dolor sed feugiat. Pellentesque vitae pretium justo. Nulla porttitor augue et auctor consectetur. Proin lacinia sem non quam faucibus, at malesuada ante volutpat. Vestibulum quam est, consectetur quis laoreet id, consectetur at odio.
+                    Ballistic Publishing launched 16 years ago with EXPOSE 1.
+                    Since then we have published 54 books which have won numerous awards.
+                    Our back catalogue is available from <a href="http://www.ballisticpublishing.com">www.BallisticPublishing.com</a>
+                </p>
+                <p>
+                    We have an exciting line up of new print and digital products scheduled for release in the upcoming months.
+                    These will be available exclusively through cgStarter
                 </p>
 
             </div>
