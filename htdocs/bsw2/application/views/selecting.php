@@ -40,9 +40,23 @@ function translate_status($status)
             padding: 0 !important;
         }
 
+        div#recat .modal-dialog {
+            width: 600px !important;
+            height: 356px !important;
+            margin: 0 auto !important;
+            padding: 0 !important;
+        }
+
+
         .modal-content {
             height: auto !important;
             min-height: 100% !important;
+            border-radius: 0 !important;
+        }
+
+        div#recat .modal-content {
+            height: 354px; !important;
+            min-height: 354px !important;
             border-radius: 0 !important;
         }
 
@@ -52,6 +66,7 @@ function translate_status($status)
             border-bottom: 1px solid #cccccc;
             font-size: 24px;
             clear: both;
+            height: 177px;
         }
 
         #image-zoom{
@@ -120,7 +135,7 @@ function translate_status($status)
             if($i < 10){
                 $class = "topten";
             }
-            echo "<li class='".$class."'><table class='table'>
+            echo "<li class='".$class."'  aria-data='".$entry['art_id']."' ><table class='table'>
                         <tr>
                             <td>Image</td>
                             <td>Status</td>
@@ -144,24 +159,22 @@ function translate_status($status)
                             <td>".$entry['email']."</td>
                             <td>".$entry['username']."</td>
                             <td>                     
-                <button class=\"btn btn-default btn-xs\" id=\"accept_image\" aria-data='".$entry['art_id']."'>
-                    <span class=\"glyphicon glyphicon-ok\" aria-hidden=\"true\"></span>
-                    Accept</button><br/>
-                <button class=\"btn btn-default btn-xs\" id=\"reject_image\" aria-data='".$entry['art_id']."'>
-                    <span class=\"glyphicon glyphicon-remove\" aria-hidden=\"true\"></span>
-                    Reject</button><br/>
-                <button class=\"btn btn-default btn-xs\" id=\"select_image\" aria-data='".$entry['art_id']."'>
-                    <span class=\"glyphicon glyphicon-thumbs-up\" aria-hidden=\"true\"></span>
-                    Select</button><br/>
-                <button class=\"btn btn-default btn-xs\" id=\"backlog_image\" aria-data='".$entry['art_id']."'>
-                    <span class=\"glyphicon glyphicon-folder-open\" aria-hidden=\"true\"></span>
-                    Backlog</button><br/>
-                <button class=\"btn btn-default btn-xs\" id=\"recat_image\" aria-data='".$entry['art_id']."'>
-                    <span class=\"glyphicon glyphicon-list\" aria-hidden=\"true\"></span>
-                    Re-Cat</button>
-                            
-                            
-</td>
+                                <button class=\"btn btn-default btn-xs accept_image\" aria-data='".$entry['art_id']."'>
+                                    <span class=\"glyphicon glyphicon-ok\" aria-hidden=\"true\"></span>
+                                    Accept</button><br/>
+                                <button class=\"btn btn-default btn-xs reject_image\" aria-data='".$entry['art_id']."'>
+                                    <span class=\"glyphicon glyphicon-remove\" aria-hidden=\"true\"></span>
+                                    Reject</button><br/>
+                                <button class=\"btn btn-default btn-xs select_image\" aria-data='".$entry['art_id']."'>
+                                    <span class=\"glyphicon glyphicon-thumbs-up\" aria-hidden=\"true\"></span>
+                                    Select</button><br/>
+                                <button class=\"btn btn-default btn-xs backlog_image\" aria-data='".$entry['art_id']."'>
+                                    <span class=\"glyphicon glyphicon-folder-open\" aria-hidden=\"true\"></span>
+                                    Backlog</button><br/>
+                                <button class=\"btn btn-default btn-xs recat_image\" aria-data='".$entry['art_id']."'>
+                                    <span class=\"glyphicon glyphicon-list\" aria-hidden=\"true\"></span>
+                                    Re-Cat</button>
+                            </td>
                         </tr>
                     </table>
                 </li>";
@@ -169,6 +182,46 @@ function translate_status($status)
         }
         ?>
     </ol>
+
+    <!-- Modal -->
+    <div class="modal fade" id="recat" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Change Category</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Select an existing category or create a new one. This form uses tab navigation for speedy input. Press 'esc' to close without making any changes.</p>
+                    <div class="form-group">
+                        <form id="recat_form">
+                            <label>
+                                Category:
+                                <select id="recat_category" class="form-control">
+                                    <?php
+                                    foreach($categories as $category){
+                                        echo "<option>".$category['category_title']."</option>";
+                                    }
+                                    ?>
+                                </select>
+                            </label>
+                            <br />
+                            OR
+                            <br/>
+                            <label>
+                                New Category:
+                                <input class="form-control" id="new_cat" />
+                            </label>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button id="save_cat" type="button" class="btn btn-primary">Save changes</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Modal -->
     <div class="modal fade" id="zoom" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -197,8 +250,19 @@ function translate_status($status)
 
     <script type="text/javascript">
 
+        var current_art_id = 0;
+
         // A $( document ).ready() block.
         $( document ).ready(function() {
+
+            $('#save_cat').click(function(){
+                new_cat = $("#recat_category").val();
+                if($("#new_cat").val().length>0){
+                    new_cat = $("#new_cat").val();
+                    console.log(new_cat);
+                }
+                change_cat(new_cat);
+            })
 
             $("#save_order").click(function(){
                 var art_ids = []
@@ -233,60 +297,101 @@ function translate_status($status)
                 $('#image-zoom').attr('src',largeimage);
             })
 
-            $(document).on("keypress", function (e){
-                // alert(event.which);
-                //zoom entry
 
-                $('#recat_image').click(function(){
-                    $('#recat').modal();
-                    $('#recat').on('shown.bs.modal', function (e) {
-                        $("#recat_category").focus();
-                    });
+            $('.recat_image').click(function(){
+                $('#recat').modal();
+                current_art_id = $(this).attr('aria-data');
+                $('#recat').on('shown.bs.modal', function (e) {
+                    $("#recat_category").focus();
                     select_recat();
-                    document.activeElement.blur();
-                    return false;
                 });
+                document.activeElement.blur();
+                return false;
+            });
 
-                $('#accept_image').click(function(){
-                    art_id = $(this).attr('aria-data');
-                    accept_entry();
-                    document.activeElement.blur();
-                    return false;
-                });
-                $('#reject_image').click(function(){
-                    reject_entry();
-                    document.activeElement.blur();
-                    return false;
-                });
+            $('.accept_image').click(function(){
+                art_id = $(this).attr('aria-data');
+                accept_entry(art_id);
+                return false;
+            });
 
+            $('.reject_image').click(function(){
+                art_id = $(this).attr('aria-data');
+                reject_entry(art_id);
+                return false;
+            });
+
+            $('.select_image').click(function(){
+                art_id = $(this).attr('aria-data');
+                select_entry(art_id);
+                return false;
+            });
+
+            $('.backlog_image').click(function(){
+                art_id = $(this).attr('aria-data');
+                backlog_entry(art_id);
+                return false;
             });
 
         });
 
+        function select_recat(){
+            current_cat = "<?php echo $current_cat ?>";
+            $("#recat_category").val(current_cat);
+        }
+
+        function backlog_entry(art_id) {
+            $.get( "<?php echo base_url('api/backlogentry'); ?>", { art_id: art_id} )
+                .done(function( data ) {
+                    $("li[aria-data="+art_id+"]").css("border","3px solid orange");
+                    $("li[aria-data="+art_id+"]").fadeTo(1000, 500).slideUp(500, function() {
+                        $("li[aria-data="+art_id+"]").hide();
+                    });
+                });
+        }
+
+        function select_entry(art_id) {
+            $.get( "<?php echo base_url('api/selectentry'); ?>", { art_id: art_id} )
+                .done(function( data ) {
+                    $("li[aria-data="+art_id+"]").css("border","3px solid green");
+                    $("li[aria-data="+art_id+"]").fadeTo(1000, 500).slideUp(500, function() {
+                        $("li[aria-data="+art_id+"]").hide();
+                    });
+                });
+        }
+
         function accept_entry(art_id) {
             $.get( "<?php echo base_url('api/acceptentry'); ?>", { art_id: art_id} )
                 .done(function( data ) {
-//                    $("#entry_status_accepted").show();
-//                    setTimeout(next_entry,'1000');
+                    $("li[aria-data="+art_id+"]").css("border","3px solid blue");
+                    $("li[aria-data="+art_id+"]").fadeTo(1000, 500).slideUp(500, function() {
+                        $("li[aria-data="+art_id+"]").hide();
+                    });
                 });
 
         }
 
         function change_cat(new_cat) {
-            $.get( "<?php echo base_url('api/changecat'); ?>", { art_id: current_image_data.art_id, cat: new_cat } )
+            art_id = current_art_id;
+            $.get( "<?php echo base_url('api/changecat'); ?>", { art_id: art_id, cat: new_cat } )
                 .done(function( data ) {
                     $('#recat').modal('hide');
-                    $("#cat_changed").show();
-                    setTimeout(next_entry,'1000');
+                    $("li[aria-data="+art_id+"]").css("border","3px solid purple");
+                    $("li[aria-data="+art_id+"]").fadeTo(1000, 500).slideUp(500, function() {
+                        $("li[aria-data="+art_id+"]").hide();
+                    });
                 });
 
         }
 
-        function reject_entry() {
-            $.get( "<?php echo base_url('api/rejectentry'); ?>", { art_id: current_image_data.art_id} )
+        function reject_entry(art_id) {
+            $.get( "<?php echo base_url('api/rejectentry'); ?>", { art_id: art_id} )
                 .done(function( data ) {
-                    $("#entry_status_rejected").show();
-                    setTimeout(next_entry,'1000');
+                    $("li[aria-data="+art_id+"]").css("border","3px solid red");
+                    $("li[aria-data="+art_id+"]").fadeTo(1000, 500).slideUp(500, function() {
+                        $("li[aria-data="+art_id+"]").hide();
+                    });
+
                 });
 
         }
