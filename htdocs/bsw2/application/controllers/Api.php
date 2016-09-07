@@ -52,12 +52,32 @@ class Api extends API_Controller {
         exit;
     }
 
+    public function backlogentry()
+    {
+        $this->load->model('entry_model');
+        $art_id = $this->input->get('art_id');
+        // get user data
+        $this->entry_model->backlogentry($art_id);
+        display_json('ok');
+        exit;
+    }
+
     public function acceptentry()
     {
         $this->load->model('entry_model');
         $art_id = $this->input->get('art_id');
         // get user data
         $this->entry_model->acceptentry($art_id);
+        display_json('ok');
+        exit;
+    }
+
+    public function selectentry()
+    {
+        $this->load->model('entry_model');
+        $art_id = $this->input->get('art_id');
+        // get user data
+        $this->entry_model->selectentry($art_id);
         display_json('ok');
         exit;
     }

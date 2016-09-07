@@ -82,6 +82,22 @@ class Entry_model extends CI_Model
         $this->db->update('entry', $order_data);
     }
 
+    function selectentry($art_id){
+        $order_data = array(
+            'status'    => 3
+        );
+        $this->db->where('art_id', $art_id);
+        $this->db->update('entry', $order_data);
+    }
+
+    function backlogentry($art_id){
+        $order_data = array(
+            'status'    => 4
+        );
+        $this->db->where('art_id', $art_id);
+        $this->db->update('entry', $order_data);
+    }
+
     function savevotes($cat,$votes_data){
 
         $user_id = $this->session->userdata('logged_in')['id'];
