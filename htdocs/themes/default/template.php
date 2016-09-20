@@ -36,8 +36,6 @@
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js?v=3.2.4"></script>
                                                 
     <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js?v=3.2.4"></script>
-                                     
-    <script type="text/javascript" src="bsw2/htdocs/themes/default/js/jquery.jcarousel-core.min.js"></script>
 
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -283,17 +281,7 @@ $(document).ready(function() {
         // perform AJAX call
         executeAjax(config.baseURL + 'ajax/set_session_language', postData, ajaxResults);
     });
-
-    $('.jcarousel').jcarousel();
-
-    $('.jcarousel-control-prev').click(function(){
-        $('.jcarousel').jcarousel('scroll', 1);
-        return false;
-    })
-    $('.jcarousel-control-next').click(function(){
-        $('.jcarousel').jcarousel('scroll', -1);
-        return false;
-    })
+    
 
 });
 
