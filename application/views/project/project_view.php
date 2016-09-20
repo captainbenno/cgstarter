@@ -640,7 +640,7 @@
                                     <?php } ?>
                                     </span>
                                 </em>
-                                <img src="<?php echo  $project_reward['teaser_image']?>" />
+                                <!-- img src="<?php echo  $project_reward['teaser_image']?>" / -->
                                 <p class="reward_teasertext"><?php echo  $project_reward['teaser_text']?></p>
                                 <a href="/cart/<?php echo  $project_reward['project_reward_id']?>" class="btn<?php if($project_reward['sold'] >= $project_reward['quantity']){ echo ' disabled'; } ?>" role="button">
                                     BUY ME!
