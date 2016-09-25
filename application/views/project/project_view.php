@@ -632,7 +632,7 @@
                     <div id="project-leader">
                         <h4 class="klavika-regular">Project Team</h4>
 
-                        <p>Ballistic Publishing is headed up by the same people that started the company over 12 years ago. We are also lucky to have most of our team still with us. Together the team has many decades of combined Publishing experience.</p>
+                        <p style="padding-left: 0;">Ballistic Publishing is headed up by the same people that started the company over 12 years ago. We are also lucky to have most of our team still with us. Together the team has many decades of combined Publishing experience.</p>
 
                         <?php 
                             foreach ($project['project_leaders'] as $project_leader) { ?>
