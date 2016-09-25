@@ -132,6 +132,16 @@
                                     display:none;
                                 }
 
+                                .am-wrapper{
+                                    float:left;
+                                    position:relative;
+                                    overflow:hidden;
+                                }
+                                .am-wrapper img{
+                                    position:absolute;
+                                    outline:none;
+                                }
+
                             </style>
 
                             <script type="text/javascript" src="http://ballisticpublishing.com/jquery.simplyscroll.js"></script>
@@ -139,6 +149,37 @@
                             <script type="text/javascript">
                                 $(document).ready(function() {
                                         $("#scroller").simplyScroll({autoMode: 'bounce'});
+
+
+                                    var $container 	= $('#am-container'),
+                                        $imgs		= $container.find('img').hide(),
+                                        totalImgs	= $imgs.length,
+                                        cnt			= 0;
+
+                                    $imgs.each(function(i) {
+                                        var $img	= $(this);
+                                        $('<img/>').load(function() {
+                                            ++cnt;
+                                            if( cnt === totalImgs ) {
+                                                $imgs.show();
+                                                $container.montage({
+                                                    fixedHeight : 60
+                                                });
+
+                                                /*
+                                                 * just for this demo:
+                                                 */
+                                                $('#overlay').fadeIn(500);
+                                            }
+                                        }).attr('src',$img.attr('src'));
+                                    });
+
+                                    $('#am-container img').imageTooltip({
+                                        xOffset: '300',
+                                        yOffset: 0
+                                    });
+
+
                                 });
                             </script>
 
@@ -277,7 +318,7 @@
 
                                     </ul>
 
-                            <h3>Were back!</h3>
+                            <h3>We're back!</h3>
 
                             <p>Starting with EXPOSÉ 12 we are going back to our roots... we’re going Ballistic again!</p>
 
@@ -295,17 +336,36 @@
                             <p>We can deliver more books at a lower price by returning to our original campaign model. We also offer new add-ons and products by going back to our roots and selling books by
                             campaign.</p>
 
-                            <p>Bundles include eBook and membership to Hard Cover and Limited editions at prices that are
-                            better than we used to be able to do single books!</p>
+                            <p>Bundles include eBooks and memberships to Hard Cover and Limited editions at prices that are
+                            better than we used to be able to do in single books!</p>
 
                             <p>Ballistic is a multi-award winning book publisher. We are still the world’s leading premiere
                             digital art book publisher with over 50 books published and delivered globally over the last
                             decade.</p>
+                            <div id="panel" class="panel hide"></div>
+                            <script src="/themes/default/js/image-tooltip.js"></script>
+
+                            <div class="am-container" id="am-container" style="margin: 0px auto;clear: both;width: 812px;float: left;margin-bottom: 20px;">
+                                <?php
+
+                                if ($handle = opendir('../htdocs/themes/default/img/expose12/')) {
+
+                                    while (false !== ($entry = readdir($handle))) {
+
+                                        if ($entry != "." && $entry != "..") {
+
+                                            echo '<a href="#"><img src="/themes/default/img/expose12/'.$entry.'" /></a>';
+                                        }
+                                    }
+                                    closedir($handle);
+                                }
+                                ?>
+                            </div>
 
                             <h3>Affordable shipping!</h3>
 
                             <p>Ballistic Media has over a decade of experience with global shipping of books. We have
-                            shipped many 10&#39;s thousands of books to over 170 countries. With our experience we can
+                            shipped many 10&#39;s of thousands of books to over 170 countries. With our experience we can
                             offer unbeatable quality and price for shipping books in our famous specialty book cartons.</p>
 
                             <blockquote>FLAT RATE SHIPPING TO THE WORLD $15 per book</blockquote>
@@ -454,7 +514,9 @@
                             <h3>Targets</h3>
                             <p>We have a minimum target of 2,000 books. Once this is reached the project is a go and we will start preparing the book for print. We will keep the campaign going for a while after the minimum target is met so as many people as possible can get their orders in.</p>
                             <p><strong>There won’t be any more EXPOS 12 books printed after this campaign – the only way to get a book is to order it during the campaign.</strong></p>
-                            <p>If for any reason the target is not met then everyone gets a refund … but we don’t expect this as previous editions have sold many thousands more than 2,000.</p>
+                            <p>If for any reason the target is not met then everyone gets a refund … but we don’t expect this as previous editions have sold many thousands more than our current target of 2,000.</p>
+                            <p>Orders originating from USA will be sent from our Los Angeles Warehouse and those orders from the rest of the world, including Canada, will be sent from our warehouse in Horsham, Victoria. Australia.</p>
+
 
                             <h3>New to Ballistic and EXPOSÉ – celebrating EXPOSÉ all around the world.</h3>
                             <p>EXPOSÉ is the first and premiere showcase for digital art and artists. Every year EXPOSÉ features the best digital art in the known universe. Since it launched in 2003 EXPOSÉ has been a global sensation… just take a look at these artists from previous editions celebrating EXPOSÉ all around the world.</p>
@@ -569,6 +631,9 @@
                     <hr />
                     <div id="project-leader">
                         <h4 class="klavika-regular">Project Leader</h4>
+
+                        <p>Ballistic Publishing is headed up by the same people that started the company over 12 years ago. We are also lucky to have most of our team still with us. Together the team has many decades of combined Publishing experience.</p>
+
                         <?php 
                             foreach ($project['project_leaders'] as $project_leader) { ?>
                                 <h6><?php echo  $project_leader['first_name']?> <?php echo  $project_leader['last_name']?></h6>
