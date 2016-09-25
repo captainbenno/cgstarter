@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a4b91ab6-f6b4-4e75-873e-5dfe24a7a851" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/project/project_view.php" afterPath="$PROJECT_DIR$/application/views/project/project_view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htdocs/themes/default/template.php" afterPath="$PROJECT_DIR$/htdocs/themes/default/template.php" />
     </list>
     <ignored path="cg.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,7 +28,7 @@
         <entry file="file://$PROJECT_DIR$/application/views/project/project_view.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="501">
-              <caret line="638" column="0" selection-start-line="638" selection-start-column="0" selection-end-line="638" selection-end-column="0" />
+              <caret line="632" column="64" selection-start-line="632" selection-start-column="64" selection-end-line="632" selection-end-column="64" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#2;n#!!top" expanded="true" />
               </folding>
@@ -503,12 +501,12 @@
       <workItem from="1473678519459" duration="6954000" />
       <workItem from="1473732996075" duration="4026000" />
       <workItem from="1474369778836" duration="9743000" />
-      <workItem from="1474723633627" duration="8293000" />
+      <workItem from="1474723633627" duration="8920000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="134038000" />
+    <option name="totallyTimeSpent" value="134665000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="27" width="1922" height="1054" extended-state="6" />
@@ -907,7 +905,7 @@
     <entry file="file://$PROJECT_DIR$/application/views/project/project_view.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="501">
-          <caret line="638" column="0" selection-start-line="638" selection-start-column="0" selection-end-line="638" selection-end-column="0" />
+          <caret line="632" column="64" selection-start-line="632" selection-start-column="64" selection-end-line="632" selection-end-column="64" />
           <folding>
             <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#2;n#!!top" expanded="true" />
           </folding>
