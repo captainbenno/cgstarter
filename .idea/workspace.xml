@@ -27,10 +27,11 @@
       <file leaf-file-name="project_view.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/project/project_view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="501">
-              <caret line="632" column="64" selection-start-line="632" selection-start-column="64" selection-end-line="632" selection-end-column="64" />
+            <state relative-caret-position="535">
+              <caret line="634" column="50" selection-start-line="634" selection-start-column="50" selection-end-line="634" selection-end-column="50" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#div#2;n#div#1;n#div#1;n#div#0;n#div#2;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -501,12 +502,12 @@
       <workItem from="1473678519459" duration="6954000" />
       <workItem from="1473732996075" duration="4026000" />
       <workItem from="1474369778836" duration="9743000" />
-      <workItem from="1474723633627" duration="8920000" />
+      <workItem from="1474723633627" duration="9069000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="134665000" />
+    <option name="totallyTimeSpent" value="134814000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="27" width="1922" height="1054" extended-state="6" />
@@ -904,10 +905,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/project/project_view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="501">
-          <caret line="632" column="64" selection-start-line="632" selection-start-column="64" selection-end-line="632" selection-end-column="64" />
+        <state relative-caret-position="535">
+          <caret line="634" column="50" selection-start-line="634" selection-start-column="50" selection-end-line="634" selection-end-column="50" />
           <folding>
             <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#2;n#div#1;n#div#1;n#div#0;n#div#2;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
