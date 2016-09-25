@@ -288,6 +288,7 @@ $(document).ready(function() {
 </script>
 
     <script type="text/javascript" src="/themes/default/js/custom.js"></script>
+    <script type="text/javascript" src="/themes/default/js/jquery.montage.min.js"></script>
 
     <script type="text/javascript">
 /**
