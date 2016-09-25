@@ -630,13 +630,13 @@
                     <!-- end of social media block -->
                     <hr />
                     <div id="project-leader">
-                        <h4 class="klavika-regular">Project Leader</h4>
+                        <h4 class="klavika-regular">Project Team</h4>
 
                         <p>Ballistic Publishing is headed up by the same people that started the company over 12 years ago. We are also lucky to have most of our team still with us. Together the team has many decades of combined Publishing experience.</p>
 
                         <?php 
                             foreach ($project['project_leaders'] as $project_leader) { ?>
-                                <h6><?php echo  $project_leader['first_name']?> <?php echo  $project_leader['last_name']?></h6>
+                                <h6><b><?php echo  $project_leader['first_name']?> <?php echo  $project_leader['last_name']?></b></h6>
                                 <p>
                                     <?php echo  $project_leader['leader_profile']?>
                                 </p>                            
