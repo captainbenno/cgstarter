@@ -560,7 +560,7 @@
                                 <?php 
                                     foreach ($project['backers'] as $backer) { ?>
                                         <li>
-                                            <img src="http://www.gravatar.com/avatar/<?php echo md5( strtolower( trim( $backer['email'] ) ) ); ?>?s=60" /> <?php echo  $backer['first_name']?> <?php echo  $backer['last_name']?> - Australia <br />
+                                            <img src="http://www.gravatar.com/avatar/<?php echo md5( strtolower( trim( $backer['email'] ) ) ); ?>?s=60" /> <?php echo  $backer['first_name']?> <?php echo  $backer['last_name']?> - <?php echo  $backer['billing_country']?> <br />
                                             
                                             <em><?php
 

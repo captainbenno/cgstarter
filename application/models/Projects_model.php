@@ -84,15 +84,14 @@ class Projects_model extends CI_Model {
      */
     function get_backers($project_id)
     {
-        $this->db->select('id,username,first_name,last_name,email,UNIX_TIMESTAMP(create_date) AS backer_timestamp,create_date');
-        $this->db->where('project_rewards.project_id', $project_id);
-        $this->db->join('users', 'users.id = project_rewards_join_backers.user_id');        
-        $this->db->join('project_rewards', 'project_rewards.project_reward_id = project_rewards_join_backers.reward_id');        
-        $this->db->order_by('', 'DESC');     
-        $query = $this->db->get('project_rewards_join_backers'); 
+        $this->db->select('orders.email_address AS email,orders.first_name,orders.last_name,UNIX_TIMESTAMP(orders.create_date) AS backer_timestamp,orders.create_date,orders.billing_country');
+        $this->db->where('order_items.project_id', $project_id);
+        $this->db->join('order_items', 'order_items.order_id = orders.order_id');
+        $this->db->order_by('create_date', 'DESC');
+        $this->db->group_by('order_items.order_id');
+        $query = $this->db->get('orders');
         $return_data = $query->result_array();
         return $return_data;
-
     }
 
     /**
@@ -102,12 +101,12 @@ class Projects_model extends CI_Model {
      */
     function count_backers($project_id)
     {
-      //  $this->output->enable_profiler(TRUE);
-       // $this->db->count_all_results();
-        $this->db->select('count(*) AS total');
-        $this->db->where('project_rewards.project_id', $project_id);
-        $this->db->join('project_rewards', 'project_rewards.project_reward_id = project_rewards_join_backers.reward_id');        
-        $query = $this->db->get('project_rewards_join_backers'); 
+
+        $this->db->select('count(orders.order_id) AS total');
+        $this->db->where('order_items.project_id', $project_id);
+        $this->db->join('order_items', 'order_items.order_id = orders.order_id');
+        $this->db->group_by('order_items.order_id');
+        $query = $this->db->get('orders');
         return $query->row()->total;
     }
 
