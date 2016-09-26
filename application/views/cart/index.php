@@ -77,11 +77,11 @@
                             <td style="text-align:right"><strong>Total</strong>
                             </td>
                             <td style="text-align:right">$<?php echo $this->cart->format_number($this->cart->total()); ?>
-                                <? if($shipping >0){
+                                <?php if($shipping >0){
                                 ?>
                                 <br />
                                 <span class="small">(inc $<?php echo $this->cart->format_number($shipping); ?> shipping)</span>
-                            <?
+                            <?php
                             };
                             ?>
                             </td>
