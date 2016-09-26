@@ -32,12 +32,21 @@ class Checkout extends Public_Controller {
 
     }
 
+    function mail()
+    {
+        $this->send_payment_success_email('100000063');
+
+        echo 'done';
+
+        die;
+    }
 
     /**
      * Default
      */
     function index()
-    {   
+    {
+
         // reload the new user data and store in session
         $this->user = $this->users_model->get_user($this->user['id']);
         
