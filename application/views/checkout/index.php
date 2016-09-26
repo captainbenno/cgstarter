@@ -308,8 +308,8 @@
         <input type="hidden" name="invoice" value="">
         <input type="hidden" name="country" value="">
         <input type="hidden" name="email" value="">
-        <input type="hidden" name="notify_url" value="http://cgstarter.local/checkout/paypal/">
-        <input type="hidden" name="return" value="http://cgstarter.local/checkout/paypal/">
+        <input type="hidden" name="notify_url" value="http://cgstarter.com/checkout/paypal/">
+        <input type="hidden" name="return" value="http://cgstarter.com/checkout/paypal/">
     </form>
 
     <!-- Modal -->
