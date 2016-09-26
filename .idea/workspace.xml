@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a4b91ab6-f6b4-4e75-873e-5dfe24a7a851" name="Default" comment="" />
+    <list default="true" id="a4b91ab6-f6b4-4e75-873e-5dfe24a7a851" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/project/project_view.php" afterPath="$PROJECT_DIR$/application/views/project/project_view.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htdocs/themes/default/css/default.css" afterPath="$PROJECT_DIR$/htdocs/themes/default/css/default.css" />
+    </list>
     <ignored path="cg.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -25,8 +28,8 @@
       <file leaf-file-name="project_view.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/project/project_view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+            <state relative-caret-position="442">
+              <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#0;n#div#0;n#div#1;n#div#0;n#div#2;n#!!top" expanded="true" />
@@ -40,8 +43,8 @@
       <file leaf-file-name="default.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/htdocs/themes/default/css/default.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="10234">
-              <caret line="602" column="42" selection-start-line="602" selection-start-column="42" selection-end-line="602" selection-end-column="42" />
+            <state relative-caret-position="467">
+              <caret line="427" column="26" selection-start-line="427" selection-start-column="17" selection-end-line="427" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -162,7 +165,6 @@
         <option value="$PROJECT_DIR$/htdocs/bsw2/application/views/selecting.php" />
         <option value="$PROJECT_DIR$/application/views/welcome.php" />
         <option value="$PROJECT_DIR$/application/views/misc/about.php" />
-        <option value="$PROJECT_DIR$/htdocs/themes/default/css/default.css" />
         <option value="$PROJECT_DIR$/htdocs/bsw2/application/controllers/Dataimport.php" />
         <option value="$PROJECT_DIR$/htdocs/bsw2/application/config/database.php" />
         <option value="$PROJECT_DIR$/htdocs/bsw2/application/config/index.html" />
@@ -171,6 +173,7 @@
         <option value="$PROJECT_DIR$/htdocs/themes/default/template.php" />
         <option value="$PROJECT_DIR$/htdocs/themes/default/js/image-tooltip.js" />
         <option value="$PROJECT_DIR$/application/views/checkout/index.php" />
+        <option value="$PROJECT_DIR$/htdocs/themes/default/css/default.css" />
         <option value="$PROJECT_DIR$/application/views/project/project_view.php" />
       </list>
     </option>
@@ -325,6 +328,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cg" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cg" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htdocs" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="default" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -520,12 +549,12 @@
       <workItem from="1473678519459" duration="6954000" />
       <workItem from="1473732996075" duration="4026000" />
       <workItem from="1474369778836" duration="9743000" />
-      <workItem from="1474723633627" duration="15038000" />
+      <workItem from="1474723633627" duration="15666000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="140783000" />
+    <option name="totallyTimeSpent" value="141411000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="27" width="1922" height="1054" extended-state="6" />
@@ -867,14 +896,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/htdocs/themes/default/css/default.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="10234">
-          <caret line="602" column="42" selection-start-line="602" selection-start-column="42" selection-end-line="602" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/htdocs/bsw2/application/config/config.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
@@ -923,10 +944,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/htdocs/themes/default/css/default.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="467">
+          <caret line="427" column="26" selection-start-line="427" selection-start-column="17" selection-end-line="427" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/project/project_view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+        <state relative-caret-position="442">
+          <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
           <folding>
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#div#0;n#div#1;n#div#0;n#div#2;n#!!top" expanded="true" />
