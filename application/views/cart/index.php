@@ -61,7 +61,7 @@
                                     </a>
                                 </td>
                                 <td style="text-align:right">$<?php echo $this->cart->format_number($items['price']); ?>
-                                        <? if($items['shipping']>0){
+                                        <?php if($items['shipping']>0){
                                             ?>
                                             <br />
                                             <span class="small">(inc $<?php echo $this->cart->format_number($items['shipping']); ?> shipping)</span></td>
