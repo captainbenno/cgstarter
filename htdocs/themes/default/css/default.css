@@ -549,16 +549,28 @@ footer{
     #project-leader{
 
     }
+        #project-leader ul{
+
+        }
+
+        #project-leader li{
+            list-style: none;
+        }
+
+        #project-leader img{
+            float:left;
+        }
+
         #project-leader h4{
             color: 4f4f4f;
             font-size: 24px;
         }
         #project-leader h6{
             font-size: 14px;
-            padding-left: 170px;
+            padding-left: 70px;
         }
         #project-leader p{
-            padding-left: 170px;
+            padding-left: 70px;
         }
 
     #project-stats{

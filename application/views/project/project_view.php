@@ -560,7 +560,7 @@
                                 <?php 
                                     foreach ($project['backers'] as $backer) { ?>
                                         <li>
-                                            <img src="http://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?s=60" /> <?php echo  $backer['first_name']?> <?php echo  $backer['last_name']?> - Australia <br />
+                                            <img src="http://www.gravatar.com/avatar/<?php echo md5( strtolower( trim( $backer['email'] ) ) ); ?>?s=60" /> <?php echo  $backer['first_name']?> <?php echo  $backer['last_name']?> - Australia <br />
                                             
                                             <em><?php
 
@@ -628,16 +628,20 @@
                         <h4 class="klavika-regular">Project Team</h4>
 
                         <p style="padding-left: 0;">Ballistic Publishing is headed up by the same people that started the company over 12 years ago. We are also lucky to have most of our team still with us. Together the team has many decades of combined Publishing experience.</p>
-
-                        <?php 
+                        <ul>
+                        <?php
                             foreach ($project['project_leaders'] as $project_leader) { ?>
-                                <h6><b><?php echo  $project_leader['first_name']?> <?php echo  $project_leader['last_name']?></b></h6>
-                                <p>
-                                    <?php echo  $project_leader['leader_profile']?>
-                                </p>                            
+                                <li>
+                                    <img src="http://www.gravatar.com/avatar/<?php echo md5( strtolower( trim( $project_leader['email'] ) ) ); ?>?s=60" />
+                                    <h6><b><?php echo  $project_leader['first_name']?> <?php echo  $project_leader['last_name']?></b></h6>
+                                    <p>
+                                        <?php echo  $project_leader['leader_profile']?>
+                                    </p>
+                                </li>
                         <?php 
                             }
                         ?>
+                        </ul>
 
                     </div>
                     <hr />
