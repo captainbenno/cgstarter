@@ -149,12 +149,12 @@
                     <img src="/themes/default/img/cgstarter-logo-small.png" />
                     <p>Crowd funded CG projects for all of humanity and beyond.</p>
                 </div>
-                <div class="col-md-2" id="tweets-feed">
+                <!--div class="col-md-2" id="tweets-feed">
                     <h4>Recents Tweets</h4>
                     <a class="twitter-timeline" href="https://twitter.com/damirdokic" data-widget-id="737237435642347520">Tweets by @damirdokic</a>
                     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-                </div>
-                <div class="col-md-2" id="facebook-feed">
+                </div -->
+                <div class="col-md-4" id="facebook-feed">
                     <h4>Facebook Feed</h4>
                     <div class="fb-page" 
                         data-href="https://www.facebook.com/ballisticpublishing/" 
