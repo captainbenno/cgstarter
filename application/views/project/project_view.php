@@ -345,7 +345,7 @@
                             <div id="panel" class="panel hide"></div>
                             <script src="/themes/default/js/image-tooltip.js"></script>
 
-                            <div class="am-container" id="am-container" style="margin: 0px auto;clear: both;width: 812px;float: left;margin-bottom: 20px;">
+                            <div class="am-container" id="am-container" style="margin: 0px auto;clear: both;width: 790px;float: left;margin-bottom: 20px;">
                                 <?php
 
                                 if ($handle = opendir('../htdocs/themes/default/img/expose12/')) {
