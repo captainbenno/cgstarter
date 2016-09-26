@@ -509,13 +509,12 @@
 
 
                             <h3>When will my book ship</h3>
-                            <p>As soon as the campaign closes we will finalize the book and get it to press as quickly as possible. Your book will be shrink-wrapped and mailed out in our mailing carton as quickly as possible after printing. From our experience it takes 8 – 12 weeks on average from printing to people receiving their books. We are hoping to speed this up a bit with direct shipping from Hong Kong this time.</p>
+                            <p>As soon as the campaign closes we will finalize the book and get it to press as quickly as possible. Your book will be shrink-wrapped and mailed out in our mailing carton as quickly as possible after printing. From our experience it takes 8 – 12 weeks on average from printing to people receiving their books. Orders originating from USA will be sent from our Los Angeles Warehouse and those orders from the rest of the world, including Canada, will be sent from our warehouse in Horsham, Victoria. Australia.</p>
 
                             <h3>Targets</h3>
                             <p>We have a minimum target of 2,000 books. Once this is reached the project is a go and we will start preparing the book for print. We will keep the campaign going for a while after the minimum target is met so as many people as possible can get their orders in.</p>
                             <p><strong>There won’t be any more EXPOS 12 books printed after this campaign – the only way to get a book is to order it during the campaign.</strong></p>
                             <p>If for any reason the target is not met then everyone gets a refund … but we don’t expect this as previous editions have sold many thousands more than our current target of 2,000.</p>
-                            <p>Orders originating from USA will be sent from our Los Angeles Warehouse and those orders from the rest of the world, including Canada, will be sent from our warehouse in Horsham, Victoria. Australia.</p>
 
 
                             <h3>New to Ballistic and EXPOSÉ – celebrating EXPOSÉ all around the world.</h3>
