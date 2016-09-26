@@ -413,13 +413,20 @@ footer{
 
             #project-title h1{
                 color: #fafafa;
-                font-size: 44px;
+                font-size: 83px;
                 text-shadow: 2px 2px #4f4f4f;
+                padding: 10px;
                 min-height: 100px;
+                background-color: rgba(0,0,0,0.4);
+                width: 8.1em;
             }
 
                 #project-title h1 span{
                     color: #99b707;
+                }
+
+                .top-image {
+                    padding-bottom: 80.25% !important;
                 }
 
 /* Project Page Pledge Row

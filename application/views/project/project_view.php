@@ -9,7 +9,6 @@
         <div class="row" id="project-main-logo">
             <div class="col-md-1"></div>
             <div class="col-md-2" id="project-logo">
-                <img src="/themes/default/img/expose-logo.png" />
             </div>
             <div class="col-md-8" id="project-title">
                 <h1 class="klavika-regular"><span>Project:</span> <?php echo $project['title'] ?></h1>
@@ -54,8 +53,8 @@
             <div class="col-md-5">
                 <h2 class="klavika-bold"><span>Project:</span> <?php echo $project['title'] ?></h2>
                 <!-- beginning of project video -->
-                <div class="embed-responsive embed-responsive-16by9">
-                    <img src="/themes/default/img/expose12/14224836_10153829056433148_9072124840330807846_n.jpg" style="width: 700px;">
+                <div class="embed-responsive embed-responsive-16by9 top-image">
+                    <img src="/themes/default/img/expose12/14224836_10153829056433148_9072124840330807846_n.jpg" style="width: 765px;">
                     <!--iframe class="embed-responsive-item" src="//www.youtube.com/embed/cgD8fJlkLqk"></iframe -->
                 </div>
                 <!-- end of project video -->
