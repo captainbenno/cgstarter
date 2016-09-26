@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css?v=3.2.4">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css?v=3.2.4">
     <link rel="stylesheet" href="/themes/core/css/core.css?v=3.2.4">
+    <link rel="stylesheet" href="/themes/default/css/default.css?v=3.2.4">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
 
     <! -- other -->
