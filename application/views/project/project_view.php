@@ -9,10 +9,7 @@
         <div class="row" id="project-main-logo">
             <div class="col-md-1"></div>
             <div class="col-md-2" id="project-logo">
-                <img src="/themes/default/img/expose12/14449930_10153886257943148_1879724144203128516_n.jpg" style="display: inline; height: 368px;">
-                <img src="/themes/default/img/expose12/13912759_10153789066788148_8516337506373070810_n.jpg" style="display: inline; height: 368px;">
-                <img src="/themes/default/img/expose12/14203296_10153835656078148_1977844036707400277_n.jpg" style="display: inline; height: 368px;">
-                <img src="/themes/default/img/expose12/14212563_10153827397698148_8435108648615800564_n.jpg" style="display: inline; height: 368px;">
+                <img src="/themes/default/img/expose-logo.png" />
             </div>
             <div class="col-md-8" id="project-title">
                 <h1 class="klavika-regular"><span>Project:</span> <?php echo $project['title'] ?></h1>
