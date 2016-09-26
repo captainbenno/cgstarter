@@ -65,7 +65,7 @@
                                             ?>
                                             <br />
                                             <span class="small">(inc $<?php echo $this->cart->format_number($items['shipping']); ?> shipping)</span></td>
-                                        <?
+                                        <?php
                                         };
                                         ?>
                                 <td style="text-align:right">$<?php echo $this->cart->format_number($items['subtotal']); ?></td>
