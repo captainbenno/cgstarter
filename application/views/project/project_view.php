@@ -634,7 +634,7 @@
                                 <li>
                                     <img src="http://www.gravatar.com/avatar/<?php echo md5( strtolower( trim( $project_leader['email'] ) ) ); ?>?s=60" />
                                     <h6><b><?php echo  $project_leader['first_name']?> <?php echo  $project_leader['last_name']?></b></h6>
-                                    <p><?php echo $project_leader['email'] ; ?>
+                                    <p>
                                         <?php echo  $project_leader['leader_profile']?>
                                     </p>
                                 </li>
