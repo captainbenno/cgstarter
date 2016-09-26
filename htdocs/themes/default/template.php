@@ -188,11 +188,8 @@
             </div>
             <div class="row" id="footer-2">
                 <div class="col-md-2"></div>
-                <div class="col-md-4">
+                <div class="col-md-8">
                      <img src="/themes/default/img/cgsociety-power-logo.png" />
-                </div>
-                <div class="col-md-2">
-
                 </div>
                 <div class="col-md-2"></div>
             </div>

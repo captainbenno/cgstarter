@@ -81,7 +81,8 @@ class MY_Controller extends CI_Controller {
                     "//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css",
                     "//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css",
                     "//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css",
-                    "/themes/core/css/core.css"
+                    "/themes/core/css/core.css",
+                    "/themes/default/css/default.css"
                 ))
             ->add_external_js(
                 array(
