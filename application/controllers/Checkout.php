@@ -283,6 +283,7 @@ class Checkout extends Public_Controller {
         $this->email->to($cart['email_address']);
         $this->email->bcc($this->config->item('order_email_bcc'));
         $this->email->subject('CGStarter - Payment Invoice');
+        $this->email->mailtype('html');
 
         $email_body = '<h1>CGStarter</h1>
         <p>Thankyou for support CG projects through CG Starter, your payment for the following items was successful:</p>
