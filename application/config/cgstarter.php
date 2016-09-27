@@ -31,7 +31,7 @@ $config['prodApiEndpoint'] = 'Production';
 $config['order_email_from'] = 'sales@ballisticmedia.net';
 $config['order_email_bcc'] = 'sales@ballisticmedia.net';
 
-$config['paypal_debug'] = false;
+$config['paypal_debug'] = true;
 $config['paypal_sandbox'] = false;
 $config['paypal_email'] = 'sales@ballisticmedia.net';
 
