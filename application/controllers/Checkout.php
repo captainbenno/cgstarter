@@ -251,6 +251,15 @@ class Checkout extends Public_Controller {
                 $this->db->where('order_id', $this->session->order_id);
                 $this->db->update('orders', $order_data);
 
+
+                echo "<xmp>";
+                print_r($response);
+                echo "</xmp>";
+
+                die;
+
+
+
                 if ($orderResponse->TransactionStatus) {
                     $this->send_payment_success_email();
                     $this->cart->destroy();
