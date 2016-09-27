@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a4b91ab6-f6b4-4e75-873e-5dfe24a7a851" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/Checkout.php" afterPath="$PROJECT_DIR$/application/controllers/Checkout.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/admin/Orders.php" afterPath="$PROJECT_DIR$/application/controllers/admin/Orders.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/orders/list.php" afterPath="$PROJECT_DIR$/application/views/admin/orders/list.php" />
     </list>
     <ignored path="cg.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,8 +30,8 @@
       <file leaf-file-name="Orders.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/admin/Orders.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-986">
-              <caret line="143" column="19" selection-start-line="143" selection-start-column="19" selection-end-line="143" selection-end-column="19" />
+            <state relative-caret-position="1320">
+              <caret line="103" column="45" selection-start-line="103" selection-start-column="45" selection-end-line="103" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -37,41 +40,50 @@
       <file leaf-file-name="list.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/admin/orders/list.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+            <state relative-caret-position="595">
+              <caret line="151" column="58" selection-start-line="151" selection-start-column="58" selection-end-line="151" selection-end-column="58" />
               <folding>
-                <marker date="1474976600843" expanded="true" signature="3970:4007" ph="..." />
-                <marker date="1474976600843" expanded="true" signature="4128:4244" ph="..." />
-                <marker date="1474976600843" expanded="true" signature="4306:4332" ph="..." />
-                <marker date="1474976600843" expanded="true" signature="4357:4383" ph="..." />
-                <marker date="1474976600843" expanded="true" signature="5610:5636" ph="..." />
-                <marker date="1474976600843" expanded="true" signature="5673:5863" ph="..." />
-                <marker date="1474976600843" expanded="true" signature="5722:5863" ph="..." />
-                <marker date="1474976600843" expanded="true" signature="6466:6666" ph="..." />
-                <marker date="1474976600843" expanded="true" signature="6616:6666" ph="..." />
-                <marker date="1474976600843" expanded="true" signature="7979:8142" ph="..." />
-                <marker date="1474976600843" expanded="true" signature="8032:8142" ph="..." />
-                <marker date="1474976600843" expanded="true" signature="8088:8142" ph="..." />
-                <marker date="1474976600843" expanded="true" signature="8904:8982" ph="..." />
-                <marker date="1474976600843" expanded="true" signature="8941:8982" ph="..." />
-                <marker date="1474976600843" expanded="true" signature="9176:9295" ph="..." />
-                <marker date="1474976600843" expanded="true" signature="9202:9295" ph="..." />
-                <marker date="1474976600843" expanded="true" signature="9247:9295" ph="..." />
-                <marker date="1474976600843" expanded="true" signature="9399:9658" ph="..." />
-                <marker date="1474976600843" expanded="true" signature="9504:9658" ph="..." />
-                <marker date="1474976600843" expanded="true" signature="10471:10533" ph="..." />
-                <marker date="1474976600843" expanded="true" signature="10579:10831" ph="..." />
-                <marker date="1474976600843" expanded="true" signature="11368:11639" ph="..." />
-                <marker date="1474976600843" expanded="true" signature="11412:11639" ph="..." />
-                <marker date="1474976600843" expanded="true" signature="11459:11639" ph="..." />
-                <marker date="1474976600843" expanded="true" signature="11780:11832" ph="..." />
-                <marker date="1474976600843" expanded="true" signature="11992:12100" ph="..." />
+                <marker date="1474985028995" expanded="true" signature="3514:3551" ph="..." />
+                <marker date="1474985028995" expanded="true" signature="3672:3788" ph="..." />
+                <marker date="1474985028995" expanded="true" signature="3850:3876" ph="..." />
+                <marker date="1474985028995" expanded="true" signature="3901:3927" ph="..." />
+                <marker date="1474985028995" expanded="true" signature="4384:4410" ph="..." />
+                <marker date="1474985028995" expanded="true" signature="4447:4637" ph="..." />
+                <marker date="1474985028995" expanded="true" signature="4496:4637" ph="..." />
+                <marker date="1474985028995" expanded="true" signature="5240:5440" ph="..." />
+                <marker date="1474985028995" expanded="true" signature="5390:5440" ph="..." />
+                <marker date="1474985028995" expanded="true" signature="6581:6744" ph="..." />
+                <marker date="1474985028995" expanded="true" signature="6634:6744" ph="..." />
+                <marker date="1474985028995" expanded="true" signature="6690:6744" ph="..." />
+                <marker date="1474985028995" expanded="true" signature="8582:9496" ph="..." />
+                <marker date="1474985028995" expanded="true" signature="8627:8823" ph="..." />
+                <marker date="1474985028995" expanded="true" signature="8941:8957" ph="..." />
+                <marker date="1474985028995" expanded="true" signature="8958:9200" ph="..." />
+                <marker date="1474985028995" expanded="true" signature="8958:9269" ph="..." />
+                <marker date="1474985028995" expanded="true" signature="9366:9382" ph="..." />
+                <marker date="1474985028995" expanded="true" signature="9693:10003" ph="..." />
+                <marker date="1474985028995" expanded="true" signature="9801:9817" ph="..." />
+                <marker date="1474985028995" expanded="true" signature="9894:9910" ph="..." />
+                <marker date="1474985028995" expanded="true" signature="10183:10261" ph="..." />
+                <marker date="1474985028995" expanded="true" signature="10220:10261" ph="..." />
+                <marker date="1474985028995" expanded="true" signature="10455:10574" ph="..." />
+                <marker date="1474985028995" expanded="true" signature="10481:10574" ph="..." />
+                <marker date="1474985028995" expanded="true" signature="10526:10574" ph="..." />
+                <marker date="1474985028995" expanded="true" signature="10678:10937" ph="..." />
+                <marker date="1474985028995" expanded="true" signature="10783:10937" ph="..." />
+                <marker date="1474985028995" expanded="true" signature="11750:11812" ph="..." />
+                <marker date="1474985028995" expanded="true" signature="11858:12110" ph="..." />
+                <marker date="1474985028995" expanded="true" signature="12647:12918" ph="..." />
+                <marker date="1474985028995" expanded="true" signature="12691:12918" ph="..." />
+                <marker date="1474985028995" expanded="true" signature="12738:12918" ph="..." />
+                <marker date="1474985028995" expanded="true" signature="13059:13111" ph="..." />
+                <marker date="1474985028995" expanded="true" signature="13271:13379" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="config.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/config/config.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="425">
@@ -94,24 +106,44 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/checkout/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
-              <caret line="310" column="95" selection-start-line="310" selection-start-column="95" selection-end-line="310" selection-end-column="95" />
+            <state relative-caret-position="527">
+              <caret line="264" column="0" selection-start-line="261" selection-start-column="0" selection-end-line="264" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Checkout.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Checkout.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/Checkout.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="535">
-              <caret line="74" column="0" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+            <state relative-caret-position="374">
+              <caret line="223" column="49" selection-start-line="223" selection-start-column="49" selection-end-line="223" selection-end-column="49" />
               <folding>
-                <marker date="1474981413913" expanded="true" signature="11002:11219" ph="..." />
-                <marker date="1474981413913" expanded="true" signature="11019:11219" ph="..." />
-                <marker date="1474981413913" expanded="false" signature="11109:11125" ph="..." />
-                <marker date="1474981413913" expanded="false" signature="11170:11186" ph="..." />
+                <marker date="1475016058210" expanded="true" signature="11008:11225" ph="..." />
+                <marker date="1475016058210" expanded="true" signature="11025:11225" ph="..." />
+                <marker date="1475016058210" expanded="false" signature="11115:11131" ph="..." />
+                <marker date="1475016058210" expanded="false" signature="11176:11192" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/cart/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="476">
+              <caret line="79" column="55" selection-start-line="79" selection-start-column="55" selection-end-line="79" selection-end-column="55" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Client.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/libraries/eway-rapid-php-master/src/Rapid/Client.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2346">
+              <caret line="181" column="36" selection-start-line="181" selection-start-column="20" selection-end-line="181" selection-end-column="36" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -158,12 +190,12 @@
         <option value="$PROJECT_DIR$/application/views/project/project_view.php" />
         <option value="$PROJECT_DIR$/application/models/Projects_model.php" />
         <option value="$PROJECT_DIR$/htdocs/themes/default/template.php" />
-        <option value="$PROJECT_DIR$/application/controllers/admin/Orders.php" />
-        <option value="$PROJECT_DIR$/application/views/admin/orders/list.php" />
-        <option value="$PROJECT_DIR$/application/config/config.php" />
         <option value="$PROJECT_DIR$/application/config/cgstarter.php" />
         <option value="$PROJECT_DIR$/application/views/checkout/index.php" />
+        <option value="$PROJECT_DIR$/application/controllers/admin/Orders.php" />
+        <option value="$PROJECT_DIR$/application/views/admin/orders/list.php" />
         <option value="$PROJECT_DIR$/application/controllers/Checkout.php" />
+        <option value="$PROJECT_DIR$/application/config/config.php" />
       </list>
     </option>
   </component>
@@ -509,6 +541,150 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="libraries" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cg" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cg" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="libraries" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="eway-rapid-php-master" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cg" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cg" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="libraries" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="eway-rapid-php-master" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cg" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cg" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="libraries" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="eway-rapid-php-master" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Rapid" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cg" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cg" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="libraries" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="eway-rapid-php-master" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resource" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lang" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cg" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cg" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="helpers" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cg" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cg" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="core" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -648,12 +824,12 @@
       <workItem from="1474369778836" duration="9743000" />
       <workItem from="1474723633627" duration="21272000" />
       <workItem from="1474929524580" duration="1394000" />
-      <workItem from="1474972706128" duration="8079000" />
+      <workItem from="1474972706128" duration="12544000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="156490000" />
+    <option name="totallyTimeSpent" value="160955000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="27" width="1922" height="1054" extended-state="6" />
@@ -703,13 +879,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/htdocs/bsw2/application/controllers/Welcome.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/htdocs/bsw2/htdocs/themes/default/js/jquery.sortable.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -926,13 +1095,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="60" column="9" selection-start-line="60" selection-start-column="9" selection-end-line="60" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/cart/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1530">
-          <caret line="90" column="33" selection-start-line="90" selection-start-column="33" selection-end-line="90" selection-end-column="33" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1018,41 +1181,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/orders/list.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-          <folding>
-            <marker date="1474976600843" expanded="true" signature="3970:4007" ph="..." />
-            <marker date="1474976600843" expanded="true" signature="4128:4244" ph="..." />
-            <marker date="1474976600843" expanded="true" signature="4306:4332" ph="..." />
-            <marker date="1474976600843" expanded="true" signature="4357:4383" ph="..." />
-            <marker date="1474976600843" expanded="true" signature="5610:5636" ph="..." />
-            <marker date="1474976600843" expanded="true" signature="5673:5863" ph="..." />
-            <marker date="1474976600843" expanded="true" signature="5722:5863" ph="..." />
-            <marker date="1474976600843" expanded="true" signature="6466:6666" ph="..." />
-            <marker date="1474976600843" expanded="true" signature="6616:6666" ph="..." />
-            <marker date="1474976600843" expanded="true" signature="7979:8142" ph="..." />
-            <marker date="1474976600843" expanded="true" signature="8032:8142" ph="..." />
-            <marker date="1474976600843" expanded="true" signature="8088:8142" ph="..." />
-            <marker date="1474976600843" expanded="true" signature="8904:8982" ph="..." />
-            <marker date="1474976600843" expanded="true" signature="8941:8982" ph="..." />
-            <marker date="1474976600843" expanded="true" signature="9176:9295" ph="..." />
-            <marker date="1474976600843" expanded="true" signature="9202:9295" ph="..." />
-            <marker date="1474976600843" expanded="true" signature="9247:9295" ph="..." />
-            <marker date="1474976600843" expanded="true" signature="9399:9658" ph="..." />
-            <marker date="1474976600843" expanded="true" signature="9504:9658" ph="..." />
-            <marker date="1474976600843" expanded="true" signature="10471:10533" ph="..." />
-            <marker date="1474976600843" expanded="true" signature="10579:10831" ph="..." />
-            <marker date="1474976600843" expanded="true" signature="11368:11639" ph="..." />
-            <marker date="1474976600843" expanded="true" signature="11412:11639" ph="..." />
-            <marker date="1474976600843" expanded="true" signature="11459:11639" ph="..." />
-            <marker date="1474976600843" expanded="true" signature="11780:11832" ph="..." />
-            <marker date="1474976600843" expanded="true" signature="11992:12100" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/ipn.log">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -1069,11 +1197,92 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/admin/Orders.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1320">
+          <caret line="103" column="45" selection-start-line="103" selection-start-column="45" selection-end-line="103" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/orders/list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="151" column="58" selection-start-line="151" selection-start-column="58" selection-end-line="151" selection-end-column="58" />
+          <folding>
+            <marker date="1474985028995" expanded="true" signature="3514:3551" ph="..." />
+            <marker date="1474985028995" expanded="true" signature="3672:3788" ph="..." />
+            <marker date="1474985028995" expanded="true" signature="3850:3876" ph="..." />
+            <marker date="1474985028995" expanded="true" signature="3901:3927" ph="..." />
+            <marker date="1474985028995" expanded="true" signature="4384:4410" ph="..." />
+            <marker date="1474985028995" expanded="true" signature="4447:4637" ph="..." />
+            <marker date="1474985028995" expanded="true" signature="4496:4637" ph="..." />
+            <marker date="1474985028995" expanded="true" signature="5240:5440" ph="..." />
+            <marker date="1474985028995" expanded="true" signature="5390:5440" ph="..." />
+            <marker date="1474985028995" expanded="true" signature="6581:6744" ph="..." />
+            <marker date="1474985028995" expanded="true" signature="6634:6744" ph="..." />
+            <marker date="1474985028995" expanded="true" signature="6690:6744" ph="..." />
+            <marker date="1474985028995" expanded="true" signature="8582:9496" ph="..." />
+            <marker date="1474985028995" expanded="true" signature="8627:8823" ph="..." />
+            <marker date="1474985028995" expanded="true" signature="8941:8957" ph="..." />
+            <marker date="1474985028995" expanded="true" signature="8958:9200" ph="..." />
+            <marker date="1474985028995" expanded="true" signature="8958:9269" ph="..." />
+            <marker date="1474985028995" expanded="true" signature="9366:9382" ph="..." />
+            <marker date="1474985028995" expanded="true" signature="9693:10003" ph="..." />
+            <marker date="1474985028995" expanded="true" signature="9801:9817" ph="..." />
+            <marker date="1474985028995" expanded="true" signature="9894:9910" ph="..." />
+            <marker date="1474985028995" expanded="true" signature="10183:10261" ph="..." />
+            <marker date="1474985028995" expanded="true" signature="10220:10261" ph="..." />
+            <marker date="1474985028995" expanded="true" signature="10455:10574" ph="..." />
+            <marker date="1474985028995" expanded="true" signature="10481:10574" ph="..." />
+            <marker date="1474985028995" expanded="true" signature="10526:10574" ph="..." />
+            <marker date="1474985028995" expanded="true" signature="10678:10937" ph="..." />
+            <marker date="1474985028995" expanded="true" signature="10783:10937" ph="..." />
+            <marker date="1474985028995" expanded="true" signature="11750:11812" ph="..." />
+            <marker date="1474985028995" expanded="true" signature="11858:12110" ph="..." />
+            <marker date="1474985028995" expanded="true" signature="12647:12918" ph="..." />
+            <marker date="1474985028995" expanded="true" signature="12691:12918" ph="..." />
+            <marker date="1474985028995" expanded="true" signature="12738:12918" ph="..." />
+            <marker date="1474985028995" expanded="true" signature="13059:13111" ph="..." />
+            <marker date="1474985028995" expanded="true" signature="13271:13379" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/checkout/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="310" column="95" selection-start-line="310" selection-start-column="95" selection-end-line="310" selection-end-column="95" />
+        <state relative-caret-position="527">
+          <caret line="264" column="0" selection-start-line="261" selection-start-column="0" selection-end-line="264" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/cart/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="79" column="55" selection-start-line="79" selection-start-column="55" selection-end-line="79" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/libraries/eway-rapid-php-master/src/Rapid/Client.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2346">
+          <caret line="181" column="36" selection-start-line="181" selection-start-column="20" selection-end-line="181" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Checkout.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="223" column="49" selection-start-line="223" selection-start-column="49" selection-end-line="223" selection-end-column="49" />
+          <folding>
+            <marker date="1475016058210" expanded="true" signature="11008:11225" ph="..." />
+            <marker date="1475016058210" expanded="true" signature="11025:11225" ph="..." />
+            <marker date="1475016058210" expanded="false" signature="11115:11131" ph="..." />
+            <marker date="1475016058210" expanded="false" signature="11176:11192" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1082,27 +1291,6 @@
         <state relative-caret-position="425">
           <caret line="25" column="43" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="43" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/admin/Orders.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-986">
-          <caret line="143" column="19" selection-start-line="143" selection-start-column="19" selection-end-line="143" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Checkout.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="535">
-          <caret line="74" column="0" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
-          <folding>
-            <marker date="1474981413913" expanded="true" signature="11002:11219" ph="..." />
-            <marker date="1474981413913" expanded="true" signature="11019:11219" ph="..." />
-            <marker date="1474981413913" expanded="false" signature="11109:11125" ph="..." />
-            <marker date="1474981413913" expanded="false" signature="11170:11186" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>

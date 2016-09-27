@@ -221,7 +221,7 @@ class Checkout extends Public_Controller {
             // Create the eWAY Client
             $client = $this->get_eway_client();
             // Query the order result.
-            $response = $client->queryorder($this->input->get('AccessCode'));
+            $response = $client->queryTransaction($this->input->get('AccessCode'));
 
             if(count($response->orders) > 0){
 
