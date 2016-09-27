@@ -18,7 +18,7 @@ $config['order_ref_prefix'] = '1000000';
 
 // eWAY Credentials
 
-$config['paymentMode'] = 'prod';
+$config['paymentMode'] = 'test';
 
 $config['testApiKey'] = 'F9802CrvCgLU3hdmWQMnay0puMGQTRLjZq7HWjl42cPCEAzNVDUP+Tl+nC7XxeqyeJ1xaS';
 $config['testApiPassword'] = 'fvz1V656';

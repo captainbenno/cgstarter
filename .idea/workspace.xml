@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a4b91ab6-f6b4-4e75-873e-5dfe24a7a851" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/cgstarter.php" afterPath="$PROJECT_DIR$/application/config/cgstarter.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/Checkout.php" afterPath="$PROJECT_DIR$/application/controllers/Checkout.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/admin/Orders.php" afterPath="$PROJECT_DIR$/application/controllers/admin/Orders.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/orders/list.php" afterPath="$PROJECT_DIR$/application/views/admin/orders/list.php" />
     </list>
     <ignored path="cg.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -83,7 +81,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="config.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/config/config.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="425">
@@ -93,11 +91,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cgstarter.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="cgstarter.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/config/cgstarter.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+            <state relative-caret-position="187">
+              <caret line="11" column="37" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -116,13 +114,13 @@
       <file leaf-file-name="Checkout.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/Checkout.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="223" column="49" selection-start-line="223" selection-start-column="49" selection-end-line="223" selection-end-column="49" />
+            <state relative-caret-position="249">
+              <caret line="227" column="0" selection-start-line="227" selection-start-column="0" selection-end-line="227" selection-end-column="0" />
               <folding>
-                <marker date="1475016058210" expanded="true" signature="11008:11225" ph="..." />
-                <marker date="1475016058210" expanded="true" signature="11025:11225" ph="..." />
-                <marker date="1475016058210" expanded="false" signature="11115:11131" ph="..." />
-                <marker date="1475016058210" expanded="false" signature="11176:11192" ph="..." />
+                <marker date="1475016604406" expanded="true" signature="11112:11329" ph="..." />
+                <marker date="1475016604406" expanded="true" signature="11129:11329" ph="..." />
+                <marker date="1475016604406" expanded="false" signature="11219:11235" ph="..." />
+                <marker date="1475016604406" expanded="false" signature="11280:11296" ph="..." />
               </folding>
             </state>
           </provider>
@@ -190,10 +188,10 @@
         <option value="$PROJECT_DIR$/application/views/project/project_view.php" />
         <option value="$PROJECT_DIR$/application/models/Projects_model.php" />
         <option value="$PROJECT_DIR$/htdocs/themes/default/template.php" />
-        <option value="$PROJECT_DIR$/application/config/cgstarter.php" />
         <option value="$PROJECT_DIR$/application/views/checkout/index.php" />
         <option value="$PROJECT_DIR$/application/controllers/admin/Orders.php" />
         <option value="$PROJECT_DIR$/application/views/admin/orders/list.php" />
+        <option value="$PROJECT_DIR$/application/config/cgstarter.php" />
         <option value="$PROJECT_DIR$/application/controllers/Checkout.php" />
         <option value="$PROJECT_DIR$/application/config/config.php" />
       </list>
@@ -824,12 +822,12 @@
       <workItem from="1474369778836" duration="9743000" />
       <workItem from="1474723633627" duration="21272000" />
       <workItem from="1474929524580" duration="1394000" />
-      <workItem from="1474972706128" duration="12544000" />
+      <workItem from="1474972706128" duration="13090000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="160955000" />
+    <option name="totallyTimeSpent" value="161501000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="27" width="1922" height="1054" extended-state="6" />
@@ -1189,14 +1187,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/config/cgstarter.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/admin/Orders.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1320">
@@ -1275,13 +1265,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Checkout.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="223" column="49" selection-start-line="223" selection-start-column="49" selection-end-line="223" selection-end-column="49" />
+        <state relative-caret-position="249">
+          <caret line="227" column="0" selection-start-line="227" selection-start-column="0" selection-end-line="227" selection-end-column="0" />
           <folding>
-            <marker date="1475016058210" expanded="true" signature="11008:11225" ph="..." />
-            <marker date="1475016058210" expanded="true" signature="11025:11225" ph="..." />
-            <marker date="1475016058210" expanded="false" signature="11115:11131" ph="..." />
-            <marker date="1475016058210" expanded="false" signature="11176:11192" ph="..." />
+            <marker date="1475016604406" expanded="true" signature="11112:11329" ph="..." />
+            <marker date="1475016604406" expanded="true" signature="11129:11329" ph="..." />
+            <marker date="1475016604406" expanded="false" signature="11219:11235" ph="..." />
+            <marker date="1475016604406" expanded="false" signature="11280:11296" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1290,6 +1280,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="25" column="43" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/cgstarter.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="37" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
           <folding />
         </state>
       </provider>

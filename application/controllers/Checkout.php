@@ -223,6 +223,12 @@ class Checkout extends Public_Controller {
             // Query the order result.
             $response = $client->queryTransaction($this->input->get('AccessCode'));
 
+            echo "<xmp>";
+            print_r($response);
+            echo "</xmp>";
+
+            die;
+
             if(count($response->orders) > 0){
 
                 $orderResponse = $response->orders[0];
