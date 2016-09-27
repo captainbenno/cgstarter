@@ -223,22 +223,17 @@ class Checkout extends Public_Controller {
             // Query the order result.
             $response = $client->queryTransaction($this->input->get('AccessCode'));
 
-            echo "<xmp>";
-            print_r($response);
-            echo "</xmp>";
 
-            die;
+            if(count($response->Transactions) > 0){
 
-            if(count($response->orders) > 0){
-
-                $orderResponse = $response->orders[0];
+                $orderResponse = $response->Transactions[0];
                 $orderResponse->AuthorisationCode;
                 $payment_success = false;
 
-                if ($orderResponse->orderStatus) {
+                if ($orderResponse->TransactionStatus) {
                     $payment_success = true;
                     $order_data = array(
-                        'payment_order_ref'   => $orderResponse->orderID,
+                        'payment_order_ref'   => $orderResponse->TransactionID,
                         'payment_auth_code'         => $orderResponse->AuthorisationCode,
                         'order_status'              => 'payment confirmed',
                         'order_date'          => date_create()->format('Y-m-d H:i:s'),
@@ -247,7 +242,7 @@ class Checkout extends Public_Controller {
                 } else {
                     $order_data = array(
                         'order_status'        => 'payment failure',
-                        'payment_order_ref'   => $orderResponse->orderID,
+                        'payment_order_ref'   => $orderResponse->TransactionID,
                         'order_date'          => date_create()->format('Y-m-d H:i:s'),
                         'order_total'         => $orderResponse->TotalAmount
                     );
@@ -272,7 +267,15 @@ class Checkout extends Public_Controller {
 
             } else {
                 // take them home... they are lost
-                    redirect('/', 'refresh');       
+
+                echo "<xmp>";
+                print_r($response);
+                echo "</xmp>";
+
+                die;
+
+
+                redirect('/', 'refresh');
             }
         } else {
             // take them home... they are lost
