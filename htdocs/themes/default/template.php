@@ -13,6 +13,18 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="shortcut icon" type="image/png" href="/favicon-16x16.png">
     <title><?php echo $this->settings->site_name; ?> - <?php echo $page_title; ?></title>
+
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-42678219-2', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+
     <meta name="keywords" content="these, are, keywords">
     <meta name="description" content="This is the site description.">
 
