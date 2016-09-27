@@ -18,7 +18,7 @@ $config['order_ref_prefix'] = '1000000';
 
 // eWAY Credentials
 
-$config['paymentMode'] = 'test';
+$config['paymentMode'] = 'prod';
 
 $config['testApiKey'] = 'F9802CrvCgLU3hdmWQMnay0puMGQTRLjZq7HWjl42cPCEAzNVDUP+Tl+nC7XxeqyeJ1xaS';
 $config['testApiPassword'] = 'fvz1V656';
@@ -31,7 +31,7 @@ $config['prodApiEndpoint'] = 'Production';
 $config['order_email_from'] = 'sales@ballisticmedia.net';
 $config['order_email_bcc'] = 'sales@ballisticmedia.net';
 
-$config['paypal_debug'] = true;
+$config['paypal_debug'] = false;
 $config['paypal_sandbox'] = false;
 $config['paypal_email'] = 'sales@ballisticmedia.net';
 
