@@ -360,7 +360,9 @@
             });
 
             $(".form-validate").change(function() {
-                validate_item($(this));
+                if($(this).parent().hasClass("has-error")){
+                    validate_item($(this));
+                }
             });
 
             $("#copy_billing_address").change(function() {
