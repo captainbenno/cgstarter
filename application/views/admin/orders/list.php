@@ -4,11 +4,11 @@
     <div class="panel-heading">
         <div class="row">
             <div class="col-md-6 text-left">
-                <h3 class="panel-title"><?php echo lang('users title user_list'); ?></h3>
+                <h3 class="panel-title">Orders</h3>
             </div>
-            <div class="col-md-6 text-right">
+            <!--div class="col-md-6 text-right">
                 <a class="btn btn-success tooltips" href="<?php echo base_url('admin/users/add'); ?>" title="<?php echo lang('users tooltip add_new_user') ?>" data-toggle="tooltip"><span class="glyphicon glyphicon-plus-sign"></span> <?php echo lang('users button add_new_user'); ?></a>
-            </div>
+            </div -->
         </div>
     </div>
 
@@ -26,16 +26,12 @@
                     <?php if ($sort == 'payment_gateway') : ?><span class="glyphicon glyphicon-arrow-<?php echo (($dir == 'asc') ? 'up' : 'down'); ?>"></span><?php endif; ?>
                 </td>
                 <td>
-                    <a href="<?php echo current_url(); ?>?sort=username&dir=<?php echo (($dir == 'asc' ) ? 'desc' : 'asc'); ?>&limit=<?php echo $limit; ?>&offset=<?php echo $offset; ?><?php echo $filter; ?>">Customer Email</a>
-                    <?php if ($sort == 'username') : ?><span class="glyphicon glyphicon-arrow-<?php echo (($dir == 'asc') ? 'up' : 'down'); ?>"></span><?php endif; ?>
+                    <a href="<?php echo current_url(); ?>?sort=payment_auth_code&dir=<?php echo (($dir == 'asc' ) ? 'desc' : 'asc'); ?>&limit=<?php echo $limit; ?>&offset=<?php echo $offset; ?><?php echo $filter; ?>">Payment Auth</a>
+                    <?php if ($sort == 'payment_auth_code') : ?><span class="glyphicon glyphicon-arrow-<?php echo (($dir == 'asc') ? 'up' : 'down'); ?>"></span><?php endif; ?>
                 </td>
                 <td>
-                    <a href="<?php echo current_url(); ?>?sort=first_name&dir=<?php echo (($dir == 'asc' ) ? 'desc' : 'asc'); ?>&limit=<?php echo $limit; ?>&offset=<?php echo $offset; ?><?php echo $filter; ?>">Customer Firstname</a>
-                    <?php if ($sort == 'first_name') : ?><span class="glyphicon glyphicon-arrow-<?php echo (($dir == 'asc') ? 'up' : 'down'); ?>"></span><?php endif; ?>
-                </td>
-                <td>
-                    <a href="<?php echo current_url(); ?>?sort=last_name&dir=<?php echo (($dir == 'asc' ) ? 'desc' : 'asc'); ?>&limit=<?php echo $limit; ?>&offset=<?php echo $offset; ?><?php echo $filter; ?>">Customer Lastname</a>
-                    <?php if ($sort == 'last_name') : ?><span class="glyphicon glyphicon-arrow-<?php echo (($dir == 'asc') ? 'up' : 'down'); ?>"></span><?php endif; ?>
+                    <a href="<?php echo current_url(); ?>?sort=email_address&dir=<?php echo (($dir == 'asc' ) ? 'desc' : 'asc'); ?>&limit=<?php echo $limit; ?>&offset=<?php echo $offset; ?><?php echo $filter; ?>">Customer Email</a>
+                    <?php if ($sort == 'email_address') : ?><span class="glyphicon glyphicon-arrow-<?php echo (($dir == 'asc') ? 'up' : 'down'); ?>"></span><?php endif; ?>
                 </td>
                 <td>
                     <a href="<?php echo current_url(); ?>?sort=status&dir=<?php echo (($dir == 'asc' ) ? 'desc' : 'asc'); ?>&limit=<?php echo $limit; ?>&offset=<?php echo $offset; ?><?php echo $filter; ?>"><?php echo lang('admin col status'); ?></a>
@@ -57,14 +53,10 @@
                     </th>
                     <th>
                     </th>
-                    <th<?php echo ((isset($filters['username'])) ? ' class="has-success"' : ''); ?>>
-                        <?php echo form_input(array('name'=>'username', 'id'=>'username', 'class'=>'form-control input-sm', 'placeholder'=>lang('users input username'), 'value'=>set_value('username', ((isset($filters['username'])) ? $filters['username'] : '')))); ?>
+                    <th>
                     </th>
-                    <th<?php echo ((isset($filters['first_name'])) ? ' class="has-success"' : ''); ?>>
-                        <?php echo form_input(array('name'=>'first_name', 'id'=>'first_name', 'class'=>'form-control input-sm', 'placeholder'=>lang('users input first_name'), 'value'=>set_value('first_name', ((isset($filters['first_name'])) ? $filters['first_name'] : '')))); ?>
-                    </th>
-                    <th<?php echo ((isset($filters['last_name'])) ? ' class="has-success"' : ''); ?>>
-                        <?php echo form_input(array('name'=>'last_name', 'id'=>'username', 'class'=>'form-control input-sm', 'placeholder'=>lang('users input last_name'), 'value'=>set_value('last_name', ((isset($filters['last_name'])) ? $filters['last_name'] : '')))); ?>
+                    <th<?php echo ((isset($filters['email_address'])) ? ' class="has-success"' : ''); ?>>
+                        <?php echo form_input(array('name'=>'email_address', 'id'=>'email_address', 'class'=>'form-control input-sm', 'email address', 'value'=>set_value('username', ((isset($filters['username'])) ? $filters['username'] : '')))); ?>
                     </th>
                     <th>
                     </th>
@@ -90,14 +82,11 @@
                         <td<?php echo (($sort == 'payment_gateway') ? ' class="sorted"' : ''); ?>>
                             <?php echo $order['payment_gateway']; ?>
                         </td>
+                        <td<?php echo (($sort == 'payment_auth_code') ? ' class="sorted"' : ''); ?>>
+                            <?php echo $order['payment_auth_code']; ?>
+                        </td>
                         <td<?php echo (($sort == 'email_address') ? ' class="sorted"' : ''); ?>>
                             <?php echo $order['email_address']; ?>
-                        </td>
-                        <td<?php echo (($sort == 'first_name') ? ' class="sorted"' : ''); ?>>
-                            <?php echo $order['first_name']; ?>
-                        </td>
-                        <td<?php echo (($sort == 'last_name') ? ' class="sorted"' : ''); ?>>
-                            <?php echo $order['last_name']; ?>
                         </td>
                         <td<?php echo (($sort == 'order_status') ? ' class="sorted"' : ''); ?>>
                             <?php echo $order['order_status']; ?>
@@ -114,6 +103,58 @@
                                     <a href="<?php echo $this_url; ?>/edit/<?php echo $order['order_id']; ?>" class="btn btn-warning" title="<?php echo lang('admin button edit'); ?>"><span class="glyphicon glyphicon-pencil"></span></a>
                                 </div>
                             </div>
+                        </td>
+                    </tr>
+                    <?php
+                        $this->load->model('orders_model');
+                        $cart = $this->orders_model->order_by_ref($order['order_ref']);
+
+                    ?>
+                    <tr>
+                        <td colspan="7">
+                            <table class="table table-striped" border="1">
+                                <tr>
+                                    <th>Reward</th>
+                                    <th>Qty</th>
+                                    <th style="text-align:right">Item Price</th>
+                                    <th style="text-align:right">Sub-Total</th>
+                                </tr>
+                                <?php
+                                $i = 1;
+                                $shipping = 0;
+                                $items = $cart['items'];
+                                $total = 0;
+
+                               foreach ($items as $item){
+
+                                   $item['shipping'] = 15;
+
+                                   $shipping = $shipping +($item['shipping']*$item['qty']);
+
+                                    echo '<tr>
+                                        <td>
+                                            <h4>'.$item['reward_title'].'</h4>
+                                            '.$item['project_title'].'
+                                        </td>
+                                        <td>'.$item['qty'].'</td>
+                                       <td style="text-align:right">$'.$this->cart->format_number($item['reward_cost']);
+
+                                     if($item['shipping']>0){
+                                          echo '<br />
+                                            <span class="small">(inc $'.$this->cart->format_number($item['shipping']).'shipping)</span></td>';
+                                     }
+                                     echo '<td style="text-align:right">$'.$this->cart->format_number($item['reward_cost']*$item['qty']).'</td>
+                                    </tr>';
+                                   $total = $total + ($item['reward_cost']*$item['qty']);
+                               }
+                                ?>
+                                <tr>
+                                    <td colspan="2"> </td>
+                                    <td style="text-align:right"><strong>Total</strong></td>
+                                    <td style="text-align:right">$<?php echo $this->cart->format_number($total) ?></td>
+                                </tr>
+                            </table>
+
                         </td>
                     </tr>
                 <?php endforeach; ?>

@@ -20,6 +20,7 @@ class Orders extends Admin_Controller {
 
         // load the users model
         $this->load->model('orders_model');
+        $this->load->model('users_model');
 
         // set constants
         define('REFERRER', "referrer");
