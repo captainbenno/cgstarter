@@ -233,7 +233,7 @@ class Checkout extends Public_Controller {
                 if ($orderResponse->TransactionStatus) {
                     $payment_success = true;
                     $order_data = array(
-                        'payment_order_ref'   => $orderResponse->TransactionID,
+                        'payment_transaction_ref'   => $orderResponse->TransactionID,
                         'payment_auth_code'         => $orderResponse->AuthorisationCode,
                         'order_status'              => 'payment confirmed',
                         'order_date'          => date_create()->format('Y-m-d H:i:s'),
@@ -242,7 +242,7 @@ class Checkout extends Public_Controller {
                 } else {
                     $order_data = array(
                         'order_status'        => 'payment failure',
-                        'payment_order_ref'   => $orderResponse->TransactionID,
+                        'payment_transaction_ref'   => $orderResponse->TransactionID,
                         'order_date'          => date_create()->format('Y-m-d H:i:s'),
                         'order_total'         => $orderResponse->TotalAmount
                     );
