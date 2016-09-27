@@ -120,14 +120,14 @@ class Orders extends Admin_Controller {
         }
 
         // get list
-        $users = $this->orders_model->get_all_orders($limit, $offset, $filters, $sort, $dir);
+        $orders = $this->orders_model->get_all_orders($limit, $offset, $filters, $sort, $dir);
 
 
 
         // build pagination
         $this->pagination->initialize(array(
             'base_url'   => THIS_URL . "?sort={$sort}&dir={$dir}&limit={$limit}{$filter}",
-            'total_rows' => $users['total'],
+            'total_rows' => $orders['total'],
             'per_page'   => $limit
         ));
 
@@ -141,8 +141,8 @@ class Orders extends Admin_Controller {
         // set content data
         $content_data = array(
             'this_url'   => THIS_URL,
-            'users'      => $users['results'],
-            'total'      => $users['total'],
+            'orders'      => $orders['results'],
+            'total'      => $orders['total'],
             'filters'    => $filters,
             'filter'     => $filter,
             'pagination' => $this->pagination->create_links(),

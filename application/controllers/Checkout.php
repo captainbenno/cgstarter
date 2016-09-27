@@ -170,12 +170,13 @@ class Checkout extends Public_Controller {
             $payment_amount = $_POST['mc_gross'];
             $invoice = $_POST['invoice'];
             //$payment_currency = $_POST['mc_currency'];
-            $txn_id = $_POST['txn_id'];            
+
+            $txn_id = $_POST['txn_id'];
 
             $payment_success = true;
             $order_data = array(
                 'order_ref'   => $invoice,
-                'payment_auth_code'         => '',
+                'payment_auth_code'         => $txn_id,
                 'order_status'              => 'payment confirmed',
                 'order_date'          => date_create()->format('Y-m-d H:i:s'),
                 'order_total'         => $payment_amount);
@@ -318,7 +319,7 @@ class Checkout extends Public_Controller {
             </table>
 
             <p>Your order reference is <strong>'.$order_ref.'</strong>.</p>
-
+           
             <p>From everyone here at CGStarter we thank you for supporting the CG community.</p>
 
                     <p><em>cheers,<br />
