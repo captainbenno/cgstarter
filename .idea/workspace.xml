@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a4b91ab6-f6b4-4e75-873e-5dfe24a7a851" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/checkout/index.php" afterPath="$PROJECT_DIR$/application/views/checkout/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/Checkout.php" afterPath="$PROJECT_DIR$/application/controllers/Checkout.php" />
     </list>
     <ignored path="cg.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -81,22 +81,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Checkout.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controllers/Checkout.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3868">
-              <caret line="79" column="23" selection-start-line="79" selection-start-column="13" selection-end-line="79" selection-end-column="23" />
-              <folding>
-                <marker date="1474976801339" expanded="true" signature="11040:11257" ph="..." />
-                <marker date="1474976801339" expanded="true" signature="11057:11257" ph="..." />
-                <marker date="1474976801339" expanded="false" signature="11147:11163" ph="..." />
-                <marker date="1474976801339" expanded="false" signature="11208:11224" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cgstarter.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="cgstarter.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/config/cgstarter.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="612">
@@ -112,6 +97,21 @@
             <state relative-caret-position="646">
               <caret line="310" column="95" selection-start-line="310" selection-start-column="95" selection-end-line="310" selection-end-column="95" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Checkout.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/controllers/Checkout.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="297">
+              <caret line="192" column="0" selection-start-line="192" selection-start-column="0" selection-end-line="192" selection-end-column="0" />
+              <folding>
+                <marker date="1474979910468" expanded="true" signature="11005:11222" ph="..." />
+                <marker date="1474979910468" expanded="true" signature="11022:11222" ph="..." />
+                <marker date="1474979910468" expanded="false" signature="11112:11128" ph="..." />
+                <marker date="1474979910468" expanded="false" signature="11173:11189" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -160,10 +160,10 @@
         <option value="$PROJECT_DIR$/htdocs/themes/default/template.php" />
         <option value="$PROJECT_DIR$/application/controllers/admin/Orders.php" />
         <option value="$PROJECT_DIR$/application/views/admin/orders/list.php" />
-        <option value="$PROJECT_DIR$/application/controllers/Checkout.php" />
         <option value="$PROJECT_DIR$/application/config/config.php" />
         <option value="$PROJECT_DIR$/application/config/cgstarter.php" />
         <option value="$PROJECT_DIR$/application/views/checkout/index.php" />
+        <option value="$PROJECT_DIR$/application/controllers/Checkout.php" />
       </list>
     </option>
   </component>
@@ -648,12 +648,12 @@
       <workItem from="1474369778836" duration="9743000" />
       <workItem from="1474723633627" duration="21272000" />
       <workItem from="1474929524580" duration="1394000" />
-      <workItem from="1474972706128" duration="5909000" />
+      <workItem from="1474972706128" duration="6597000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="154320000" />
+    <option name="totallyTimeSpent" value="155008000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="27" width="1922" height="1054" extended-state="6" />
@@ -1018,14 +1018,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/admin/Orders.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2431">
-          <caret line="143" column="19" selection-start-line="143" selection-start-column="19" selection-end-line="143" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/admin/orders/list.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -1069,16 +1061,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Checkout.php">
+    <entry file="file://$PROJECT_DIR$/application/config/cgstarter.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3868">
-          <caret line="79" column="23" selection-start-line="79" selection-start-column="13" selection-end-line="79" selection-end-column="23" />
-          <folding>
-            <marker date="1474976801339" expanded="true" signature="11040:11257" ph="..." />
-            <marker date="1474976801339" expanded="true" signature="11057:11257" ph="..." />
-            <marker date="1474976801339" expanded="false" signature="11147:11163" ph="..." />
-            <marker date="1474976801339" expanded="false" signature="11208:11224" ph="..." />
-          </folding>
+        <state relative-caret-position="612">
+          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1098,11 +1085,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/config/cgstarter.php">
+    <entry file="file://$PROJECT_DIR$/application/controllers/admin/Orders.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+        <state relative-caret-position="2431">
+          <caret line="143" column="19" selection-start-line="143" selection-start-column="19" selection-end-line="143" selection-end-column="19" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Checkout.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="192" column="0" selection-start-line="192" selection-start-column="0" selection-end-line="192" selection-end-column="0" />
+          <folding>
+            <marker date="1474979910468" expanded="true" signature="11005:11222" ph="..." />
+            <marker date="1474979910468" expanded="true" signature="11022:11222" ph="..." />
+            <marker date="1474979910468" expanded="false" signature="11112:11128" ph="..." />
+            <marker date="1474979910468" expanded="false" signature="11173:11189" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
