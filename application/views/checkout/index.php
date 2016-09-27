@@ -339,7 +339,7 @@
                     field_val = $(this).val();
                     $("#delivery-address-section input[name='"+field_name+"']").val(field_val);
                 }
-                validate_form();
+             //   validate_form();
             });
 
             $("#billing-address-section select").change(function() {
