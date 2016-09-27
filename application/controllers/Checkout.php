@@ -164,8 +164,8 @@ class Checkout extends Public_Controller {
         // Split response headers and payload, a better way for strcmp
         $tokens = explode("\r\n\r\n", trim($res));
         $res = trim(end($tokens));
-
-        if (strcmp ($res, "VERIFIED") != 0) {
+        if (strcmp ($res, "VERIFIED") == 0) {
+            
             $payment_status = $_POST['payment_status'];
             $payment_amount = $_POST['mc_gross'];
             $invoice = $_POST['invoice'];

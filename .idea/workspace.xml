@@ -104,13 +104,13 @@
       <file leaf-file-name="Checkout.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/controllers/Checkout.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="192" column="0" selection-start-line="192" selection-start-column="0" selection-end-line="192" selection-end-column="0" />
+            <state relative-caret-position="535">
+              <caret line="167" column="12" selection-start-line="167" selection-start-column="12" selection-end-line="167" selection-end-column="12" />
               <folding>
-                <marker date="1474979910468" expanded="true" signature="11005:11222" ph="..." />
-                <marker date="1474979910468" expanded="true" signature="11022:11222" ph="..." />
-                <marker date="1474979910468" expanded="false" signature="11112:11128" ph="..." />
-                <marker date="1474979910468" expanded="false" signature="11173:11189" ph="..." />
+                <marker date="1474981028281" expanded="true" signature="11017:11234" ph="..." />
+                <marker date="1474981028281" expanded="true" signature="11034:11234" ph="..." />
+                <marker date="1474981028281" expanded="false" signature="11124:11140" ph="..." />
+                <marker date="1474981028281" expanded="false" signature="11185:11201" ph="..." />
               </folding>
             </state>
           </provider>
@@ -648,12 +648,12 @@
       <workItem from="1474369778836" duration="9743000" />
       <workItem from="1474723633627" duration="21272000" />
       <workItem from="1474929524580" duration="1394000" />
-      <workItem from="1474972706128" duration="6597000" />
+      <workItem from="1474972706128" duration="7693000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="155008000" />
+    <option name="totallyTimeSpent" value="156104000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="27" width="1922" height="1054" extended-state="6" />
@@ -1095,13 +1095,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Checkout.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="192" column="0" selection-start-line="192" selection-start-column="0" selection-end-line="192" selection-end-column="0" />
+        <state relative-caret-position="535">
+          <caret line="167" column="12" selection-start-line="167" selection-start-column="12" selection-end-line="167" selection-end-column="12" />
           <folding>
-            <marker date="1474979910468" expanded="true" signature="11005:11222" ph="..." />
-            <marker date="1474979910468" expanded="true" signature="11022:11222" ph="..." />
-            <marker date="1474979910468" expanded="false" signature="11112:11128" ph="..." />
-            <marker date="1474979910468" expanded="false" signature="11173:11189" ph="..." />
+            <marker date="1474981028281" expanded="true" signature="11017:11234" ph="..." />
+            <marker date="1474981028281" expanded="true" signature="11034:11234" ph="..." />
+            <marker date="1474981028281" expanded="false" signature="11124:11140" ph="..." />
+            <marker date="1474981028281" expanded="false" signature="11185:11201" ph="..." />
           </folding>
         </state>
       </provider>
