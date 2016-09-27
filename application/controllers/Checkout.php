@@ -190,7 +190,7 @@ class Checkout extends Public_Controller {
             if(DEBUG == true) {
                 error_log(date('[Y-m-d H:i e] '). "Verified IPN: $req ". PHP_EOL, 3, LOG_FILE);
             }
-        } else if (strcmp ($res, "INVALID") == 0) {
+        } else {
 
             $invoice = $_POST['invoice'];
 
