@@ -71,6 +71,8 @@ class Checkout extends Public_Controller {
             'cancel_url' => base_url(),
             'payment_success' => $payment_success
         );
+        $this->cart->destroy();
+
 
         $data['content'] = $this->load->view('checkout/complete', $content_data, TRUE);
         $this->load->view($this->template, $data);
@@ -165,7 +167,7 @@ class Checkout extends Public_Controller {
         $tokens = explode("\r\n\r\n", trim($res));
         $res = trim(end($tokens));
         if (strcmp ($res, "VERIFIED") == 0) {
-            
+
             $payment_status = $_POST['payment_status'];
             $payment_amount = $_POST['mc_gross'];
             $invoice = $_POST['invoice'];
@@ -185,7 +187,6 @@ class Checkout extends Public_Controller {
             $this->db->update('orders', $order_data);
 
             $this->send_payment_success_email($invoice);
-            $this->cart->destroy();
 
             if(DEBUG == true) {
                 error_log(date('[Y-m-d H:i e] '). "Verified IPN: $req ". PHP_EOL, 3, LOG_FILE);
