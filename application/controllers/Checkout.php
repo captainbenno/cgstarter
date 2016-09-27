@@ -251,7 +251,7 @@ class Checkout extends Public_Controller {
                 $this->db->where('order_id', $this->session->order_id);
                 $this->db->update('orders', $order_data);
 
-                if ($orderResponse->orderStatus) {
+                if ($orderResponse->TransactionStatus) {
                     $this->send_payment_success_email();
                     $this->cart->destroy();
                 }
@@ -267,13 +267,6 @@ class Checkout extends Public_Controller {
 
             } else {
                 // take them home... they are lost
-
-                echo "<xmp>";
-                print_r($response);
-                echo "</xmp>";
-
-                die;
-
 
                 redirect('/', 'refresh');
             }
