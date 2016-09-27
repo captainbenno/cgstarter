@@ -18,19 +18,23 @@
             <?php // sortable headers ?>
             <tr>
                 <td>
-                    <a href="<?php echo current_url(); ?>?sort=id&dir=<?php echo (($dir == 'asc' ) ? 'desc' : 'asc'); ?>&limit=<?php echo $limit; ?>&offset=<?php echo $offset; ?><?php echo $filter; ?>"><?php echo lang('users col user_id'); ?></a>
-                    <?php if ($sort == 'id') : ?><span class="glyphicon glyphicon-arrow-<?php echo (($dir == 'asc') ? 'up' : 'down'); ?>"></span><?php endif; ?>
+                    <a href="<?php echo current_url(); ?>?sort=order_ref&dir=<?php echo (($dir == 'asc' ) ? 'desc' : 'asc'); ?>&limit=<?php echo $limit; ?>&offset=<?php echo $offset; ?><?php echo $filter; ?>">Order Ref</a>
+                    <?php if ($sort == 'order_ref') : ?><span class="glyphicon glyphicon-arrow-<?php echo (($dir == 'asc') ? 'up' : 'down'); ?>"></span><?php endif; ?>
                 </td>
                 <td>
-                    <a href="<?php echo current_url(); ?>?sort=username&dir=<?php echo (($dir == 'asc' ) ? 'desc' : 'asc'); ?>&limit=<?php echo $limit; ?>&offset=<?php echo $offset; ?><?php echo $filter; ?>"><?php echo lang('users col username'); ?></a>
+                    <a href="<?php echo current_url(); ?>?sort=payment_gateway&dir=<?php echo (($dir == 'asc' ) ? 'desc' : 'asc'); ?>&limit=<?php echo $limit; ?>&offset=<?php echo $offset; ?><?php echo $filter; ?>">Gateway</a>
+                    <?php if ($sort == 'payment_gateway') : ?><span class="glyphicon glyphicon-arrow-<?php echo (($dir == 'asc') ? 'up' : 'down'); ?>"></span><?php endif; ?>
+                </td>
+                <td>
+                    <a href="<?php echo current_url(); ?>?sort=username&dir=<?php echo (($dir == 'asc' ) ? 'desc' : 'asc'); ?>&limit=<?php echo $limit; ?>&offset=<?php echo $offset; ?><?php echo $filter; ?>">Customer Email</a>
                     <?php if ($sort == 'username') : ?><span class="glyphicon glyphicon-arrow-<?php echo (($dir == 'asc') ? 'up' : 'down'); ?>"></span><?php endif; ?>
                 </td>
                 <td>
-                    <a href="<?php echo current_url(); ?>?sort=first_name&dir=<?php echo (($dir == 'asc' ) ? 'desc' : 'asc'); ?>&limit=<?php echo $limit; ?>&offset=<?php echo $offset; ?><?php echo $filter; ?>"><?php echo lang('users col first_name'); ?></a>
+                    <a href="<?php echo current_url(); ?>?sort=first_name&dir=<?php echo (($dir == 'asc' ) ? 'desc' : 'asc'); ?>&limit=<?php echo $limit; ?>&offset=<?php echo $offset; ?><?php echo $filter; ?>">Customer Firstname</a>
                     <?php if ($sort == 'first_name') : ?><span class="glyphicon glyphicon-arrow-<?php echo (($dir == 'asc') ? 'up' : 'down'); ?>"></span><?php endif; ?>
                 </td>
                 <td>
-                    <a href="<?php echo current_url(); ?>?sort=last_name&dir=<?php echo (($dir == 'asc' ) ? 'desc' : 'asc'); ?>&limit=<?php echo $limit; ?>&offset=<?php echo $offset; ?><?php echo $filter; ?>"><?php echo lang('users col last_name'); ?></a>
+                    <a href="<?php echo current_url(); ?>?sort=last_name&dir=<?php echo (($dir == 'asc' ) ? 'desc' : 'asc'); ?>&limit=<?php echo $limit; ?>&offset=<?php echo $offset; ?><?php echo $filter; ?>">Customer Lastname</a>
                     <?php if ($sort == 'last_name') : ?><span class="glyphicon glyphicon-arrow-<?php echo (($dir == 'asc') ? 'up' : 'down'); ?>"></span><?php endif; ?>
                 </td>
                 <td>
@@ -38,8 +42,8 @@
                     <?php if ($sort == 'status') : ?><span class="glyphicon glyphicon-arrow-<?php echo (($dir == 'asc') ? 'up' : 'down'); ?>"></span><?php endif; ?>
                 </td>
                 <td>
-                    <a href="<?php echo current_url(); ?>?sort=is_admin&dir=<?php echo (($dir == 'asc' ) ? 'desc' : 'asc'); ?>&limit=<?php echo $limit; ?>&offset=<?php echo $offset; ?><?php echo $filter; ?>"><?php echo lang('users col is_admin'); ?></a>
-                    <?php if ($sort == 'is_admin') : ?><span class="glyphicon glyphicon-arrow-<?php echo (($dir == 'asc') ? 'up' : 'down'); ?>"></span><?php endif; ?>
+                    <a href="<?php echo current_url(); ?>?sort=create_date&dir=<?php echo (($dir == 'asc' ) ? 'desc' : 'asc'); ?>&limit=<?php echo $limit; ?>&offset=<?php echo $offset; ?><?php echo $filter; ?>">Order Date</a>
+                    <?php if ($sort == 'create_date') : ?><span class="glyphicon glyphicon-arrow-<?php echo (($dir == 'asc') ? 'up' : 'down'); ?>"></span><?php endif; ?>
                 </td>
                 <td class="pull-right">
                     <?php echo lang('admin col actions'); ?>
@@ -51,6 +55,8 @@
                 <?php echo form_open("{$this_url}?sort={$sort}&dir={$dir}&limit={$limit}&offset=0{$filter}", array('role'=>'form', 'id'=>"filters")); ?>
                     <th>
                     </th>
+                    <th>
+                    </th>
                     <th<?php echo ((isset($filters['username'])) ? ' class="has-success"' : ''); ?>>
                         <?php echo form_input(array('name'=>'username', 'id'=>'username', 'class'=>'form-control input-sm', 'placeholder'=>lang('users input username'), 'value'=>set_value('username', ((isset($filters['username'])) ? $filters['username'] : '')))); ?>
                     </th>
@@ -59,6 +65,8 @@
                     </th>
                     <th<?php echo ((isset($filters['last_name'])) ? ' class="has-success"' : ''); ?>>
                         <?php echo form_input(array('name'=>'last_name', 'id'=>'username', 'class'=>'form-control input-sm', 'placeholder'=>lang('users input last_name'), 'value'=>set_value('last_name', ((isset($filters['last_name'])) ? $filters['last_name'] : '')))); ?>
+                    </th>
+                    <th>
                     </th>
                     <th colspan="3">
                         <div class="text-right">
@@ -74,33 +82,36 @@
 
             <?php // data rows ?>
             <?php if ($total) : ?>
-                <?php foreach ($users as $user) : ?>
+                <?php foreach ($orders as $order) : ?>
                     <tr>
-                        <td<?php echo (($sort == 'id') ? ' class="sorted"' : ''); ?>>
-                            <?php echo $user['order_ref']; ?>
+                        <td<?php echo (($sort == 'order_ref') ? ' class="sorted"' : ''); ?>>
+                            <?php echo $order['order_ref']; ?>
                         </td>
-                        <td<?php echo (($sort == 'username') ? ' class="sorted"' : ''); ?>>
-                            <?php echo $user['email_address']; ?>
+                        <td<?php echo (($sort == 'payment_gateway') ? ' class="sorted"' : ''); ?>>
+                            <?php echo $order['payment_gateway']; ?>
+                        </td>
+                        <td<?php echo (($sort == 'email_address') ? ' class="sorted"' : ''); ?>>
+                            <?php echo $order['email_address']; ?>
                         </td>
                         <td<?php echo (($sort == 'first_name') ? ' class="sorted"' : ''); ?>>
-                            <?php echo $user['first_name']; ?>
+                            <?php echo $order['first_name']; ?>
                         </td>
                         <td<?php echo (($sort == 'last_name') ? ' class="sorted"' : ''); ?>>
-                            <?php echo $user['last_name']; ?>
+                            <?php echo $order['last_name']; ?>
                         </td>
-                        <td<?php echo (($sort == 'status') ? ' class="sorted"' : ''); ?>>
-                            <?php echo $user['order_status']; ?>
+                        <td<?php echo (($sort == 'order_status') ? ' class="sorted"' : ''); ?>>
+                            <?php echo $order['order_status']; ?>
                         </td>
-                        <td<?php echo (($sort == 'is_admin') ? ' class="sorted"' : ''); ?>>
-                            <?php echo $user['order_date']; ?>
+                        <td<?php echo (($sort == 'create_date') ? ' class="sorted"' : ''); ?>>
+                            <?php echo $order['create_date']; ?>
                         </td>
                         <td>
                             <div class="text-right">
                                 <div class="btn-group">
-                                    <?php if ($user['order_id'] > 1) : ?>
-                                        <a href="#modal-<?php echo $user['order_id']; ?>" data-toggle="modal" class="btn btn-danger" title="<?php echo lang('admin button delete'); ?>"><span class="glyphicon glyphicon-trash"></span></a>
+                                    <?php if ($order['order_id'] > 1) : ?>
+                                        <a href="#modal-<?php echo $order['order_id']; ?>" data-toggle="modal" class="btn btn-danger" title="<?php echo lang('admin button delete'); ?>"><span class="glyphicon glyphicon-trash"></span></a>
                                     <?php endif; ?>
-                                    <a href="<?php echo $this_url; ?>/edit/<?php echo $user['order_id']; ?>" class="btn btn-warning" title="<?php echo lang('admin button edit'); ?>"><span class="glyphicon glyphicon-pencil"></span></a>
+                                    <a href="<?php echo $this_url; ?>/edit/<?php echo $order['order_id']; ?>" class="btn btn-warning" title="<?php echo lang('admin button edit'); ?>"><span class="glyphicon glyphicon-pencil"></span></a>
                                 </div>
                             </div>
                         </td>
@@ -149,20 +160,20 @@
 
 <?php // delete modal ?>
 <?php if ($total) : ?>
-    <?php foreach ($users as $user) : ?>
-        <div class="modal fade" id="modal-<?php echo $user['order_id']; ?>" tabindex="-1" role="dialog" aria-labelledby="modal-label-<?php echo $user['order_id']; ?>" aria-hidden="true">
+    <?php foreach ($orders as $order) : ?>
+        <div class="modal fade" id="modal-<?php echo $order['order_id']; ?>" tabindex="-1" role="dialog" aria-labelledby="modal-label-<?php echo $order['order_id']; ?>" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        <h4 id="modal-label-<?php echo $user['order_id']; ?>"><?php echo lang('users title user_delete');  ?></h4>
+                        <h4 id="modal-label-<?php echo $order['order_id']; ?>"><?php echo lang('users title user_delete');  ?></h4>
                     </div>
                     <div class="modal-body">
-                        <p><?php echo sprintf(lang('users msg delete_confirm'), $user['first_name'] . " " . $user['last_name']); ?></p>
+                        <p><?php echo sprintf(lang('users msg delete_confirm'), $order['first_name'] . " " . $order['last_name']); ?></p>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal"><?php echo lang('core button cancel'); ?></button>
-                        <button type="button" class="btn btn-primary btn-delete-user" data-id="<?php echo $user['order_id']; ?>"><?php echo lang('admin button delete'); ?></button>
+                        <button type="button" class="btn btn-primary btn-delete-user" data-id="<?php echo $order['order_id']; ?>"><?php echo lang('admin button delete'); ?></button>
                     </div>
                 </div>
             </div>
