@@ -509,7 +509,7 @@
 
                             <h3>Targets</h3>
                             <p>We have a minimum target of 2,000 books. Once this is reached the project is a go and we will start preparing the book for print. We will keep the campaign going for a while after the minimum target is met so as many people as possible can get their orders in.</p>
-                            <p><strong>There won’t be any more EXPOS 12 books printed after this campaign – the only way to get a book is to order it during the campaign.</strong></p>
+                            <p><strong>There won’t be any more EXPOSE 12 books printed after this campaign – the only way to get a book is to order it during the campaign.</strong></p>
                             <p>If for any reason the target is not met then everyone gets a refund … but we don’t expect this as previous editions have sold many thousands more than our current target of 2,000.</p>
 
 
