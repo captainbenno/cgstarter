@@ -84,14 +84,31 @@ class Projects_model extends CI_Model {
      */
     function get_backers($project_id)
     {
-        $this->db->select('orders.email_address AS email,orders.first_name,orders.last_name,UNIX_TIMESTAMP(orders.create_date) AS backer_timestamp,orders.create_date,orders.billing_country');
-        $this->db->where('order_items.project_id', $project_id);
-        $this->db->join('order_items', 'order_items.order_id = orders.order_id');
-        $this->db->order_by('create_date', 'DESC');
-        $this->db->group_by('order_items.order_id');
-        $query = $this->db->get('orders');
-        $return_data = $query->result_array();
-        return $return_data;
+        if($this->config->item('project_seeding') && $this->config->item('project_seeding') == $project_id) {
+            $sql = "SELECT orders.email_address AS email,orders.first_name,orders.last_name,UNIX_TIMESTAMP(orders.create_date) AS backer_timestamp,orders.create_date,orders.billing_country
+                FROM orders
+                INNER JOIN order_items ON order_items.order_id = orders.order_id
+                WHERE order_items.project_id = ".$this->db->escape($project_id)."
+                GROUP BY order_items.order_id
+                UNION
+                SELECT email,fullname AS firstname, '' AS last_name, UNIX_TIMESTAMP(order_date) AS backer_timestamp, order_date AS create_date, billing_country
+                FROM project_seed
+                WHERE project_id = ".$this->db->escape($project_id)."
+                ORDER BY create_date DESC";
+            $query = $this->db->query($sql);
+            return $query->result_array();
+        } else {
+            $this->db->select('orders.email_address AS email,orders.first_name,orders.last_name,UNIX_TIMESTAMP(orders.create_date) AS backer_timestamp,orders.create_date,orders.billing_country');
+            $this->db->where('order_items.project_id', $project_id);
+            $this->db->join('order_items', 'order_items.order_id = orders.order_id');
+            $this->db->order_by('create_date', 'DESC');
+            $this->db->group_by('order_items.order_id');
+            $query = $this->db->get('orders');
+            $return_data = $query->result_array();
+            return $return_data;
+        }
+
+
     }
 
     /**
@@ -107,7 +124,17 @@ class Projects_model extends CI_Model {
         $this->db->join('order_items', 'order_items.order_id = orders.order_id');
         $this->db->group_by('order_items.order_id');
         $query = $this->db->get('orders');
-        return $query->row()->total;
+
+        $total_backers = $query->row()->total;
+
+        if($this->config->item('project_seeding') && $this->config->item('project_seeding') == $project_id){
+            $this->db->select('count(*) AS total');
+            $this->db->where('project_seed.project_id', $project_id);
+            $query = $this->db->get('project_seed');
+            $total_backers = $total_backers+$query->row()->total;
+        }
+
+        return $total_backers;
     }
 
      /**
@@ -124,16 +151,28 @@ class Projects_model extends CI_Model {
         $this->db->join('projects', 'projects.project_id = order_items.project_id');        
         $query = $this->db->get('order_items');
 
+        $total_cnt = $query->row()->total_cnt;
+        $total = $query->row()->total;
+
+        if($this->config->item('project_seeding') && $this->config->item('project_seeding') == $project_id){
+            $this->db->select('count(*) AS total_cnt,sum(reward_cost) AS total');
+            $this->db->where('project_seed.project_id', $project_id);
+            $query = $this->db->get('project_seed');
+
+            $total_cnt = $total_cnt+$query->row()->total_cnt;
+            $total = $total+$query->row()->total;
+        }
+
         $project = $this->get_project($project_id);
         $goal_type = $project['goal_type'];
         $goal_results = array();
 
         if($goal_type=='items'){
-            $goal_results['achievement_percentage'] = (($query->row()->total_cnt/$project['goal'])*100);
-            $goal_results['achievement_total'] = $query->row()->total_cnt;
+            $goal_results['achievement_percentage'] = (($total_cnt/$project['goal'])*100);
+            $goal_results['achievement_total'] = $total_cnt;
         } else {
-            $goal_results['achievement_percentage'] = (($query->row()->total/$project['goal'])*100);
-            $goal_results['achievement_total'] = $query->row()->total;
+            $goal_results['achievement_percentage'] = (($total/$project['goal'])*100);
+            $goal_results['achievement_total'] = $total;
         }
 
         return $goal_results;
