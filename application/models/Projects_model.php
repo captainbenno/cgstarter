@@ -155,7 +155,7 @@ class Projects_model extends CI_Model {
         $total = $query->row()->total;
 
         if($this->config->item('project_seeding') && $this->config->item('project_seeding') == $project_id){
-            $this->db->select('count(*) AS total_cnt,sum(reward_cost) AS total');
+            $this->db->select('count(*) AS total_cnt,sum(item_cost) AS total');
             $this->db->where('project_seed.project_id', $project_id);
             $query = $this->db->get('project_seed');
 
