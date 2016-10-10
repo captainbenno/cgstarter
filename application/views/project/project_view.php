@@ -568,11 +568,11 @@
                                             if($seconds_remaining<60){
                                                 echo "&gt; 1 minute to ago";
                                             } else if($seconds_remaining<3600){
-                                                echo floor($seconds_remaining/60)."minutes to go";
+                                                echo floor($seconds_remaining/60)."minutes ago";
                                             } else if($seconds_remaining<86400){
-                                                echo floor($seconds_remaining/60/60)." hours to go";
+                                                echo floor($seconds_remaining/60/60)." hours ago";
                                             } else if($seconds_remaining>=86400){
-                                                echo "".floor($seconds_remaining/60/60/24)." days to go";
+                                                echo "".floor($seconds_remaining/60/60/24)." days ago";
                                             } ?></em>
                                         </li>
                                 <?php 
