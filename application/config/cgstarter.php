@@ -38,3 +38,5 @@ $config['paypal_email'] = 'sales@ballisticmedia.net';
 $apiKey = "A1001AbJJiR9hBjQbC5eiUGYJKr93fi/D3Xk87S8RoYFZLgFf1GNorhHDyKYtQr8F7aExC";
 $apiPassword = "hME1m3vW";
 $apiEndpoint = "Production";
+
+$config['project_seeding'] = '1';
