@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a4b91ab6-f6b4-4e75-873e-5dfe24a7a851" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/cgstarter.php" afterPath="$PROJECT_DIR$/application/config/cgstarter.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/Project_rewards_model.php" afterPath="$PROJECT_DIR$/application/models/Project_rewards_model.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/Projects_model.php" afterPath="$PROJECT_DIR$/application/models/Projects_model.php" />
     </list>
     <ignored path="cg.iws" />
@@ -94,22 +91,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Projects_model.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Projects_model.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/models/Projects_model.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="353">
-              <caret line="99" column="16" selection-start-line="99" selection-start-column="16" selection-end-line="99" selection-end-column="16" />
+            <state relative-caret-position="217">
+              <caret line="157" column="61" selection-start-line="157" selection-start-column="61" selection-end-line="157" selection-end-column="61" />
               <folding>
-                <marker date="1476071156150" expanded="true" signature="1966:2371" ph="SELECT order... orders" />
-                <marker date="1476071156150" expanded="true" signature="1966:2699" ph="SELECT order... " />
-                <marker date="1476071156150" expanded="true" signature="2410:2623" ph="SELECT email... project_seed" />
-                <marker date="1476071156150" expanded="true" signature="3413:3550" ph="SELECT order... " />
-                <marker date="1476071156150" expanded="true" signature="3425:3483" ph="/** * Count " />
-                <marker date="1476071156150" expanded="true" signature="3550:3591" ph="select('coun... " />
-                <marker date="1476071156150" expanded="true" signature="4017:4044" ph="select('coun... " />
-                <marker date="1476071156150" expanded="true" signature="4289:4350" ph="/** * Goal A... " />
-                <marker date="1476071156150" expanded="true" signature="4420:4478" ph="select('sum(... " />
-                <marker date="1476071156150" expanded="true" signature="4988:5045" ph="select('coun... " />
+                <marker date="1476071364006" expanded="true" signature="1966:2371" ph="SELECT order... orders" />
+                <marker date="1476071364006" expanded="true" signature="1966:2699" ph="SELECT order... " />
+                <marker date="1476071364006" expanded="true" signature="2410:2623" ph="SELECT email... project_seed" />
+                <marker date="1476071364006" expanded="true" signature="3413:3550" ph="SELECT order... " />
+                <marker date="1476071364006" expanded="true" signature="3425:3483" ph="/** * Count " />
+                <marker date="1476071364006" expanded="true" signature="3550:3591" ph="select('coun... " />
+                <marker date="1476071364006" expanded="true" signature="4017:4044" ph="select('coun... " />
+                <marker date="1476071364006" expanded="true" signature="4289:4350" ph="/** * Goal A... " />
+                <marker date="1476071364006" expanded="true" signature="4420:4478" ph="select('sum(... " />
+                <marker date="1476071364006" expanded="true" signature="4988:5043" ph="select('coun... " />
               </folding>
             </state>
           </provider>
@@ -154,7 +151,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="database.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="database.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/config/database.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-131">
@@ -642,12 +639,12 @@
       <workItem from="1475037949189" duration="2008000" />
       <workItem from="1475540207939" duration="12000" />
       <workItem from="1475545171402" duration="10000" />
-      <workItem from="1476060004007" duration="6489000" />
+      <workItem from="1476060004007" duration="6644000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="171955000" />
+    <option name="totallyTimeSpent" value="172110000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="14" y="27" width="1906" height="1013" extended-state="0" />
@@ -1061,25 +1058,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/Projects_model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="99" column="16" selection-start-line="99" selection-start-column="16" selection-end-line="99" selection-end-column="16" />
-          <folding>
-            <marker date="1476071156150" expanded="true" signature="1966:2371" ph="SELECT order... orders" />
-            <marker date="1476071156150" expanded="true" signature="1966:2699" ph="SELECT order... " />
-            <marker date="1476071156150" expanded="true" signature="2410:2623" ph="SELECT email... project_seed" />
-            <marker date="1476071156150" expanded="true" signature="3413:3550" ph="SELECT order... " />
-            <marker date="1476071156150" expanded="true" signature="3425:3483" ph="/** * Count " />
-            <marker date="1476071156150" expanded="true" signature="3550:3591" ph="select('coun... " />
-            <marker date="1476071156150" expanded="true" signature="4017:4044" ph="select('coun... " />
-            <marker date="1476071156150" expanded="true" signature="4289:4350" ph="/** * Goal A... " />
-            <marker date="1476071156150" expanded="true" signature="4420:4478" ph="select('sum(... " />
-            <marker date="1476071156150" expanded="true" signature="4988:5045" ph="select('coun... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/models/Cart_model.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1101,6 +1079,25 @@
         <state relative-caret-position="-131">
           <caret line="61" column="21" selection-start-line="61" selection-start-column="17" selection-end-line="61" selection-end-column="21" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/Projects_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="157" column="61" selection-start-line="157" selection-start-column="61" selection-end-line="157" selection-end-column="61" />
+          <folding>
+            <marker date="1476071364006" expanded="true" signature="1966:2371" ph="SELECT order... orders" />
+            <marker date="1476071364006" expanded="true" signature="1966:2699" ph="SELECT order... " />
+            <marker date="1476071364006" expanded="true" signature="2410:2623" ph="SELECT email... project_seed" />
+            <marker date="1476071364006" expanded="true" signature="3413:3550" ph="SELECT order... " />
+            <marker date="1476071364006" expanded="true" signature="3425:3483" ph="/** * Count " />
+            <marker date="1476071364006" expanded="true" signature="3550:3591" ph="select('coun... " />
+            <marker date="1476071364006" expanded="true" signature="4017:4044" ph="select('coun... " />
+            <marker date="1476071364006" expanded="true" signature="4289:4350" ph="/** * Goal A... " />
+            <marker date="1476071364006" expanded="true" signature="4420:4478" ph="select('sum(... " />
+            <marker date="1476071364006" expanded="true" signature="4988:5043" ph="select('coun... " />
+          </folding>
         </state>
       </provider>
     </entry>
