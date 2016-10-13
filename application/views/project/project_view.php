@@ -175,14 +175,29 @@
                                         }).attr('src',$img.attr('src'));
                                     });
 
-                                    $('#am-container img').imageTooltip({
-                                        xOffset: '300',
-                                        yOffset: 0
-                                    });
-
+                                    $('#am-container img').click(function(){
+                                        $('#zoom').modal();
+                                        largeimage = $(this).attr("src");
+                                        $('#image-zoom').attr('src',largeimage);
+                                    })
 
                                 });
                             </script>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="zoom" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                <div class="modal-dialog modal-lg" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                            <h4 class="modal-title" id="myModalLabel">EXPOSÉ 12</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <img id="image-zoom" src="" style="margin:0 auto;width:100%"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
                             <ul id="scroller">
 
@@ -339,7 +354,6 @@
                             digital art book publisher with over 50 books published and delivered globally over the last
                             decade.</p>
                             <div id="panel" class="panel hide"></div>
-                            <script src="/themes/default/js/image-tooltip.js"></script>
 
                             <div class="am-container" id="am-container" style="margin: 0px auto;clear: both;width: 790px;float: left;margin-bottom: 20px;">
                                 <?php
@@ -700,7 +714,10 @@
                                     <?php if($project_reward['sold'] >= $project_reward['quantity']){ ?> 
                                         SOLD OUT!
                                     <?php } else { ?>
-					    <?php if($project_reward['sold'] > 0){ echo '('.$project_reward['sold'].' sold)'; } ?> 
+					                    <?php if($project_reward['sold'] > 0){ echo '('.$project_reward['sold'].' sold)'; } ?>
+                                    <?php } ?> <br>
+                                        <?php if($project_reward['shipping']>0){ ?>
+                                        shipping $<?php echo  $project_reward['shipping']?>
                                     <?php } ?>
                                 </span>
                                 </em>
