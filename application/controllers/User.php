@@ -159,7 +159,7 @@ class User extends Public_Controller {
 
                 // TODO language selection
                 $this->session->language = "english"; //$this->input->post('language');
-                $this->lang->load('users', $this->user['language']);
+                $this->lang->load('users', 'english');
                 $this->session->set_flashdata('message', sprintf(lang('users msg register_success'), $this->input->post('first_name', TRUE)));
             }
             else
