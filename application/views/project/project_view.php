@@ -145,7 +145,7 @@
 
                             </style>
 
-                            <script type="text/javascript" src="http://ballisticpublishing.com/jquery.simplyscroll.js"></script>
+                            <script type="text/javascript" src="https://ballisticpublishing.com/jquery.simplyscroll.js"></script>
 
                             <script type="text/javascript">
                                 $(document).ready(function() {
@@ -646,7 +646,11 @@
                         <?php
                             foreach ($project['project_leaders'] as $project_leader) { ?>
                                 <li>
-                                    <img src="http://www.gravatar.com/avatar/<?php echo md5( strtolower( trim( $project_leader['email'] ) ) ); ?>?s=60" />
+                                    <?php if(file_exists('themes/default/img/user_'.$project_leader['user_id'].'.png')){ ?>
+                                        <?php echo '<img src="/themes/default/img/user_'.$project_leader['user_id'].'.png" />'; ?>
+                                    <?php }else{ ?>
+                                        <img src="http://www.gravatar.com/avatar/<?php echo md5( strtolower( trim( $project_leader['email'] ) ) ); ?>?s=60" />
+                                    <?php } ?>
                                     <h6><b><?php echo  $project_leader['first_name']?> <?php echo  $project_leader['last_name']?></b></h6>
                                     <p>
                                         <?php echo  $project_leader['leader_profile']?>
