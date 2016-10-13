@@ -225,7 +225,7 @@ class Users_model extends CI_Model {
                     " . $this->db->escape($data['email']) . ",
                     " . $this->db->escape($data['language']) . ",
                     '0',
-                    '0',
+                    '1',
                     '0',
                     " . $this->db->escape($validation_code) . ",
                     '" . date('Y-m-d H:i:s') . "',

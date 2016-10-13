@@ -1,5 +1,5 @@
 
-
+<?php if($_SERVER['HTTP_HOST'] != 'cgstarter.local'){ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -208,3 +208,9 @@
 
 </body>
 </html>
+<?php } else {?>
+<div style="display:none">
+	<?php echo $heading; ?>
+	<?php echo $message; ?>
+</div>
+<?php }?>
