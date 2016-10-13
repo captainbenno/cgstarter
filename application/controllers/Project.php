@@ -36,25 +36,32 @@ class Project extends Public_Controller {
         $this->set_title( 'project' );
 
         $project_data = $this->projects_model->get_project_by_stub($stub);
-        $project_data['project_leaders'] = $this->project_leaders_model->get_project_leaders($project_data['project_id']);
-        $project_data['project_news'] = $this->project_news_model->get_all_active_news($project_data['project_id']);
-        $project_data['backers_total'] = $this->projects_model->count_backers($project_data['project_id']);
-        $project_data['project_rewards'] = $this->project_rewards_model->get_active_rewards($project_data['project_id']);
-        $project_data['goal_achievement'] = $this->projects_model->goal_achievement($project_data['project_id']);
-        $project_data['backers'] = $this->projects_model->get_backers($project_data['project_id']);
 
-        // set content data
-        $content_data = array(
-            'page_title' => 'Project: '.$project_data['title'],
-            'cancel_url' => base_url(),
-            'project'    => $project_data,
+        if(property_exists($project_data,'project_id')){
 
-        );
-        // load views
-        $data['content'] = $this->load->view('project/project_view', $content_data, TRUE);
-        $this->load->view($this->template, $data);
+            $project_data['project_leaders'] = $this->project_leaders_model->get_project_leaders($project_data['project_id']);
+            $project_data['project_news'] = $this->project_news_model->get_all_active_news($project_data['project_id']);
+            $project_data['backers_total'] = $this->projects_model->count_backers($project_data['project_id']);
+            $project_data['project_rewards'] = $this->project_rewards_model->get_active_rewards($project_data['project_id']);
+            $project_data['goal_achievement'] = $this->projects_model->goal_achievement($project_data['project_id']);
+            $project_data['backers'] = $this->projects_model->get_backers($project_data['project_id']);
 
+            // set content data
+            $content_data = array(
+                'page_title' => 'Project: '.$project_data['title'],
+                'cancel_url' => base_url(),
+                'project'    => $project_data,
 
+            );
+            // load views
+            $data['content'] = $this->load->view('project/project_view', $content_data, TRUE);
+            $this->load->view($this->template, $data);
+
+        } else{
+            // load views
+            $data['content'] = $this->load->view('errors/html/error_general', FALSE, TRUE);
+            $this->load->view($this->template, $data);
+        }
 	}
 
 }
