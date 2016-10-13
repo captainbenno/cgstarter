@@ -699,10 +699,10 @@
                                     <span>
                                     <?php if($project_reward['sold'] >= $project_reward['quantity']){ ?> 
                                         SOLD OUT!
-                                    <? } else { ?>
-                                        (<?php if($project_reward['sold'] > 0){ echo  $project_reward['sold']?> sold, <?php } echo  $project_reward['quantity']-$project_reward['sold']?> left)                                    
+                                    <?php } else { ?>
+					    <?php if($project_reward['sold'] > 0){ echo '('.$project_reward['sold'].' sold)'; } ?> 
                                     <?php } ?>
-                                    </span>
+                                </span>
                                 </em>
                                 <!-- img src="<?php echo  $project_reward['teaser_image']?>" / -->
                                 <p class="reward_teasertext"><?php echo  $project_reward['teaser_text']?></p>
