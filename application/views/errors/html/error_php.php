@@ -201,6 +201,10 @@
 	});
 
 </script>
+<div style="display:none">
+	<?php echo $heading; ?>
+	<?php echo $message; ?>
+</div>
 
 </body>
 </html>
