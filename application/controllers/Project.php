@@ -37,7 +37,7 @@ class Project extends Public_Controller {
 
         $project_data = $this->projects_model->get_project_by_stub($stub);
 
-        if(property_exists($project_data,'project_id')){
+        if(array_key_exists('project_id',$project_data)){
 
             $project_data['project_leaders'] = $this->project_leaders_model->get_project_leaders($project_data['project_id']);
             $project_data['project_news'] = $this->project_news_model->get_all_active_news($project_data['project_id']);
