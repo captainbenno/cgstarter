@@ -145,8 +145,6 @@ class User extends Public_Controller {
 
                 // send email
                 $this->load->library('email');
-                $config['protocol'] = 'sendmail';
-                $config['mailpath'] = '/usr/sbin/sendmail -f' . $this->settings->site_email;
                 $this->email->initialize($config);
                 $this->email->clear();
                 $this->email->from($this->settings->site_email, $this->settings->site_name);
@@ -158,8 +156,8 @@ class User extends Public_Controller {
                 #echo $this->email->print_debugger();
 
                 // TODO language selection
-                $this->session->language = "english"; //$this->input->post('language');
-                $this->lang->load('users', 'english');
+                $this->session->language = "ENG"; //$this->input->post('language');
+                $this->lang->load('users', 'ENG');
                 $this->session->set_flashdata('message', sprintf(lang('users msg register_success'), $this->input->post('first_name', TRUE)));
             }
             else
