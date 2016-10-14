@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a4b91ab6-f6b4-4e75-873e-5dfe24a7a851" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/User.php" afterPath="$PROJECT_DIR$/application/controllers/User.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/Users_model.php" afterPath="$PROJECT_DIR$/application/models/Users_model.php" />
     </list>
     <ignored path="cg.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,40 +25,40 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Users_model.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Users_model.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/models/Users_model.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="524">
-              <caret line="403" column="26" selection-start-line="403" selection-start-column="20" selection-end-line="403" selection-end-column="26" />
+            <state relative-caret-position="439">
+              <caret line="515" column="16" selection-start-line="515" selection-start-column="16" selection-end-line="515" selection-end-column="16" />
               <folding>
-                <marker date="1476400727874" expanded="true" signature="691:781" ph="SELECT SQL_C... $" />
-                <marker date="1476400727874" expanded="true" signature="1781:1919" ph="SELECT * FRO... $" />
-                <marker date="1476400727874" expanded="true" signature="2349:2493" ph="SELECT * FRO... $" />
-                <marker date="1476400727874" expanded="true" signature="3099:4232" ph="INSERT INTO $... " />
-                <marker date="1476400727874" expanded="true" signature="4964:6105" ph="INSERT INTO $... " />
-                <marker date="1476400727874" expanded="true" signature="6523:6639" ph="UPDATE ${{$t... " />
-                <marker date="1476400727874" expanded="true" signature="8215:8331" ph="UPDATE ${{$t... " />
-                <marker date="1476400727874" expanded="true" signature="9685:9978" ph="UPDATE ${{$t... " />
-                <marker date="1476400727874" expanded="true" signature="10475:11103" ph="SELECT id, u... " />
-                <marker date="1476400727874" expanded="true" signature="11922:11992" ph="DELETE FROM " />
-                <marker date="1476400727874" expanded="true" signature="12110:12333" ph="INSERT INTO login_attempts... " />
-                <marker date="1476400727874" expanded="true" signature="12463:12562" ph="SELECT COUNT... login_attempts" />
-                <marker date="1476400727874" expanded="true" signature="13358:13666" ph="SELECT id FR... $" />
-                <marker date="1476400727874" expanded="true" signature="13873:14033" ph="UPDATE ${{$t... " />
-                <marker date="1476400727874" expanded="true" signature="14485:14751" ph="SELECT id, f... $" />
-                <marker date="1476400727874" expanded="true" signature="15397:15589" ph="UPDATE ${{$t... " />
-                <marker date="1476400727874" expanded="true" signature="16069:16194" ph="SELECT id FR... $" />
-                <marker date="1476400727874" expanded="true" signature="16548:16667" ph="SELECT id FR... $" />
+                <marker date="1476406578330" expanded="true" signature="691:781" ph="SELECT SQL_C... $" />
+                <marker date="1476406578330" expanded="true" signature="1781:1919" ph="SELECT * FRO... $" />
+                <marker date="1476406578330" expanded="true" signature="2349:2493" ph="SELECT * FRO... $" />
+                <marker date="1476406578330" expanded="true" signature="3099:4232" ph="INSERT INTO $... " />
+                <marker date="1476406578330" expanded="true" signature="4964:6105" ph="INSERT INTO $... " />
+                <marker date="1476406578330" expanded="true" signature="6523:6639" ph="UPDATE ${{$t... " />
+                <marker date="1476406578330" expanded="true" signature="8215:8331" ph="UPDATE ${{$t... " />
+                <marker date="1476406578330" expanded="true" signature="9685:9978" ph="UPDATE ${{$t... " />
+                <marker date="1476406578330" expanded="true" signature="10475:11103" ph="SELECT id, u... " />
+                <marker date="1476406578330" expanded="true" signature="11922:11992" ph="DELETE FROM " />
+                <marker date="1476406578330" expanded="true" signature="12110:12333" ph="INSERT INTO login_attempts... " />
+                <marker date="1476406578330" expanded="true" signature="12463:12562" ph="SELECT COUNT... login_attempts" />
+                <marker date="1476406578330" expanded="true" signature="13358:13666" ph="SELECT id FR... $" />
+                <marker date="1476406578330" expanded="true" signature="13915:14075" ph="UPDATE ${{$t... " />
+                <marker date="1476406578330" expanded="true" signature="14527:14793" ph="SELECT id, f... $" />
+                <marker date="1476406578330" expanded="true" signature="15439:15631" ph="UPDATE ${{$t... " />
+                <marker date="1476406578330" expanded="true" signature="16111:16236" ph="SELECT id FR... $" />
+                <marker date="1476406578330" expanded="true" signature="16590:16709" ph="SELECT id FR... $" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="User.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/User.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="159" column="51" selection-start-line="159" selection-start-column="51" selection-end-line="159" selection-end-column="51" />
+            <state relative-caret-position="221">
+              <caret line="201" column="57" selection-start-line="201" selection-start-column="41" selection-end-line="201" selection-end-column="57" />
               <folding />
             </state>
           </provider>
@@ -66,8 +67,8 @@
       <file leaf-file-name="Checkout.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/Checkout.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="284" column="0" selection-start-line="283" selection-start-column="0" selection-end-line="284" selection-end-column="0" />
+            <state relative-caret-position="255">
+              <caret line="290" column="0" selection-start-line="289" selection-start-column="0" selection-end-line="290" selection-end-column="0" />
               <folding>
                 <marker date="1475017204061" expanded="true" signature="11095:11312" ph="..." />
                 <marker date="1475017204061" expanded="true" signature="11112:11312" ph="..." />
@@ -201,12 +202,12 @@
         <option value="$PROJECT_DIR$/application/views/errors/html/error_404.php" />
         <option value="$PROJECT_DIR$/application/views/errors/html/error_db.php" />
         <option value="$PROJECT_DIR$/htdocs/index.php" />
-        <option value="$PROJECT_DIR$/application/models/Users_model.php" />
         <option value="$PROJECT_DIR$/application/config/config.php" />
         <option value="$PROJECT_DIR$/application/views/errors/html/error_php.php" />
         <option value="$PROJECT_DIR$/application/views/errors/html/error_general.php" />
         <option value="$PROJECT_DIR$/application/views/errors/html/error_exception.php" />
         <option value="$PROJECT_DIR$/application/controllers/User.php" />
+        <option value="$PROJECT_DIR$/application/models/Users_model.php" />
       </list>
     </option>
   </component>
@@ -659,12 +660,12 @@
       <workItem from="1476060004007" duration="7175000" />
       <workItem from="1476246841072" duration="1446000" />
       <workItem from="1476319171390" duration="1220000" />
-      <workItem from="1476326116959" duration="23797000" />
+      <workItem from="1476326116959" duration="24566000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="199104000" />
+    <option name="totallyTimeSpent" value="199873000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="15" y="66" width="1717" height="918" extended-state="0" />
@@ -1034,54 +1035,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/Users_model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="524">
-          <caret line="403" column="26" selection-start-line="403" selection-start-column="20" selection-end-line="403" selection-end-column="26" />
-          <folding>
-            <marker date="1476400727874" expanded="true" signature="691:781" ph="SELECT SQL_C... $" />
-            <marker date="1476400727874" expanded="true" signature="1781:1919" ph="SELECT * FRO... $" />
-            <marker date="1476400727874" expanded="true" signature="2349:2493" ph="SELECT * FRO... $" />
-            <marker date="1476400727874" expanded="true" signature="3099:4232" ph="INSERT INTO $... " />
-            <marker date="1476400727874" expanded="true" signature="4964:6105" ph="INSERT INTO $... " />
-            <marker date="1476400727874" expanded="true" signature="6523:6639" ph="UPDATE ${{$t... " />
-            <marker date="1476400727874" expanded="true" signature="8215:8331" ph="UPDATE ${{$t... " />
-            <marker date="1476400727874" expanded="true" signature="9685:9978" ph="UPDATE ${{$t... " />
-            <marker date="1476400727874" expanded="true" signature="10475:11103" ph="SELECT id, u... " />
-            <marker date="1476400727874" expanded="true" signature="11922:11992" ph="DELETE FROM " />
-            <marker date="1476400727874" expanded="true" signature="12110:12333" ph="INSERT INTO login_attempts... " />
-            <marker date="1476400727874" expanded="true" signature="12463:12562" ph="SELECT COUNT... login_attempts" />
-            <marker date="1476400727874" expanded="true" signature="13358:13666" ph="SELECT id FR... $" />
-            <marker date="1476400727874" expanded="true" signature="13873:14033" ph="UPDATE ${{$t... " />
-            <marker date="1476400727874" expanded="true" signature="14485:14751" ph="SELECT id, f... $" />
-            <marker date="1476400727874" expanded="true" signature="15397:15589" ph="UPDATE ${{$t... " />
-            <marker date="1476400727874" expanded="true" signature="16069:16194" ph="SELECT id FR... $" />
-            <marker date="1476400727874" expanded="true" signature="16548:16667" ph="SELECT id FR... $" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/config/cgstarter.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="30" column="55" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Checkout.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="284" column="0" selection-start-line="283" selection-start-column="0" selection-end-line="284" selection-end-column="0" />
-          <folding>
-            <marker date="1475017204061" expanded="true" signature="11095:11312" ph="..." />
-            <marker date="1475017204061" expanded="true" signature="11112:11312" ph="..." />
-            <marker date="1475017204061" expanded="false" signature="11202:11218" ph="..." />
-            <marker date="1475017204061" expanded="false" signature="11263:11279" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/errors/html/error_db.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="654">
@@ -1138,11 +1091,59 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/cgstarter.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="30" column="55" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Checkout.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="290" column="0" selection-start-line="289" selection-start-column="0" selection-end-line="290" selection-end-column="0" />
+          <folding>
+            <marker date="1475017204061" expanded="true" signature="11095:11312" ph="..." />
+            <marker date="1475017204061" expanded="true" signature="11112:11312" ph="..." />
+            <marker date="1475017204061" expanded="false" signature="11202:11218" ph="..." />
+            <marker date="1475017204061" expanded="false" signature="11263:11279" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/User.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="159" column="51" selection-start-line="159" selection-start-column="51" selection-end-line="159" selection-end-column="51" />
+        <state relative-caret-position="221">
+          <caret line="201" column="57" selection-start-line="201" selection-start-column="41" selection-end-line="201" selection-end-column="57" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/Users_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="439">
+          <caret line="515" column="16" selection-start-line="515" selection-start-column="16" selection-end-line="515" selection-end-column="16" />
+          <folding>
+            <marker date="1476406578330" expanded="true" signature="691:781" ph="SELECT SQL_C... $" />
+            <marker date="1476406578330" expanded="true" signature="1781:1919" ph="SELECT * FRO... $" />
+            <marker date="1476406578330" expanded="true" signature="2349:2493" ph="SELECT * FRO... $" />
+            <marker date="1476406578330" expanded="true" signature="3099:4232" ph="INSERT INTO $... " />
+            <marker date="1476406578330" expanded="true" signature="4964:6105" ph="INSERT INTO $... " />
+            <marker date="1476406578330" expanded="true" signature="6523:6639" ph="UPDATE ${{$t... " />
+            <marker date="1476406578330" expanded="true" signature="8215:8331" ph="UPDATE ${{$t... " />
+            <marker date="1476406578330" expanded="true" signature="9685:9978" ph="UPDATE ${{$t... " />
+            <marker date="1476406578330" expanded="true" signature="10475:11103" ph="SELECT id, u... " />
+            <marker date="1476406578330" expanded="true" signature="11922:11992" ph="DELETE FROM " />
+            <marker date="1476406578330" expanded="true" signature="12110:12333" ph="INSERT INTO login_attempts... " />
+            <marker date="1476406578330" expanded="true" signature="12463:12562" ph="SELECT COUNT... login_attempts" />
+            <marker date="1476406578330" expanded="true" signature="13358:13666" ph="SELECT id FR... $" />
+            <marker date="1476406578330" expanded="true" signature="13915:14075" ph="UPDATE ${{$t... " />
+            <marker date="1476406578330" expanded="true" signature="14527:14793" ph="SELECT id, f... $" />
+            <marker date="1476406578330" expanded="true" signature="15439:15631" ph="UPDATE ${{$t... " />
+            <marker date="1476406578330" expanded="true" signature="16111:16236" ph="SELECT id FR... $" />
+            <marker date="1476406578330" expanded="true" signature="16590:16709" ph="SELECT id FR... $" />
+          </folding>
         </state>
       </provider>
     </entry>

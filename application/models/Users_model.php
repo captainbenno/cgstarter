@@ -511,6 +511,10 @@ class Users_model extends CI_Model {
                 LIMIT 1
             ";
 
+
+            echo $sql;
+            die;
+
             $query = $this->db->query($sql);
 
             if ($query->num_rows())

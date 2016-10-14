@@ -152,6 +152,7 @@ class User extends Public_Controller {
                 $this->email->to($this->input->post('email', TRUE));
                 $this->email->subject(sprintf(lang('users msg email_new_account_title'), $this->input->post('first_name', TRUE)));
                 $this->email->message($email_msg);
+                $this->email->mailtype = 'html';
                 $this->email->send();
                 #echo $this->email->print_debugger();
 
