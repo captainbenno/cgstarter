@@ -120,11 +120,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="error_exception.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="error_exception.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/errors/html/error_exception.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -133,18 +133,18 @@
       <file leaf-file-name="error_general.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/errors/html/error_general.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+            <state relative-caret-position="17">
+              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="error_php.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="error_php.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/errors/html/error_php.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+            <state relative-caret-position="17">
+              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -206,9 +206,9 @@
         <option value="$PROJECT_DIR$/application/models/Users_model.php" />
         <option value="$PROJECT_DIR$/application/config/config.php" />
         <option value="$PROJECT_DIR$/application/controllers/User.php" />
-        <option value="$PROJECT_DIR$/application/views/errors/html/error_exception.php" />
-        <option value="$PROJECT_DIR$/application/views/errors/html/error_general.php" />
         <option value="$PROJECT_DIR$/application/views/errors/html/error_php.php" />
+        <option value="$PROJECT_DIR$/application/views/errors/html/error_general.php" />
+        <option value="$PROJECT_DIR$/application/views/errors/html/error_exception.php" />
       </list>
     </option>
   </component>
@@ -548,12 +548,12 @@
       <workItem from="1476060004007" duration="7175000" />
       <workItem from="1476246841072" duration="1446000" />
       <workItem from="1476319171390" duration="1220000" />
-      <workItem from="1476326116959" duration="22783000" />
+      <workItem from="1476326116959" duration="22918000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="198090000" />
+    <option name="totallyTimeSpent" value="198225000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="15" y="66" width="1717" height="918" extended-state="0" />
@@ -1008,26 +1008,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/errors/html/error_exception.php">
+    <entry file="file://$PROJECT_DIR$/application/views/errors/html/error_php.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        <state relative-caret-position="17">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/errors/html/error_general.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        <state relative-caret-position="17">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/errors/html/error_php.php">
+    <entry file="file://$PROJECT_DIR$/application/views/errors/html/error_exception.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
