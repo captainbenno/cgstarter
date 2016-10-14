@@ -238,8 +238,6 @@ class User extends Public_Controller {
 
                 // send email
                 $this->load->library('email');
-                $config['protocol'] = 'sendmail';
-                $config['mailpath'] = '/usr/sbin/sendmail -f' . $this->settings->site_email;
                 $this->email->initialize($config);
                 $this->email->clear();
                 $this->email->from($this->settings->site_email, $this->settings->site_name);
