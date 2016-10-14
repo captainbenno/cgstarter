@@ -40,7 +40,10 @@ class Cart_model extends CI_Model {
                         'name'    => $project_reward_data['title'],
                         'shipping'  => $project_reward_data['shipping']);
 
-                $this->cart->insert($data); 
+
+
+                $this->cart->insert($data);
+
             }
         }
 

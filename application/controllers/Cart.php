@@ -50,6 +50,7 @@ class Cart extends Public_Controller {
             'remove_cart_alert' => $remove_cart_alert
         );
 
+
         $data['content'] = $this->load->view('cart/index', $content_data, TRUE);
         $this->load->view($this->template, $data);
 	}
