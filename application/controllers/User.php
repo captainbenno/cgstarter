@@ -245,7 +245,10 @@ class User extends Public_Controller {
                 $this->email->to($this->input->post('email', TRUE));
                 $this->email->subject(sprintf(lang('users msg email_password_reset_title'), $results['first_name']));
                 $this->email->message($email_msg);
+                $this->email->mailtype = 'html';
                 $this->email->send();
+
+
                 #echo $this->email->print_debugger();
 
                 $this->session->set_flashdata('message', sprintf(lang('users msg password_reset_success'), $results['first_name']));
