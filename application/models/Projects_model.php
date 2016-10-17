@@ -124,10 +124,10 @@ class Projects_model extends CI_Model {
         $this->db->join('order_items', 'order_items.order_id = orders.order_id');
         $this->db->group_by('order_items.order_id');
         $query = $this->db->get('orders');
-
+        
         $total_backers = 0;
         if ($query->num_rows()) {
-            $total_backers = $query->row()->total;
+            $total_backers = $query->num_rows();
         }
 
         if($this->config->item('project_seeding') && $this->config->item('project_seeding') == $project_id){
