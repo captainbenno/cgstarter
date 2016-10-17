@@ -201,130 +201,130 @@
 
                             <ul id="scroller">
 
-                                <li><a href="http://www.ballisticpublishing.com/books/expose/expose_11/"><div id="booktitle">EXPOSE 11</div><img id="bookimage"src="http://www.ballisticpublishing.com/carousel/expose11.png" alt="EXPOSE 11"><div id="bookseries"></div></a></li>
-                                   <li><a href="http://www.ballisticpublishing.com/books/expose/expose_11/"><div id="booktitle">EXPOSE 11</div><img id="bookimage"src="http://www.ballisticpublishing.com/carousel/expose11.png" alt="EXPOSE 11"><div id="bookseries"></div></a></li>
-                                <li><a href="http://www.ballisticpublishing.com/books/expose/expose_10/"><div id="booktitle">EXPOSÉ 10</div>
-                                  <img id="bookimage13"src="http://www.ballisticpublishing.com/carousel/expose10.png" alt="EXPOSÉ 10">
+                                <li><a href="https://www.ballisticpublishing.com/books/expose/expose_11/"><div id="booktitle">EXPOSE 11</div><img id="bookimage"src="https://www.ballisticpublishing.com/carousel/expose11.png" alt="EXPOSE 11"><div id="bookseries"></div></a></li>
+                                   <li><a href="https://www.ballisticpublishing.com/books/expose/expose_11/"><div id="booktitle">EXPOSE 11</div><img id="bookimage"src="https://www.ballisticpublishing.com/carousel/expose11.png" alt="EXPOSE 11"><div id="bookseries"></div></a></li>
+                                <li><a href="https://www.ballisticpublishing.com/books/expose/expose_10/"><div id="booktitle">EXPOSÉ 10</div>
+                                  <img id="bookimage13"src="https://www.ballisticpublishing.com/carousel/expose10.png" alt="EXPOSÉ 10">
                                   <div id="bookseries"></div></a></li>
-                                <li><a href="http://www.ballisticpublishing.com/books/expose/expose_9/"><div id="booktitle">EXPOSÉ 9</div>
-                                  <img id="bookimage14"src="http://www.ballisticpublishing.com/carousel/expose9.png" alt="EXPOSÉ 9">
+                                <li><a href="https://www.ballisticpublishing.com/books/expose/expose_9/"><div id="booktitle">EXPOSÉ 9</div>
+                                  <img id="bookimage14"src="https://www.ballisticpublishing.com/carousel/expose9.png" alt="EXPOSÉ 9">
                                   <div id="bookseries"></div></a></li>
                                 <li>
-                                  <a href="http://www.ballisticpublishing.com/books/expose/expose_8/"><div id="booktitle">EXPOSÉ 8</div>
-                                  <img id="bookimage14"src="http://www.ballisticpublishing.com/carousel/expose8.png" alt="EXPOSÉ 8">
+                                  <a href="https://www.ballisticpublishing.com/books/expose/expose_8/"><div id="booktitle">EXPOSÉ 8</div>
+                                  <img id="bookimage14"src="https://www.ballisticpublishing.com/carousel/expose8.png" alt="EXPOSÉ 8">
                                   <div id="bookseries"></div></a></li>
-                                <li><a href="http://www.ballisticpublishing.com/books/expose/expose_7/"><div id="booktitle">EXPOSÉ 7</div>
-                                  <img id="bookimage16"src="http://www.ballisticpublishing.com/carousel/expose7.png" alt="EXPOSÉ 7">
+                                <li><a href="https://www.ballisticpublishing.com/books/expose/expose_7/"><div id="booktitle">EXPOSÉ 7</div>
+                                  <img id="bookimage16"src="https://www.ballisticpublishing.com/carousel/expose7.png" alt="EXPOSÉ 7">
                                   <div id="bookseries"></div></a></li>
-                                <li><a href="http://www.ballisticpublishing.com/books/expose/expose_6/"><div id="booktitle">EXPOSÉ 6</div>
-                                  <img id="bookimage17"src="http://www.ballisticpublishing.com/carousel/expose6.png" alt="EXPOSÉ 6">
+                                <li><a href="https://www.ballisticpublishing.com/books/expose/expose_6/"><div id="booktitle">EXPOSÉ 6</div>
+                                  <img id="bookimage17"src="https://www.ballisticpublishing.com/carousel/expose6.png" alt="EXPOSÉ 6">
                                   <div id="bookseries"></div></a></li>
-                                <li><a href="http://www.ballisticpublishing.com/books/expose/expose_5/"><div id="booktitle">EXPOSÉ 5</div>
-                                  <img id="bookimage18"src="http://www.ballisticpublishing.com/carousel/expose5.png" alt="EXPOSÉ 5">
+                                <li><a href="https://www.ballisticpublishing.com/books/expose/expose_5/"><div id="booktitle">EXPOSÉ 5</div>
+                                  <img id="bookimage18"src="https://www.ballisticpublishing.com/carousel/expose5.png" alt="EXPOSÉ 5">
                                   <div id="bookseries"></div></a></li>
-                                <li><a href="http://www.ballisticpublishing.com/books/expose/expose_4/"><div id="booktitle">EXPOSÉ 4</div>
-                                  <img id="bookimage19"src="http://www.ballisticpublishing.com/carousel/expose4.png" alt="EXPOSÉ 4">
+                                <li><a href="https://www.ballisticpublishing.com/books/expose/expose_4/"><div id="booktitle">EXPOSÉ 4</div>
+                                  <img id="bookimage19"src="https://www.ballisticpublishing.com/carousel/expose4.png" alt="EXPOSÉ 4">
                                   <div id="bookseries"></div></a></li>
-                                <li><a href="http://www.ballisticpublishing.com/books/expose/expose_3/"><div id="booktitle">EXPOSÉ 3</div>
-                                  <img id="bookimage20"src="http://www.ballisticpublishing.com/carousel/expose3.png" alt="EXPOSÉ 3">
+                                <li><a href="https://www.ballisticpublishing.com/books/expose/expose_3/"><div id="booktitle">EXPOSÉ 3</div>
+                                  <img id="bookimage20"src="https://www.ballisticpublishing.com/carousel/expose3.png" alt="EXPOSÉ 3">
                                   <div id="bookseries"></div></a></li>
-                                <li><a href="http://www.ballisticpublishing.com/books/expose/expose_2/"><div id="booktitle">EXPOSÉ 2</div>
-                                  <img id="bookimage21"src="http://www.ballisticpublishing.com/carousel/expose2.png" alt="EXPOSÉ 2">
+                                <li><a href="https://www.ballisticpublishing.com/books/expose/expose_2/"><div id="booktitle">EXPOSÉ 2</div>
+                                  <img id="bookimage21"src="https://www.ballisticpublishing.com/carousel/expose2.png" alt="EXPOSÉ 2">
                                   <div id="bookseries"></div></a></li>
-                                <li><a href="http://www.ballisticpublishing.com/books/expose/expose_1/"><div id="booktitle">EXPOSÉ 1</div>
-                                  <img id="bookimage22"src="http://www.ballisticpublishing.com/carousel/expose1.png" alt="EXPOSÉ 1">
+                                <li><a href="https://www.ballisticpublishing.com/books/expose/expose_1/"><div id="booktitle">EXPOSÉ 1</div>
+                                  <img id="bookimage22"src="https://www.ballisticpublishing.com/carousel/expose1.png" alt="EXPOSÉ 1">
                                   <div id="bookseries"></div></a></li>
-                                <li><a href="http://www.ballisticpublishing.com/books/uncharted2/"><div id="booktitle">Character Design</div><img id="bookimage"src="http://www.ballisticpublishing.com/carousel/dartiste_charcDes.png" alt="expose"><div id="bookseries"></div></a></li>
-                                <li><a href="http://www.ballisticpublishing.com/books/dartiste/character_modeling_3/"><div id="booktitle">Character Modeling 3</div>
-                                  <img id="bookimage2"src="http://www.ballisticpublishing.com/carousel/dartiste_charcMod3.png" alt="Character Modeling 3">
+                                <li><a href="https://www.ballisticpublishing.com/books/uncharted2/"><div id="booktitle">Character Design</div><img id="bookimage"src="https://www.ballisticpublishing.com/carousel/dartiste_charcDes.png" alt="expose"><div id="bookseries"></div></a></li>
+                                <li><a href="https://www.ballisticpublishing.com/books/dartiste/character_modeling_3/"><div id="booktitle">Character Modeling 3</div>
+                                  <img id="bookimage2"src="https://www.ballisticpublishing.com/carousel/dartiste_charcMod3.png" alt="Character Modeling 3">
                                   <div id="bookseries"></div></a></li>
-                                <li><a href="http://www.ballisticpublishing.com/books/dartiste/character_modeling_2/"><div id="booktitle">Character Modeling 2</div>
-                                  <img id="bookimage3"src="http://www.ballisticpublishing.com/carousel/dartiste_charcMod2.png" alt="Character Modeling 2">
+                                <li><a href="https://www.ballisticpublishing.com/books/dartiste/character_modeling_2/"><div id="booktitle">Character Modeling 2</div>
+                                  <img id="bookimage3"src="https://www.ballisticpublishing.com/carousel/dartiste_charcMod2.png" alt="Character Modeling 2">
                                   <div id="bookseries"></div></a></li>
-                                <li><a href="http://www.ballisticpublishing.com/books/dartiste/character_modeling/"><div id="booktitle">Character Modeling 1</div>
-                                  <img id="bookimage4"src="http://www.ballisticpublishing.com/carousel/dartiste_charcMod1.png" alt="Character Modeling 1">
+                                <li><a href="https://www.ballisticpublishing.com/books/dartiste/character_modeling/"><div id="booktitle">Character Modeling 1</div>
+                                  <img id="bookimage4"src="https://www.ballisticpublishing.com/carousel/dartiste_charcMod1.png" alt="Character Modeling 1">
                                   <div id="bookseries"></div></a></li>
-                                <li><a href="http://www.ballisticpublishing.com/books/dartiste/digital_painting_2/"><div id="booktitle">Digital Paiting 2</div>
-                                  <img id="bookimage5"src="http://www.ballisticpublishing.com/carousel/dartiste_digPaint2.png" alt="Digital Paiting 2">
+                                <li><a href="https://www.ballisticpublishing.com/books/dartiste/digital_painting_2/"><div id="booktitle">Digital Paiting 2</div>
+                                  <img id="bookimage5"src="https://www.ballisticpublishing.com/carousel/dartiste_digPaint2.png" alt="Digital Paiting 2">
                                   <div id="bookseries"></div></a></li>
-                                <li><a href="http://www.ballisticpublishing.com/books/dartiste/digital_painting/"><div id="booktitle">Digital Painting 1</div>
-                                  <img id="bookimage6"src="http://www.ballisticpublishing.com/carousel/dartiste_digPaint1t.png" alt="Digital Paiting 1">
+                                <li><a href="https://www.ballisticpublishing.com/books/dartiste/digital_painting/"><div id="booktitle">Digital Painting 1</div>
+                                  <img id="bookimage6"src="https://www.ballisticpublishing.com/carousel/dartiste_digPaint1t.png" alt="Digital Paiting 1">
                                   <div id="bookseries"></div></a></li>
-                                <li><a href="http://www.ballisticpublishing.com/books/dartiste/concept_art/"><div id="booktitle">Concept Art</div>
-                                  <img id="bookimage7"src="http://www.ballisticpublishing.com/carousel/dartiste_concept.png" alt="Concept Art">
-                                  <div id="bookseries"></div></a></li>
-
-                                   <li><a href="http://www.ballisticpublishing.com/books/dartiste/matte_painting_3/"><div id="booktitle">Matte Painting 3</div>
-                                  <img src="http://www.ballisticpublishing.com/carousel/dartiste_mp3.png" alt="Matte Painting 3" name="mp3" id="bookimage8">
+                                <li><a href="https://www.ballisticpublishing.com/books/dartiste/concept_art/"><div id="booktitle">Concept Art</div>
+                                  <img id="bookimage7"src="https://www.ballisticpublishing.com/carousel/dartiste_concept.png" alt="Concept Art">
                                   <div id="bookseries"></div></a></li>
 
-                                <li><a href="http://www.ballisticpublishing.com/books/dartiste/matte_painting_2/"><div id="booktitle">Matte Painting 2</div>
-                                  <img id="bookimage8"src="http://www.ballisticpublishing.com/carousel/dartiste_mp2.png" alt="Matte Painting 2">
-                                  <div id="bookseries"></div></a></li>
-                                <li><a href="http://www.ballisticpublishing.com/books/dartiste/matte_painting/"><div id="booktitle">Matte Painting 1</div>
-                                  <img id="bookimage9"src="http://www.ballisticpublishing.com/carousel/dartiste_mp1.png" alt="Matte Painting 1">
-                                  <div id="bookseries"></div></a></li>
-                                  <li><a href="http://www.ballisticpublishing.com/books/exotique_7/"><div id="booktitle">EXOTIQUE 7</div>
-                                  <img id="bookimage9"src="http://www.ballisticpublishing.com/carousel/exotique_7.png" alt="EXOTIQUE 7">
-                                  <div id="bookseries"></div></a></li>
-                                   <li><a href="http://www.ballisticpublishing.com/books/exotique_6/"><div id="booktitle">EXOTIQUE 6</div><img id="bookimage"src="http://www.ballisticpublishing.com/carousel/exotique_6.png" alt="EXOTIQUE 6"><div id="bookseries"></div></a></li>
-
-                                <li><a href="http://www.ballisticpublishing.com/books/exotique_5/"><div id="booktitle">EXOTIQUE 5</div>
-                                  <img id="bookimage13"src="http://www.ballisticpublishing.com/carousel/exotique_5.png" alt="EXOTIQUE 5">
-                                  <div id="bookseries"></div></a></li>
-                                <li><a href="http://www.ballisticpublishing.com/books/exotique_4/"><div id="booktitle">EXOTIQUE 4</div>
-                                  <img id="bookimage14"src="http://www.ballisticpublishing.com/carousel/exotique_4.png" alt="EXOTIQUE 4">
+                                   <li><a href="https://www.ballisticpublishing.com/books/dartiste/matte_painting_3/"><div id="booktitle">Matte Painting 3</div>
+                                  <img src="https://www.ballisticpublishing.com/carousel/dartiste_mp3.png" alt="Matte Painting 3" name="mp3" id="bookimage8">
                                   <div id="bookseries"></div></a></li>
 
-                                <li><a href="http://www.ballisticpublishing.com/books/exotique_3/"><div id="booktitle">EXOTIQUE 3</div>
-                                  <img id="bookimage15"src="http://www.ballisticpublishing.com/carousel/exotique_3.png" alt="EXOTIQUE 3">
+                                <li><a href="https://www.ballisticpublishing.com/books/dartiste/matte_painting_2/"><div id="booktitle">Matte Painting 2</div>
+                                  <img id="bookimage8"src="https://www.ballisticpublishing.com/carousel/dartiste_mp2.png" alt="Matte Painting 2">
+                                  <div id="bookseries"></div></a></li>
+                                <li><a href="https://www.ballisticpublishing.com/books/dartiste/matte_painting/"><div id="booktitle">Matte Painting 1</div>
+                                  <img id="bookimage9"src="https://www.ballisticpublishing.com/carousel/dartiste_mp1.png" alt="Matte Painting 1">
+                                  <div id="bookseries"></div></a></li>
+                                  <li><a href="https://www.ballisticpublishing.com/books/exotique_7/"><div id="booktitle">EXOTIQUE 7</div>
+                                  <img id="bookimage9"src="https://www.ballisticpublishing.com/carousel/exotique_7.png" alt="EXOTIQUE 7">
+                                  <div id="bookseries"></div></a></li>
+                                   <li><a href="https://www.ballisticpublishing.com/books/exotique_6/"><div id="booktitle">EXOTIQUE 6</div><img id="bookimage"src="https://www.ballisticpublishing.com/carousel/exotique_6.png" alt="EXOTIQUE 6"><div id="bookseries"></div></a></li>
+
+                                <li><a href="https://www.ballisticpublishing.com/books/exotique_5/"><div id="booktitle">EXOTIQUE 5</div>
+                                  <img id="bookimage13"src="https://www.ballisticpublishing.com/carousel/exotique_5.png" alt="EXOTIQUE 5">
+                                  <div id="bookseries"></div></a></li>
+                                <li><a href="https://www.ballisticpublishing.com/books/exotique_4/"><div id="booktitle">EXOTIQUE 4</div>
+                                  <img id="bookimage14"src="https://www.ballisticpublishing.com/carousel/exotique_4.png" alt="EXOTIQUE 4">
                                   <div id="bookseries"></div></a></li>
 
-                                <li><a href="http://www.ballisticpublishing.com/books/exotique_2/"><div id="booktitle">EXOTIQUE 2</div>
-                                  <img id="bookimage16"src="http://www.ballisticpublishing.com/carousel/exotique_2.png" alt="EXOTIQUE 2">
-                                  <div id="bookseries"></div></a></li>
-                                <li><a href="http://www.ballisticpublishing.com/books/exotique/"><div id="booktitle">EXOTIQUE 1</div>
-                                  <img id="bookimage17"src="http://www.ballisticpublishing.com/carousel/exotique_1.png" alt="EXOTIQUE 1">
-                                  <div id="bookseries"></div></a></li>
-                                 <li><a href="http://www.ballisticpublishing.com/books/theartofthegame/gearsofwar3/"><div id="booktitle">Gears of War 3</div>
-                                  <img id="bookimage18"src="http://www.ballisticpublishing.com/carousel/art_gears.png" alt="Gears of War 3">
-                                  <div id="bookseries"></div></a></li>
-                                <li><a href="http://www.ballisticpublishing.com/books/theartofthegame/godofwar3/index.php"><div id="booktitle">God of War III</div>
-                                  <img id="bookimage19"src="http://www.ballisticpublishing.com/carousel/art_god.png" alt="God of War 3">
-                                  <div id="bookseries"></div></a></li>
-                                <li><a href="http://www.ballisticpublishing.com/books/uncharted2/"><div id="booktitle">Unchartered 2</div>
-                                  <img id="bookimage20"src="http://www.ballisticpublishing.com/carousel/art_unchart.png" alt="Unchartered 2">
-                                  <div id="bookseries"></div></a></li>
-                                <li><a href="http://www.ballisticpublishing.com/books/oddworld/"><div id="booktitle">Oddworld</div>
-                                  <img id="bookimage21"src="http://www.ballisticpublishing.com/carousel/art_odd.png" alt="Oddworld">
-                                  <div id="bookseries"></div></a></li>
-                                <li><a href="http://www.ballisticpublishing.com/books/elemental3/"><div id="booktitle">Elemental 3</div>
-                                  <img id="bookimage22"src="http://www.ballisticpublishing.com/carousel/elemental_3.png" alt="Elemental 3">
-                                  <div id="bookseries"></div></a></li>
-                                   <li><a href="http://www.ballisticpublishing.com/books/uncharted2/"><div id="booktitle">Elemental 2</div><img id="bookimage"src="http://www.ballisticpublishing.com/carousel/elemental_2.png" alt="Elemental 2"><div id="bookseries"></div></a></li>
-
-                                <li><a href="http://www.ballisticpublishing.com/books/elemental/"><div id="booktitle">Elemental 1</div>
-                                  <img id="bookimage13"src="http://www.ballisticpublishing.com/carousel/elemental_1.png" alt="Elemental 1">
+                                <li><a href="https://www.ballisticpublishing.com/books/exotique_3/"><div id="booktitle">EXOTIQUE 3</div>
+                                  <img id="bookimage15"src="https://www.ballisticpublishing.com/carousel/exotique_3.png" alt="EXOTIQUE 3">
                                   <div id="bookseries"></div></a></li>
 
-                                <li><a href="http://www.ballisticpublishing.com/books/machineflesh/"><div id="booktitle">MachineFlesh</div>
-                                  <img id="bookimage14"src="http://www.ballisticpublishing.com/carousel/challenge_machineflesh.png" alt="MachineFlesh">
+                                <li><a href="https://www.ballisticpublishing.com/books/exotique_2/"><div id="booktitle">EXOTIQUE 2</div>
+                                  <img id="bookimage16"src="https://www.ballisticpublishing.com/carousel/exotique_2.png" alt="EXOTIQUE 2">
+                                  <div id="bookseries"></div></a></li>
+                                <li><a href="https://www.ballisticpublishing.com/books/exotique/"><div id="booktitle">EXOTIQUE 1</div>
+                                  <img id="bookimage17"src="https://www.ballisticpublishing.com/carousel/exotique_1.png" alt="EXOTIQUE 1">
+                                  <div id="bookseries"></div></a></li>
+                                 <li><a href="https://www.ballisticpublishing.com/books/theartofthegame/gearsofwar3/"><div id="booktitle">Gears of War 3</div>
+                                  <img id="bookimage18"src="https://www.ballisticpublishing.com/carousel/art_gears.png" alt="Gears of War 3">
+                                  <div id="bookseries"></div></a></li>
+                                <li><a href="https://www.ballisticpublishing.com/books/theartofthegame/godofwar3/index.php"><div id="booktitle">God of War III</div>
+                                  <img id="bookimage19"src="https://www.ballisticpublishing.com/carousel/art_god.png" alt="God of War 3">
+                                  <div id="bookseries"></div></a></li>
+                                <li><a href="https://www.ballisticpublishing.com/books/uncharted2/"><div id="booktitle">Unchartered 2</div>
+                                  <img id="bookimage20"src="https://www.ballisticpublishing.com/carousel/art_unchart.png" alt="Unchartered 2">
+                                  <div id="bookseries"></div></a></li>
+                                <li><a href="https://www.ballisticpublishing.com/books/oddworld/"><div id="booktitle">Oddworld</div>
+                                  <img id="bookimage21"src="https://www.ballisticpublishing.com/carousel/art_odd.png" alt="Oddworld">
+                                  <div id="bookseries"></div></a></li>
+                                <li><a href="https://www.ballisticpublishing.com/books/elemental3/"><div id="booktitle">Elemental 3</div>
+                                  <img id="bookimage22"src="https://www.ballisticpublishing.com/carousel/elemental_3.png" alt="Elemental 3">
+                                  <div id="bookseries"></div></a></li>
+                                   <li><a href="https://www.ballisticpublishing.com/books/uncharted2/"><div id="booktitle">Elemental 2</div><img id="bookimage"src="https://www.ballisticpublishing.com/carousel/elemental_2.png" alt="Elemental 2"><div id="bookseries"></div></a></li>
+
+                                <li><a href="https://www.ballisticpublishing.com/books/elemental/"><div id="booktitle">Elemental 1</div>
+                                  <img id="bookimage13"src="https://www.ballisticpublishing.com/carousel/elemental_1.png" alt="Elemental 1">
                                   <div id="bookseries"></div></a></li>
 
-                                <li><a href="http://www.ballisticpublishing.com/books/grand_space_opera/"><div id="booktitle">Grand Space Opera</div>
-                                  <img id="bookimage15"src="http://www.ballisticpublishing.com/carousel/challenge_gso.png" alt="Grand Space Opera">
+                                <li><a href="https://www.ballisticpublishing.com/books/machineflesh/"><div id="booktitle">MachineFlesh</div>
+                                  <img id="bookimage14"src="https://www.ballisticpublishing.com/carousel/challenge_machineflesh.png" alt="MachineFlesh">
                                   <div id="bookseries"></div></a></li>
 
-                                <li><a href="http://www.ballisticpublishing.com/books/vesage/"><div id="booktitle">VESAGE</div>
-                                  <img id="bookimage16"src="http://www.ballisticpublishing.com/carousel/vesage.png" alt="VESAGE">
+                                <li><a href="https://www.ballisticpublishing.com/books/grand_space_opera/"><div id="booktitle">Grand Space Opera</div>
+                                  <img id="bookimage15"src="https://www.ballisticpublishing.com/carousel/challenge_gso.png" alt="Grand Space Opera">
                                   <div id="bookseries"></div></a></li>
 
-                                <li><a href="http://www.ballisticpublishing.com/books/painter/"><div id="booktitle">Painter</div>
-                                  <img id="bookimage17"src="http://www.ballisticpublishing.com/carousel/painter.png" alt="Painter">
+                                <li><a href="https://www.ballisticpublishing.com/books/vesage/"><div id="booktitle">VESAGE</div>
+                                  <img id="bookimage16"src="https://www.ballisticpublishing.com/carousel/vesage.png" alt="VESAGE">
                                   <div id="bookseries"></div></a></li>
 
-                                <li><a href="http://www.ballisticpublishing.com/books/machine_phase/"><div id="booktitle">Machine Phase</div>
-                                  <img id="bookimage18"src="http://www.ballisticpublishing.com/carousel/machinePhase.png" alt="Machine Phase">
+                                <li><a href="https://www.ballisticpublishing.com/books/painter/"><div id="booktitle">Painter</div>
+                                  <img id="bookimage17"src="https://www.ballisticpublishing.com/carousel/painter.png" alt="Painter">
+                                  <div id="bookseries"></div></a></li>
+
+                                <li><a href="https://www.ballisticpublishing.com/books/machine_phase/"><div id="booktitle">Machine Phase</div>
+                                  <img id="bookimage18"src="https://www.ballisticpublishing.com/carousel/machinePhase.png" alt="Machine Phase">
                                   <div id="bookseries"></div></a></li>
 
                             </ul>
@@ -532,18 +532,18 @@
                             <p>See previews of the previous editions:
                                 <ul>
                                     <li>
-                                        <a href="http://www.ballisticpublishing.com/books/expose/expose_11/">
+                                        <a href="https://www.ballisticpublishing.com/books/expose/expose_11/">
                                             EXPOSÉ 11
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="http://www.ballisticpublishing.com/books/expose/expose_10/">
+                                        <a href="https://www.ballisticpublishing.com/books/expose/expose_10/">
                                             EXPOSÉ 10
                                         </a>
                                     </li>
                                 </ul>
                             </p>
-                            <p>To learn more about Ballistic Publishing’s history and other books visit <a href="http://www.ballisticpublishing.com/">Ballistic Publishing</a></p>
+                            <p>To learn more about Ballistic Publishing’s history and other books visit <a href="https://www.ballisticpublishing.com/">Ballistic Publishing</a></p>
 
                             <h3>New stuff</h3>
                             <p>With the re-launch of Ballistic we are excited to bring a whole range of new products and benefits...</p>
@@ -574,7 +574,7 @@
                                 <?php 
                                     foreach ($project['backers'] as $backer) { ?>
                                         <li>
-                                            <img src="http://www.gravatar.com/avatar/<?php echo md5( strtolower( trim( $backer['email'] ) ) ); ?>?s=60" /> <?php echo  $backer['first_name']?> <?php echo  $backer['last_name']?> - <?php echo  $backer['billing_country']?> <br />
+                                            <img src="https://www.gravatar.com/avatar/<?php echo md5( strtolower( trim( $backer['email'] ) ) ); ?>?s=60" /> <?php echo  $backer['first_name']?> <?php echo  $backer['last_name']?> - <?php echo  $backer['billing_country']?> <br />
                                             
                                             <em><?php
 
@@ -649,7 +649,7 @@
                                     <?php if(file_exists('themes/default/img/user_'.$project_leader['user_id'].'.png')){ ?>
                                         <?php echo '<img src="/themes/default/img/user_'.$project_leader['user_id'].'.png" />'; ?>
                                     <?php }else{ ?>
-                                        <img src="http://www.gravatar.com/avatar/<?php echo md5( strtolower( trim( $project_leader['email'] ) ) ); ?>?s=60" />
+                                        <img src="https://www.gravatar.com/avatar/<?php echo md5( strtolower( trim( $project_leader['email'] ) ) ); ?>?s=60" />
                                     <?php } ?>
                                     <h6><b><?php echo  $project_leader['first_name']?> <?php echo  $project_leader['last_name']?></b></h6>
                                     <p>
