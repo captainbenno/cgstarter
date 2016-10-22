@@ -74,9 +74,13 @@
             <div id="navbar" class="navbar-collapse collapse">
                 <?php // Nav bar left ?>
                 <ul class="nav navbar-nav">
-                    <li class="<?php echo (uri_string() == '') ? 'active' : ''; ?>"><a href="<?php echo base_url('/'); ?>">Culling</a></li>
+                    <?php  if($this->session->userdata('logged_in')['user_type']!='Judge'){ ?>
+                        <li class="<?php echo (uri_string() == '') ? 'active' : ''; ?>"><a href="<?php echo base_url('/'); ?>">Culling</a></li>
+                    <?php } ?>
                     <li class="<?php echo (uri_string() == 'judging') ? 'active' : ''; ?>"><a href="<?php echo base_url('/judging'); ?>">Judging</a></li>
-                    <li class="<?php echo (uri_string() == 'selecting') ? 'active' : ''; ?>"><a href="<?php echo base_url('/selecting?cat=&status=0'); ?>">Selecting</a></li>
+                    <?php  if($this->session->userdata('logged_in')['user_type']!='Judge'){ ?>
+                        <li class="<?php echo (uri_string() == 'selecting') ? 'active' : ''; ?>"><a href="<?php echo base_url('/selecting?cat=&status=0'); ?>">Selecting</a></li>
+                    <?php } ?>
                 </ul>
                 <?php // Nav bar right ?>
                 <ul class="nav navbar-nav navbar-right">
