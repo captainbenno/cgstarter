@@ -42,11 +42,7 @@ class User extends Public_Controller {
             }
             else
             {
-                if($this->session->userdata('logged_in')['user_type']=='Judge') {
-                    redirect(base_url()."/judging");
-                } else {
-                    redirect(base_url());
-                }
+                redirect(base_url());
             }
         }
 

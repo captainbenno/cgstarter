@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a4b91ab6-f6b4-4e75-873e-5dfe24a7a851" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htdocs/bsw2/application/config/config.php" afterPath="$PROJECT_DIR$/htdocs/bsw2/application/config/config.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htdocs/bsw2/application/controllers/User.php" afterPath="$PROJECT_DIR$/htdocs/bsw2/application/controllers/User.php" />
     </list>
     <ignored path="cg.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -54,7 +54,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="config.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/htdocs/bsw2/application/config/config.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="425">
@@ -94,11 +94,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="User.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/htdocs/bsw2/application/controllers/User.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="46" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+            <state relative-caret-position="170">
+              <caret line="43" column="13" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -179,10 +179,10 @@
         <option value="$PROJECT_DIR$/application/config/config.php" />
         <option value="$PROJECT_DIR$/application/views/project/project_view.php" />
         <option value="$PROJECT_DIR$/htdocs/bsw2/htdocs/themes/default/template.php" />
-        <option value="$PROJECT_DIR$/htdocs/bsw2/application/controllers/User.php" />
         <option value="$PROJECT_DIR$/htdocs/bsw2/application/controllers/Welcome.php" />
         <option value="$PROJECT_DIR$/htdocs/bsw2/application/controllers/Selecting.php" />
         <option value="$PROJECT_DIR$/htdocs/bsw2/application/config/config.php" />
+        <option value="$PROJECT_DIR$/htdocs/bsw2/application/controllers/User.php" />
       </list>
     </option>
   </component>
@@ -620,12 +620,12 @@
       <workItem from="1476326116959" duration="25972000" />
       <workItem from="1476415127023" duration="3975000" />
       <workItem from="1476738687827" duration="3425000" />
-      <workItem from="1477119632829" duration="3426000" />
+      <workItem from="1477119632829" duration="3580000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="212105000" />
+    <option name="totallyTimeSpent" value="212259000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="15" y="66" width="1902" height="1014" extended-state="0" />
@@ -1016,14 +1016,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/htdocs/bsw2/application/controllers/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="46" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/htdocs/bsw2/application/controllers/Welcome.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="291">
@@ -1044,6 +1036,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="25" column="43" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/htdocs/bsw2/application/controllers/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="43" column="13" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="13" />
           <folding />
         </state>
       </provider>
