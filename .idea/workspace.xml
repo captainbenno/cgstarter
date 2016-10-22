@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="a4b91ab6-f6b4-4e75-873e-5dfe24a7a851" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htdocs/bsw2/htdocs/themes/default/template.php" afterPath="$PROJECT_DIR$/htdocs/bsw2/htdocs/themes/default/template.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htdocs/bsw2/application/config/config.php" afterPath="$PROJECT_DIR$/htdocs/bsw2/application/config/config.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htdocs/bsw2/application/controllers/Selecting.php" afterPath="$PROJECT_DIR$/htdocs/bsw2/application/controllers/Selecting.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htdocs/bsw2/application/controllers/User.php" afterPath="$PROJECT_DIR$/htdocs/bsw2/application/controllers/User.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htdocs/bsw2/application/controllers/Welcome.php" afterPath="$PROJECT_DIR$/htdocs/bsw2/application/controllers/Welcome.php" />
     </list>
     <ignored path="cg.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,40 +38,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="terms.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/misc/terms.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3638">
-              <caret line="214" column="0" selection-start-line="214" selection-start-column="0" selection-end-line="246" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cgstarter.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/config/cgstarter.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="30" column="55" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="55" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Projects_model.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/models/Projects_model.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2142">
-              <caret line="126" column="8" selection-start-line="126" selection-start-column="8" selection-end-line="126" selection-end-column="8" />
-              <folding>
-                <marker date="1476742724531" expanded="true" signature="1966:2371" ph="SELECT order... orders" />
-                <marker date="1476742724531" expanded="true" signature="1966:2699" ph="SELECT order... " />
-                <marker date="1476742724531" expanded="true" signature="2410:2623" ph="SELECT email... project_seed" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Project.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/Project.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -89,11 +58,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="config.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/htdocs/bsw2/application/config/config.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="425">
-              <caret line="25" column="43" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="43" />
+              <caret line="25" column="45" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -112,8 +81,8 @@
       <file leaf-file-name="template.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/htdocs/bsw2/htdocs/themes/default/template.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="403">
-              <caret line="81" column="4" selection-start-line="81" selection-start-column="4" selection-end-line="81" selection-end-column="4" />
+            <state relative-caret-position="318">
+              <caret line="76" column="94" selection-start-line="76" selection-start-column="20" selection-end-line="76" selection-end-column="94" />
               <folding />
             </state>
           </provider>
@@ -129,6 +98,36 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/htdocs/bsw2/application/controllers/User.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="46" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Welcome.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/htdocs/bsw2/application/controllers/Welcome.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="291">
+              <caret line="18" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Selecting.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/htdocs/bsw2/application/controllers/Selecting.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="Git.Settings">
@@ -137,15 +136,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/application/views/misc/terms.php" />
         <option value="$PROJECT_DIR$/application/views/misc/privacy.php" />
-        <option value="$PROJECT_DIR$/htdocs/bsw2/application/controllers/Welcome.php" />
         <option value="$PROJECT_DIR$/htdocs/bsw2/data.json" />
         <option value="$PROJECT_DIR$/htdocs/bsw2/Dump20160829.sql" />
         <option value="$PROJECT_DIR$/htdocs/bsw2/application/controllers/Judging.php" />
         <option value="$PROJECT_DIR$/htdocs/bsw2/application/controllers/Sorting.php" />
         <option value="$PROJECT_DIR$/htdocs/bsw2/application/views/judging.php" />
-        <option value="$PROJECT_DIR$/htdocs/bsw2/application/controllers/Selecting.php" />
         <option value="$PROJECT_DIR$/htdocs/bsw2/application/views/welcome.php" />
         <option value="$PROJECT_DIR$/htdocs/bsw2/application/models/Entry_model.php" />
         <option value="$PROJECT_DIR$/htdocs/bsw2/application/controllers/Api.php" />
@@ -187,7 +183,10 @@
         <option value="$PROJECT_DIR$/application/config/config.php" />
         <option value="$PROJECT_DIR$/application/views/project/project_view.php" />
         <option value="$PROJECT_DIR$/htdocs/bsw2/htdocs/themes/default/template.php" />
+        <option value="$PROJECT_DIR$/htdocs/bsw2/application/controllers/User.php" />
         <option value="$PROJECT_DIR$/htdocs/bsw2/application/config/config.php" />
+        <option value="$PROJECT_DIR$/htdocs/bsw2/application/controllers/Welcome.php" />
+        <option value="$PROJECT_DIR$/htdocs/bsw2/application/controllers/Selecting.php" />
       </list>
     </option>
   </component>
@@ -507,6 +506,32 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cg" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cg" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htdocs" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bsw2" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -599,18 +624,18 @@
       <workItem from="1476326116959" duration="25972000" />
       <workItem from="1476415127023" duration="3975000" />
       <workItem from="1476738687827" duration="3425000" />
-      <workItem from="1477119632829" duration="1749000" />
+      <workItem from="1477119632829" duration="3411000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="210428000" />
+    <option name="totallyTimeSpent" value="212090000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="15" y="66" width="1902" height="1014" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22972973" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22972973" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -643,38 +668,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/htdocs/bsw2/application/controllers/Selecting.php</url>
-          <line>20</line>
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="1" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/models/Order_items_model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/Checkout_model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/system/helpers/email_helper.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="637">
-          <caret line="79" column="23" selection-start-line="79" selection-start-column="13" selection-end-line="79" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/system/libraries/Email.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="263">
@@ -1016,8 +1014,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/htdocs/bsw2/htdocs/themes/default/template.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="81" column="4" selection-start-line="81" selection-start-column="4" selection-end-line="81" selection-end-column="4" />
+        <state relative-caret-position="318">
+          <caret line="76" column="94" selection-start-line="76" selection-start-column="20" selection-end-line="76" selection-end-column="94" />
           <folding />
         </state>
       </provider>
@@ -1025,7 +1023,31 @@
     <entry file="file://$PROJECT_DIR$/htdocs/bsw2/application/config/config.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
-          <caret line="25" column="43" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="43" />
+          <caret line="25" column="45" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/htdocs/bsw2/application/controllers/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="46" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/htdocs/bsw2/application/controllers/Welcome.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="18" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/htdocs/bsw2/application/controllers/Selecting.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
         </state>
       </provider>

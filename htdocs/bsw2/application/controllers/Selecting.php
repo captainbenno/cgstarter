@@ -12,6 +12,10 @@ class Selecting extends Public_Controller {
         // load the language file
         $this->load->model('entry_model');
         $this->lang->load('welcome');
+        if ($this->session->userdata('logged_in')['user_type'] == 'Judge') {
+            redirect(base_url() . "/judging");
+        }
+
     }
 
 
