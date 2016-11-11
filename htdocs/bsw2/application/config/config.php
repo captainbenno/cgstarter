@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://cgstarter.local/bsw2/htdocs/';
+$config['base_url'] = 'http://cgstarter.com/bsw2/htdocs/';
 
 /*
 |--------------------------------------------------------------------------
