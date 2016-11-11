@@ -162,9 +162,27 @@ class Entry_model extends CI_Model
 
     }
 
+    function get_all_entries_ordered_final(){
+        $sql = "
+            SELECT (SELECT sum(position) FROM votes WHERE art_id = entry.art_id) AS position,
+                entry.*
+            FROM entry
+            WHERE status = 2
+            HAVING position IS NOT NULL
+            ORDER BY category_title, -position DESC
+        ";
+
+        $query = $this->db->query($sql);
+
+        $return_data = $query->result_array();
+
+        return $return_data;
+
+    }
+
     function get_all_entries_ordered($cat,$status){
         $sql = "
-            SELECT (SELECT position FROM votes WHERE art_id = entry.art_id) AS position,
+            SELECT (SELECT sum(position) FROM votes WHERE art_id = entry.art_id) AS position,
                 entry.*
             FROM {$this->_db}
             WHERE category_title = " . $this->db->escape($cat) . "
