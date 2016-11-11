@@ -117,6 +117,7 @@ function translate_status($status)
                 echo "<li aria-data='".$entry['art_id']."' ><table class='table'>
                             <tr>
                                 <td>Image</td>
+                                <td>Tally</td>
                                 <td>Status</td>
                                 <td>CGS Art ID</td>
                                 <td>Category</td>
@@ -129,6 +130,7 @@ function translate_status($status)
                                 <td>
                                     <img class='zoombtn' aria-data-image='".$entry['image_large']."' aria-data='".$entry['art_id']."' style='width:120px;' src='".str_replace("_large.jpg","_thumb.jpg",$entry['image_large'])."'>
                                 </td>
+                                <td>".$entry['position']."</td>
                                 <td>".translate_status($entry['status'])."</td>
                                 <td>".$entry['art_id']."</td>
                                 <td>".$entry['category_title']."</td>
@@ -141,6 +143,7 @@ function translate_status($status)
                         </table>
                     </li>";
             }
+
         }
         ?>
     </ol>

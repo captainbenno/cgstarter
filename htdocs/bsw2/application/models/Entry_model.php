@@ -164,12 +164,12 @@ class Entry_model extends CI_Model
 
     function get_all_entries_ordered_final(){
         $sql = "
-            SELECT (SELECT sum(position) FROM votes WHERE art_id = entry.art_id) AS position,
+            SELECT (SELECT sum(11-position) FROM votes WHERE art_id = entry.art_id) AS position,
                 entry.*
             FROM entry
             WHERE status = 2
-            HAVING position IS NOT NULL
-            ORDER BY category_title, -position DESC
+            HAVING position IS NOT NULL OR position > 0
+            ORDER BY category_title, position DESC
         ";
 
         $query = $this->db->query($sql);
