@@ -56,4 +56,3 @@ Founder and Director Ballistic Media.</p>
    </div>
     <!-- end the pledges and data columns -->
 </div>
-<!-- end of
