@@ -1,203 +1,61 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
 
-    $this->load->helper('date');
+$this->load->helper('date');
 
 ?>
 
 <!-- beginning of hero -->
-    <div id="project-hero" class="container-fluid" style="background-image:url(/themes/default/img/expose-hero.jpg);">
-        <div class="row" id="project-main-logo">
-            <div class="col-md-1"></div>
-            <div class="col-md-2" id="project-logo">
-            </div>
-            <div class="col-md-8" id="project-title">
-                <h1 class="klavika-regular"><span>Project:</span> <?php echo $project['title'] ?></h1>
-            </div>
-            <div class="col-md-1"></div>
-        </div>            
+<div id="project-hero" class="container-fluid" style="background-image:url(/themes/default/img/expose-hero.jpg);">
+    <div class="row" id="project-main-logo">
+        <div class="col-md-1"></div>
+        <div class="col-md-2" id="project-logo">
+        </div>
+        <div class="col-md-8" id="project-title">
+            <h1 class="klavika-regular"><span>Project:</span> <?php echo $project['title'] ?></h1>
+        </div>
+        <div class="col-md-1"></div>
     </div>
-    <!-- end of hero -->
+</div>
+<!-- end of hero -->
+<!-- beginning of project info -->
+<div id="project-info" class="container-fluid">
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <h2 class="klavika-bold"><span>Project:</span> <?php echo $project['title'] ?> - REBOOT</h2>
+            <!-- beginning of project video -->
+            <!-- end of project video -->
+            <!-- start of project tabs -->
+            <div id="project-tabs">
+               <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="what">
+<h2>EXPOSÉ 12 reboot.</h2>
+<blockquote>You spoke and we listened.</blockquote>
+
+<p>A lot of people told us they love us but they won’t order until they know what’s in the book.
+It also took a lot longer to categorize the images and complete the judging.
+We have started the book layout and by late December we will have page layouts to show everyone.</p>
+
+                        <p>So, we are going to close the EXPOSÉ 12 campaign and then reopen it late in December…</p>
+
+                        <p>We have offered all the early backers a special offer for their support and having to wait even longer.</p>
+
+                        <p>What we can tell you is that we received about 7,000 fantastic entries which have been categorized and judged. There is just as much interest in EXPOSÉ as ever. One change we are implementing is an expansion of the categories which will mean we can recognize and honour more winners. We will also be doing at least one eBook edition so we can feature more of the awesome artists and the work submitted… EXPOSÉ 12 is going to be fantastic!
+We had many unplanned delays due to a complete re-write of our entry and judging systems, but our layout, printing and packaging are all going to be the same as our previous books – the best in the world.</p>
 
 
-    <!-- beginning of pledge row -->
-    <div id="pledge-row" class="container-fluid">
-        <div class="row">
-            <div class="col-md-2"></div>
-            <div class="col-md-5">
-                <h3>Project Goal</h3>
-                <div class="progress">
-                    <?php
-                        if($project['goal_achievement']['achievement_percentage'] > 0){
-                            $achievement_percentage = $project['goal_achievement']['achievement_percentage'];
-                        }else{
-                            $achievement_percentage = 1;
-                        }
-                    ?>
-                    <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="<?php echo $achievement_percentage ?>" aria-valuemin="0" aria-valuemax="100" style="width: <?php echo $achievement_percentage ?>%">
-                        <span class="sr-only"><?php echo $achievement_percentage ?>% Complete (success)</span>
+                        <p>From the whole Ballistic Publishing team.<br>
+Mark Snoswell,<br>
+Founder and Director Ballistic Media.</p>
                     </div>
-                </div>
-            </div>
-            <!--div class="col-md-3" id="back-project">
-                <button>Back Project</button>
-            </div-->
-            <div class="col-md-2"></div>
-        </div>            
+               </div>
     </div>
-    <!-- end of pledge row -->
-    
-    <!-- beginning of project info -->
-    <div id="project-info" class="container-fluid">
-        <div class="row">
-            <div class="col-md-2"></div>
-            <div class="col-md-5">
-                <h2 class="klavika-bold"><span>Project:</span> <?php echo $project['title'] ?></h2>
-                <!-- beginning of project video -->
-                <div class="embed-responsive embed-responsive-16by9 top-image">
-                    <img src="/themes/default/img/expose12/14224836_10153829056433148_9072124840330807846_n.jpg" style="width: 765px;">
-                    <!--iframe class="embed-responsive-item" src="//www.youtube.com/embed/cgD8fJlkLqk"></iframe -->
-                </div>
-                <!-- end of project video -->
-                <!-- start of project tabs -->
-                <div id="project-tabs">
-                    <!-- Nav tabs -->
-                    <ul class="nav nav-tabs" role="tablist">
-                        <li role="presentation" class="active"><a href="#what" aria-controls="what" role="tab" data-toggle="tab">What is this project?</a></li>                   
-                        <li role="presentation"><a href="#updates" aria-controls="updates" role="tab" data-toggle="tab">Updates</a></li>
-                        <li role="presentation"><a href="#backers" aria-controls="backers" role="tab" data-toggle="tab">Backers</a></li>
-                        <li role="presentation"><a href="#comments" aria-controls="comments" role="tab" data-toggle="tab">Comments</a></li>
-                    </ul>
+            </div>
 
-                    <!-- Tab panes -->
-                    <div class="tab-content">
-                        <div role="tabpanel" class="tab-pane active" id="what">
-
-
-                            <style type="text/css">
-                                /* Container DIV - automatically generated */
-                                .simply-scroll-container {
-                                    position: relative;
-                                }
-
-                                /* Clip DIV - automatically generated */
-                                .simply-scroll-clip {
-                                    position: relative;
-                                    overflow: hidden;
-                                }
-
-                                /* UL/OL/DIV - the element that simplyScroll is inited on
-                                Class name automatically added to element */
-                                .simply-scroll-list {
-                                    overflow: hidden;
-                                    margin: 0;
-                                    padding: 0;
-                                    list-style: none;
-                                }
-
-                                .simply-scroll-list li {
-                                    padding: 0;
-                                    margin: 0;
-                                    list-style: none;
-                                }
-
-                                .simply-scroll-list li img {
-                                    border: none;
-                                    display: block;
-                                }
-
-                                /* Custom class modifications - adds to / overrides above
-
-                                .simply-scroll is default base class */
-
-                                /* Container DIV */
-                                .simply-scroll {
-                                    width: 750px;
-                                    height: 130px;
-                                    margin-bottom: 1em;
-                                }
-
-                                /* Clip DIV */
-                                .simply-scroll .simply-scroll-clip {
-                                    width: 750px;
-                                    height: 130px;
-                                }
-
-                                /* Explicitly set height/width of each list item */
-                                .simply-scroll .simply-scroll-list li {
-                                    float: left; /* Horizontal scroll only */
-                                    width: 100px;
-                                    height: 130px;
-                                }
-
-                                .simply-scroll .simply-scroll-list li #booktitle{
-                                    display:none;
-                                }
-
-                                .am-wrapper{
-                                    float:left;
-                                    position:relative;
-                                    overflow:hidden;
-                                }
-                                .am-wrapper img{
-                                    position:absolute;
-                                    outline:none;
-                                }
-
-                            </style>
-
-                            <script type="text/javascript" src="https://ballisticpublishing.com/jquery.simplyscroll.js"></script>
-
-                            <script type="text/javascript">
-                                $(document).ready(function() {
-                                        $("#scroller").simplyScroll({autoMode: 'bounce'});
-
-
-                                    var $container 	= $('#am-container'),
-                                        $imgs		= $container.find('img').hide(),
-                                        totalImgs	= $imgs.length,
-                                        cnt			= 0;
-
-                                    $imgs.each(function(i) {
-                                        var $img	= $(this);
-                                        $('<img/>').load(function() {
-                                            ++cnt;
-                                            if( cnt === totalImgs ) {
-                                                $imgs.show();
-                                                $container.montage({
-                                                    fixedHeight : 60
-                                                });
-
-                                                /*
-                                                 * just for this demo:
-                                                 */
-                                                $('#overlay').fadeIn(500);
-                                            }
-                                        }).attr('src',$img.attr('src'));
-                                    });
-
-                                    $('#am-container img').click(function(){
-                                        $('#zoom').modal();
-                                        largeimage = $(this).attr("src");
-                                        $('#image-zoom').attr('src',largeimage);
-                                    })
-
-                                });
-                            </script>
-
-                            <!-- Modal -->
-                            <div class="modal fade" id="zoom" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                                <div class="modal-dialog modal-lg" role="document">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                            <h4 class="modal-title" id="myModalLabel">EXPOSÉ 12</h4>
-                                        </div>
-                                        <div class="modal-body">
-                                            <img id="image-zoom" src="" style="margin:0 auto;width:100%"/>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+   <div class="col-md-2"></div>
+   </div>
+    <!-- end the pledges and data columns -->
+</div>
 
                             <ul id="scroller">
 
@@ -354,22 +212,8 @@
                             digital art book publisher with over 50 books published and delivered globally over the last
                             decade.</p>
                             <div id="panel" class="panel hide"></div>
-
-                            <div class="am-container" id="am-container" style="margin: 0px auto;clear: both;width: 790px;float: left;margin-bottom: 20px;">
-                                <?php
-
-                                if ($handle = opendir('../htdocs/themes/default/img/expose12/')) {
-
-                                    while (false !== ($entry = readdir($handle))) {
-
-                                        if ($entry != "." && $entry != "..") {
-
-                                            echo '<a href="#"><img src="/themes/default/img/expose12/'.$entry.'" /></a>';
-                                        }
-                                    }
-                                    closedir($handle);
-                                }
-                                ?>
+                               <div class="am-container" id="am-container" style="margin: 0px auto;clear: both;width: 790px;float: left;margin-bottom: 20px;">
+                                <a href="#" class="am-wrapper" style="width: 68px; height: 60px; margin: 1px;"><img src="/themes/default/img/expose12/13872790_10153774456743148_1906023756860543075_n.jpg" class="montage" style="display: inline; width: 70px; height: 102px; left: 0px; top: -21px;"></a><a href="#" class="am-wrapper" style="width: 78px; height: 60px; margin: 1px;"><img src="/themes/default/img/expose12/13879410_10153753621983148_6615941756682465926_n.jpg" class="montage" style="display: inline; width: 80px; height: 60px; left: 0px; top: 0px;"></a><a href="#" class="am-wrapper" style="width: 119px; height: 60px; margin: 1px;"><img src="/themes/default/img/expose12/13882264_10153750721943148_1051106209812809606_n.jpg" class="montage" style="display: inline; width: 121px; height: 60px; left: 0px; top: 0px;"></a><a href="#" class="am-wrapper" style="width: 68px; height: 60px; margin: 1px;"><img src="/themes/default/img/expose12/13886309_10153770544393148_2746566316551961233_n.jpg" class="montage" style="display: inline; width: 70px; height: 82px; left: 0px; top: -11px;"></a><a href="#" class="am-wrapper" style="width: 68px; height: 60px; margin: 1px;"><img src="/themes/default/img/expose12/13900175_10153783111228148_4538805064782890229_n.jpg" class="montage" style="display: inline; width: 70px; height: 92px; left: 0px; top: -16px;"></a><a href="#" class="am-wrapper" style="width: 78px; height: 60px; margin: 1px;"><img src="/themes/default/img/expose12/13901418_10153781741353148_845731350748181366_n.jpg" class="montage" style="display: inline; width: 80px; height: 60px; left: 0px; top: 0px;"></a><a href="#" class="am-wrapper" style="width: 68px; height: 60px; margin: 1px;"><img src="/themes/default/img/expose12/13903372_10153770543663148_507449102410004884_n.jpg" class="montage" style="display: inline; width: 70px; height: 94px; left: 0px; top: -17px;"></a><a href="#" class="am-wrapper" style="width: 130px; height: 60px; margin: 1px;"><img src="/themes/default/img/expose12/13906873_10153750721988148_582577767859660158_n.jpg" class="montage" style="display: inline; width: 132px; height: 60px; left: 0px; top: 0px;"></a><a href="#" class="am-wrapper" style="width: 95px; height: 60px; margin: 1px;"><img src="/themes/default/img/expose12/13912479_10153787279133148_7346240233533978565_n.jpg" class="montage" style="display: inline; width: 141px; height: 60px; left: -22px; top: 0px;"></a><a href="#" class="am-wrapper" style="width: 68px; height: 60px; margin: 1px;"><img src="/themes/default/img/expose12/13912759_10153789066788148_8516337506373070810_n.jpg" class="montage" style="display: inline; width: 70px; height: 99px; left: 0px; top: -19.5px;"></a><a href="#" class="am-wrapper" style="width: 112px; height: 60px; margin: 1px;"><img src="/themes/default/img/expose12/13920638_10153777120588148_7897501236653282934_n.jpg" class="montage" style="display: inline; width: 114px; height: 60px; left: 0px; top: 0px;"></a><a href="#" class="am-wrapper" style="width: 89px; height: 60px; margin: 1px;"><img src="/themes/default/img/expose12/13920746_10153781741123148_7518944671669265045_n.jpg" class="montage" style="display: inline; width: 91px; height: 60px; left: 0px; top: 0px;"></a><a href="#" class="am-wrapper" style="width: 118px; height: 60px; margin: 1px;"><img src="/themes/default/img/expose12/13921177_10153753621868148_2403721406456297315_n.jpg" class="montage" style="display: inline; width: 120px; height: 60px; left: 0px; top: 0px;"></a><a href="#" class="am-wrapper" style="width: 68px; height: 60px; margin: 1px;"><img src="/themes/default/img/expose12/13924859_10153777120318148_1711300881422264705_n.jpg" class="montage" style="display: inline; width: 70px; height: 115px; left: 0px; top: -27.5px;"></a><a href="#" class="am-wrapper" style="width: 93px; height: 60px; margin: 1px;"><img src="/themes/default/img/expose12/13925050_10153774456893148_7990639775230664065_n.jpg" class="montage" style="display: inline; width: 95px; height: 60px; left: 0px; top: 0px;"></a><a href="#" class="am-wrapper" style="width: 80px; height: 60px; margin: 1px;"><img src="/themes/default/img/expose12/13934908_10153795827598148_3020973070782876065_n.jpg" class="montage" style="display: inline; width: 82px; height: 60px; left: 0px; top: 0px;"></a><a href="#" class="am-wrapper" style="width: 68px; height: 60px; margin: 1px;"><img src="/themes/default/img/expose12/13938592_10153787279053148_8892204210147324620_n.jpg" class="montage" style="display: inline; width: 70px; height: 109px; left: 0px; top: -24.5px;"></a><a href="#" class="am-wrapper" style="width: 74px; height: 60px; margin: 1px;"><img src="/themes/default/img/expose12/13962596_10153783111033148_3348847587943847872_n.jpg" class="montage" style="display: inline; width: 78px; height: 119px; left: -1px; top: -29.5px;"></a><a href="#" class="am-wrapper" style="width: 68px; height: 60px; margin: 1px;"><img src="/themes/default/img/expose12/14045860_10153809434663148_2862155351201992848_n.jpg" class="montage" style="display: inline; width: 70px; height: 102px; left: 0px; top: -21px;"></a><a href="#" class="am-wrapper" style="width: 68px; height: 60px; margin: 1px;"><img src="/themes/default/img/expose12/14051636_10153789066053148_6506720004450657618_n.jpg" class="montage" style="display: inline; width: 70px; height: 100px; left: 0px; top: -20px;"></a><a href="#" class="am-wrapper" style="width: 68px; height: 60px; margin: 1px;"><img src="/themes/default/img/expose12/14063734_10153795827513148_3438502901981800590_n.jpg" class="montage" style="display: inline; width: 70px; height: 140px; left: 0px; top: -40px;"></a><a href="#" class="am-wrapper" style="width: 68px; height: 60px; margin: 1px;"><img src="/themes/default/img/expose12/14068092_10153816785783148_4718770694313276085_n.jpg" class="montage" style="display: inline; width: 70px; height: 92px; left: 0px; top: -16px;"></a><a href="#" class="am-wrapper" style="width: 68px; height: 60px; margin: 1px;"><img src="/themes/default/img/expose12/14079823_10153824959318148_7351771825983506170_n.jpg" class="montage" style="display: inline; width: 70px; height: 87px; left: 0px; top: -13.5px;"></a><a href="#" class="am-wrapper" style="width: 98px; height: 60px; margin: 1px;"><img src="/themes/default/img/expose12/14079883_10153819947658148_3817416882655497985_n.jpg" class="montage" style="display: inline; width: 100px; height: 60px; left: 0px; top: 0px;"></a><a href="#" class="am-wrapper" style="width: 68px; height: 60px; margin: 1px;"><img src="/themes/default/img/expose12/14080052_10153817594963148_4181347162758260117_n.jpg" class="montage" style="display: inline; width: 70px; height: 105px; left: 0px; top: -22.5px;"></a><a href="#" class="am-wrapper" style="width: 68px; height: 60px; margin: 1px;"><img src="/themes/default/img/expose12/14089241_10153816784703148_650186271296160207_n.jpg" class="montage" style="display: inline; width: 70px; height: 94px; left: 0px; top: -17px;"></a><a href="#" class="am-wrapper" style="width: 68px; height: 60px; margin: 1px;"><img src="/themes/default/img/expose12/14095876_10153809434818148_1403515655630973455_n.jpg" class="montage" style="display: inline; width: 70px; height: 94px; left: 0px; top: -17px;"></a><a href="#" class="am-wrapper" style="width: 126px; height: 60px; margin: 1px;"><img src="/themes/default/img/expose12/14100249_10153817595763148_3879336397808585660_n.jpg" class="montage" style="display: inline; width: 130px; height: 181px; left: -1px; top: -60.5px;"></a><a href="#" class="am-wrapper" style="width: 68px; height: 60px; margin: 1px;"><img src="/themes/default/img/expose12/14102276_10153805002008148_6167233258594752688_n.jpg" class="montage" style="display: inline; width: 70px; height: 102px; left: 0px; top: -21px;"></a><a href="#" class="am-wrapper" style="width: 109px; height: 60px; margin: 1px;"><img src="/themes/default/img/expose12/14102378_10153820498583148_2918269597781455194_n.jpg" class="montage" style="display: inline; width: 111px; height: 60px; left: 0px; top: 0px;"></a><a href="#" class="am-wrapper" style="width: 150px; height: 60px; margin: 1px;"><img src="/themes/default/img/expose12/14102626_10153828695148148_2153682205006870429_n.jpg" class="montage" style="display: inline; width: 152px; height: 60px; left: 0px; top: 0px;"></a><a href="#" class="am-wrapper" style="width: 86px; height: 60px; margin: 1px;"><img src="/themes/default/img/expose12/14102634_10153824735718148_7048972468692275129_n.jpg" class="montage" style="display: inline; width: 88px; height: 60px; left: 0px; top: 0px;"></a><a href="#" class="am-wrapper" style="width: 90px; height: 60px; margin: 1px;"><img src="/themes/default/img/expose12/14102710_10153819010493148_3081017672253478811_n.jpg" class="montage" style="display: inline; width: 92px; height: 60px; left: 0px; top: 0px;"></a><a href="#" class="am-wrapper" style="width: 120px; height: 60px; margin: 1px;"><img src="/themes/default/img/expose12/14124297_10153805001753148_5335758275751086849_o.jpg" class="montage" style="display: inline; width: 122px; height: 60px; left: 0px; top: 0px;"></a><a href="#" class="am-wrapper" style="width: 68px; height: 60px; margin: 1px;"><img src="/themes/default/img/expose12/14141674_10153828021098148_7923691616819555816_n.jpg" class="montage" style="display: inline; width: 70px; height: 109px; left: 0px; top: -24.5px;"></a><a href="#" class="am-wrapper" style="width: 81px; height: 60px; margin: 1px;"><img src="/themes/default/img/expose12/14183701_10153822610578148_6733821304211141739_n.jpg" class="montage" style="display: inline; width: 85px; height: 122px; left: -1px; top: -31px;"></a><a href="#" class="am-wrapper" style="width: 68px; height: 60px; margin: 1px;"><img src="/themes/default/img/expose12/14184416_10153833793068148_2168023438901827927_n.jpg" class="montage" style="display: inline; width: 70px; height: 89px; left: 0px; top: -14.5px;"></a><a href="#" class="am-wrapper" style="width: 108px; height: 60px; margin: 1px;"><img src="/themes/default/img/expose12/14192117_10153831293458148_2017099051404181381_n.jpg" class="montage" style="display: inline; width: 110px; height: 60px; left: 0px; top: 0px;"></a><a href="#" class="am-wrapper" style="width: 104px; height: 60px; margin: 1px;"><img src="/themes/default/img/expose12/14192688_10153846948593148_5783828395776633375_n.jpg" class="montage" style="display: inline; width: 106px; height: 60px; left: 0px; top: 0px;"></a><a href="#" class="am-wrapper" style="width: 68px; height: 60px; margin: 1px;"><img src="/themes/default/img/expose12/14202667_10153822151543148_6148884740815352792_n.jpg" class="montage" style="display: inline; width: 70px; height: 94px; left: 0px; top: -17px;"></a><a href="#" class="am-wrapper" style="width: 68px; height: 60px; margin: 1px;"><img src="/themes/default/img/expose12/14203195_10153822458568148_3265111113517786033_n.jpg" class="montage" style="display: inline; width: 70px; height: 99px; left: 0px; top: -19.5px;"></a><a href="#" class="am-wrapper" style="width: 124px; height: 60px; margin: 1px;"><img src="/themes/default/img/expose12/14203296_10153835656078148_1977844036707400277_n.jpg" class="montage" style="display: inline; width: 126px; height: 60px; left: 0px; top: 0px;"></a><a href="#" class="am-wrapper" style="width: 105px; height: 60px; margin: 1px;"><img src="/themes/default/img/expose12/14203363_10153832951338148_6676062960138162240_n.jpg" class="montage" style="display: inline; width: 107px; height: 60px; left: 0px; top: 0px;"></a><a href="#" class="am-wrapper" style="width: 127px; height: 60px; margin: 1px;"><img src="/themes/default/img/expose12/14212563_10153827397698148_8435108648615800564_n.jpg" class="montage" style="display: inline; width: 131px; height: 99px; left: -1px; top: -19.5px;"></a><a href="#" class="am-wrapper" style="width: 68px; height: 60px; margin: 1px;"><img src="/themes/default/img/expose12/14224836_10153829056433148_9072124840330807846_n.jpg" class="montage" style="display: inline; width: 70px; height: 106px; left: 0px; top: -23px;"></a><a href="#" class="am-wrapper" style="width: 86px; height: 60px; margin: 1px;"><img src="/themes/default/img/expose12/14232428_10153840877593148_8399673167426137417_n.jpg" class="montage" style="display: inline; width: 88px; height: 60px; left: 0px; top: 0px;"></a><a href="#" class="am-wrapper" style="width: 68px; height: 60px; margin: 1px;"><img src="/themes/default/img/expose12/14232630_10153848446403148_5943438668675053910_n.jpg" class="montage" style="display: inline; width: 70px; height: 98px; left: 0px; top: -19px;"></a><a href="#" class="am-wrapper" style="width: 104px; height: 60px; margin: 1px;"><img src="/themes/default/img/expose12/14237717_10153846951363148_7347908985822053597_n.jpg" class="montage" style="display: inline; width: 106px; height: 60px; left: 0px; top: 0px;"></a><a href="#" class="am-wrapper" style="width: 68px; height: 60px; margin: 1px;"><img src="/themes/default/img/expose12/14238244_10153845183393148_8834149606271388129_n.jpg" class="montage" style="display: inline; width: 70px; height: 113px; left: 0px; top: -26.5px;"></a><a href="#" class="am-wrapper" style="width: 121px; height: 60px; margin: 1px;"><img src="/themes/default/img/expose12/14291805_10153856556698148_5651811825821812862_n.jpg" class="montage" style="display: inline; width: 123px; height: 60px; left: 0px; top: 0px;"></a><a href="#" class="am-wrapper" style="width: 68px; height: 60px; margin: 1px;"><img src="/themes/default/img/expose12/14322373_10153860024698148_8613833752456851053_n.jpg" class="montage" style="display: inline; width: 70px; height: 94px; left: 0px; top: -17px;"></a><a href="#" class="am-wrapper" style="width: 68px; height: 60px; margin: 1px;"><img src="/themes/default/img/expose12/14344887_10153879998913148_7939631795535404316_n.jpg" class="montage" style="display: inline; width: 70px; height: 122px; left: 0px; top: -31px;"></a><a href="#" class="am-wrapper" style="width: 119px; height: 60px; margin: 1px;"><img src="/themes/default/img/expose12/14355679_10153863032993148_4057397555162460915_n.jpg" class="montage" style="display: inline; width: 123px; height: 204px; left: -1px; top: -72px;"></a><a href="#" class="am-wrapper" style="width: 68px; height: 60px; margin: 1px;"><img src="/themes/default/img/expose12/14355754_10153884891678148_5647527341700998696_n.jpg" class="montage" style="display: inline; width: 70px; height: 102px; left: 0px; top: -21px;"></a><a href="#" class="am-wrapper" style="width: 98px; height: 60px; margin: 1px;"><img src="/themes/default/img/expose12/14364853_10153874793533148_5360104011959170704_n.jpg" class="montage" style="display: inline; width: 100px; height: 60px; left: 0px; top: 0px;"></a><a href="#" class="am-wrapper" style="width: 68px; height: 60px; margin: 1px;"><img src="/themes/default/img/expose12/14432947_10153876434343148_6424382760497635878_n.jpg" class="montage" style="display: inline; width: 70px; height: 105px; left: 0px; top: -22.5px;"></a><a href="#" class="am-wrapper" style="width: 68px; height: 60px; margin: 1px;"><img src="/themes/default/img/expose12/14446045_10153887243748148_6741535030241775927_n.jpg" class="montage" style="display: inline; width: 70px; height: 125px; left: 0px; top: -32.5px;"></a><a href="#" class="am-wrapper" style="width: 68px; height: 60px; margin: 1px;"><img src="/themes/default/img/expose12/14449930_10153886257943148_1879724144203128516_n.jpg" class="montage" style="display: inline; width: 70px; height: 93px; left: 0px; top: -16.5px;"></a>                           
                             </div>
 
                             <h3>Affordable shipping!</h3>
@@ -549,196 +393,3 @@
                             <p>With the re-launch of Ballistic we are excited to bring a whole range of new products and benefits...</p>
                             <p><strong>EXTENDED editions are eBook extensions</strong> to the printed books. Every year we get over 6,000 entries but we only have room for 300 or so images in the books. With EXPOSÉ 12 we will bring out an extended edition as an eBook in the first quarter after the print book ships. It will feature an additional 300 or more artists in the same format as the print book.</p>
                             <p><strong>MEMBERSHIP</strong> includes a year’s exclusive access to artists, judges and other industry leaders via a series of monthly webinars through the year. Membership will also give you access and discounts for the growing range of EXPOSÉ products being released over the next 12 months.</p>
-
-                            <?php //echo $project['description'] ?>
-
-
-                        </div>
-                        <div role="tabpanel" class="tab-pane" id="updates">
-                            <?php 
-                                foreach ($project['project_news'] as $project_news) { ?>
-                                    <div class="project-update">
-                                        <h4><?php echo  $project_news['title']?></h4>
-                                        <p>
-                                            <?php echo  $project_news['description']?>
-                                        </p>
-                                        <h6>posted: <?php echo  $project_news['first_name']?> <?php echo  $project_news['last_name']?> ,  <?php echo date( 'd-m-Y H:i', strtotime( $project_news['create_date']) ); ?></h6>
-                                    </div>
-                                    <hr />
-                            <?php 
-                                }
-                            ?>
-                        </div>
-                        <div role="tabpanel" class="tab-pane" id="backers">
-                            <ul>
-                                <?php 
-                                    foreach ($project['backers'] as $backer) { ?>
-                                        <li>
-                                            <img src="https://www.gravatar.com/avatar/<?php echo md5( strtolower( trim( $backer['email'] ) ) ); ?>?s=60" /> <?php echo  $backer['first_name']?> <?php echo  $backer['last_name']?> - <?php echo  $backer['billing_country']?> <br />
-                                            
-                                            <em><?php
-
-                                            $seconds_remaining = now() - $backer['backer_timestamp'];
-                                            if($seconds_remaining<60){
-                                                echo "&gt; 1 minute to ago";
-                                            } else if($seconds_remaining<3600){
-                                                echo floor($seconds_remaining/60)."minutes ago";
-                                            } else if($seconds_remaining<86400){
-                                                echo floor($seconds_remaining/60/60)." hours ago";
-                                            } else if($seconds_remaining>=86400){
-                                                echo "".floor($seconds_remaining/60/60/24)." days ago";
-                                            } ?></em>
-                                        </li>
-                                <?php 
-                                    }
-                                ?>
-                            </ul>
-
-                        </div>
-                        <div role="tabpanel" class="tab-pane" id="comments">
-                            <div id="disqus_thread"></div>
-                            <script>
-                                /**
-                                 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                                 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                                 */
-                                /*
-                                var disqus_config = function () {
-                                    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-                                    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-                                };
-                                */
-                                (function() {  // DON'T EDIT BELOW THIS LINE
-                                    var d = document, s = d.createElement('script');
-                                    
-                                    s.src = '//cgstarter.disqus.com/embed.js';
-                                    
-                                    s.setAttribute('data-timestamp', +new Date());
-                                    (d.head || d.body).appendChild(s);
-                                })();
-                            </script>
-                            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-
-                        </div>
-                    </div>
-                    <!-- end of project tabs -->
-                    <!-- start of social media block -->
-                    <div id="social-media-block">
-                        <?php $socialLinks =  array('facebook','google','pinterest','twitter','instagram');
-                            foreach ($socialLinks as $socialLink) {
-                                if(strlen($project['url_'.$socialLink]) > 0){
-                                    echo '
-                                        <a href="'.$project['url_'.$socialLink].'" target="_blank" class="btn btn-social-icon btn-'.$socialLink.'">
-                                            <span class="fa fa-'.$socialLink.'"></span>
-                                        </a>
-                                    ';                                    
-                                }
-                            } 
-                        ?>
-                    </div>
-                    <!-- end of social media block -->
-                    <hr />
-                    <div id="project-leader">
-                        <h4 class="klavika-regular">Project Team</h4>
-
-                        <p style="padding-left: 0;">Ballistic Publishing is headed up by the same people that started the company over 12 years ago. We are also lucky to have most of our team still with us. Together the team has many decades of combined Publishing experience.</p>
-                        <ul>
-                        <?php
-                            foreach ($project['project_leaders'] as $project_leader) { ?>
-                                <li>
-                                    <?php if(file_exists('themes/default/img/user_'.$project_leader['user_id'].'.png')){ ?>
-                                        <?php echo '<img src="/themes/default/img/user_'.$project_leader['user_id'].'.png" />'; ?>
-                                    <?php }else{ ?>
-                                        <img src="https://www.gravatar.com/avatar/<?php echo md5( strtolower( trim( $project_leader['email'] ) ) ); ?>?s=60" />
-                                    <?php } ?>
-                                    <h6><b><?php echo  $project_leader['first_name']?> <?php echo  $project_leader['last_name']?></b></h6>
-                                    <p>
-                                        <?php echo  $project_leader['leader_profile']?>
-                                    </p>
-                                </li>
-                        <?php 
-                            }
-                        ?>
-                        </ul>
-
-                    </div>
-                    <hr />
-
-                </div>
-                <!-- end of the project manager -->
-            </div>
-            <!-- start the pledges and data columns -->
-            <div class="col-md-3" id="back-project">
-                <ul id="project-stats">
-                    <li id="stats-backer">
-                        <strong><?php echo $project['backers_total'] ?></strong>
-                        <em>Backers</em>
-                        <hr />
-                    </li>
-                    <li id="<?php if($project['goal_type'] == 'items'){ ?>stats-item<?php } else { ?>stats-total<?php } ?>">
-                        <strong><?php if($project['goal_achievement']['achievement_total']>0){echo $project['goal_achievement']['achievement_total'];}else{echo 0;}?></strong>
-                        <em>
-                            <?php if($project['goal_type'] == 'items'){ ?>
-                                Items sold of <?php echo  $project['goal']?> goal</em>
-                            <?php }else{ ?>
-                                Pledged of $<?php echo  $project['goal']?> goal</em>
-                            <?php } ?>
-                        <hr />
-                    </li>
-                    <li id="stats-days">
-                        <?php
-                            $seconds_remaining = strtotime($project['end_date']) -now();
-
-                            if($seconds_remaining<60){
-                                echo "<strong>&gt; 1</strong><em> minute to go</em>";
-                            } else if($seconds_remaining<3600){
-                                echo "<strong>".floor($seconds_remaining/60)."</strong><em> minutes to go</em>";
-                            } else if($seconds_remaining<86400){
-                                echo "<strong>".floor($seconds_remaining/60/60)."</strong><em> hours to go</em>";
-                            } else if($seconds_remaining>=86400){
-                                echo "<strong>".floor($seconds_remaining/60/60/24)."</strong><em> days to go</em>";
-                            }
-                        ?>
-                        <hr />
-                    </li>
-                </ul>
-
-                <h3>Your Rewards</h3>
-                <ul id="project-rewards">
-                    <?php 
-                        foreach ($project['project_rewards'] as $project_reward) { ?>
-                            <li>
-                                <h4><?php echo  $project_reward['title']?></h4>
-                                <em>
-                                    <?php if($project_reward['rrp']>0){
-                                        echo  "<span class='rrp'>($".$project_reward['rrp'].")</span>";
-                                    }?>
-                                    $<?php echo  $project_reward['price']?>
-                                    <span>
-                                    <?php if($project_reward['sold'] >= $project_reward['quantity']){ ?> 
-                                        SOLD OUT!
-                                    <?php } else { ?>
-					                    <?php if($project_reward['sold'] > 0){ echo '('.$project_reward['sold'].' sold)'; } ?>
-                                    <?php } ?> <br>
-                                        <?php if($project_reward['shipping']>0){ ?>
-                                        shipping $<?php echo  $project_reward['shipping']?>
-                                    <?php } ?>
-                                </span>
-                                </em>
-                                <!-- img src="<?php echo  $project_reward['teaser_image']?>" / -->
-                                <p class="reward_teasertext"><?php echo  $project_reward['teaser_text']?></p>
-                                <a href="/cart/<?php echo  $project_reward['project_reward_id']?>" class="btn<?php if($project_reward['sold'] >= $project_reward['quantity']){ echo ' disabled'; } ?>" role="button">
-                                    BUY ME!
-                                </a>
-                            </li>
-                    <?php 
-                        }
-                    ?>
-
-                </ul>
-            </div>
-            <div class="col-md-2"></div>
-        </div>  
-        <!-- end the pledges and data columns -->          
-    </div>
-    <!-- end of pledge row -->

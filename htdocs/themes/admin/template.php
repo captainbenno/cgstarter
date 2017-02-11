@@ -20,7 +20,7 @@
             <?php endif; ?>
         <?php endforeach; ?>
     <?php endif; ?>
-
+    <link rel="stylesheet" href="/themes/admin/css/summernote.css?v=3.2.4">
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -31,7 +31,7 @@
 
     <?php // Fixed navbar ?>
     <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
+        <div class="container" style=>
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                     <span class="sr-only"><?php echo lang('core button toggle_nav'); ?></span>
@@ -39,12 +39,13 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/"><?php echo $this->settings->site_name; ?></a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <?php // Nav bar left ?>
                 <ul class="nav navbar-nav">
                     <li class="<?php echo (uri_string() == 'admin' OR uri_string() == 'admin/dashboard') ? 'active' : ''; ?>"><a href="<?php echo base_url('/admin'); ?>"><?php echo lang('admin button dashboard'); ?></a></li>
+                    <li class="<?php echo (uri_string() == 'admin' OR uri_string() == 'admin/project') ? 'active' : ''; ?>"><a href="<?php echo base_url('/admin/project'); ?>">Projects</a></li>
+                    <li class="<?php echo (uri_string() == 'admin' OR uri_string() == 'admin/orders') ? 'active' : ''; ?>"><a href="<?php echo base_url('/admin/orders'); ?>">Orders</a></li>
                     <li class="dropdown<?php echo (strstr(uri_string(), 'admin/users')) ? ' active' : ''; ?>">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><?php echo lang('admin button users'); ?> <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">

@@ -1,5 +1,32 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 
+<?php
+
+
+        $settings = array();
+        $settings[0]['is_numeric'] = 0;
+        $settings[0]['options'] = null;
+        $settings[0]['input_type'] = "input";// dropdown,textarea,input,radio,timezone
+        $settings[0]['input_size'] = "medium";//small,medium,large
+        $settings[0]['show_editor'] = false;
+        $settings[0]['help_text'] = "";
+        $settings[0]['validation'] = false;
+        $settings[0]['name'] = "title";
+        $settings[0]['label'] = "Project Name";
+        $settings[0]['value'] = 'asdasd';
+
+        $settings[1]['is_numeric'] = 0;
+        $settings[1]['options'] = null;
+        $settings[1]['input_type'] = "textarea";// dropdown,textarea,input,radio,timezone
+        $settings[1]['input_size'] = "large";//small,medium,large
+        $settings[1]['show_editor'] = true;
+        $settings[1]['help_text'] = "";
+        $settings[1]['validation'] = false;
+        $settings[1]['name'] = "description";
+        $settings[1]['label'] = "Content";
+        $settings[1]['value'] = htmlentities('asdad');
+
+?>
 <?php echo form_open('', array('role'=>'form')); ?>
 
     <?php foreach ($settings as $setting) : ?>

@@ -42,10 +42,22 @@ class Projects_model extends CI_Model {
     function get_all_projects()
     {
      //   $this->db->where('is_active', 1);        
-        $this->db->order_by('end_date', 'DESC');       
+   //     $this->db->order_by('end_date', 'DESC');       
         $query = $this->db->get($this->_db); 
-        $return_data = $query->result_array();
-        return $return_data;
+        if ($query->num_rows() > 0)
+        {
+            $results['results'] = $query->result_array();
+        }
+        else
+        {
+            $results['results'] = NULL;
+        }
+
+        $sql = "SELECT FOUND_ROWS() AS total";
+        $query = $this->db->query($sql);
+        $results['total'] = $query->row()->total;
+
+        return $results;
     }
 
     /**
@@ -188,5 +200,20 @@ class Projects_model extends CI_Model {
         return $current_timestamp - $end_date_timestamp;
     }
 
-#
+    function edit_project($form_data = array())
+    {
+
+        $data = array(
+        'title' => $form_data['title'],
+        'description' => $form_data['description']
+        );
+
+        $this->db->where('project_id', $form_data['project_id']);
+       $success = $this->db->update('projects', $data);
+
+        return true;
+
+
+    }
+
 }
