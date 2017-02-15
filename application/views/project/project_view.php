@@ -63,6 +63,8 @@
                     <!-- Nav tabs -->
                     <ul class="nav nav-tabs" role="tablist">
                         <li role="presentation" class="active"><a href="#what" aria-controls="what" role="tab" data-toggle="tab">What is this project?</a></li>                   
+                        <li role="presentation"><a href="#awards" aria-controls="awards" role="tab" data-toggle="tab">Awards</a></li>
+                        <li role="presentation"><a href="#layouts" aria-controls="layouts" role="tab" data-toggle="tab">Layouts</a></li>
                         <li role="presentation"><a href="#updates" aria-controls="updates" role="tab" data-toggle="tab">Updates</a></li>
                         <li role="presentation"><a href="#backers" aria-controls="backers" role="tab" data-toggle="tab">Backers</a></li>
                         <li role="presentation"><a href="#comments" aria-controls="comments" role="tab" data-toggle="tab">Comments</a></li>
@@ -212,8 +214,12 @@
 
 
                             <?php echo $project['description'] ?>
-</xmp>
-
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="awards">
+                            <?php require_once BASEPATH.'../htdocs/includes/awards.html' ?>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="layouts">
+                            <?php require_once BASEPATH.'../htdocs/includes/layouts.html' ?>
                         </div>
                         <div role="tabpanel" class="tab-pane" id="updates">
                             <?php 
