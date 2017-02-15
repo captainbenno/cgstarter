@@ -52,6 +52,20 @@ class Entry_model extends CI_Model
         $this->_db = 'entry';
     }
 
+    function get_id($art_id)
+    {
+        $sql = "
+            SELECT id
+            FROM {$this->_db}
+            WHERE art_id = " . $this->db->escape($art_id) . "
+            LIMIT 1
+        ";
+
+       return $this->db->query($sql)->row()->id;
+
+      //  return FALSE;
+    }
+
     function get_entry_by_index($index,$cat,$status)
     {
         $this->db->where('status', $status);
@@ -188,6 +202,25 @@ class Entry_model extends CI_Model
             WHERE category_title = " . $this->db->escape($cat) . "
             AND status = ". $this->db->escape($status)."
             ORDER BY -position DESC
+        ";
+
+        $query = $this->db->query($sql);
+
+        $return_data = $query->result_array();
+
+        return $return_data;
+
+    }
+
+
+    function get_missing_images(){
+        $user_id = $this->session->userdata('logged_in')['id'];
+        $sql = "
+            SELECT
+                entry.*
+            FROM {$this->_db}
+            WHERE 1=1
+            AND status NOT IN (2,3)
         ";
 
         $query = $this->db->query($sql);

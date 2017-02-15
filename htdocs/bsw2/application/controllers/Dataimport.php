@@ -59,7 +59,17 @@ class Dataimport extends Public_Controller
                             //save the data
                             $this->db->insert('entry', $entry_data);
                             echo "inserted</br>";
-                        }
+                        }else{
+			//	$this->db->query("YOUR QUERY")->row()->fieldname;
+				$id = $this->entry_model->get_id($entry_data['art_id']);
+				$entry_data_update = array();
+				$entry_data_update['title'] = $entry_data['title'];
+				$entry_data_update['description'] = $entry_data['description'];
+				$entry_data_update['csv_software'] = $entry_data['csv_software'];	
+				$entry_data_update['country'] = $entry_data['country'];
+				$this->db->where('id', $id);
+				$this->db->update('entry', $entry_data_update);
+			}
                         $new_entry=1;
                     }
                 }

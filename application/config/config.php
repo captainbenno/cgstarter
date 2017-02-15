@@ -154,7 +154,7 @@ $config['composer_autoload'] = FALSE;
 | Leave blank to allow all characters -- but only if you are insane.
 |
 | The configured value is actually a regular expression character group
-| and it will be executed as: ! preg_match(/'/^[<permitted_uri_chars>]+$/i
+| and it will be executed as: ! preg_match(/'/^[<permitted_uri_chars]+$/i
 |
 | DO NOT CHANGE THIS UNLESS YOU FULLY UNDERSTAND THE REPERCUSSIONS!!
 |
