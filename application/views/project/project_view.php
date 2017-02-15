@@ -343,15 +343,16 @@
                         <hr />
                     </li>
                     <li id="<?php if($project['goal_type'] == 'items'){ ?>stats-item<?php } else { ?>stats-total<?php } ?>">
-                        <strong><?php if($project['goal_achievement']['achievement_total']>0){echo $project['goal_achievement']['achievement_total'];}else{echo 0;}?></strong>
+                        <strong><?php if($project['goal_achievement']['achievement_total']>0){echo $project['goal']-$project['goal_achievement']['achievement_total'];}else{echo 0;}?> Remaining</strong> 
                         <em>
                             <?php if($project['goal_type'] == 'items'){ ?>
-                                Items sold of <?php echo  $project['goal']?> goal</em>
+                                <?php echo  $project['goal_achievement']['achievement_total']?> Items sold</em>
                             <?php }else{ ?>
                                 Pledged of $<?php echo  $project['goal']?> goal</em>
                             <?php } ?>
                         <hr />
                     </li>
+                    <?php /* ?>
                     <li id="stats-days">
                         <?php
                             $seconds_remaining = strtotime($project['end_date']) -now();
@@ -368,6 +369,7 @@
                         ?>
                         <hr />
                     </li>
+                    <?php */ ?>
                 </ul>
 
                 <h3>Your Rewards</h3>
