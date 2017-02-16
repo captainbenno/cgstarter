@@ -20,7 +20,7 @@
         $settings[1]['options'] = null;
         $settings[1]['input_type'] = "textarea";// dropdown,textarea,input,radio,timezone
         $settings[1]['input_size'] = "large";//small,medium,large
-        $settings[1]['show_editor'] = true;
+        $settings[1]['show_editor'] = false;
         $settings[1]['help_text'] = "";
         $settings[1]['validation'] = false;
         $settings[1]['name'] = "description";
