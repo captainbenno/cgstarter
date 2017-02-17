@@ -63,9 +63,10 @@
                     <!-- Nav tabs -->
                     <ul class="nav nav-tabs" role="tablist">
                         <li role="presentation" class="active"><a href="#what" aria-controls="what" role="tab" data-toggle="tab">What is this project?</a></li>                   
+ 			<li role="presentation"><a href="#updates" aria-controls="updates" role="tab" data-toggle="tab">Updates</a></li>
                         <li role="presentation"><a href="#awards" aria-controls="awards" role="tab" data-toggle="tab">Awards</a></li>
                         <li role="presentation"><a href="#layouts" aria-controls="layouts" role="tab" data-toggle="tab">Layouts</a></li>
-                        <li role="presentation"><a href="#updates" aria-controls="updates" role="tab" data-toggle="tab">Updates</a></li>
+                       
                         <li role="presentation"><a href="#backers" aria-controls="backers" role="tab" data-toggle="tab">Backers</a></li>
                         <li role="presentation"><a href="#comments" aria-controls="comments" role="tab" data-toggle="tab">Comments</a></li>
                     </ul>
@@ -202,7 +203,8 @@
                             </div>
 
                             <?php 
-                                $project_news = $project['project_news'][0] ?>
+                                /*
+				$project_news = $project['project_news'][0] ?>
                                     <div class="project-update">
                                         <h4><?php echo  $project_news['title']?></h4>
                                         <p>
@@ -211,7 +213,7 @@
                                         <h6>posted: <?php echo  $project_news['first_name']?> <?php echo  $project_news['last_name']?> ,  <?php echo date( 'd-m-Y H:i', strtotime( $project_news['create_date']) ); ?></h6>
                                     </div>
                                     <hr />
-
+				<?php */ ?>
 
                             <?php echo $project['description'] ?>
                         </div>
