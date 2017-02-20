@@ -69,3 +69,4 @@ $route['about']                = 'misc/about';
 $route['privacy']                = 'misc/privacy';
 $route['terms']                = 'misc/terms';
 $route['shipping']                = 'misc/shipping';
+$route['admin/news']            = 'admin/news/index';

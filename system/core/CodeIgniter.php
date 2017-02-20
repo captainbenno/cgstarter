@@ -400,7 +400,7 @@ if ( ! is_php('5.4'))
 	$method = $RTR->method;
 
 	if (empty($class) OR ! file_exists(APPPATH.'controllers/'.$RTR->directory.$class.'.php'))
-	{
+	{	
 		$e404 = TRUE;
 	}
 	else
@@ -409,6 +409,10 @@ if ( ! is_php('5.4'))
 
 		if ( ! class_exists($class, FALSE) OR $method[0] === '_' OR method_exists('CI_Controller', $method))
 		{
+
+		echo $class;
+		die;
+
 			$e404 = TRUE;
 		}
 		elseif (method_exists($class, '_remap'))

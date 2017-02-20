@@ -1,6 +1,6 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Project extends Admin_Controller {
+class News extends Admin_Controller {
 
     /**
      * @var string
@@ -20,11 +20,11 @@ class Project extends Admin_Controller {
 
         // load the users model
         $this->load->model('projects_model');
-        $this->load->model('projects_model');
+        $this->load->model('project_news_model');
 
         // set constants
         define('REFERRER', "referrer");
-        define('THIS_URL', base_url('admin/project'));
+        define('THIS_URL', base_url('admin/news'));
         define('DEFAULT_LIMIT', $this->settings->per_page_limit);
         define('DEFAULT_OFFSET', 0);
         define('DEFAULT_SORT', "last_name");
@@ -52,7 +52,6 @@ class Project extends Admin_Controller {
      */
     function index()
     {
-
         // get parameters
         $limit  = $this->input->get('limit')  ? $this->input->get('limit', TRUE)  : DEFAULT_LIMIT;
         $offset = $this->input->get('offset') ? $this->input->get('offset', TRUE) : DEFAULT_OFFSET;
@@ -122,14 +121,14 @@ class Project extends Admin_Controller {
         }
 
         // get list
-        $projects = $this->projects_model->get_all_projects($limit, $offset, $filters, $sort, $dir);
+        $news = $this->project_news_model->get_all_news($limit, $offset, $filters, $sort, $dir);
 
 
 
         // build pagination
         $this->pagination->initialize(array(
             'base_url'   => THIS_URL . "?sort={$sort}&dir={$dir}&limit={$limit}{$filter}",
-            'total_rows' => $projects['total'],
+            'total_rows' => $news['total'],
             'per_page'   => $limit
         ));
 
@@ -143,8 +142,8 @@ class Project extends Admin_Controller {
         // set content data
         $content_data = array(
             'this_url'   => THIS_URL,
-            'projects'      => $projects['results'],
-            'total'      => $projects['total'],
+            'news'      => $news['results'],
+            'total'      => $news['total'],
             'filters'    => $filters,
             'filter'     => $filter,
             'pagination' => $this->pagination->create_links(),
@@ -155,7 +154,7 @@ class Project extends Admin_Controller {
         );
 
         // load views
-        $data['content'] = $this->load->view('admin/projects/list', $content_data, TRUE);
+        $data['content'] = $this->load->view('admin/news/list', $content_data, TRUE);
         $this->load->view($this->template, $data);
     }
 
@@ -165,30 +164,25 @@ class Project extends Admin_Controller {
      */
     function add()
     {
-        // validators
-        $this->form_validation->set_error_delimiters($this->config->item('error_delimeter_left'), $this->config->item('error_delimeter_right'));
-        $this->form_validation->set_rules('username', lang('users input username'), 'required|trim|min_length[5]|max_length[30]|callback__check_username[]');
-        $this->form_validation->set_rules('first_name', lang('users input first_name'), 'required|trim|min_length[2]|max_length[32]');
-        $this->form_validation->set_rules('last_name', lang('users input last_name'), 'required|trim|min_length[2]|max_length[32]');
-        $this->form_validation->set_rules('email', lang('users input email'), 'required|trim|max_length[128]|valid_email|callback__check_email[]');
-        $this->form_validation->set_rules('language', lang('users input language'), 'required|trim');
-        $this->form_validation->set_rules('status', lang('users input status'), 'required|numeric');
-        $this->form_validation->set_rules('is_admin', lang('users input is_admin'), 'required|numeric');
-        $this->form_validation->set_rules('password', lang('users input password'), 'required|trim|min_length[5]');
-        $this->form_validation->set_rules('password_repeat', lang('users input password_repeat'), 'required|trim|matches[password]');
+
+
+        $this->form_validation->set_rules('title', '', 'required');
 
         if ($this->form_validation->run() == TRUE)
         {
             // save the new user
-            $saved = $this->projects_model->add_user($this->input->post());
+            $saved = $this->project_news_model->add_news($this->input->post());
+
+
 
             if ($saved)
             {
-                $this->session->set_flashdata('message', sprintf(lang('users msg add_user_success'), $this->input->post('first_name') . " " . $this->input->post('last_name')));
+                $this->session->set_flashdata('message', "Added news article");
             }
             else
             {
-                $this->session->set_flashdata('error', sprintf(lang('users error add_user_failed'), $this->input->post('first_name') . " " . $this->input->post('last_name')));
+                $this->session->set_flashdata('message', "Could not add news article");
+
             }
 
             // return to list and display message
@@ -196,7 +190,7 @@ class Project extends Admin_Controller {
         }
 
         // setup page header data
-        $this->set_title( lang('users title user_add') );
+        $this->set_title( "Add news article" );
 
         $data = $this->includes;
 
@@ -204,11 +198,12 @@ class Project extends Admin_Controller {
         $content_data = array(
             'cancel_url'        => $this->_redirect_url,
             'user'              => NULL,
-            'password_required' => TRUE
+            'password_required' => TRUE,
+            'news'              =>  array('title' => '', 'description' => '', 'project_news_id' => '')
         );
 
         // load views
-        $data['content'] = $this->load->view('admin/users/form', $content_data, TRUE);
+        $data['content'] = $this->load->view('admin/news/form', $content_data, TRUE);
         $this->load->view($this->template, $data);
     }
 
@@ -228,10 +223,10 @@ class Project extends Admin_Controller {
         }
 
         // get the data
-        $project = $this->projects_model->get_project($id);
+        $news = $this->project_news_model->get_news($id);
 
         // if empty results, return to list
-        if ( ! $project)
+        if ( ! $news)
         {
             redirect($this->_redirect_url);
         }
@@ -256,15 +251,15 @@ class Project extends Admin_Controller {
         if ($this->form_validation->run() == TRUE)
         {
             // save the changes
-            $saved = $this->projects_model->edit_project($this->input->post());
+            $saved = $this->project_news_model->edit_news($this->input->post());
 
             // return to list and display message
-            redirect('/admin/project');
+            redirect('/admin/news');
         }
 
 
         // setup page header data
-        $this->set_title( 'Edit Project' );
+        $this->set_title( 'Edit News' );
 
         $data = $this->includes;
 
@@ -277,13 +272,14 @@ class Project extends Admin_Controller {
         // set content data
         $content_data = array(
             'cancel_url'        => $this->_redirect_url,
-            'project'              => $project,
-            'project_id'           => $id,
+            'news'              => $news[0],
+            'project_news_id'           => $id,
             'password_required' => FALSE
         );
 
+
         // load views
-        $data['content'] = $this->load->view('admin/projects/form', $content_data, TRUE);
+        $data['content'] = $this->load->view('admin/news/form', $content_data, TRUE);
         $this->load->view($this->template, $data);
     }
 
