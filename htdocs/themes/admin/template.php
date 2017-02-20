@@ -45,6 +45,8 @@
                 <ul class="nav navbar-nav">
                     <li class="<?php echo (uri_string() == 'admin' OR uri_string() == 'admin/dashboard') ? 'active' : ''; ?>"><a href="<?php echo base_url('/admin'); ?>"><?php echo lang('admin button dashboard'); ?></a></li>
                     <li class="<?php echo (uri_string() == 'admin' OR uri_string() == 'admin/project') ? 'active' : ''; ?>"><a href="<?php echo base_url('/admin/project'); ?>">Projects</a></li>
+                    <li class="<?php echo (uri_string() == 'admin' OR uri_string() == 'admin/news') ? 'active' : ''; ?>"><a href="<?php echo base_url('/admin/news'); ?>">News</a></li>
+
                     <li class="<?php echo (uri_string() == 'admin' OR uri_string() == 'admin/orders') ? 'active' : ''; ?>"><a href="<?php echo base_url('/admin/orders'); ?>">Orders</a></li>
                     <li class="dropdown<?php echo (strstr(uri_string(), 'admin/users')) ? ' active' : ''; ?>">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><?php echo lang('admin button users'); ?> <span class="caret"></span></a>
