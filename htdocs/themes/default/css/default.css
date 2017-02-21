@@ -476,6 +476,7 @@ footer{
 -------------------------------------------------- */    
 
 #project-info{
+    max-width: 1942px;
 }
     #project-info h2{
         font-size: 44px;

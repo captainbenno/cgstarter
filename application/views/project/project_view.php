@@ -54,7 +54,7 @@
                 <h2 class="klavika-bold"><span>Project:</span> <?php echo $project['title'] ?></h2>
                 <!-- beginning of project video -->
                 <div class="embed-responsive embed-responsive-16by9 top-image">
-                    <img src="/themes/default/img/expose12/14224836_10153829056433148_9072124840330807846_n.jpg" style="width: 765px;">
+                    <img src="/includes/main_image_project_1.jpg" style="width: 765px;">
                     <!--iframe class="embed-responsive-item" src="//www.youtube.com/embed/cgD8fJlkLqk"></iframe -->
                 </div>
                 <!-- end of project video -->
@@ -184,6 +184,21 @@
                                         $('#image-zoom').attr('src',largeimage);
                                     })
 
+                                    var url = document.location.toString();
+                                    
+                                    if (url.match('#')) {
+                                        $('.nav-tabs a[href="#'+url.split('#')[1]+'"]').tab('show') ;
+                                    } 
+
+                                    // With HTML5 history API, we can easily prevent scrolling!
+                                    $('.nav-tabs a').on('shown.bs.tab', function (e) {
+                                        if(history.pushState) {
+                                            history.pushState(null, null, e.target.hash); 
+                                        } else {
+                                            window.location.hash = e.target.hash; //Polyfill for old browsers
+                                        }
+                                    })
+
                                 });
                             </script>
 
@@ -216,6 +231,31 @@
 				<?php */ ?>
 
                             <?php echo $project['description'] ?>
+                            <hr />
+                            <div id="project-leader">
+                                <h4 class="klavika-regular">Project Team</h4>
+
+                                <p style="padding-left: 0;">Ballistic Publishing is headed up by the same people that started the company over 12 years ago. We are also lucky to have most of our team still with us. Together the team has many decades of combined Publishing experience.</p>
+                                <ul>
+                                <?php
+                                    foreach ($project['project_leaders'] as $project_leader) { ?>
+                                        <li>
+                                            <?php if(file_exists('themes/default/img/user_'.$project_leader['user_id'].'.png')){ ?>
+                                                <?php echo '<img src="/themes/default/img/user_'.$project_leader['user_id'].'.png" />'; ?>
+                                            <?php }else{ ?>
+                                                <img src="https://www.gravatar.com/avatar/<?php echo md5( strtolower( trim( $project_leader['email'] ) ) ); ?>?s=60" />
+                                            <?php } ?>
+                                            <h6><b><?php echo  $project_leader['first_name']?> <?php echo  $project_leader['last_name']?></b></h6>
+                                            <p>
+                                                <?php echo  $project_leader['leader_profile']?>
+                                            </p>
+                                        </li>
+                                <?php 
+                                    }
+                                ?>
+                                </ul>
+
+                            </div>
                         </div>
                         <div role="tabpanel" class="tab-pane" id="awards">
                             <?php require_once BASEPATH.'../htdocs/includes/awards.html' ?>
@@ -306,31 +346,7 @@
                         ?>
                     </div>
                     <!-- end of social media block -->
-                    <hr />
-                    <div id="project-leader">
-                        <h4 class="klavika-regular">Project Team</h4>
 
-                        <p style="padding-left: 0;">Ballistic Publishing is headed up by the same people that started the company over 12 years ago. We are also lucky to have most of our team still with us. Together the team has many decades of combined Publishing experience.</p>
-                        <ul>
-                        <?php
-                            foreach ($project['project_leaders'] as $project_leader) { ?>
-                                <li>
-                                    <?php if(file_exists('themes/default/img/user_'.$project_leader['user_id'].'.png')){ ?>
-                                        <?php echo '<img src="/themes/default/img/user_'.$project_leader['user_id'].'.png" />'; ?>
-                                    <?php }else{ ?>
-                                        <img src="https://www.gravatar.com/avatar/<?php echo md5( strtolower( trim( $project_leader['email'] ) ) ); ?>?s=60" />
-                                    <?php } ?>
-                                    <h6><b><?php echo  $project_leader['first_name']?> <?php echo  $project_leader['last_name']?></b></h6>
-                                    <p>
-                                        <?php echo  $project_leader['leader_profile']?>
-                                    </p>
-                                </li>
-                        <?php 
-                            }
-                        ?>
-                        </ul>
-
-                    </div>
                     <hr />
 
                 </div>
