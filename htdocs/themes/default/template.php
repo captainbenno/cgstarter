@@ -31,7 +31,7 @@
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/3.0.3/normalize.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css?v=3.2.5">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css?v=3.2.5">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css?v=3.2.45">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css?v=3.2.5">
     <link rel="stylesheet" href="/themes/core/css/core.css?v=3.2.5">
     <link rel="stylesheet" href="/themes/default/css/default.css?v=3.2.5">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
@@ -40,7 +40,7 @@
     <?php if (isset($css_files) && is_array($css_files)) : ?>
         <?php foreach ($css_files as $css) : ?>
             <?php if ( ! is_null($css)) : ?>
-                <link rel="stylesheet" href="<?php echo $css; ?>?v=<?php echo $this->settings->site_version; ?>"><?php echo "\n"; ?>
+                <link rel="stylesheet" href="<?php echo $css; ?>?v=3.2.5"><?php echo "\n"; ?>
             <?php endif; ?>
         <?php endforeach; ?>
     <?php endif; ?>
