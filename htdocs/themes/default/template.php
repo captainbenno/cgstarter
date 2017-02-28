@@ -29,11 +29,11 @@
     <meta name="description" content="This is the site description.">
 
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/3.0.3/normalize.css">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css?v=3.2.4">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css?v=3.2.4">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css?v=3.2.4">
-    <link rel="stylesheet" href="/themes/core/css/core.css?v=3.2.4">
-    <link rel="stylesheet" href="/themes/default/css/default.css?v=3.2.4">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css?v=3.2.5">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css?v=3.2.5">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css?v=3.2.45">
+    <link rel="stylesheet" href="/themes/core/css/core.css?v=3.2.5">
+    <link rel="stylesheet" href="/themes/default/css/default.css?v=3.2.5">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
 
     <! -- other -->
@@ -45,9 +45,9 @@
         <?php endforeach; ?>
     <?php endif; ?>
 
-    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js?v=3.2.4"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js?v=3.2.5"></script>
                                                 
-    <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js?v=3.2.4"></script>
+    <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js?v=3.2.5"></script>
 
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
