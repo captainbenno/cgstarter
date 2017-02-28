@@ -806,3 +806,61 @@ footer{
 .profile-text{
     padding-top: 0px;
 }
+
+#awards img{
+    width: 795px !important;
+} 
+
+@media only screen and (max-width: 1920px) {
+    #awards img{
+        width: 730px !important;
+    } 
+}
+
+@media only screen and (max-width: 1800px) {
+    #awards img{
+        width: 690px !important;
+    } 
+}
+
+@media only screen and (max-width: 1700px) {
+    #awards img{
+        width: 600px !important;
+    } 
+}
+
+@media only screen and (max-width: 1600px) {
+    #awards img{
+        width: 570px !important;
+    } 
+}
+
+@media only screen and (max-width: 1400px) {
+    #awards img{
+        width: 550px !important;
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+    #awards img{
+        width: 520px !important;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    #awards img{
+        width: 500px !important;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    #awards img{
+        width: 480px !important;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    #awards img{
+        width: 420px !important;
+    }
+}
