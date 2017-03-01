@@ -184,6 +184,13 @@
                                         $('#image-zoom').attr('src',largeimage);
                                     })
 
+
+                                    $('img.zoom').click(function(){
+                                        $('#zoom').modal();
+                                        largeimage = $(this).attr("src");
+                                        $('#image-zoom').attr('src',largeimage);
+                                    })
+
                                     var url = document.location.toString();
                                     
                                     if (url.match('#')) {
@@ -201,21 +208,6 @@
 
                                 });
                             </script>
-
-                            <!-- Modal -->
-                            <div class="modal fade" id="zoom" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                                <div class="modal-dialog modal-lg" role="document">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                            <h4 class="modal-title" id="myModalLabel">Closer Look</h4>
-                                        </div>
-                                        <div class="modal-body">
-                                            <img id="image-zoom" src="" style="margin:0 auto;width:100%"/>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
 
                             <?php 
                                 /*
@@ -428,4 +420,20 @@
         </div>  
         <!-- end the pledges and data columns -->          
     </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="zoom" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Closer Look</h4>
+                </div>
+                <div class="modal-body">
+                    <img id="image-zoom" src="" style="margin:0 auto;width:100%"/>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- end of pledge row -->
