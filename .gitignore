@@ -8,4 +8,4 @@
 /htdocs/bsw2/application/logs/*
 /application/logs/*
 /htdocs/images/*
-/htdocs/includes/*
+htdocs/includes/*
